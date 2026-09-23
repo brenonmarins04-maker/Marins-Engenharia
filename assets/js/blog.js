@@ -7,6 +7,140 @@
    ============================================================ */
 const BLOG = [
   {
+    id: "melhores-bairros-sao-carlos",
+    data: "Outubro / 2026",
+    foto: "assets/img/blog/bairros-capa.jpg",
+    fotoMini: "assets/img/blog/bairros-capa-mini.jpg",
+    alt: "Vista do centro de São Carlos a partir do Edifício Trentino, com prédios e casas ao redor",
+    titulo: "Melhores bairros de São Carlos: por que o Centro lidera",
+    resumo: "Um ranking montado por critérios de rotina, serviços e liquidez, com o Centro em primeiro lugar e o caso do Edifício Trentino.",
+    seo: {
+      kw: "melhores bairros de São Carlos",
+      meta: "Melhores bairros de São Carlos para morar: ranking por deslocamento, serviços e liquidez, com o Centro em primeiro lugar e o caso do Trentino.",
+      categoria: "Guia da cidade",
+      leitura: "5 min de leitura",
+      atualizado: "Atualizado em Outubro de 2026"
+    },
+    resumoRapido: "Entre os melhores bairros de São Carlos para morar, o Centro fica em primeiro lugar por um motivo objetivo: é a região que concentra comércio, bancos, serviços de saúde, escolas e linhas de ônibus em raio de caminhada, o que reduz deslocamento diário e mantém a liquidez do imóvel na revenda e na locação. O Edifício Trentino, da Marins Engenharia, fica na Rua Padre Teixeira, 1456, no Centro, com apartamentos de 64,52 m², dois dormitórios sendo uma suíte e varanda gourmet.",
+    intro: "Lista de melhores bairros costuma ser questão de gosto. Esta não é. A ordem abaixo segue quatro critérios verificáveis: tempo de deslocamento, serviços que cabem em uma caminhada, oferta de transporte público e liquidez do imóvel quando chega a hora de vender ou alugar. Por esses critérios, o Centro de São Carlos fica em primeiro lugar, e o texto explica por quê.",
+    secoes: [
+      {
+        titulo: "Como este ranking foi montado",
+        paragrafos: [
+          "Nenhum bairro é bom ou ruim em abstrato. O que existe é encaixe entre a região e a rotina de quem mora. Para que a comparação não virasse opinião, a ordem seguiu critérios que qualquer pessoa consegue conferir em uma visita."
+        ],
+        bullets: [
+          "Deslocamento diário: quanto tempo a região custa, por dia, em trajetos de trabalho e escola.",
+          "Serviços a pé: o que resolve em quinze minutos de caminhada a partir da portaria.",
+          "Transporte público: linhas e frequência no ponto mais próximo.",
+          "Infraestrutura consolidada: comércio e prédios já ocupados, sem depender de obras futuras.",
+          "Liquidez: facilidade de vender ou alugar o imóvel mais adiante."
+        ],
+        callout: { tipo: "info", texto: "Se a sua rotina é toda na universidade, o peso dos critérios muda e a ordem também. O ranking é um ponto de partida, não uma sentença." }
+      },
+      {
+        titulo: "1. Centro: a região que resolve mais coisas a pé",
+        paragrafos: [
+          "O Centro de São Carlos concentra o que os outros bairros distribuem: comércio de rua, bancos, cartórios, farmácias, supermercados, escolas, Santa Casa e as principais linhas de ônibus da cidade. Essa concentração é o que faz a diferença na conta do dia a dia, porque cada serviço resolvido a pé é um deslocamento de carro a menos.",
+          "Há um segundo efeito, menos visível na hora da compra. Imóvel em região central tem público maior quando volta ao mercado, seja para venda, seja para locação. Isso reduz o tempo de negociação e dá margem melhor ao proprietário.",
+          "O ponto de atenção do Centro é o ruído e o fluxo de veículos durante o dia comercial. A forma de resolver isso é escolher quadra residencial próxima ao centro comercial, em vez da avenida principal. É exatamente a situação da Rua Padre Teixeira."
+        ],
+        bullets: [],
+        callout: { tipo: "destaque", texto: "Centro em primeiro lugar por três razões: menor deslocamento diário, maior oferta de serviços em raio de caminhada e melhor liquidez na revenda e na locação." }
+      },
+      {
+        titulo: "As outras regiões e para quem elas se encaixam",
+        paragrafos: [
+          "Depois do Centro, a escolha depende do que pesa mais na sua rotina. As quatro regiões abaixo aparecem com frequência na procura de quem compra em São Carlos."
+        ],
+        bullets: [
+          "Vila Nery: bairro residencial tradicional colado ao Centro, com comércio de bairro e ruas mais calmas. Encaixa em quem quer proximidade do centro sem o movimento comercial na porta.",
+          "Santa Felícia: região mais próxima da UFSCar, com procura constante por locação e comércio voltado ao público universitário.",
+          "Vila Prado: bairro consolidado, com comércio de rua, escolas e acesso rápido ao Centro e à USP São Carlos.",
+          "Parque Faber Castell: área planejada e mais afastada, com lotes maiores e perfil residencial. Encaixa em quem prioriza silêncio e aceita depender do carro."
+        ],
+        callout: null
+      },
+      {
+        titulo: "Onde o Edifício Trentino se encaixa nesse mapa",
+        paragrafos: [
+          "O Trentino fica na Rua Padre Teixeira, 1456, no Centro. É uma rua residencial dentro da região central, o que resolve o principal ponto de atenção do Centro: o morador fica perto dos serviços sem ficar dentro do movimento comercial.",
+          "São 24 apartamentos em uma torre, com 64,52 m² de área privativa, dois dormitórios sendo uma suíte, os dois banheiros com box, sala de dois ambientes, cozinha, área de serviço e varanda gourmet. O prédio está entregue e ocupado, o que permite visitar o entorno em horários diferentes antes de decidir."
+        ],
+        bullets: [],
+        figura: {
+          src: "assets/img/blog/trentino-sala.jpg",
+          alt: "Sala de dois ambientes do apartamento do Edifício Trentino, com painel de madeira e cozinha ao fundo",
+          legenda: "Sala de dois ambientes integrada à cozinha, em apartamento de 64,52 m² do Trentino."
+        },
+        callout: null
+      },
+      {
+        titulo: "O que o apartamento entrega por dentro",
+        paragrafos: [
+          "Localização abre a porta, mas quem mora convive com a planta. No Trentino, a cozinha tem bancada de granito e liga à área de serviço, e a suíte e o dormitório social ficam separados da área social do apartamento.",
+          "Na visita, olhe a cozinha e os quartos com a mesma atenção que você daria à rua: posição das tomadas, ponto de ar-condicionado, espaço para armário planejado e incidência de sol no fim da tarde."
+        ],
+        bullets: [],
+        figura: {
+          src: "assets/img/blog/trentino-cozinha.jpg",
+          alt: "Cozinha do apartamento do Trentino, com bancada de granito, cooktop e armários planejados",
+          legenda: "Cozinha com bancada de granito e passagem para a área de serviço."
+        },
+        callout: null
+      },
+      {
+        titulo: "A conta que a localização faz todo mês",
+        paragrafos: [
+          "Morar perto do trabalho e dos serviços tem efeito direto em três linhas do orçamento: combustível, manutenção do carro e tempo. A região central é a que mais reduz essas três de uma vez, porque permite resolver parte da rotina a pé ou de ônibus.",
+          "Some o efeito na revenda. Entre dois apartamentos iguais, o que fica em região com serviços consolidados costuma ser negociado mais rápido. Localização não é só conforto: é o item da compra que não pode ser reformado depois."
+        ],
+        bullets: [],
+        figura: {
+          src: "assets/img/blog/trentino-suite.jpg",
+          alt: "Suíte do apartamento do Trentino, com cama de casal e armário planejado",
+          legenda: "Suíte do apartamento tipo, com armário planejado e janela para a rua residencial.",
+          retrato: true
+        },
+        callout: null
+      }
+    ],
+    tabela: {
+      titulo: "Ranking por critérios de rotina, serviços e liquidez",
+      colunas: ["Posição e região", "Ponto forte", "Para quem se encaixa"],
+      linhas: [
+        ["1. Centro", "Serviços, bancos, saúde e ônibus em raio de caminhada", "Quem quer reduzir deslocamento e garantir liquidez"],
+        ["2. Vila Nery", "Rua calma colada à região central", "Quem quer o Centro por perto, sem o movimento comercial"],
+        ["3. Santa Felícia", "Proximidade da UFSCar e procura constante por locação", "Investidor e público universitário"],
+        ["4. Vila Prado", "Bairro consolidado com acesso rápido ao Centro e à USP", "Famílias que usam carro no dia a dia"],
+        ["5. Parque Faber Castell", "Área planejada, silenciosa e mais afastada", "Quem prioriza silêncio e aceita depender do carro"],
+        ["Edifício Trentino", "Centro, em quadra residencial da Rua Padre Teixeira", "Quem quer o primeiro lugar da lista sem o barulho da avenida"]
+      ],
+      destaque: 5
+    },
+    faq: [
+      { p: "Qual o melhor bairro para morar em São Carlos?",
+        r: "Pelos critérios de deslocamento, serviços a pé, transporte e liquidez, o Centro fica em primeiro lugar. Para quem estuda ou trabalha na UFSCar, a região de Santa Felícia costuma fazer mais sentido." },
+      { p: "Morar no Centro de São Carlos é barulhento?",
+        r: "Depende da rua. As avenidas comerciais têm fluxo alto durante o dia, mas as quadras residenciais próximas, como a Rua Padre Teixeira, são silenciosas à noite. Visite o endereço depois das 22h para confirmar." },
+      { p: "Qual região de São Carlos é melhor para investir?",
+        r: "O Centro, pela liquidez na venda e na locação, e a região próxima à UFSCar, pela procura ligada ao calendário acadêmico. A escolha depende do tipo de inquilino que você quer atender." },
+      { p: "O Edifício Trentino fica em qual bairro?",
+        r: "No Centro, na Rua Padre Teixeira, 1456. São apartamentos de 64,52 m², com dois dormitórios sendo uma suíte e varanda gourmet, construídos pela Marins Engenharia." }
+    ],
+    cta: {
+      titulo: "Visite o Trentino no Centro",
+      texto: "Agende um horário para conhecer o apartamento, a área comum e a rua. O time de vendas responde em até um dia útil."
+    },
+    fontes: [
+      "Plano Diretor do Município de São Carlos",
+      "Prefeitura Municipal de São Carlos",
+      "Memorial descritivo do Edifício Trentino",
+      "Base de dados interna da Marins Engenharia"
+    ]
+  },
+
+  {
     id: "localizacao-centro-sao-carlos",
     data: "Outubro / 2026",
     foto: "assets/img/blog/trentino-fachada.jpg",
