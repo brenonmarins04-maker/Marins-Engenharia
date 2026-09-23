@@ -208,9 +208,19 @@ const TEXTOS = {
     },
     blog: {
       rotulo: "Blog",
-      titulo: "Notícias e bastidores da obra",
-      texto: "Andamento dos empreendimentos, dicas de quem constrói e novidades da Marins.",
-      ler: "Ler o texto",
+      titulo: "Construtoras em São Carlos: guias de quem constrói",
+      texto: "Documentos, prazos, regiões da cidade e o que olhar antes de comprar apartamento em São Carlos.",
+      ler: "Ler o texto completo",
+      voltar: "Todos os textos",
+      naoEncontrado: "Texto não encontrado",
+      naoEncontradoTexto: "O endereço acessado não corresponde a nenhum texto publicado.",
+      seo: "SEO",
+      palavraChave: "Palavra-chave principal:",
+      metaDescription: "Meta description:",
+      resumoRapido: "Resumo rápido",
+      perguntas: "Perguntas frequentes",
+      fontes: "Fontes e referências",
+      leiaTambem: "Leia também",
       vazio: "Ainda não publicamos nenhum texto por aqui. Volte em breve."
     }
   },
@@ -501,14 +511,4 @@ const DEPOIMENTOS_EDIFICIO = {
   verona: { texto:"Acompanho a obra pelo site e recebo notícia sem precisar cobrar. Para quem comprou na planta, isso vale muito.", autor:"Investidor", ref:"Comprador do Verona (empreendimento de exemplo)", exemplo:true }
 };
 
-/* ------------------------------------------------------------
-   BLOG — textos de exemplo. Troque pelos posts reais.
-   ------------------------------------------------------------ */
-const BLOG = [
-  { id:"andamento-verona", data:"Setembro / 2026", titulo:"Edifício Verona: estrutura concluída",
-    resumo:"A estrutura do nosso lançamento chegou ao último pavimento. Veja o que vem pela frente até a entrega das chaves.", exemplo:true },
-  { id:"comprar-na-planta", data:"Agosto / 2026", titulo:"Comprar na planta: o que olhar antes de assinar",
-    resumo:"Prazo, memorial descritivo, documentação e acompanhamento de obra: o que separa uma boa compra de uma dor de cabeça.", exemplo:true },
-  { id:"construcao-40", data:"Julho / 2026", titulo:"Construção 4.0 no canteiro da Marins",
-    resumo:"Como o controle digital de processos encurta prazos e mantém a qualidade do primeiro ao último apartamento.", exemplo:true }
-];
+/* Os posts do blog ficam em assets/js/blog.js */

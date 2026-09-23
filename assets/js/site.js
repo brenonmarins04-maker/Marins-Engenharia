@@ -454,17 +454,143 @@ function montarLocacao(){
 function montarBlog(){
   const alvo = document.getElementById("grade-blog");
   if(!alvo) return;
-  alvo.innerHTML = BLOG.length
-    ? BLOG.map(post => `
+  const B = TEXTOS.paginas.blog;
+  alvo.innerHTML = (typeof BLOG !== "undefined" && BLOG.length)
+    ? BLOG.map(post => {
+        const url = "post.html?id=" + encodeURIComponent(post.id);
+        return `
       <article class="post">
-        ${ph("Foto do post — " + post.titulo, "post__foto")}
+        <a class="post__foto-link" href="${url}" tabindex="-1">
+          ${post.foto
+            ? `<img class="post__foto" src="${esc(post.fotoMini || post.foto)}" alt="${esc(post.alt || post.titulo)}" loading="lazy">`
+            : ph("Foto do post — " + post.titulo, "post__foto")}
+        </a>
         <div class="post__corpo">
           <p class="post__data">${esc(post.data)}</p>
-          <h3>${esc(post.titulo)}</h3>
+          <h3><a href="${url}">${esc(post.titulo)}</a></h3>
           <p class="post__resumo">${esc(post.resumo)}</p>
+          <a class="post__link" href="${url}">${esc(B.ler)}</a>
         </div>
-      </article>`).join("")
-    : `<p class="medida">${esc(TEXTOS.paginas.blog.vazio)}</p>`;
+      </article>`;
+      }).join("")
+    : `<p class="medida">${esc(B.vazio)}</p>`;
+}
+
+/* ---------- página de um post (10 blocos do guia de produção) ---------- */
+function montarPost(){
+  const raiz = document.getElementById("pagina-post");
+  if(!raiz) return;
+  const B = TEXTOS.paginas.blog;
+  const id = new URLSearchParams(location.search).get("id");
+  const post = (typeof BLOG !== "undefined" ? BLOG : []).find(x => x.id === id);
+
+  if(!post){
+    raiz.innerHTML = `
+      <div class="env secao">
+        <h1>${esc(B.naoEncontrado)}</h1>
+        <p class="medida emp__sub">${esc(B.naoEncontradoTexto)}</p>
+        <a class="btn btn--linha" href="blog.html">${esc(B.voltar)}</a>
+      </div>`;
+    return;
+  }
+
+  document.title = post.titulo + " — " + EMPRESA.nome;
+  const meta = document.querySelector('meta[name="description"]');
+  if(meta) meta.content = post.seo.meta;
+
+  const callout = c => c
+    ? `<div class="callout callout--${esc(c.tipo)}"><p>${esc(c.texto)}</p></div>` : "";
+
+  const secoes = post.secoes.map(s => `
+    <section class="post__secao">
+      <h2>${esc(s.titulo)}</h2>
+      ${s.paragrafos.map(t => `<p>${esc(t)}</p>`).join("")}
+      ${s.bullets && s.bullets.length ? `<ul class="post__lista">${s.bullets.map(b => `<li>${esc(b)}</li>`).join("")}</ul>` : ""}
+      ${callout(s.callout)}
+    </section>`).join("");
+
+  const tabela = post.tabela ? `
+    <div class="post__tabela-caixa">
+      <table class="post__tabela">
+        <caption>${esc(post.tabela.titulo)}</caption>
+        <thead><tr>${post.tabela.colunas.map(t => `<th scope="col">${esc(t)}</th>`).join("")}</tr></thead>
+        <tbody>
+          ${post.tabela.linhas.map((linha, i) => `
+            <tr${post.tabela.destaque === i ? ' class="post__tabela-destaque"' : ""}>
+              ${linha.map((cel, j) => j === 0
+                ? `<th scope="row">${esc(cel)}</th>`
+                : `<td>${esc(cel)}</td>`).join("")}
+            </tr>`).join("")}
+        </tbody>
+      </table>
+    </div>` : "";
+
+  const faq = `
+    <section class="post__secao">
+      <h2>${esc(B.perguntas)}</h2>
+      <div class="faq">
+        ${post.faq.map(f => `
+          <div class="faq__item">
+            <h3>${esc(f.p)}</h3>
+            <p>${esc(f.r)}</p>
+          </div>`).join("")}
+      </div>
+    </section>`;
+
+  const outros = BLOG.filter(x => x.id !== post.id).slice(0, 2).map(x => `
+    <a class="post__outro" href="post.html?id=${encodeURIComponent(x.id)}">
+      <span class="post__outro-data">${esc(x.data)}</span>
+      <span class="post__outro-titulo">${esc(x.titulo)}</span>
+    </a>`).join("");
+
+  raiz.innerHTML = `
+  <header class="post-capa">
+    <img class="post-capa__foto" src="${esc(post.foto)}" alt="${esc(post.alt)}">
+    <div class="post-capa__texto">
+      <div class="env">
+        <p class="post-capa__marca">${esc(EMPRESA.nome)}</p>
+        <p class="post-capa__sub">${esc(TEXTOS.rodape.texto)}</p>
+        <p class="post-capa__pe">${esc(post.seo.categoria)} &nbsp;·&nbsp; ${esc(post.data)}</p>
+      </div>
+    </div>
+  </header>
+
+  <div class="env secao post__env">
+    <a class="volta" href="blog.html">${ICO.seta} ${esc(B.voltar)}</a>
+
+    <div class="post__seo">
+      <p><b>${esc(B.seo)}</b> ${esc(B.palavraChave)} <b>${esc(post.seo.kw)}</b></p>
+      <p>${esc(B.metaDescription)} ${esc(post.seo.meta)}</p>
+      <p>${esc(post.seo.categoria)} &nbsp;·&nbsp; ${esc(post.seo.leitura)} &nbsp;·&nbsp; ${esc(post.seo.atualizado)}</p>
+    </div>
+
+    <h1 class="post__titulo">${esc(post.titulo)}</h1>
+
+    <div class="post__resumo-rapido">
+      <p class="post__resumo-rotulo">${esc(B.resumoRapido)}</p>
+      <p>${esc(post.resumoRapido)}</p>
+    </div>
+
+    <p class="post__intro">${esc(post.intro)}</p>
+
+    ${secoes}
+    ${tabela}
+    ${faq}
+
+    <div class="post__cta">
+      <h2>${esc(post.cta.titulo)}</h2>
+      <p>${esc(post.cta.texto)}</p>
+      <p class="post__cta-contato">${esc(EMPRESA.telefone)} &nbsp;·&nbsp; ${esc(EMPRESA.whatsappVisivel)} &nbsp;·&nbsp; ${esc(EMPRESA.email)}</p>
+      <a class="btn btn--zap" data-zap="vendas" target="_blank" rel="noopener">${esc(TEXTOS.cabecalho.vendas)}</a>
+    </div>
+
+    <div class="post__fontes">
+      <p class="post__fontes-rotulo">${esc(B.fontes)}</p>
+      <p>${post.fontes.map(f => esc(f)).join(" | ")}</p>
+    </div>
+
+    ${outros ? `<div class="post__leia"><p class="post__fontes-rotulo">${esc(B.leiaTambem)}</p><div class="post__outros">${outros}</div></div>` : ""}
+  </div>`;
 }
 
 /* ---------- página interna do empreendimento ---------- */
@@ -649,6 +775,7 @@ document.addEventListener("DOMContentLoaded", () => {
   montarQuemSomos();
   montarLocacao();
   montarBlog();
+  montarPost();
   montarEmpreendimento();
   ligarTrilhos();
   preencherContatos();
