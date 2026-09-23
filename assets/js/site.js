@@ -506,6 +506,11 @@ function montarPost(){
       <h2>${esc(s.titulo)}</h2>
       ${s.paragrafos.map(t => `<p>${esc(t)}</p>`).join("")}
       ${s.bullets && s.bullets.length ? `<ul class="post__lista">${s.bullets.map(b => `<li>${esc(b)}</li>`).join("")}</ul>` : ""}
+      ${s.figura ? `
+        <figure class="post__figura${s.figura.retrato ? " post__figura--retrato" : ""}">
+          <img src="${esc(s.figura.src)}" alt="${esc(s.figura.alt)}" loading="lazy">
+          <figcaption>${esc(s.figura.legenda)}</figcaption>
+        </figure>` : ""}
       ${callout(s.callout)}
     </section>`).join("");
 

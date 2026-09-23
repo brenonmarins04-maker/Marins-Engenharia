@@ -7,6 +7,122 @@
    ============================================================ */
 const BLOG = [
   {
+    id: "localizacao-centro-sao-carlos",
+    data: "Outubro / 2026",
+    foto: "assets/img/blog/trentino-fachada.jpg",
+    fotoMini: "assets/img/blog/trentino-fachada-mini.jpg",
+    alt: "Entrada do Edifício Trentino, na Rua Padre Teixeira, 1456, no centro de São Carlos",
+    titulo: "Apartamento no centro de São Carlos: por que a localização pesa",
+    resumo: "O que o endereço decide na rotina, no custo mensal e na revenda, e como fica essa conta no Edifício Trentino, na Rua Padre Teixeira.",
+    seo: {
+      kw: "apartamento no centro de São Carlos",
+      meta: "Por que a localização decide a compra de um apartamento no centro de São Carlos: rotina, custo mensal, revenda e o caso do Edifício Trentino.",
+      categoria: "Guia da cidade",
+      leitura: "4 min de leitura",
+      atualizado: "Atualizado em Outubro de 2026"
+    },
+    resumoRapido: "Localização é o único item de um apartamento que não pode ser reformado. Planta, acabamento e até a fachada mudam com obra; o endereço permanece o mesmo e define o tempo gasto no trajeto, o custo mensal com transporte e a facilidade de revender ou alugar. O Edifício Trentino, da Marins Engenharia, fica na Rua Padre Teixeira, 1456, no centro de São Carlos, com apartamentos de 64,52 m², dois dormitórios sendo uma suíte e varanda gourmet.",
+    intro: "Duas plantas idênticas, com o mesmo acabamento e o mesmo preço, valem coisas diferentes se estiverem em ruas diferentes. Essa é a parte da compra que nenhuma reforma corrige depois. Este texto reúne o que a localização decide na prática e mostra como esses critérios se aplicam a um endereço concreto no centro de São Carlos.",
+    secoes: [
+      {
+        titulo: "O que a localização decide antes do acabamento",
+        paragrafos: [
+          "Um apartamento é escolhido pela planta e vivido pelo endereço. O trajeto diário, o horário em que a rua silencia, a distância até a farmácia e a existência de ponto de ônibus na esquina aparecem todos os dias, enquanto o revestimento do banheiro deixa de ser notado na primeira semana.",
+          "Há também o custo que não entra na tabela de vendas. Morar longe do trabalho e dos serviços significa mais combustível, mais tempo parado no trânsito e, em muitas famílias, a necessidade de um segundo carro. Esse gasto é mensal e acompanha o imóvel pela vida inteira."
+        ],
+        bullets: [],
+        callout: { tipo: "info", texto: "Tudo em um apartamento pode ser reformado, menos o endereço. É o único item da compra que não tem conserto depois da escritura." }
+      },
+      {
+        titulo: "Localização também é liquidez",
+        paragrafos: [
+          "Quem compra para morar costuma pensar só na rotina, mas todo imóvel um dia volta ao mercado, por venda ou por locação. Endereço central, com comércio, serviços e transporte por perto, tem público maior e tempo de negociação menor. É o que o mercado chama de liquidez.",
+          "Regiões com boa infraestrutura urbana instalada também sofrem menos com mudanças de humor do mercado, porque a demanda não depende de um único fator, como a abertura de uma empresa ou a proximidade de um campus."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Como medir uma localização antes de comprar",
+        paragrafos: [
+          "Localização boa não é a que aparece bem no anúncio, e sim a que resolve a sua rotina. A forma mais simples de testar é caminhar. Saia do prédio e veja o que cabe em quinze minutos a pé em cada direção.",
+          "A tabela abaixo organiza os critérios que mais pesam e como verificar cada um sem depender da descrição do anúncio."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Um endereço concreto: Edifício Trentino, Rua Padre Teixeira, 1456",
+        paragrafos: [
+          "O Edifício Trentino fica na Rua Padre Teixeira, 1456, no centro de São Carlos. São 24 apartamentos em uma torre, com 64,52 m² de área privativa, dois dormitórios sendo uma suíte, os dois banheiros com box, sala de dois ambientes, cozinha, área de serviço e varanda gourmet.",
+          "O endereço reúne as três condições que este texto descreveu: região central com comércio e serviços no entorno, proximidade da USP São Carlos e vizinhança já consolidada, sem depender de infraestrutura futura. É uma rua residencial, mas a poucos minutos do centro comercial da cidade."
+        ],
+        bullets: [],
+        figura: {
+          src: "assets/img/blog/trentino-aerea.jpg",
+          alt: "Vista aérea do Edifício Trentino e do entorno, no centro de São Carlos",
+          legenda: "Edifício Trentino visto de cima: torre única, em quadra residencial do centro de São Carlos.",
+          retrato: true
+        },
+        callout: null
+      },
+      {
+        titulo: "O que o prédio entrega além do endereço",
+        paragrafos: [
+          "A localização abre a porta, mas o que segura o morador é o conjunto. No Trentino, a área comum foi projetada para uso diário, com hall de entrada, portaria e acesso controlado. O prédio foi entregue e está ocupado, o que permite visitar e conversar com quem mora antes de decidir.",
+          "Vale repetir o teste de visita em dois horários diferentes: durante o dia, para ver o movimento da rua e do comércio, e à noite, para ouvir o que acontece na quadra depois das dez."
+        ],
+        bullets: [
+          "Confira o trajeto até o trabalho no horário real, em dia útil.",
+          "Caminhe quatro quadras em cada direção e anote o que encontrou.",
+          "Verifique as linhas de ônibus no ponto mais próximo.",
+          "Pergunte ao porteiro qual é o horário de maior movimento na rua."
+        ],
+        figura: {
+          src: "assets/img/blog/trentino-hall.jpg",
+          alt: "Hall de entrada do Edifício Trentino, com painel de madeira, espelho e poltronas",
+          legenda: "Hall de entrada do Trentino: a primeira área comum que morador e visita usam todos os dias."
+        },
+        callout: { tipo: "destaque", texto: "Edifício Trentino: Rua Padre Teixeira, 1456, centro de São Carlos. Apartamentos de 64,52 m², dois dormitórios com uma suíte e varanda gourmet." }
+      }
+    ],
+    tabela: {
+      titulo: "Critérios de localização e como verificar cada um",
+      colunas: ["Critério", "Por que pesa", "Como verificar"],
+      linhas: [
+        ["Trajeto diário", "É o gasto de tempo que se repete todo dia útil", "Fazer o percurso entre sete e nove da manhã"],
+        ["Serviços a pé", "Reduz o uso do carro e o custo mensal", "Caminhar quinze minutos a partir da portaria"],
+        ["Transporte público", "Dá autonomia a quem não dirige", "Conferir linhas e frequência no ponto mais próximo"],
+        ["Ruído da rua", "Define o sono e o uso da varanda", "Visitar o endereço depois das 22h"],
+        ["Vizinhança consolidada", "Evita depender de obras e promessas futuras", "Observar se há comércio e prédios já ocupados na quadra"],
+        ["Edifício Trentino", "Centro, quadra residencial, comércio e serviços por perto", "Visita agendada na Rua Padre Teixeira, 1456"]
+      ],
+      destaque: 5
+    },
+    faq: [
+      { p: "Onde fica o Edifício Trentino em São Carlos?",
+        r: "Na Rua Padre Teixeira, 1456, no centro de São Carlos. O prédio tem 24 apartamentos de 64,52 m², com dois dormitórios sendo uma suíte e varanda gourmet, e foi construído pela Marins Engenharia." },
+      { p: "Vale a pena comprar apartamento no centro de São Carlos?",
+        r: "Vale para quem quer reduzir deslocamento e resolver serviços a pé, e também para quem pensa em revenda ou locação, porque endereço central costuma ter público maior e negociação mais rápida." },
+      { p: "Morar no centro significa conviver com barulho?",
+        r: "Depende da rua, não da região. Quadras residenciais próximas ao centro costumam ser silenciosas à noite. A forma de confirmar é visitar o endereço depois das 22h, antes de fechar negócio." },
+      { p: "Como visitar o Edifício Trentino?",
+        r: "A visita é agendada com o time de vendas da Marins Engenharia pelo WhatsApp. O prédio está entregue e ocupado, o que permite conhecer a área comum e o entorno em horários diferentes." }
+    ],
+    cta: {
+      titulo: "Agende uma visita ao Trentino",
+      texto: "Conheça o apartamento, a área comum e a rua antes de decidir. O time de vendas responde em até um dia útil."
+    },
+    fontes: [
+      "Plano Diretor do Município de São Carlos",
+      "Prefeitura Municipal de São Carlos",
+      "ABNT NBR 15575 (desempenho de edificações habitacionais)",
+      "Memorial descritivo do Edifício Trentino",
+      "Base de dados interna da Marins Engenharia"
+    ]
+  },
+
+  {
     id: "construtora-sao-carlos",
     data: "Setembro / 2026",
     foto: "assets/img/blog/entrada-sao-carlos.jpg",

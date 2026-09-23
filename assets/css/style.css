@@ -481,6 +481,11 @@ p{margin:0 0 1em}
 .post__lista{margin:0 0 16px;padding-left:20px;display:grid;gap:9px;color:var(--post-texto)}
 .post__lista li::marker{color:var(--azul)}
 
+.post__figura{margin:20px 0;border-radius:var(--r-g);overflow:hidden;border:1px solid var(--linha)}
+.post__figura img{width:100%;aspect-ratio:16/9;object-fit:cover}
+.post__figura--retrato img{aspect-ratio:3/4;object-position:center 35%}
+.post__figura figcaption{background:var(--post-claro);padding:10px 14px;font-size:.8125rem;color:var(--post-texto-2)}
+
 /* callouts: 4 tipos, borda lateral colorida */
 .callout{border-left:6px solid var(--amarelo);background:var(--post-claro);padding:14px 18px;border-radius:0 var(--r) var(--r) 0;margin:16px 0}
 .callout p{margin:0;font-size:.9375rem;color:var(--post-texto)}
