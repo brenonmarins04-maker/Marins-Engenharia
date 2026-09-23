@@ -26,7 +26,7 @@
   --linha:rgba(12,22,38,.13);
   --linha-esc:rgba(255,255,255,.20);
 
-  --fonte:"Archivo", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --fonte:"Raleway", system-ui, -apple-system, "Segoe UI", sans-serif;
   --max:1240px;
   --gut:clamp(20px, 5vw, 56px);
   --r:6px;
@@ -46,11 +46,9 @@ img{max-width:100%;display:block}
 a{color:inherit}
 button{font:inherit}
 
-/* Uma família só, dois usos: títulos em peso alto e largura
-   expandida (ecoando o bloco do logotipo), texto em largura normal. */
+/* Raleway em todo o site, com títulos em peso alto. */
 h1,h2,h3{
   margin:0;font-weight:800;line-height:1.04;letter-spacing:-.022em;
-  font-variation-settings:"wdth" 108;
   text-wrap:balance;
 }
 h1{font-size:clamp(2.3rem, 6.2vw, 4.4rem)}
@@ -188,23 +186,23 @@ p{margin:0 0 1em}
 /* véu escuro: é ele que mantém a frase legível sobre qualquer foto */
 .cr__slide::after{
   content:"";position:absolute;inset:0;
-  /* escurece só o lado do texto; a foto aparece quase limpa à direita */
-  background:linear-gradient(100deg, rgba(0,12,30,.72) 0%, rgba(0,12,30,.55) 42%, rgba(0,12,30,.18) 75%, rgba(0,12,30,.10) 100%);
+  /* Véu uniforme para manter legíveis os textos centralizados. */
+  background:rgba(0,12,30,.42);
 }
 @media (max-width:820px){
   .cr__slide::after{background:linear-gradient(180deg, rgba(0,12,30,.35) 0%, rgba(0,12,30,.62) 60%, rgba(0,12,30,.75) 100%)}
 }
-.cr__texto{position:relative;z-index:2;width:100%;padding-block:clamp(70px,10vw,110px)}
+.cr__texto{position:relative;z-index:2;width:100%;text-align:center;padding-block:clamp(70px,10vw,110px)}
 .cr__titulo{
-  color:#fff;max-width:17ch;
+  color:#fff;max-width:23ch;margin-inline:auto;
   font-size:clamp(2.1rem,5.4vw,4rem);
-  text-shadow:0 2px 16px rgba(0,10,25,.8), 0 1px 3px rgba(0,10,25,.6);
+  text-shadow:none;
 }
 .realce{color:var(--amarelo)}
 .cr__sub{
-  color:#EAF0FA;max-width:52ch;margin-top:18px;
+  color:#EAF0FA;max-width:64ch;margin:24px auto 0;
   font-size:clamp(1rem,1.5vw,1.125rem);
-  text-shadow:0 1px 10px rgba(0,10,25,.85);
+  text-shadow:none;
 }
 .cr__texto .btn{margin-top:26px}
 .cr__seta{
@@ -513,7 +511,7 @@ p{margin:0 0 1em}
 
 /* Cabeçalho sobre a foto inicial; o branco acompanha a rolagem. */
 .home .topo{position:fixed;left:0;right:0;background:rgba(255,255,255,var(--topo-opacidade,0));backdrop-filter:none;border-bottom-color:rgba(220,226,235,var(--topo-opacidade,0))}
-.home .topo:not(.topo--claro) .nav > a:not(.btn){color:#fff;text-shadow:0 1px 5px #00142b}
+.home .topo:not(.topo--claro) .nav > a:not(.btn){color:#fff;text-shadow:none}
 .home .topo:not(.topo--claro) .nav > a.nav__loc{color:var(--amarelo)}
 .home .topo:not(.topo--claro) .menu-btn{color:#fff;border-color:rgba(255,255,255,.7)}
 .home .cr__texto{padding-top:130px;padding-bottom:100px}

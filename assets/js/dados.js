@@ -69,15 +69,15 @@ const HERO = [
     botao: "Quem somos", href: "quem-somos.html"
   },
   {
-    foto: "assets/img/predios/turim-entrada.jpg",
-    alt: "Entrada do Edifício Turim, com jardim e portaria",
+    foto: "assets/img/predios/escritorio-marins.png",
+    alt: "Fachada do escritório da Marins Engenharia",
     titulo: "*{edificios} edifícios* entregues na cidade.",
     texto: "São {apartamentos} apartamentos construídos nas melhores localizações de São Carlos.",
     botao: "Ver edifícios", href: "edificios.html"
   },
   {
-    foto: "assets/img/predios/ferretto.jpg",
-    alt: "Fachada do Edifício Ferretto, na esquina da Rua Riachuelo",
+    foto: "assets/img/predios/hall-apartamentos.jpg",
+    alt: "Hall de entrada com poltronas, espelho e painel de madeira",
     titulo: "Hospede-se em um apartamento *nosso*.",
     texto: "Conheça nossos apartamentos para hospedagem pelo AirBnB e aproveite sua estadia em São Carlos.",
     botao: "Ver unidades", href: "locacao.html"
