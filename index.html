@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Título e descrição ficam no HTML para buscadores e prévias de link. -->
+<title>Marins Engenharia — apartamentos em São Carlos, do terreno à chave</title>
+<meta name="description" content="Incorporação e construção de prédios residenciais de médio e alto padrão em São Carlos, SP. 25 anos, 100% das obras entregues ANTES do prazo.">
+<meta name="theme-color" content="#00378A">
+<link rel="icon" href="assets/img/logo-marins.png">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Marins Engenharia — apartamentos em São Carlos">
+<meta property="og:description" content="Prédios residenciais de médio e alto padrão em São Carlos, com o andamento de cada obra publicado.">
+<meta property="og:image" content="assets/img/predios/turim-fachada.jpg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css?v=20260923-2">
+</head>
+<body class="home">
+
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<header class="topo" id="cabecalho"></header>
+
+<main id="conteudo">
+
+  <!-- carrossel de fotos dos edifícios -->
+  <section class="cr" id="carrossel" aria-label="Destaques da Marins Engenharia"></section>
+
+  <!-- prévia dos edifícios -->
+  <section class="secao" id="edificios" aria-labelledby="vendas-titulo">
+    <div class="env">
+      <div class="cab">
+        <div>
+          <p class="rotulo" data-t="vendas.rotulo"></p>
+          <h2 id="vendas-titulo" data-t="vendas.tituloHome"></h2>
+          <p data-t="vendas.texto"></p>
+        </div>
+        <a class="btn btn--linha" href="edificios.html" data-t="vendas.verTodos"></a>
+      </div>
+      <div class="trilho" id="trilho-vendas" tabindex="0" aria-labelledby="vendas-titulo"></div>
+    </div>
+  </section>
+
+  <!-- chamada da locação -->
+  <section class="loc secao--fina" aria-labelledby="loc-titulo">
+    <div class="env">
+      <p class="rotulo rotulo--claro" data-t="locacao.rotulo"></p>
+      <h2 id="loc-titulo" class="h2--menor" data-t="locacao.titulo"></h2>
+      <p class="aviso" data-t="locacao.aviso"></p>
+      <a class="btn btn--amarelo" href="locacao.html" data-t="locacao.verUnidades"></a>
+    </div>
+  </section>
+
+  <!-- contato -->
+  <section class="contato secao" id="contato" aria-labelledby="contato-titulo">
+    <div class="env">
+      <div class="cab">
+        <div>
+          <p class="rotulo" data-t="contato.rotulo"></p>
+          <h2 id="contato-titulo" data-t="contato.titulo"></h2>
+          <p data-t="contato.texto"></p>
+        </div>
+      </div>
+
+      <div class="contato__grade">
+        <div>
+          <div class="mapa">
+            <iframe id="mapa-escritorio" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <ul class="infos">
+            <li><span data-icone-pin></span><span><b data-t="contato.escritorio"></b><br><span data-campo="endereco"></span></span></li>
+            <li><span data-icone-fone></span><span><b data-t="contato.telefone"></b><br><a data-tel><span data-campo="telefone"></span></a></span></li>
+            <li><span data-icone-zap></span><span><b data-t="contato.whatsapp"></b><br><a data-zap="geral" data-icone="nao" target="_blank" rel="noopener"><span data-campo="whatsappVisivel"></span></a></span></li>
+            <li><span data-icone-mail></span><span><b data-t="contato.email"></b><br><a data-mail><span data-campo="email"></span></a></span></li>
+          </ul>
+        </div>
+
+        <form class="form" id="form-contato" novalidate>
+          <div class="campo">
+            <label for="nome">Nome</label>
+            <input id="nome" name="nome" type="text" autocomplete="name" required>
+          </div>
+          <div class="campo">
+            <label for="email">E-mail</label>
+            <input id="email" name="email" type="email" autocomplete="email" required>
+          </div>
+          <div class="campo">
+            <label for="telefone">Telefone</label>
+            <input id="telefone" name="telefone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(16) 99999-9999" required>
+          </div>
+          <div class="campo">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="mensagem" data-t-placeholder="contato.phMensagem"></textarea>
+          </div>
+          <button class="btn btn--azul btn--bloco" type="submit" data-t="contato.enviar"></button>
+          <p class="form__aviso" role="status" aria-live="polite"></p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer class="rodape" id="rodape"></footer>
+
+<a class="zap-fixo" data-zap="geral" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <span>WhatsApp</span>
+</a>
+
+<script src="assets/js/dados.js?v=20260923-2"></script>
+<script src="assets/js/galerias.js?v=20260923-2"></script>
+<script src="assets/js/site.js?v=20260923-2"></script>
+</body>
+</html>

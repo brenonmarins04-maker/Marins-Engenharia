@@ -1,0 +1,79 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quem Somos — Marins Engenharia</title>
+<meta name="description" content="25 anos construindo prédios residenciais em São Carlos: história, valores e o que dizem investidores, moradores e locatários.">
+<meta name="theme-color" content="#00378A">
+<link rel="icon" href="assets/img/logo-marins.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css?v=20260923-2">
+</head>
+<body>
+
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<header class="topo" id="cabecalho"></header>
+
+<main id="conteudo">
+  <section class="anos secao" aria-labelledby="anos-titulo">
+    <div class="env">
+      <p class="rotulo" data-t="paginas.quemSomos.rotulo"></p>
+      <h1 class="pg__titulo" data-t="paginas.quemSomos.titulo"></h1>
+    </div>
+    <div class="env anos__grade">
+      <div id="anos-foto"></div>
+      <div class="anos__texto">
+        <h2 id="anos-titulo" data-t="anos.titulo"></h2>
+        <div id="anos-paragrafos"></div>
+      </div>
+      <ul class="destaques" id="anos-destaques"></ul>
+    </div>
+  </section>
+
+  <section class="secao" aria-labelledby="historia-titulo">
+    <div class="env">
+      <div class="cab">
+        <div>
+          <p class="rotulo" data-t="historia.rotulo"></p>
+          <h2 id="historia-titulo" data-t="historia.titulo"></h2>
+          <p data-t="historia.texto"></p>
+        </div>
+      </div>
+      <div id="linha-tempo"></div>
+      <div class="principios" id="principios"></div>
+    </div>
+  </section>
+
+  <section class="secao depoimentos" aria-labelledby="depo-titulo">
+    <div class="env">
+      <div class="cab">
+        <div>
+          <p class="rotulo" data-t="depoimentos.rotulo"></p>
+          <h2 id="depo-titulo" data-t="depoimentos.titulo"></h2>
+          <p data-t="depoimentos.texto"></p>
+        </div>
+      </div>
+      <div class="abas" role="tablist" aria-labelledby="depo-titulo">
+        <button class="aba" role="tab" id="aba-investidor" aria-controls="painel-depoimentos" aria-selected="true" data-chave="investidor" data-t="depoimentos.abas.investidor" type="button"></button>
+        <button class="aba" role="tab" id="aba-morador" aria-controls="painel-depoimentos" aria-selected="false" tabindex="-1" data-chave="morador" data-t="depoimentos.abas.morador" type="button"></button>
+        <button class="aba" role="tab" id="aba-locatario" aria-controls="painel-depoimentos" aria-selected="false" tabindex="-1" data-chave="locatario" data-t="depoimentos.abas.locatario" data-loc type="button"></button>
+      </div>
+      <div class="depos" id="painel-depoimentos" role="tabpanel" aria-labelledby="aba-investidor" tabindex="0"></div>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape" id="rodape"></footer>
+
+<a class="zap-fixo" data-zap="geral" target="_blank" rel="noopener" aria-label="Falar no WhatsApp">
+  <span>WhatsApp</span>
+</a>
+
+<script src="assets/js/dados.js?v=20260923-2"></script>
+<script src="assets/js/galerias.js?v=20260923-2"></script>
+<script src="assets/js/site.js?v=20260923-2"></script>
+</body>
+</html>
