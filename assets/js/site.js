@@ -63,8 +63,10 @@ function montarCabecalho(){
   const alvo = document.getElementById("cabecalho");
   if(!alvo) return;
   const aqui = location.pathname.split("/").pop() || "index.html";
+  const paginaMenu = aqui === "empreendimento.html" ? "edificios.html" : aqui;
+  const paginaAtual = NAV.find(n => n.href === paginaMenu);
   const itens = NAV.map(n => {
-    const atual = n.href === aqui ? ' aria-current="page"' : "";
+    const atual = n.href === paginaMenu ? ' aria-current="page"' : "";
     return `<a href="${esc(n.href)}"${n.classe ? ` class="${esc(n.classe)}"` : ""}${atual}>${esc(n.texto)}</a>`;
   }).join("");
 
@@ -73,6 +75,7 @@ function montarCabecalho(){
     <a class="marca" href="index.html">
       <img src="assets/img/logo-marins.png" alt="${esc(TEXTOS.cabecalho.inicio)}" width="44" height="43">
     </a>
+    <span class="topo__pagina">${esc(paginaAtual ? paginaAtual.texto : "")}</span>
     <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav" aria-label="${esc(TEXTOS.cabecalho.menu)}">${ICO.menu}</button>
     <nav class="nav" id="nav" aria-label="Principal">
       ${itens}
@@ -246,36 +249,9 @@ function montarCarrossel(){
   reiniciar();
 }
 
-/* ---------- barra de progresso da obra ---------- */
+/* ---------- situação do empreendimento ---------- */
 function barra(emp){
-  const rotulo = `${emp.progresso}% ${TEXTOS.vendas.obraExecutada}`;
-  return `
-    <div class="prog">
-      <div class="prog__topo">
-        <span class="prog__pct" aria-hidden="true">${esc(rotulo)}</span>
-      </div>
-      <div class="prog__trilha" role="progressbar" aria-valuenow="${emp.progresso}" aria-valuemin="0" aria-valuemax="100"
-           aria-label="${esc(TEXTOS.interna.obra)} — ${esc(emp.nome)}" aria-valuetext="${esc(rotulo)}">
-        <div class="prog__barra" data-alvo="${emp.progresso}"${emp.emObras ? " data-obras" : ""}></div>
-      </div>
-      <p class="prog__data">${esc(emp.atualizado)}</p>
-    </div>`;
-}
-
-function animarBarras(escopo){
-  const barras = (escopo || document).querySelectorAll(".prog__barra:not([data-animada])");
-  const reduz = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-  const encherBarra = b => { b.style.width = b.dataset.alvo + "%"; b.setAttribute("data-animada", ""); };
-  if(reduz || !("IntersectionObserver" in window)){
-    barras.forEach(encherBarra);
-    return;
-  }
-  const obs = new IntersectionObserver(itens => {
-    itens.forEach(i => {
-      if(i.isIntersecting){ encherBarra(i.target); obs.unobserve(i.target); }
-    });
-  }, { threshold: .4 });
-  barras.forEach(b => obs.observe(b));
+  return `<p class="entrega${emp.emObras ? ' entrega--obras' : ''}">${emp.emObras ? 'Em obras' : 'Entregue'}</p>`;
 }
 
 /* ---------- cartões de empreendimento (venda) ---------- */
@@ -452,11 +428,11 @@ function montarEdificios(){
 
 function montarQuemSomos(){
   const A = TEXTOS.anos;
-  encher("anos-foto", ph(A.foto, "anos__foto"));
+  encher("anos-foto", `<img class="anos__foto" src="assets/img/predios/escritorio-marins.png" alt="Fachada do escritório da Marins Engenharia" loading="lazy">`);
   encher("anos-paragrafos", A.paragrafos.map(p => `<p>${esc(p)}</p>`).join(""));
   encher("anos-destaques", A.destaques.map(d => `<li><b>${esc(d.titulo)}</b><span>${esc(d.texto)}</span></li>`).join(""));
   encher("linha-tempo", HISTORIA.map(marcoHistoria).join(""));
-  encher("principios", TEXTOS.historia.principios.map(p => `
+  encher("principios", ["Missão", "Valores", "Visão"].map(titulo => TEXTOS.historia.principios.find(p => p.titulo === titulo)).map(p => `
     <div><h3>${esc(p.titulo)}</h3><p>${esc(p.texto)}</p></div>`).join(""));
 }
 
@@ -515,16 +491,6 @@ function montarEmpreendimento(){
   document.querySelectorAll(".zap-fixo").forEach(el => el.dataset.zapPronto = zap(msg));
 
   const fotos = fotosEmpreendimento(emp);
-  const depo = DEPOIMENTOS_EDIFICIO[emp.id];
-  const blocoDepo = depo ? `
-    <section class="caixa">
-      <h2>${esc(TEXTOS.vendas.depoimento)}</h2>
-      <figure class="depo depo--interno">
-        <blockquote>“${esc(depo.texto)}”</blockquote>
-        <figcaption><b>${esc(depo.autor)}</b>${esc(depo.ref)}</figcaption>
-      </figure>
-    </section>` : "";
-
   raiz.innerHTML = `
   <div class="env secao">
     <a class="volta" href="edificios.html">${ICO.seta} ${esc(I.voltar)}</a>
@@ -532,7 +498,7 @@ function montarEmpreendimento(){
     <header class="emp__cab">
       <div>
         <h1>${esc(emp.nome)}</h1>
-        <p class="emp__sub">${esc(emp.statusTexto)} &nbsp;·&nbsp; ${esc(emp.torres)}</p>
+        <p class="emp__sub">${emp.emObras ? "Em obras" : "Entregue"} &nbsp;·&nbsp; ${esc(emp.torres)}</p>
       </div>
       <a class="btn btn--zap" href="${zap(msg)}" target="_blank" rel="noopener">${ICO.zap} ${esc(TEXTOS.vendas.botaoCartao)}</a>
     </header>
@@ -570,11 +536,10 @@ function montarEmpreendimento(){
         </section>
 
         <section class="caixa">
-          <h2>${esc(I.obra)}</h2>
+          <h2>Situação da obra</h2>
           ${barra(emp)}
         </section>
 
-        ${blocoDepo}
       </div>
     </div>
   </div>`;
@@ -658,5 +623,4 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("[data-zap-pronto]").forEach(el => el.href = el.dataset.zapPronto);
   ligarDepoimentos();
   ligarFormulario();
-  animarBarras();
 });

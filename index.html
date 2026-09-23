@@ -17,7 +17,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/style.css?v=20260923-3">
+<link rel="stylesheet" href="assets/css/style.css?v=20260923-4">
 </head>
 <body class="home">
 
@@ -54,6 +54,23 @@
     </div>
   </section>
 
+  <section class="secao depoimentos" aria-labelledby="depo-titulo">
+    <div class="env">
+      <div class="cab">
+        <div>
+          <p class="rotulo" data-t="depoimentos.rotulo"></p>
+          <h2 id="depo-titulo" data-t="depoimentos.titulo"></h2>
+          <p data-t="depoimentos.texto"></p>
+        </div>
+      </div>
+      <div class="abas" role="tablist" aria-labelledby="depo-titulo">
+        <button class="aba" role="tab" id="aba-investidor" aria-controls="painel-depoimentos" aria-selected="true" data-chave="investidor" data-t="depoimentos.abas.investidor" type="button"></button>
+        <button class="aba" role="tab" id="aba-morador" aria-controls="painel-depoimentos" aria-selected="false" tabindex="-1" data-chave="morador" data-t="depoimentos.abas.morador" type="button"></button>
+        <button class="aba" role="tab" id="aba-locatario" aria-controls="painel-depoimentos" aria-selected="false" tabindex="-1" data-chave="locatario" data-t="depoimentos.abas.locatario" data-loc type="button"></button>
+      </div>
+      <div class="depos" id="painel-depoimentos" role="tabpanel" aria-labelledby="aba-investidor" tabindex="0"></div>
+    </div>
+  </section>
   <!-- contato -->
   <section class="contato secao" id="contato" aria-labelledby="contato-titulo">
     <div class="env">
@@ -110,8 +127,8 @@
   <span>WhatsApp</span>
 </a>
 
-<script src="assets/js/dados.js?v=20260923-3"></script>
-<script src="assets/js/galerias.js?v=20260923-3"></script>
-<script src="assets/js/site.js?v=20260923-3"></script>
+<script src="assets/js/dados.js?v=20260923-4"></script>
+<script src="assets/js/galerias.js?v=20260923-4"></script>
+<script src="assets/js/site.js?v=20260923-4"></script>
 </body>
 </html>
