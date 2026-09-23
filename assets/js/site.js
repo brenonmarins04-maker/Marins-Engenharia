@@ -81,7 +81,7 @@ function montarCabecalho(){
       ${itens}
       <a class="btn btn--zap" data-zap="vendas" target="_blank" rel="noopener">${esc(TEXTOS.cabecalho.vendas)}</a>
     </nav>
-    <a class="btn btn--zap topo__vendas" data-zap="vendas" target="_blank" rel="noopener">${esc(TEXTOS.cabecalho.vendas)}</a>
+    <a class="btn btn--zap topo__vendas" data-zap="vendas" target="_blank" rel="noopener">Contato</a>
   </div>`;
   ligarMenu();
   if(document.body.classList.contains("home")){

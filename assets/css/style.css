@@ -579,3 +579,10 @@ p{margin:0 0 1em}
   .trilho-controles button{width:44px;height:44px;flex-shrink:0;border:1px solid var(--linha);border-radius:50%;background:white;color:var(--azul);font-size:1.25rem;cursor:pointer}
   .trilho-controles button:disabled{opacity:.35;cursor:default}
 }
+
+/* Fachada vertical do segundo destaque: preservar o enquadramento no desktop. */
+@media(min-width:961px){
+  .cr__slide[data-i="1"]{overflow:hidden;background:var(--azul-esc)}
+  .cr__slide[data-i="1"]::before{content:"";position:absolute;inset:-24px;background:url("../img/predios/trivoli.jpg") center / cover no-repeat;filter:blur(20px);opacity:.38}
+  .cr__slide[data-i="1"] .cr__foto{object-fit:contain;object-position:center;image-rendering:auto}
+}
