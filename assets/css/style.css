@@ -558,3 +558,7 @@ p{margin:0 0 1em}
   .nav a[aria-current="page"]{border-left:4px solid var(--azul);border-bottom-color:transparent;background:var(--azul-nevoa);color:var(--azul)}
 }
 @media(max-width:600px){#linha-tempo .marco{flex-basis:85%;max-width:320px}}
+
+.selos-empreendimento{display:flex;flex-wrap:wrap;gap:8px}
+.entrega--lancamento{background:var(--amarelo);color:var(--azul-esc)}
+.entrega--novidades{background:var(--azul);color:#fff}

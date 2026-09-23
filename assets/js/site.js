@@ -251,7 +251,7 @@ function montarCarrossel(){
 
 /* ---------- situação do empreendimento ---------- */
 function barra(emp){
-  return `<p class="entrega${emp.emObras ? ' entrega--obras' : ''}">${emp.emObras ? 'Em obras' : 'Entregue'}</p>`;
+  return `<div class="selos-empreendimento"><span class="entrega">Entregue</span>${emp.id === "trentino" ? '<span class="entrega entrega--lancamento">Lançamento</span><span class="entrega entrega--novidades">Últimas novidades</span>' : ''}</div>`;
 }
 
 /* ---------- cartões de empreendimento (venda) ---------- */
@@ -498,7 +498,8 @@ function montarEmpreendimento(){
     <header class="emp__cab">
       <div>
         <h1>${esc(emp.nome)}</h1>
-        <p class="emp__sub">${emp.emObras ? "Em obras" : "Entregue"} &nbsp;·&nbsp; ${esc(emp.torres)}</p>
+        ${emp.id === "trentino" ? barra(emp) : ""}
+        <p class="emp__sub">Entregue &nbsp;·&nbsp; ${esc(emp.torres)}</p>
       </div>
       <a class="btn btn--zap" href="${zap(msg)}" target="_blank" rel="noopener">${ICO.zap} ${esc(TEXTOS.vendas.botaoCartao)}</a>
     </header>
@@ -528,7 +529,7 @@ function montarEmpreendimento(){
               <tr><th scope="row">${esc(I.metragem)}</th><td>${esc(emp.metragem)}</td></tr>
               <tr><th scope="row">${esc(I.dormitorios)}</th><td>${esc(emp.dorms)}</td></tr>
               <tr><th scope="row">${esc(I.estrutura)}</th><td>${esc(emp.torres)}</td></tr>
-              <tr><th scope="row">${esc(I.situacao)}</th><td>${esc(emp.statusTexto)}</td></tr>
+              <tr><th scope="row">${esc(I.situacao)}</th><td>Entregue</td></tr>
             </tbody>
           </table>
           <h3>${esc(I.itens)}</h3>
