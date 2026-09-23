@@ -7,6 +7,144 @@
    ============================================================ */
 const BLOG = [
   {
+    id: "investir-imoveis-sao-carlos",
+    data: "Outubro / 2026",
+    foto: "assets/img/blog/investidor-capa.jpg",
+    fotoMini: "assets/img/blog/investidor-capa-mini.jpg",
+    alt: "Vista aérea do Edifício Trentino e do entorno, no centro de São Carlos",
+    titulo: "Investir em imóveis em São Carlos: rentabilidade e liquidez",
+    resumo: "Como calcular o retorno de verdade, quais custos entram na conta e que tipo de apartamento atende cada perfil de inquilino.",
+    seo: {
+      kw: "investir em imóveis em São Carlos",
+      meta: "Investir em imóveis em São Carlos: como calcular rentabilidade líquida, custos que entram na conta, perfis de inquilino e liquidez na revenda.",
+      categoria: "Investimento",
+      leitura: "5 min de leitura",
+      atualizado: "Atualizado em Outubro de 2026"
+    },
+    resumoRapido: "Investir em imóveis em São Carlos costuma render por dois caminhos: aluguel mensal e valorização na revenda. O que define o resultado é a conta líquida, feita depois de ITBI, registro, condomínio nos meses vagos, manutenção, administração, imposto de renda e vacância. Apartamentos de dois dormitórios em região central atendem o público mais amplo, que é o que reduz vacância. O Edifício Trentino, da Marins Engenharia, tem unidades de 64,52 m² com dois dormitórios, sendo uma suíte, na Rua Padre Teixeira, 1456, no Centro.",
+    intro: "A parte fácil de investir em imóvel é a compra. A difícil é manter a unidade alugada, com inquilino bom, sem surpresa de custo. Este texto organiza a conta que o investidor precisa fazer antes de assinar, os três formatos de investimento que existem na cidade e o tipo de apartamento que sustenta cada um deles.",
+    secoes: [
+      {
+        titulo: "Por que São Carlos aparece na conta do investidor",
+        paragrafos: [
+          "São Carlos é uma cidade de porte médio com duas universidades públicas, USP e UFSCar, instituições privadas e um polo de tecnologia. Isso cria demanda por moradia que não depende de um único empregador nem de uma única temporada do ano.",
+          "Para o investidor, o efeito prático é a diversidade de inquilino: estudante de pós-graduação, professor, profissional que vem por contrato de trabalho, casal jovem e família. Cidade com público variado sofre menos quando um desses grupos encolhe."
+        ],
+        bullets: [],
+        callout: { tipo: "info", texto: "Demanda diversa vale mais que demanda alta. O que protege o investidor não é a fila de interessados hoje, é a existência de vários tipos de inquilino ao longo dos anos." }
+      },
+      {
+        titulo: "Os três formatos de investimento e o que cada um exige",
+        paragrafos: [
+          "Não existe formato melhor em abstrato. Existe o que combina com o capital disponível, com o tempo que você pretende dedicar e com o risco que aceita correr."
+        ],
+        bullets: [
+          "Locação residencial por contrato longo: renda previsível, menos trabalho e contrato regido pela Lei 8.245/1991. Exige reserva para vacância e manutenção.",
+          "Locação por temporada: diária mais alta e flexibilidade de uso, com custo de enxoval, limpeza, anúncio e gestão. Depende de localização e de avaliação boa nas plataformas.",
+          "Compra na planta para revenda: entrada menor e pagamento diluído na obra, com ganho concentrado na entrega. Exige folga financeira para o saldo final e tolerância ao prazo de obra."
+        ],
+        callout: null
+      },
+      {
+        titulo: "Como calcular a rentabilidade de verdade",
+        paragrafos: [
+          "A conta que aparece nos anúncios costuma ser a rentabilidade bruta: aluguel mensal multiplicado por doze e dividido pelo valor do imóvel. Ela serve para comparar oportunidades, não para decidir.",
+          "A conta que importa é a líquida, feita depois de descontar os custos fixos e os eventuais. Um exemplo ilustrativo: um apartamento de 400 mil reais alugado por 2 mil reais rende 6% ao ano na conta bruta. Depois de condomínio em meses vagos, IPTU, manutenção, taxa de administração e imposto de renda, o número fica abaixo disso. Faça essa conta com os valores reais do imóvel que você está avaliando antes de fechar."
+        ],
+        bullets: [],
+        callout: { tipo: "alerta", texto: "Rentabilidade bruta não paga conta. Só a líquida, com vacância e imposto incluídos, mostra o que sobra por mês no bolso do proprietário." }
+      },
+      {
+        titulo: "Os custos que precisam estar na planilha",
+        paragrafos: [
+          "A tabela abaixo reúne o que costuma entrar na conta de um imóvel para locação, com o momento em que cada item incide. Alguns são únicos, na compra; outros acompanham o investimento pela vida inteira."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "O que reduz vacância no dia a dia",
+        paragrafos: [
+          "Vacância é o custo mais silencioso do investimento: cada mês vago apaga a margem de vários meses alugados. O que encurta o tempo entre inquilinos é a combinação de localização central, planta funcional e apartamento pronto para morar.",
+          "Armários planejados, cozinha equipada, ponto de ar-condicionado e medição individual de água e energia aparecem na primeira visita e pesam na decisão de quem aluga. Prédio novo também reduz manutenção nos primeiros anos, o que protege o resultado."
+        ],
+        bullets: [],
+        figura: {
+          src: "assets/img/blog/trentino-sala.jpg",
+          alt: "Sala de dois ambientes do apartamento do Edifício Trentino, com painel de madeira e cozinha ao fundo",
+          legenda: "Apartamento pronto para morar encurta o tempo entre um inquilino e outro."
+        },
+        callout: null
+      },
+      {
+        titulo: "Que perfil de inquilino cada apartamento atende",
+        paragrafos: [
+          "Studios e unidades de um dormitório atendem estudante e profissional sozinho, com diária ou aluguel menor e troca mais frequente. Apartamentos de dois dormitórios com suíte alcançam casal, família pequena e profissional que divide, que é o público que costuma ficar mais tempo no mesmo endereço.",
+          "O segundo dormitório também amplia a saída: serve como quarto de filho, de visita ou escritório. Na revenda, esse mesmo apartamento disputa com um número maior de compradores."
+        ],
+        bullets: [],
+        figura: {
+          src: "assets/img/blog/trentino-quarto.jpg",
+          alt: "Dormitório social do apartamento do Trentino, com duas camas de solteiro e armário planejado",
+          legenda: "Dormitório social com armário planejado: atende filho, visita ou home office.",
+          retrato: true
+        },
+        callout: null
+      },
+      {
+        titulo: "O caso do Edifício Trentino",
+        paragrafos: [
+          "O Trentino fica na Rua Padre Teixeira, 1456, no Centro de São Carlos. São 24 apartamentos em uma torre, com 64,52 m² de área privativa, dois dormitórios sendo uma suíte, os dois banheiros com box, sala de dois ambientes, cozinha, área de serviço e varanda gourmet.",
+          "Para o investidor, três pontos importam nesse endereço: região central, que amplia o público e sustenta a liquidez; planta de dois dormitórios, que atende do casal à família pequena; e prédio entregue e ocupado, o que permite avaliar o condomínio real antes de comprar, sem depender de estimativa."
+        ],
+        bullets: [],
+        figura: {
+          src: "assets/img/blog/trentino-hall.jpg",
+          alt: "Hall de entrada do Edifício Trentino, com painel de madeira, espelho e poltronas",
+          legenda: "Área comum entregue e em uso: dá para conferir o padrão e o custo de condomínio antes de investir."
+        },
+        callout: { tipo: "destaque", texto: "Edifício Trentino: Rua Padre Teixeira, 1456, Centro. Apartamentos de 64,52 m², dois dormitórios com uma suíte e varanda gourmet, construídos pela Marins Engenharia." }
+      }
+    ],
+    tabela: {
+      titulo: "Custos que entram na conta do investidor",
+      colunas: ["Item", "Quando incide", "Observação"],
+      linhas: [
+        ["ITBI, escritura e registro", "Uma vez, na compra", "Percentuais definidos pelo município e pelo cartório"],
+        ["IPTU", "Anual", "Pode ser repassado ao inquilino, se o contrato previr"],
+        ["Condomínio", "Mensal", "Fica com o proprietário nos meses em que a unidade está vaga"],
+        ["Manutenção entre inquilinos", "Eventual", "Pintura, reparos e limpeza antes de uma nova locação"],
+        ["Taxa de administração", "Mensal", "Percentual do aluguel, quando há imobiliária"],
+        ["Imposto de renda sobre o aluguel", "Mensal", "Recolhido por carnê-leão, pela tabela progressiva"],
+        ["Vacância", "Eventual", "Cada mês vago consome a margem de vários meses alugados"]
+      ],
+      destaque: null
+    },
+    faq: [
+      { p: "Quanto rende um apartamento alugado em São Carlos?",
+        r: "Depende do valor pago pelo imóvel e do aluguel praticado na região. Calcule a rentabilidade bruta dividindo doze aluguéis pelo valor do imóvel e depois desconte condomínio em meses vagos, IPTU, manutenção, administração e imposto de renda para chegar à líquida." },
+      { p: "É melhor alugar por contrato longo ou por temporada?",
+        r: "Contrato longo dá renda previsível e pouco trabalho. Temporada rende mais por diária, mas exige enxoval, limpeza, gestão e boa localização. A escolha depende do tempo que você pode dedicar ao imóvel." },
+      { p: "Comprar na planta vale a pena para investir?",
+        r: "Vale quando existe folga financeira para o saldo na entrega e tolerância ao prazo de obra. A vantagem é a entrada menor e o pagamento diluído; o risco é o atraso, que diminui com construtora de histórico conhecido na cidade." },
+      { p: "O Edifício Trentino serve para quem quer investir?",
+        r: "Sim. Fica no Centro, tem apartamentos de 64,52 m² com dois dormitórios, sendo uma suíte, e está entregue e ocupado, o que permite avaliar condomínio e entorno antes da compra. A disponibilidade é consultada pelo WhatsApp de vendas." }
+    ],
+    cta: {
+      titulo: "Fale sobre investimento com a Marins",
+      texto: "Consulte as unidades disponíveis e os valores de condomínio antes de fazer a sua conta. Retorno em até um dia útil."
+    },
+    fontes: [
+      "Lei 8.245/1991 (Lei do Inquilinato)",
+      "Lei 13.786/2018",
+      "Receita Federal do Brasil (tributação de aluguéis, carnê-leão)",
+      "Prefeitura Municipal de São Carlos (ITBI e IPTU)",
+      "Memorial descritivo do Edifício Trentino",
+      "Base de dados interna da Marins Engenharia"
+    ]
+  },
+
+  {
     id: "melhores-bairros-sao-carlos",
     data: "Outubro / 2026",
     foto: "assets/img/blog/bairros-capa.jpg",
