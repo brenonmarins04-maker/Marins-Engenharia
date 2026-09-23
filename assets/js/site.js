@@ -250,8 +250,10 @@ function montarCarrossel(){
 }
 
 /* ---------- situação do empreendimento ---------- */
-function barra(emp){
-  return `<div class="selos-empreendimento"><span class="entrega">Entregue</span>${emp.id === "trentino" ? '<span class="entrega entrega--lancamento">Lançamento</span><span class="entrega entrega--novidades">Últimas novidades</span>' : ''}</div>`;
+function selosEmpreendimento(emp){
+  return `<div class="selos-empreendimento">${emp.id === "trentino"
+    ? '<span class="entrega entrega--lancamento">Lançamento</span><span class="entrega entrega--novidades">Últimas unidades</span>'
+    : '<span class="entrega">Entregue</span>'}</div>`;
 }
 
 /* ---------- cartões de empreendimento (venda) ---------- */
@@ -261,13 +263,13 @@ function cartaoEmpreendimento(emp){
   return `
   <article class="cartao">
     <a class="cartao__foto" href="${url}" tabindex="-1">
+      ${selosEmpreendimento(emp)}
       ${emp.foto ? `<img src="${esc(emp.foto)}" alt="${esc(legenda)}" loading="lazy">` : `<span class="foto-ausente">Fotos em breve</span>`}
     </a>
     <div class="cartao__corpo">
       <h3><a href="${url}">${esc(emp.nome)}</a></h3>
       <p class="cartao__meta">${esc(emp.metragem)} &nbsp;·&nbsp; ${esc(emp.dorms)}<br>${esc(emp.torres)}</p>
       <a class="link-mapa" href="${maps(emp.endereco)}" target="_blank" rel="noopener">${ICO.pin}${esc(emp.endereco)}</a>
-      ${barra(emp)}
     </div>
   </article>`;
 }
@@ -498,14 +500,14 @@ function montarEmpreendimento(){
     <header class="emp__cab">
       <div>
         <h1>${esc(emp.nome)}</h1>
-        ${emp.id === "trentino" ? barra(emp) : ""}
-        <p class="emp__sub">Entregue &nbsp;·&nbsp; ${esc(emp.torres)}</p>
+        <p class="emp__sub">${emp.id === "trentino" ? "Lançamento" : "Entregue"} &nbsp;·&nbsp; ${esc(emp.torres)}</p>
       </div>
       <a class="btn btn--zap" href="${zap(msg)}" target="_blank" rel="noopener">${ICO.zap} ${esc(TEXTOS.vendas.botaoCartao)}</a>
     </header>
 
     <div class="emp__grade">
       <div class="emp__principal">
+        ${selosEmpreendimento(emp)}
         ${fotos.length ? miniaturaFoto(fotos[0], 0, "emp__foto") : '<p class="foto-ausente">Fotos em breve</p>'}
       </div>
       <div class="emp__galeria" aria-label="Fotos do edifício">
@@ -529,17 +531,14 @@ function montarEmpreendimento(){
               <tr><th scope="row">${esc(I.metragem)}</th><td>${esc(emp.metragem)}</td></tr>
               <tr><th scope="row">${esc(I.dormitorios)}</th><td>${esc(emp.dorms)}</td></tr>
               <tr><th scope="row">${esc(I.estrutura)}</th><td>${esc(emp.torres)}</td></tr>
-              <tr><th scope="row">${esc(I.situacao)}</th><td>Entregue</td></tr>
+              <tr><th scope="row">${esc(I.situacao)}</th><td>${emp.id === "trentino" ? "Lançamento — Últimas unidades" : "Entregue"}</td></tr>
             </tbody>
           </table>
           <h3>${esc(I.itens)}</h3>
           <p class="caixa__texto">${esc(emp.detalhes)}</p>
         </section>
 
-        <section class="caixa">
-          <h2>Situação da obra</h2>
-          ${barra(emp)}
-        </section>
+
 
       </div>
     </div>
@@ -609,6 +608,37 @@ function ligarLupa(escopo, fotos){
   });
 }
 
+/* Navegação móvel dos prédios: gesto nativo, encaixe e botões opcionais. */
+function ligarTrilhos(){
+  document.querySelectorAll("#trilho-vendas, #trilho-outros, #grade-edificios").forEach(trilho => {
+    const cards = [...trilho.children];
+    if(!cards.length) return;
+    const controles = document.createElement("div");
+    controles.className = "trilho-controles";
+    controles.innerHTML = `<button type="button" aria-label="Prédio anterior">←</button><span></span><button type="button" aria-label="Próximo prédio">→</button>`;
+    trilho.after(controles);
+    const [anterior, proximo] = controles.querySelectorAll("button");
+    let atual = 0;
+    const atualizar = () => {
+      const inicio = trilho.getBoundingClientRect().left + parseFloat(getComputedStyle(trilho).paddingLeft);
+      atual = cards.reduce((melhor, card, i) => Math.abs(card.getBoundingClientRect().left - inicio) < Math.abs(cards[melhor].getBoundingClientRect().left - inicio) ? i : melhor, 0);
+      controles.querySelector("span").textContent = `${atual + 1} de ${cards.length} · Deslize para ver mais`;
+      anterior.disabled = atual === 0;
+      proximo.disabled = atual === cards.length - 1;
+    };
+    const mover = passo => {
+      const destino = cards[Math.max(0, Math.min(cards.length - 1, atual + passo))];
+      const deslocamento = destino.getBoundingClientRect().left - trilho.getBoundingClientRect().left - parseFloat(getComputedStyle(trilho).paddingLeft);
+      trilho.scrollBy({left:deslocamento, behavior:window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth"});
+    };
+    anterior.onclick = () => mover(-1);
+    proximo.onclick = () => mover(1);
+    trilho.addEventListener("scroll", atualizar, {passive:true});
+    window.addEventListener("resize", atualizar);
+    atualizar();
+  });
+}
+
 /* ---------- início ---------- */
 document.addEventListener("DOMContentLoaded", () => {
   montarCabecalho();
@@ -620,6 +650,7 @@ document.addEventListener("DOMContentLoaded", () => {
   montarLocacao();
   montarBlog();
   montarEmpreendimento();
+  ligarTrilhos();
   preencherContatos();
   document.querySelectorAll("[data-zap-pronto]").forEach(el => el.href = el.dataset.zapPronto);
   ligarDepoimentos();

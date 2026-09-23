@@ -196,7 +196,7 @@ const TEXTOS = {
     edificios: {
       rotulo: "Portfólio",
       titulo: "Edifícios da Marins",
-      texto: "Cada prédio tem uma página com plantas, localização, ficha do apartamento, andamento da obra e o depoimento de quem mora nele."
+      texto: "Conheça nossos edifícios: fotos, localização e detalhes dos apartamentos em uma página dedicada a cada empreendimento."
     },
     quemSomos: {
       rotulo: "A empresa",
