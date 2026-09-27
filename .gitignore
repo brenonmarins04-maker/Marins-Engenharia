@@ -1,1 +1,7 @@
 .vercel
+
+# gerados por ferramentas/gerar-paginas.js (a Vercel cria no deploy)
+/edificios/
+/blog/
+/sitemap.xml
+/robots.txt
