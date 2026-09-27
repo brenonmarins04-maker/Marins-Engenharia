@@ -62,8 +62,11 @@ function preencherTextos(){
 function montarCabecalho(){
   const alvo = document.getElementById("cabecalho");
   if(!alvo) return;
-  const aqui = location.pathname.split("/").pop() || "index.html";
-  const paginaMenu = aqui === "empreendimento.html" ? "edificios.html" : aqui;
+  const caminho = location.pathname.replace(/\/index\.html$/, "/").replace(/\.html$/, "");
+  // /edificios/turim conta como Edifícios; /blog/algum-texto conta como Blog
+  const paginaMenu = NAV.map(n => n.href)
+    .filter(h => h !== "/" && (caminho === h || caminho.startsWith(h + "/")))
+    .sort((a, b) => b.length - a.length)[0] || (caminho === "/" ? "/" : "");
   const paginaAtual = NAV.find(n => n.href === paginaMenu);
   const itens = NAV.map(n => {
     const atual = n.href === paginaMenu ? ' aria-current="page"' : "";
@@ -72,7 +75,7 @@ function montarCabecalho(){
 
   alvo.innerHTML = `
   <div class="topo__in">
-    <a class="marca" href="index.html">
+    <a class="marca" href="/">
       <img src="assets/img/logo-marins.png" alt="${esc(TEXTOS.cabecalho.inicio)}" width="44" height="43">
     </a>
     <span class="topo__pagina">${esc(paginaAtual ? paginaAtual.texto : "")}</span>
@@ -103,7 +106,7 @@ function montarRodape(){
   <div class="env">
     <div class="rodape__grade">
       <div>
-        <a class="marca" href="index.html">
+        <a class="marca" href="/">
           <img src="assets/img/logo-marins.png" alt="${esc(TEXTOS.cabecalho.inicio)}" width="58" height="56">
         </a>
         <p class="rodape__texto">${esc(R.texto)}</p>
@@ -258,7 +261,7 @@ function selosEmpreendimento(emp){
 
 /* ---------- cartões de empreendimento (venda) ---------- */
 function cartaoEmpreendimento(emp){
-  const url = "empreendimento.html?id=" + encodeURIComponent(emp.id);
+  const url = "/edificios/" + encodeURIComponent(emp.id);
   const legenda = TEXTOS.vendas.fotoCartao + " — " + emp.nome;
   return `
   <article class="cartao">
@@ -457,7 +460,7 @@ function montarBlog(){
   const B = TEXTOS.paginas.blog;
   alvo.innerHTML = (typeof BLOG !== "undefined" && BLOG.length)
     ? BLOG.map(post => {
-        const url = "post.html?id=" + encodeURIComponent(post.id);
+        const url = "/blog/" + encodeURIComponent(post.id);
         return `
       <article class="post">
         <a class="post__foto-link" href="${url}" tabindex="-1">
@@ -481,7 +484,7 @@ function montarPost(){
   const raiz = document.getElementById("pagina-post");
   if(!raiz) return;
   const B = TEXTOS.paginas.blog;
-  const id = new URLSearchParams(location.search).get("id");
+  const id = window.PAGINA_ID || new URLSearchParams(location.search).get("id");
   const post = (typeof BLOG !== "undefined" ? BLOG : []).find(x => x.id === id);
 
   if(!post){
@@ -489,14 +492,14 @@ function montarPost(){
       <div class="env secao">
         <h1>${esc(B.naoEncontrado)}</h1>
         <p class="medida emp__sub">${esc(B.naoEncontradoTexto)}</p>
-        <a class="btn btn--linha" href="blog.html">${esc(B.voltar)}</a>
+        <a class="btn btn--linha" href="/blog">${esc(B.voltar)}</a>
       </div>`;
     return;
   }
 
-  document.title = post.titulo + " — " + EMPRESA.nome;
+  if(!window.PAGINA_ID) document.title = post.titulo + " — " + EMPRESA.nome;
   const meta = document.querySelector('meta[name="description"]');
-  if(meta) meta.content = post.seo.meta;
+  if(meta && !window.PAGINA_ID) meta.content = post.seo.meta;
 
   const callout = c => c
     ? `<div class="callout callout--${esc(c.tipo)}"><p>${esc(c.texto)}</p></div>` : "";
@@ -543,7 +546,7 @@ function montarPost(){
     </section>`;
 
   const outros = BLOG.filter(x => x.id !== post.id).slice(0, 2).map(x => `
-    <a class="post__outro" href="post.html?id=${encodeURIComponent(x.id)}">
+    <a class="post__outro" href="/blog/${encodeURIComponent(x.id)}">
       <span class="post__outro-data">${esc(x.data)}</span>
       <span class="post__outro-titulo">${esc(x.titulo)}</span>
     </a>`).join("");
@@ -561,7 +564,7 @@ function montarPost(){
   </header>
 
   <div class="env secao post__env">
-    <a class="volta" href="blog.html">${ICO.seta} ${esc(B.voltar)}</a>
+    <a class="volta" href="/blog">${ICO.seta} ${esc(B.voltar)}</a>
 
     <div class="post__seo">
       <p><b>${esc(B.seo)}</b> ${esc(B.palavraChave)} <b>${esc(post.seo.kw)}</b></p>
@@ -604,7 +607,7 @@ function montarEmpreendimento(){
   if(!raiz) return;
   const I = TEXTOS.interna;
 
-  const id = new URLSearchParams(location.search).get("id");
+  const id = window.PAGINA_ID || new URLSearchParams(location.search).get("id");
   const emp = EMPREENDIMENTOS.find(e => e.id === id);
 
   const outros = document.getElementById("trilho-outros");
@@ -619,14 +622,14 @@ function montarEmpreendimento(){
     return;
   }
 
-  document.title = emp.nome + " — " + EMPRESA.nome;
+  if(!window.PAGINA_ID) document.title = emp.nome + " — " + EMPRESA.nome;
   const msg = MENSAGENS.edificio(emp.nome);
   document.querySelectorAll(".zap-fixo").forEach(el => el.dataset.zapPronto = zap(msg));
 
   const fotos = fotosEmpreendimento(emp);
   raiz.innerHTML = `
   <div class="env secao">
-    <a class="volta" href="edificios.html">${ICO.seta} ${esc(I.voltar)}</a>
+    <a class="volta" href="/edificios">${ICO.seta} ${esc(I.voltar)}</a>
 
     <header class="emp__cab">
       <div>

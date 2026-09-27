@@ -40,11 +40,11 @@ function maps(endereco){
 }
 
 const NAV = [
-  { texto: "Home",       href: "index.html" },
-  { texto: "Edifícios",  href: "edificios.html" },
-  { texto: "Quem Somos", href: "quem-somos.html" },
-  { texto: "AirBnB",    href: "locacao.html", classe: "nav__loc" },
-  { texto: "Blog",       href: "blog.html" }
+  { texto: "Home",       href: "/" },
+  { texto: "Edifícios",  href: "/edificios" },
+  { texto: "Quem Somos", href: "/quem-somos" },
+  { texto: "AirBnB",     href: "/locacao", classe: "nav__loc" },
+  { texto: "Blog",       href: "/blog" }
 ];
 
 /* ------------------------------------------------------------

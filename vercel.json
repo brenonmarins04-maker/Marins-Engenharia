@@ -1,0 +1,146 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "cleanUrls": true,
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/empresa",
+      "destination": "/quem-somos",
+      "statusCode": 301
+    },
+    {
+      "source": "/marins-empreendimentos",
+      "destination": "/edificios",
+      "statusCode": 301
+    },
+    {
+      "source": "/copy-of-empreendimentos",
+      "destination": "/edificios",
+      "statusCode": 301
+    },
+    {
+      "source": "/turim",
+      "destination": "/edificios/turim",
+      "statusCode": 301
+    },
+    {
+      "source": "/c%C3%B3pia-turim",
+      "destination": "/edificios/turim",
+      "statusCode": 301
+    },
+    {
+      "source": "/cópia-turim",
+      "destination": "/edificios/turim",
+      "statusCode": 301
+    },
+    {
+      "source": "/trieste",
+      "destination": "/edificios/trieste",
+      "statusCode": 301
+    },
+    {
+      "source": "/treviso",
+      "destination": "/edificios/treviso",
+      "statusCode": 301
+    },
+    {
+      "source": "/trento",
+      "destination": "/edificios/trento",
+      "statusCode": 301
+    },
+    {
+      "source": "/trivoli",
+      "destination": "/edificios/trivoli",
+      "statusCode": 301
+    },
+    {
+      "source": "/copy-of-trivoli",
+      "destination": "/edificios/trivoli",
+      "statusCode": 301
+    },
+    {
+      "source": "/ana-terra",
+      "destination": "/edificios/ana-terra",
+      "statusCode": 301
+    },
+    {
+      "source": "/marioverzola",
+      "destination": "/edificios/mario-verzola",
+      "statusCode": 301
+    },
+    {
+      "source": "/ferretto",
+      "destination": "/locacao",
+      "statusCode": 301
+    },
+    {
+      "source": "/copy-of-ap-62",
+      "destination": "/locacao",
+      "statusCode": 301
+    },
+    {
+      "source": "/manutencao",
+      "destination": "/",
+      "statusCode": 301
+    },
+    {
+      "source": "/empreendimento",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "(?<id>[a-z0-9-]+)"
+        }
+      ],
+      "destination": "/edificios/:id",
+      "statusCode": 301
+    },
+    {
+      "source": "/empreendimento.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "(?<id>[a-z0-9-]+)"
+        }
+      ],
+      "destination": "/edificios/:id",
+      "statusCode": 301
+    },
+    {
+      "source": "/post",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "(?<id>[a-z0-9-]+)"
+        }
+      ],
+      "destination": "/blog/:id",
+      "statusCode": 301
+    },
+    {
+      "source": "/post.html",
+      "has": [
+        {
+          "type": "query",
+          "key": "id",
+          "value": "(?<id>[a-z0-9-]+)"
+        }
+      ],
+      "destination": "/blog/:id",
+      "statusCode": 301
+    }
+  ],
+  "headers": [
+    {
+      "source": "/assets/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=604800, must-revalidate"
+        }
+      ]
+    }
+  ]
+}
