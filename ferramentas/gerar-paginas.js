@@ -42,7 +42,7 @@ const versao = () => {
 const V = versao();
 
 /* ---------- molde comum ---------- */
-function pagina({ titulo, descricao, canonical, imagem, jsonLd, corpo, id, scripts }) {
+function pagina({ titulo, descricao, canonical, imagem, jsonLd, corpo, id, scripts, rota }) {
   return `<!doctype html>
 <html lang="pt-BR">
 <head>
@@ -71,7 +71,7 @@ function pagina({ titulo, descricao, canonical, imagem, jsonLd, corpo, id, scrip
 </head>
 <body>
 
-<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<a class="pular" href="${rota}#conteudo">Pular para o conteúdo</a>
 <header class="topo" id="cabecalho"></header>
 
 <main id="conteudo">
@@ -146,6 +146,7 @@ function paginaEmpreendimento(emp) {
     jsonLd,
     corpo,
     id: { valor: emp.id, tipo: "empreendimento" },
+    rota: `/edificios/${emp.id}`,
     scripts: ["dados.js", "galerias.js", "site.js"]
   });
 }
@@ -212,6 +213,7 @@ function paginaPost(post) {
     jsonLd,
     corpo,
     id: { valor: post.id, tipo: "post" },
+    rota: `/blog/${post.id}`,
     scripts: ["blog.js", "dados.js", "galerias.js", "site.js"]
   });
 }

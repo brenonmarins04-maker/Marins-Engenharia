@@ -1,0 +1,4 @@
+# Configuração do Cloudflare Pages
+# Build: node ferramentas/gerar-paginas.js   |   Saída: raiz do projeto
+name = "marins-engenharia"
+pages_build_output_dir = "."

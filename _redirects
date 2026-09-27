@@ -1,0 +1,22 @@
+# Redirecionamentos 301 das URLs antigas da Wix (Cloudflare Pages)
+# Mantém o que o Google já indexou apontando para a página nova.
+/empresa                  /quem-somos              301
+/marins-empreendimentos   /edificios               301
+/copy-of-empreendimentos  /edificios               301
+/turim                    /edificios/turim         301
+/cópia-turim              /edificios/turim         301
+/c%C3%B3pia-turim         /edificios/turim         301
+/trieste                  /edificios/trieste       301
+/treviso                  /edificios/treviso       301
+/trento                   /edificios/trento        301
+/trivoli                  /edificios/trivoli       301
+/copy-of-trivoli          /edificios/trivoli       301
+/ana-terra                /edificios/ana-terra     301
+/marioverzola             /edificios/mario-verzola 301
+/ferretto                 /locacao                 301
+/copy-of-ap-62            /locacao                 301
+/manutencao               /                        301
+
+# formato antigo do próprio site, antes das URLs limpas
+/empreendimento.html      /edificios               301
+/post.html                /blog                    301
