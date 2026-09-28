@@ -280,6 +280,7 @@ function montarCarrossel(){
   // arrastar o dedo: a foto acompanha o dedo e só troca se passar de um quinto da tela
   const palco = raiz.querySelector(".cr__palco");
   let arrastando = false, toqueX = 0, toqueY = 0, desloc = 0, eixo = null, vizinho = null, alvo = 0, largura = 0;
+  let ultimoX = 0, ultimoT = 0, velocidade = 0;
 
   function aplicarDireto(i){
     atual = (i + slides.length) % slides.length;
@@ -305,6 +306,7 @@ function montarCarrossel(){
     const t = e.changedTouches[0];
     toqueX = t.clientX; toqueY = t.clientY;
     desloc = 0; eixo = null; largura = palco.offsetWidth || 1;
+    ultimoX = t.clientX; ultimoT = performance.now(); velocidade = 0;
     arrastando = true;
     pausar();
   }, { passive: true });
@@ -321,6 +323,12 @@ function montarCarrossel(){
       raiz.classList.add("cr--arrasto");
     }
     desloc = mx;
+    const agora = performance.now();
+    if(agora - ultimoT >= 8){                       // amostra a cada ~8 ms para não ler ruído
+      const instantanea = (t.clientX - ultimoX) / (agora - ultimoT);
+      velocidade = velocidade * .6 + instantanea * .4;   // média suavizada, em px por ms
+      ultimoX = t.clientX; ultimoT = agora;
+    }
     const proximo = desloc < 0 ? (atual + 1) % slides.length : (atual - 1 + slides.length) % slides.length;
     if(vizinho && vizinho !== slides[proximo]){ vizinho.style.transform = ""; vizinho.classList.remove("cr__slide--vizinho"); }
     alvo = proximo;
@@ -336,7 +344,12 @@ function montarCarrossel(){
     raiz.classList.remove("cr--arrasto");
     if(eixo !== "x"){ reiniciar(); return; }
 
-    const trocou = Math.abs(desloc) > largura * .2;
+    // o card mais próximo vence: passou da metade, troca; senão, volta.
+    // um lançamento rápido do dedo também troca, mesmo sem chegar à metade.
+    const parado = performance.now() - ultimoT > 140;   // soltou depois de segurar: não é lançamento
+    const lancou = !parado && Math.abs(velocidade) > .7 && Math.abs(desloc) > 40 &&
+      Math.sign(velocidade) === Math.sign(desloc);
+    const trocou = Math.abs(desloc) > largura / 2 || lancou;
     const atualEl = slides[atual];
     atualEl.classList.add("cr__slide--soltando");
     if(vizinho) vizinho.classList.add("cr__slide--soltando");
@@ -352,7 +365,7 @@ function montarCarrossel(){
       limparArrasto();
       if(trocou) aplicarDireto(destino);
       reiniciar();
-    }, 300);
+    }, 380);
   }
   palco.addEventListener("touchend", soltar, { passive: true });
   palco.addEventListener("touchcancel", soltar, { passive: true });

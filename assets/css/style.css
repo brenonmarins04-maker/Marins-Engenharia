@@ -184,7 +184,7 @@ p{margin:0 0 1em}
 /* enquanto o dedo arrasta, a foto acompanha o movimento sem transição */
 .cr--arrasto .cr__slide{transition:none}
 .cr__slide--vizinho{opacity:1;visibility:visible;z-index:2}
-.cr__slide--soltando{transition:transform .3s cubic-bezier(.25,.8,.35,1)}
+.cr__slide--soltando{transition:transform .38s cubic-bezier(.22,.61,.36,1)}
 @media (prefers-reduced-motion:reduce){ .cr__slide{transition:none} }
 .cr__foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 /* véu escuro: é ele que mantém a frase legível sobre qualquer foto */
