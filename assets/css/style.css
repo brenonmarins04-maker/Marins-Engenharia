@@ -181,6 +181,10 @@ p{margin:0 0 1em}
   display:flex;align-items:center;
 }
 .cr__slide--ativo{opacity:1;visibility:visible}
+/* enquanto o dedo arrasta, a foto acompanha o movimento sem transição */
+.cr--arrasto .cr__slide{transition:none}
+.cr__slide--vizinho{opacity:1;visibility:visible;z-index:2}
+.cr__slide--soltando{transition:transform .3s cubic-bezier(.25,.8,.35,1)}
 @media (prefers-reduced-motion:reduce){ .cr__slide{transition:none} }
 .cr__foto{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
 /* véu escuro: é ele que mantém a frase legível sobre qualquer foto */
@@ -424,6 +428,7 @@ p{margin:0 0 1em}
 .campo input:focus,.campo textarea:focus{border-color:var(--azul);outline:none;box-shadow:0 0 0 3px rgba(0,55,138,.14)}
 .campo textarea{resize:vertical;min-height:130px}
 .campo [aria-invalid="true"]{border-color:#A32218}
+.form__nota{margin:0;font-size:.8125rem;color:var(--cinza)}
 .form__aviso{font-size:.875rem;margin:0;min-height:1.2em;font-weight:500}
 .form__aviso[data-tipo="erro"]{color:#A32218}
 .form__aviso[data-tipo="ok"]{color:var(--azul)}
@@ -715,6 +720,20 @@ p{margin:0 0 1em}
 .selos-empreendimento{position:absolute;top:12px;left:12px;right:12px;z-index:3;display:flex;justify-content:space-between;gap:6px;pointer-events:none}
 .selos-empreendimento .entrega{margin:0;padding:6px 9px;font-size:.7rem;line-height:1.35;background:var(--azul);color:white}
 .selos-empreendimento .entrega--lancamento{background:#c62828;color:white}
+.selos-empreendimento .entrega--esgotado{background:rgba(12,22,38,.78);color:#fff}
+.selos-empreendimento .entrega--disponivel{background:var(--amarelo);color:var(--azul-esc)}
+
+/* unidades à venda e aviso de esgotado na página do prédio */
+.caixa--unidades{border-color:var(--amarelo);border-width:2px;margin-bottom:28px}
+.unidades{list-style:none;margin:0 0 14px;padding:0;display:grid;gap:10px}
+.unidades li{display:flex;flex-wrap:wrap;gap:6px 12px;align-items:baseline;border-bottom:1px solid var(--linha);padding-bottom:10px}
+.unidades li:last-child{border-bottom:0;padding-bottom:0}
+.unidades b{color:var(--azul);min-width:92px}
+.unidades span{color:var(--tinta)}
+.aviso-esgotado{
+  background:var(--neve-2);border-left:6px solid var(--azul);border-radius:0 var(--r) var(--r) 0;
+  padding:14px 18px;margin:0 0 28px;color:var(--tinta);font-weight:500;
+}
 .selos-empreendimento .entrega--novidades{background:var(--amarelo);color:var(--azul-esc);margin-left:auto}
 .trilho-controles{display:none}
 @media(max-width:680px){

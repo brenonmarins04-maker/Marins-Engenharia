@@ -100,11 +100,10 @@ function paginaEmpreendimento(emp) {
   const corpo = `  <div id="pagina-empreendimento">
     <div class="env secao">
       <h1>${esc(emp.nome)}</h1>
-      <p>${esc(emp.statusTexto)} · ${esc(emp.torres)}</p>
+      <p>${esc(emp.torres)}</p>
       <p>${esc(emp.metragem)} · ${esc(emp.dorms)}</p>
       <p>${esc(emp.detalhes)}</p>
       <p>${esc(emp.endereco)}, ${esc(EMPRESA.cidade)}</p>
-      <ul>${(emp.pontos || []).map(x => `<li>${esc(x)}</li>`).join("")}</ul>
     </div>
   </div>
 

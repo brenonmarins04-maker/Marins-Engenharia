@@ -277,24 +277,85 @@ function montarCarrossel(){
   raiz.addEventListener("focusin", pausar);
   raiz.addEventListener("focusout", reiniciar);
 
-  // arrastar o dedo troca de foto (celular e tablet)
-  let toqueX = 0, toqueY = 0, arrastando = false;
+  // arrastar o dedo: a foto acompanha o dedo e só troca se passar de um quinto da tela
   const palco = raiz.querySelector(".cr__palco");
+  let arrastando = false, toqueX = 0, toqueY = 0, desloc = 0, eixo = null, vizinho = null, alvo = 0, largura = 0;
+
+  function aplicarDireto(i){
+    atual = (i + slides.length) % slides.length;
+    slides.forEach((s, n) => {
+      const ativo = n === atual;
+      s.classList.toggle("cr__slide--ativo", ativo);
+      if(ativo) s.removeAttribute("aria-hidden"); else s.setAttribute("aria-hidden", "true");
+      s.querySelectorAll("a").forEach(a => a.tabIndex = ativo ? 0 : -1);
+    });
+    pontos.forEach((p, n) => p.setAttribute("aria-current", String(n === atual)));
+  }
+  function limparArrasto(){
+    slides.forEach(s => {
+      s.style.transform = "";
+      s.classList.remove("cr__slide--vizinho", "cr__slide--soltando");
+    });
+    raiz.classList.remove("cr--arrasto");
+    vizinho = null;
+  }
+
   palco.addEventListener("touchstart", e => {
+    if(animando || slides.length < 2) return;
     const t = e.changedTouches[0];
-    toqueX = t.clientX; toqueY = t.clientY; arrastando = true;
+    toqueX = t.clientX; toqueY = t.clientY;
+    desloc = 0; eixo = null; largura = palco.offsetWidth || 1;
+    arrastando = true;
     pausar();
   }, { passive: true });
-  palco.addEventListener("touchend", e => {
+
+  palco.addEventListener("touchmove", e => {
+    if(!arrastando) return;
+    const t = e.changedTouches[0];
+    const mx = t.clientX - toqueX, my = t.clientY - toqueY;
+    if(!eixo){
+      if(Math.abs(mx) < 8 && Math.abs(my) < 8) return;
+      // movimento vertical é rolagem da página, não troca de foto
+      eixo = Math.abs(mx) > Math.abs(my) ? "x" : "y";
+      if(eixo === "y"){ arrastando = false; reiniciar(); return; }
+      raiz.classList.add("cr--arrasto");
+    }
+    desloc = mx;
+    const proximo = desloc < 0 ? (atual + 1) % slides.length : (atual - 1 + slides.length) % slides.length;
+    if(vizinho && vizinho !== slides[proximo]){ vizinho.style.transform = ""; vizinho.classList.remove("cr__slide--vizinho"); }
+    alvo = proximo;
+    vizinho = slides[proximo];
+    vizinho.classList.add("cr__slide--vizinho");
+    slides[atual].style.transform = `translateX(${desloc}px)`;
+    vizinho.style.transform = `translateX(${desloc + (desloc < 0 ? largura : -largura)}px)`;
+  }, { passive: true });
+
+  function soltar(){
     if(!arrastando) return;
     arrastando = false;
-    const t = e.changedTouches[0];
-    const dx = t.clientX - toqueX, dy = t.clientY - toqueY;
-    // só conta como arrasto lateral; movimento vertical é rolagem da página
-    if(Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) andar(dx < 0 ? 1 : -1);
-    else reiniciar();
-  }, { passive: true });
-  palco.addEventListener("touchcancel", () => { arrastando = false; reiniciar(); }, { passive: true });
+    raiz.classList.remove("cr--arrasto");
+    if(eixo !== "x"){ reiniciar(); return; }
+
+    const trocou = Math.abs(desloc) > largura * .2;
+    const atualEl = slides[atual];
+    atualEl.classList.add("cr__slide--soltando");
+    if(vizinho) vizinho.classList.add("cr__slide--soltando");
+    if(trocou){
+      atualEl.style.transform = `translateX(${desloc < 0 ? -largura : largura}px)`;
+      if(vizinho) vizinho.style.transform = "translateX(0)";
+    }else{
+      atualEl.style.transform = "translateX(0)";
+      if(vizinho) vizinho.style.transform = `translateX(${desloc < 0 ? largura : -largura}px)`;
+    }
+    const destino = alvo;
+    setTimeout(() => {
+      limparArrasto();
+      if(trocou) aplicarDireto(destino);
+      reiniciar();
+    }, 300);
+  }
+  palco.addEventListener("touchend", soltar, { passive: true });
+  palco.addEventListener("touchcancel", soltar, { passive: true });
 
   mostrar(0);
   reiniciar();
@@ -302,9 +363,12 @@ function montarCarrossel(){
 
 /* ---------- situação do empreendimento ---------- */
 function selosEmpreendimento(emp){
-  return `<div class="selos-empreendimento">${emp.id === "trentino"
-    ? '<span class="entrega entrega--lancamento">Lançamento</span><span class="entrega entrega--novidades">Últimas unidades</span>'
-    : '<span class="entrega">Entregue</span>'}</div>`;
+  const V = TEXTOS.vendas;
+  const total = (emp.disponiveis || []).reduce((s, a) => s + a.aptos.length, 0);
+  const selo = total
+    ? `<span class="entrega entrega--disponivel">${total} ${esc(V.disponivel.toLowerCase())}</span>`
+    : `<span class="entrega entrega--esgotado">${esc(V.esgotado)}</span>`;
+  return `<div class="selos-empreendimento">${selo}</div>`;
 }
 
 /* ---------- cartões de empreendimento (venda) ---------- */
@@ -356,53 +420,15 @@ function cartaoLocacao(un){
   </article>`;
 }
 
-/* ---------- linha do tempo ---------- */
-function marcoHistoria(m){
-  return `
-  <article class="marco">
-    <div class="marco__ano">${esc(m.ano)}</div>
-    <div class="marco__conteudo">
-      ${ph(m.foto, m.sepia ? "ph--sepia" : "")}
-      <div>
-        <h3>${esc(m.titulo)}</h3>
-        <p>${esc(m.texto)}</p>
-      </div>
-    </div>
-  </article>`;
-}
-
-/* ---------- depoimentos com abas (padrão WAI-ARIA tabs) ---------- */
+/* ---------- depoimentos (avaliações reais de hóspedes) ---------- */
 function ligarDepoimentos(){
-  const abas = [...document.querySelectorAll(".aba")];
   const painel = document.getElementById("painel-depoimentos");
-  if(!abas.length || !painel) return;
-
-  function selecionar(aba, focar){
-    abas.forEach(a => {
-      const ativa = a === aba;
-      a.setAttribute("aria-selected", String(ativa));
-      a.tabIndex = ativa ? 0 : -1;
-    });
-    painel.setAttribute("aria-labelledby", aba.id);
-    painel.innerHTML = (DEPOIMENTOS[aba.dataset.chave] || []).map(d => `
-      <figure class="depo">
-        <blockquote>“${esc(d.texto)}”</blockquote>
-        <figcaption><b>${esc(d.autor)}</b>${esc(d.ref)}</figcaption>
-      </figure>`).join("");
-    if(focar) aba.focus();
-  }
-
-  abas.forEach((aba, i) => {
-    aba.addEventListener("click", () => selecionar(aba));
-    aba.addEventListener("keydown", e => {
-      const n = abas.length;
-      const alvo = { ArrowRight: (i + 1) % n, ArrowLeft: (i - 1 + n) % n, Home: 0, End: n - 1 }[e.key];
-      if(alvo === undefined) return;
-      e.preventDefault();
-      selecionar(abas[alvo], true);
-    });
-  });
-  selecionar(abas.find(a => a.getAttribute("aria-selected") === "true") || abas[0]);
+  if(!painel || typeof DEPOIMENTOS === "undefined") return;
+  painel.innerHTML = DEPOIMENTOS.map(d => `
+    <figure class="depo">
+      <blockquote>“${esc(d.texto)}”</blockquote>
+      <figcaption><b>${esc(d.autor)}</b>${esc(d.ref)}</figcaption>
+    </figure>`).join("");
 }
 
 /* ---------- formulário de contato ---------- */
@@ -484,7 +510,6 @@ function montarQuemSomos(){
   encher("anos-foto", `<img class="anos__foto" src="assets/img/predios/escritorio-marins.png" alt="Fachada do escritório da Marins Engenharia" loading="lazy">`);
   encher("anos-paragrafos", A.paragrafos.map(p => `<p>${esc(p)}</p>`).join(""));
   encher("anos-destaques", A.destaques.map(d => `<li><b>${esc(d.titulo)}</b><span>${esc(d.texto)}</span></li>`).join(""));
-  encher("linha-tempo", HISTORIA.map(marcoHistoria).join(""));
   encher("principios", ["Missão", "Valores", "Visão"].map(titulo => TEXTOS.historia.principios.find(p => p.titulo === titulo)).map(p => `
     <div><h3>${esc(p.titulo)}</h3><p>${esc(p.texto)}</p></div>`).join(""));
 }
@@ -688,14 +713,22 @@ function montarEmpreendimento(){
       ${fotos.length ? miniaturaFoto(fotos[0], 0, "emp__foto") : '<p class="foto-ausente">Fotos em breve</p>'}
     </div>
 
+    ${emp.disponiveis ? `
+      <section class="caixa caixa--unidades">
+        <h2>${esc(TEXTOS.vendas.unidades)}</h2>
+        <ul class="unidades">
+          ${emp.disponiveis.map(a => `
+            <li><b>${esc(a.andar)}</b><span>${a.aptos.map(n => `apto ${esc(n)}`).join(" · ")}</span></li>`).join("")}
+        </ul>
+        <p class="caixa__texto">${esc(TEXTOS.vendas.unidadesTexto)}</p>
+        <a class="btn btn--zap" href="${zap(MENSAGENS.edificio(emp.nome))}" target="_blank" rel="noopener">${ICO.zap} ${esc(TEXTOS.cabecalho.vendas)}</a>
+      </section>` : `
+      <p class="aviso-esgotado">${esc(TEXTOS.vendas.semUnidades)}</p>`}
+
     <div class="emp__info">
       <section class="caixa">
         <h2>${esc(I.localizacao)}</h2>
         <a class="link-mapa" href="${maps(emp.endereco)}" target="_blank" rel="noopener">${ICO.pin}${esc(emp.endereco)}</a>
-        <h3>${esc(I.perto)}</h3>
-        <ul class="perto">
-          ${emp.pontos.map(p => `<li>${ICO.check}${esc(p)}</li>`).join("")}
-        </ul>
       </section>
 
       <section class="caixa">
@@ -705,7 +738,7 @@ function montarEmpreendimento(){
             <tr><th scope="row">${esc(I.metragem)}</th><td>${esc(emp.metragem)}</td></tr>
             <tr><th scope="row">${esc(I.dormitorios)}</th><td>${esc(emp.dorms)}</td></tr>
             <tr><th scope="row">${esc(I.estrutura)}</th><td>${esc(emp.torres)}</td></tr>
-            <tr><th scope="row">${esc(I.situacao)}</th><td>${emp.id === "trentino" ? "Lançamento — Últimas unidades" : "Entregue"}</td></tr>
+            <tr><th scope="row">${esc(I.situacao)}</th><td>${emp.disponiveis ? esc(TEXTOS.vendas.disponivel) : esc(TEXTOS.vendas.esgotado)}</td></tr>
           </tbody>
         </table>
         <h3>${esc(I.itens)}</h3>

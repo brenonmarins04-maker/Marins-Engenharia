@@ -95,7 +95,7 @@ const BLOG = [
         titulo: "O caso do Edifício Trentino",
         paragrafos: [
           "O Trentino fica na Rua Padre Teixeira, 1456, no Centro de São Carlos. São 24 apartamentos em uma torre, com 64,52 m² de área privativa, dois dormitórios sendo uma suíte, os dois banheiros com box, sala de dois ambientes, cozinha, área de serviço e varanda gourmet.",
-          "Para o investidor, três pontos importam nesse endereço: região central, que amplia o público e sustenta a liquidez; planta de dois dormitórios, que atende do casal à família pequena; e prédio entregue e ocupado, o que permite avaliar o condomínio real antes de comprar, sem depender de estimativa."
+          "Para o investidor, três pontos importam nesse endereço: região central, que amplia o público e sustenta a liquidez; planta de dois dormitórios, que atende do casal à família pequena; e prédio pronto para visitar, o que permite avaliar o padrão de acabamento e o condomínio antes de comprar."
         ],
         bullets: [],
         figura: {
@@ -128,7 +128,7 @@ const BLOG = [
       { p: "Comprar na planta vale a pena para investir?",
         r: "Vale quando existe folga financeira para o saldo na entrega e tolerância ao prazo de obra. A vantagem é a entrada menor e o pagamento diluído; o risco é o atraso, que diminui com construtora de histórico conhecido na cidade." },
       { p: "O Edifício Trentino serve para quem quer investir?",
-        r: "Sim. Fica no Centro, tem apartamentos de 64,52 m² com dois dormitórios, sendo uma suíte, e está entregue e ocupado, o que permite avaliar condomínio e entorno antes da compra. A disponibilidade é consultada pelo WhatsApp de vendas." }
+        r: "Sim. Fica no Centro, tem apartamentos de 64,52 m² com dois dormitórios, sendo uma suíte, e está pronto para visitar, o que permite avaliar acabamento e entorno antes da compra. A disponibilidade é consultada pelo WhatsApp de vendas." }
     ],
     cta: {
       titulo: "Fale sobre investimento com a Marins",
@@ -203,7 +203,7 @@ const BLOG = [
         titulo: "Onde o Edifício Trentino se encaixa nesse mapa",
         paragrafos: [
           "O Trentino fica na Rua Padre Teixeira, 1456, no Centro. É uma rua residencial dentro da região central, o que resolve o principal ponto de atenção do Centro: o morador fica perto dos serviços sem ficar dentro do movimento comercial.",
-          "São 24 apartamentos em uma torre, com 64,52 m² de área privativa, dois dormitórios sendo uma suíte, os dois banheiros com box, sala de dois ambientes, cozinha, área de serviço e varanda gourmet. O prédio está entregue e ocupado, o que permite visitar o entorno em horários diferentes antes de decidir."
+          "São 24 apartamentos em uma torre, com 64,52 m² de área privativa, dois dormitórios sendo uma suíte, os dois banheiros com box, sala de dois ambientes, cozinha, área de serviço e varanda gourmet. O prédio está pronto, o que permite visitar o apartamento e o entorno em horários diferentes antes de decidir."
         ],
         bullets: [],
         figura: {
@@ -379,7 +379,7 @@ const BLOG = [
       { p: "Morar no centro significa conviver com barulho?",
         r: "Depende da rua, não da região. Quadras residenciais próximas ao centro costumam ser silenciosas à noite. A forma de confirmar é visitar o endereço depois das 22h, antes de fechar negócio." },
       { p: "Como visitar o Edifício Trentino?",
-        r: "A visita é agendada com o time de vendas da Marins Engenharia pelo WhatsApp. O prédio está entregue e ocupado, o que permite conhecer a área comum e o entorno em horários diferentes." }
+        r: "A visita é agendada com o time de vendas da Marins Engenharia pelo WhatsApp. O prédio está pronto, o que permite conhecer o apartamento, a área comum e o entorno." }
     ],
     cta: {
       titulo: "Agende uma visita ao Trentino",
@@ -442,7 +442,7 @@ const BLOG = [
           "Na leitura do contrato, procure três informações: a data prevista de conclusão, o tamanho da tolerância e o valor da multa por atraso. Contrato que traz apenas semestre ou ano de entrega, sem dia e mês, deixa o comprador sem parâmetro para cobrar."
         ],
         bullets: [],
-        callout: { tipo: "destaque", texto: "Nas obras entregues pela Marins em São Carlos, nenhuma passou da data contratada. Fonte: base de dados interna da Marins Engenharia." }
+        callout: { tipo: "info", texto: "Peça a lista de empreendimentos já entregues e compare a data prevista em contrato com a data do habite-se. É a forma mais simples de conferir o histórico de qualquer construtora." }
       },
       {
         titulo: "O que continua garantido depois da chave",
@@ -481,7 +481,7 @@ const BLOG = [
       { p: "Como saber se a construtora entrega no prazo?",
         r: "Peça a lista de empreendimentos concluídos, compare a data prevista em contrato com a data do habite-se e visite os prédios entregues. Em São Carlos, os edifícios da Marins podem ser visitados na Rua Padre Teixeira, na Rua São Joaquim e na Rua José Bonifácio." },
       { p: "Posso acompanhar a obra antes da entrega?",
-        r: "Sim. A visita é combinada com a empresa por questão de segurança. A Marins também publica o andamento de cada obra na página do empreendimento, com o percentual executado e a data da última atualização." },
+        r: "Sim. A visita é combinada com a empresa por questão de segurança, e o time de vendas informa em que etapa a obra está." },
       { p: "A Marins Engenharia atende fora de São Carlos?",
         r: "A atuação é concentrada em São Carlos, onde a empresa incorpora e constrói há 25 anos. Consultas de outras cidades podem ser feitas pelo WhatsApp de vendas." }
     ],
@@ -515,7 +515,7 @@ const BLOG = [
       leitura: "4 min de leitura",
       atualizado: "Atualizado em Agosto de 2026"
     },
-    resumoRapido: "Comprar apartamento na planta em São Carlos significa pagar durante a obra e receber a chave no fim dela. O que protege o comprador é o memorial de incorporação registrado, o memorial descritivo detalhando acabamentos, o cronograma com data de entrega e o acompanhamento do andamento da obra. A Marins Engenharia publica o percentual executado de cada empreendimento e entrega o manual do proprietário junto com as chaves.",
+    resumoRapido: "Comprar apartamento na planta em São Carlos significa pagar durante a obra e receber a chave no fim dela. O que protege o comprador é o memorial de incorporação registrado, o memorial descritivo detalhando acabamentos, o cronograma com data de entrega e o acompanhamento do andamento da obra. Peça à construtora o cronograma da obra por escrito e o manual do proprietário na entrega das chaves.",
     intro: "Na planta, o comprador escolhe um apartamento que ainda não existe. O preço costuma ser menor que o do pronto e o pagamento se distribui ao longo da obra, mas a decisão depende de documentos, não de perspectiva artística. Abaixo estão as etapas, os papéis envolvidos e o que reduz risco em cada fase.",
     secoes: [
       {
@@ -558,7 +558,7 @@ const BLOG = [
           "O terceiro é financeiro: parcelas corrigidas por índice durante a obra e saldo final a financiar. Simule o saldo devedor na entrega antes de assinar, não durante a obra."
         ],
         bullets: [],
-        callout: { tipo: "positivo", texto: "Acompanhamento publicado reduz o primeiro risco. Cada empreendimento da Marins tem página própria com o percentual de obra executado e a data da última atualização." }
+        callout: { tipo: "positivo", texto: "Combine no contrato como o andamento será informado: relatório por escrito, visita agendada ou canal direto com o time de vendas." }
       }
     ],
     tabela: {
@@ -581,7 +581,7 @@ const BLOG = [
       { p: "O apartamento decorado é igual ao que será entregue?",
         r: "Não necessariamente. O que vale é o memorial descritivo. Móveis, objetos e, em alguns casos, revestimentos do decorado não fazem parte do contrato." },
       { p: "Como acompanho a obra do apartamento que comprei?",
-        r: "Pela página do empreendimento no site da Marins, que mostra o percentual executado e a data da última atualização, e pelo contato direto com o time de vendas." }
+        r: "Pelo contato direto com o time de vendas da Marins, que informa a etapa da obra e agenda visitas ao canteiro quando é seguro." }
     ],
     cta: {
       titulo: "Consulte as unidades disponíveis",
