@@ -198,13 +198,36 @@ function montarCarrossel(){
     <button class="cr__seta cr__seta--esq" type="button" aria-label="${esc(C.anterior)}">${ICO.seta}</button>
     <button class="cr__seta cr__seta--dir" type="button" aria-label="${esc(C.proxima)}">${ICO.seta}</button>
     <div class="cr__pontos">
-      ${HERO.map((s, i) => `<button class="cr__ponto" type="button" aria-label="${esc(C.irPara)} ${i + 1}" data-i="${i}"></button>`).join("")}
+      ${HERO.map((s, i) => `<button class="cr__ponto" type="button" aria-label="${esc(C.irPara)} ${i + 1}" data-i="${i}"><span class="cr__ponto-carga"></span></button>`).join("")}
     </div>`;
 
   const slides = [...raiz.querySelectorAll(".cr__slide")];
   const pontos = [...raiz.querySelectorAll(".cr__ponto")];
+  const cargas = [...raiz.querySelectorAll(".cr__ponto-carga")];
+  const TEMPO = 6000;                 // 6 segundos por foto
   let atual = 0, relogio = null, animando = false, iniciou = false;
   const reduz = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  // a barrinha do ponto ativo enche durante os 6 segundos
+  function recarregar(){
+    cargas.forEach((carga, n) => {
+      carga.style.transition = "none";
+      carga.style.width = n === atual && reduz ? "100%" : "0%";
+    });
+    if(reduz) return;
+    const carga = cargas[atual];
+    if(!carga) return;
+    void carga.offsetWidth;                       // força o navegador a aplicar o zero antes de animar
+    carga.style.transition = `width ${TEMPO}ms linear`;
+    carga.style.width = "100%";
+  }
+  function congelarCarga(){
+    const carga = cargas[atual];
+    if(!carga) return;
+    const largura = getComputedStyle(carga).width;
+    carga.style.transition = "none";
+    carga.style.width = largura;
+  }
 
   function mostrar(i){
     const proximo = (i + slides.length) % slides.length;
@@ -229,11 +252,17 @@ function montarCarrossel(){
       s.querySelectorAll("a").forEach(a => a.tabIndex = ativo ? 0 : -1);
     });
     pontos.forEach((p, n) => p.setAttribute("aria-current", String(n === atual)));
+    recarregar();
   }
   function reiniciar(){
     if(reduz) return;               // quem pediu menos movimento troca no botão
     clearInterval(relogio);
-    relogio = setInterval(() => mostrar(atual + 1), 6000);   // sempre para frente: 1,2,3,4,1,2...
+    recarregar();
+    relogio = setInterval(() => mostrar(atual + 1), TEMPO);   // sempre para frente: 1,2,3,4,1,2...
+  }
+  function pausar(){
+    clearInterval(relogio);
+    congelarCarga();
   }
   const andar = n => { mostrar(atual + n); reiniciar(); };
 
@@ -245,8 +274,27 @@ function montarCarrossel(){
     if(e.key === "ArrowLeft") andar(-1);
   });
   // para de girar enquanto a pessoa lê ou usa o teclado
-  raiz.addEventListener("focusin", () => clearInterval(relogio));
+  raiz.addEventListener("focusin", pausar);
   raiz.addEventListener("focusout", reiniciar);
+
+  // arrastar o dedo troca de foto (celular e tablet)
+  let toqueX = 0, toqueY = 0, arrastando = false;
+  const palco = raiz.querySelector(".cr__palco");
+  palco.addEventListener("touchstart", e => {
+    const t = e.changedTouches[0];
+    toqueX = t.clientX; toqueY = t.clientY; arrastando = true;
+    pausar();
+  }, { passive: true });
+  palco.addEventListener("touchend", e => {
+    if(!arrastando) return;
+    arrastando = false;
+    const t = e.changedTouches[0];
+    const dx = t.clientX - toqueX, dy = t.clientY - toqueY;
+    // só conta como arrasto lateral; movimento vertical é rolagem da página
+    if(Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) andar(dx < 0 ? 1 : -1);
+    else reiniciar();
+  }, { passive: true });
+  palco.addEventListener("touchcancel", () => { arrastando = false; reiniciar(); }, { passive: true });
 
   mostrar(0);
   reiniciar();
@@ -632,50 +680,46 @@ function montarEmpreendimento(){
     <a class="volta" href="/edificios">${ICO.seta} ${esc(I.voltar)}</a>
 
     <header class="emp__cab">
-      <div>
-        <h1>${esc(emp.nome)}</h1>
-        <p class="emp__sub">${emp.id === "trentino" ? "Lançamento" : "Entregue"} &nbsp;·&nbsp; ${esc(emp.torres)}</p>
-      </div>
-      <a class="btn btn--zap" href="${zap(msg)}" target="_blank" rel="noopener">${ICO.zap} ${esc(TEXTOS.vendas.botaoCartao)}</a>
+      <h1>${esc(emp.nome)}</h1>
     </header>
 
-    <div class="emp__grade">
-      <div class="emp__principal">
-        ${selosEmpreendimento(emp)}
-        ${fotos.length ? miniaturaFoto(fotos[0], 0, "emp__foto") : '<p class="foto-ausente">Fotos em breve</p>'}
-      </div>
-      <div class="emp__galeria" aria-label="Fotos do edifício">
-        ${fotos.map((foto, i) => miniaturaFoto(foto, i)).join("")}
-      </div>
-
-      <div class="emp__lado">
-        <section class="caixa">
-          <h2>${esc(I.localizacao)}</h2>
-          <a class="link-mapa" href="${maps(emp.endereco)}" target="_blank" rel="noopener">${ICO.pin}${esc(emp.endereco)}</a>
-          <h3>${esc(I.perto)}</h3>
-          <ul class="perto">
-            ${emp.pontos.map(p => `<li>${ICO.check}${esc(p)}</li>`).join("")}
-          </ul>
-        </section>
-
-        <section class="caixa">
-          <h2>${esc(I.apartamento)}</h2>
-          <table class="tabela">
-            <tbody>
-              <tr><th scope="row">${esc(I.metragem)}</th><td>${esc(emp.metragem)}</td></tr>
-              <tr><th scope="row">${esc(I.dormitorios)}</th><td>${esc(emp.dorms)}</td></tr>
-              <tr><th scope="row">${esc(I.estrutura)}</th><td>${esc(emp.torres)}</td></tr>
-              <tr><th scope="row">${esc(I.situacao)}</th><td>${emp.id === "trentino" ? "Lançamento — Últimas unidades" : "Entregue"}</td></tr>
-            </tbody>
-          </table>
-          <h3>${esc(I.itens)}</h3>
-          <p class="caixa__texto">${esc(emp.detalhes)}</p>
-        </section>
-
-
-
-      </div>
+    <!-- 1) a fachada  2) as informações  3) todas as fotos -->
+    <div class="emp__capa">
+      ${fotos.length ? miniaturaFoto(fotos[0], 0, "emp__foto") : '<p class="foto-ausente">Fotos em breve</p>'}
     </div>
+
+    <div class="emp__info">
+      <section class="caixa">
+        <h2>${esc(I.localizacao)}</h2>
+        <a class="link-mapa" href="${maps(emp.endereco)}" target="_blank" rel="noopener">${ICO.pin}${esc(emp.endereco)}</a>
+        <h3>${esc(I.perto)}</h3>
+        <ul class="perto">
+          ${emp.pontos.map(p => `<li>${ICO.check}${esc(p)}</li>`).join("")}
+        </ul>
+      </section>
+
+      <section class="caixa">
+        <h2>${esc(I.apartamento)}</h2>
+        <table class="tabela">
+          <tbody>
+            <tr><th scope="row">${esc(I.metragem)}</th><td>${esc(emp.metragem)}</td></tr>
+            <tr><th scope="row">${esc(I.dormitorios)}</th><td>${esc(emp.dorms)}</td></tr>
+            <tr><th scope="row">${esc(I.estrutura)}</th><td>${esc(emp.torres)}</td></tr>
+            <tr><th scope="row">${esc(I.situacao)}</th><td>${emp.id === "trentino" ? "Lançamento — Últimas unidades" : "Entregue"}</td></tr>
+          </tbody>
+        </table>
+        <h3>${esc(I.itens)}</h3>
+        <p class="caixa__texto">${esc(emp.detalhes)}</p>
+      </section>
+    </div>
+
+    ${fotos.length > 1 ? `
+      <section class="emp__fotos">
+        <h2 class="h2--menor">Fotos do ${esc(emp.nome)}</h2>
+        <div class="emp__galeria" aria-label="Fotos do edifício">
+          ${fotos.map((foto, i) => miniaturaFoto(foto, i)).join("")}
+        </div>
+      </section>` : ""}
   </div>`;
 
   ligarLupa(raiz, fotos);

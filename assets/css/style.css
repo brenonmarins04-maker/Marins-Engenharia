@@ -225,8 +225,13 @@ p{margin:0 0 1em}
 .cr__ponto{
   width:34px;height:4px;border:0;border-radius:99px;cursor:pointer;padding:0;
   background:rgba(255,255,255,.5);
+  position:relative;overflow:hidden;   /* segura a barrinha de progresso */
 }
-.cr__ponto[aria-current="true"]{background:var(--amarelo)}
+/* enche em 6 segundos, acompanhando a troca de foto */
+.cr__ponto-carga{
+  position:absolute;left:0;top:0;bottom:0;width:0;
+  background:var(--amarelo);border-radius:99px;pointer-events:none;
+}
 
 /* ============================================================
    GRADES DE CARTÕES E POSTS
@@ -593,6 +598,19 @@ p{margin:0 0 1em}
 .secao--fina .cab{margin-bottom:26px}
 
 .emp__grade{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,.7fr) minmax(0,1fr);gap:20px;align-items:start}
+
+/* ordem da página do prédio: 1) fachada  2) informações  3) fotos */
+.emp__capa{margin-bottom:28px}
+.emp__capa .miniatura{width:100%;cursor:zoom-in}
+.emp__capa .emp__foto{aspect-ratio:16/10;max-height:560px}
+.emp__capa .miniatura > span{display:none}
+.emp__info{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;align-items:start;margin-bottom:34px}
+.emp__fotos{margin-top:8px}
+.emp__fotos h2{margin-bottom:16px}
+.emp__fotos .emp__galeria{
+  max-height:none;overflow:visible;padding:0;
+  grid-template-columns:repeat(auto-fill,minmax(230px,1fr));
+}
 .emp__principal .ph,
 .emp__foto{aspect-ratio:4/3;width:100%;object-fit:cover;border-radius:var(--r-g);border:1px solid var(--linha)}
 .emp__galeria{display:grid;gap:12px;max-height:600px;overflow-y:auto;padding-right:6px;scrollbar-width:thin}
@@ -621,7 +639,12 @@ p{margin:0 0 1em}
   .emp__lado{grid-column:1 / -1}
   .emp__galeria{max-height:none;grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
 }
-@media (max-width:680px){ .emp__grade{grid-template-columns:1fr} }
+@media (max-width:680px){
+  .emp__grade{grid-template-columns:1fr}
+  .emp__capa .emp__foto{aspect-ratio:4/3}
+  .emp__fotos .emp__galeria{grid-template-columns:repeat(2,1fr);gap:10px}
+  .emp__fotos .miniatura > span{font-size:.75rem}
+}
 
 .lupa{position:fixed;inset:0;z-index:200;background:rgba(0,20,50,.94);display:grid;place-items:center;padding:24px}
 .lupa__cx{max-width:980px;width:100%}
@@ -688,6 +711,7 @@ p{margin:0 0 1em}
 
 /* Selos sobre as fotos, sem ocupar espaço no corpo do cartão. */
 .emp__principal{position:relative}
+.emp__capa .selos-empreendimento{display:none}
 .selos-empreendimento{position:absolute;top:12px;left:12px;right:12px;z-index:3;display:flex;justify-content:space-between;gap:6px;pointer-events:none}
 .selos-empreendimento .entrega{margin:0;padding:6px 9px;font-size:.7rem;line-height:1.35;background:var(--azul);color:white}
 .selos-empreendimento .entrega--lancamento{background:#c62828;color:white}
