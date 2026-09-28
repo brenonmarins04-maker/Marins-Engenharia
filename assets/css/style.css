@@ -579,14 +579,14 @@ p{margin:0 0 1em}
    ============================================================ */
 .zap-fixo{
   position:fixed;right:20px;bottom:20px;z-index:150;
-  width:62px;height:62px;border-radius:50%;
+  width:70px;height:70px;border-radius:50%;
   display:grid;place-items:center;
   background:var(--verde);color:#fff;text-decoration:none;
-  border:2px solid #fff;   /* contorno em vez de sombra: separa do fundo azul do rodapé */
+  border:0;
 }
 .zap-fixo span{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}  /* só para leitor de tela */
 .zap-fixo:hover{background:var(--verde-esc)}
-.zap-fixo svg{width:32px;height:32px}
+.zap-fixo svg{width:36px;height:36px}
 
 
 /* ============================================================
@@ -748,7 +748,7 @@ p{margin:0 0 1em}
 
 /* Fachada vertical do segundo destaque: preservar o enquadramento no desktop. */
 @media(min-width:961px){
-  .cr__slide[data-i="1"]{overflow:hidden;background:var(--azul-esc)}
-  .cr__slide[data-i="1"]::before{content:"";position:absolute;inset:-24px;background:url("../img/predios/trivoli.jpg") center / cover no-repeat;filter:blur(20px);opacity:.38}
-  .cr__slide[data-i="1"] .cr__foto{object-fit:contain;object-position:center;image-rendering:auto}
+  .cr__slide[data-i="2"]{overflow:hidden;background:var(--azul-esc)}
+  .cr__slide[data-i="2"]::before{content:"";position:absolute;inset:-24px;background:url("../img/predios/trivoli.jpg") center / cover no-repeat;filter:blur(20px);opacity:.38}
+  .cr__slide[data-i="2"] .cr__foto{object-fit:contain;object-position:center;image-rendering:auto}
 }
