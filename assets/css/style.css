@@ -233,7 +233,8 @@ p{margin:0 0 1em}
 }
 /* enche em 6 segundos, acompanhando a troca de foto */
 .cr__ponto-carga{
-  position:absolute;left:0;top:0;bottom:0;width:0;
+  position:absolute;inset:0;width:100%;
+  transform:scaleX(0);transform-origin:left center;
   background:var(--amarelo);border-radius:99px;pointer-events:none;
 }
 
@@ -748,7 +749,12 @@ p{margin:0 0 1em}
 
 /* Fachada vertical do segundo destaque: preservar o enquadramento no desktop. */
 @media(min-width:961px){
+  /* o segundo slide é uma foto 9:16: no computador ela aparece inteira,
+     com o fundo desfocado preenchendo as laterais */
+  .cr__slide[data-i="1"]{overflow:hidden;background:var(--azul-esc)}
+  .cr__slide[data-i="1"]::before{content:"";position:absolute;inset:-24px;background:url("../img/predios/apartamento-vertical.jpg") center / cover no-repeat;filter:blur(20px);opacity:.38}
+  .cr__slide[data-i="1"] .cr__foto{object-fit:contain;object-position:center}
   .cr__slide[data-i="2"]{overflow:hidden;background:var(--azul-esc)}
-  .cr__slide[data-i="2"]::before{content:"";position:absolute;inset:-24px;background:url("../img/predios/trivoli.jpg") center / cover no-repeat;filter:blur(20px);opacity:.38}
+  .cr__slide[data-i="2"]::before{content:"";position:absolute;inset:-24px;background:url("../img/predios/trivoli-fachada.jpg") center / cover no-repeat;filter:blur(20px);opacity:.38}
   .cr__slide[data-i="2"] .cr__foto{object-fit:contain;object-position:center;image-rendering:auto}
 }

@@ -209,24 +209,23 @@ function montarCarrossel(){
   const reduz = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // a barrinha do ponto ativo enche durante os 6 segundos
+  let animacaoCarga = null;
   function recarregar(){
-    cargas.forEach((carga, n) => {
-      carga.style.transition = "none";
-      carga.style.width = n === atual && reduz ? "100%" : "0%";
-    });
+    if(animacaoCarga){ animacaoCarga.cancel(); animacaoCarga = null; }
+    cargas.forEach((carga, n) => carga.style.transform = (reduz && n === atual) ? "scaleX(1)" : "scaleX(0)");
     if(reduz) return;
     const carga = cargas[atual];
-    if(!carga) return;
-    void carga.offsetWidth;                       // força o navegador a aplicar o zero antes de animar
-    carga.style.transition = `width ${TEMPO}ms linear`;
-    carga.style.width = "100%";
+    if(!carga || typeof carga.animate !== "function") return;
+    animacaoCarga = carga.animate(
+      [{ transform: "scaleX(0)" }, { transform: "scaleX(1)" }],
+      { duration: TEMPO, easing: "linear", fill: "forwards" }
+    );
   }
   function congelarCarga(){
-    const carga = cargas[atual];
-    if(!carga) return;
-    const largura = getComputedStyle(carga).width;
-    carga.style.transition = "none";
-    carga.style.width = largura;
+    if(animacaoCarga && animacaoCarga.playState === "running") animacaoCarga.pause();
+  }
+  function retomarCarga(){
+    if(animacaoCarga && animacaoCarga.playState === "paused") animacaoCarga.play();
   }
 
   function mostrar(i){
@@ -291,6 +290,7 @@ function montarCarrossel(){
       s.querySelectorAll("a").forEach(a => a.tabIndex = ativo ? 0 : -1);
     });
     pontos.forEach((p, n) => p.setAttribute("aria-current", String(n === atual)));
+    recarregar();
   }
   function limparArrasto(){
     slides.forEach(s => {
