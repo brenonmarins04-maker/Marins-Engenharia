@@ -55,7 +55,7 @@ const NAV = [
    ------------------------------------------------------------ */
 const HERO = [
   {
-    foto: "assets/img/predios/escritorio-marins.png",
+    foto: "assets/img/predios/escritorio-marins.jpg",
     alt: "Fachada do escritório da Marins Engenharia",
     titulo: "*{edificios} edifícios* entregues na cidade.",
     texto: "São {apartamentos} apartamentos construídos nas melhores localizações de São Carlos.",

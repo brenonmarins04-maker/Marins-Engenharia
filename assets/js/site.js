@@ -185,7 +185,7 @@ function montarCarrossel(){
     <div class="cr__palco">
       ${HERO.map((s, i) => `
         <div class="cr__slide" data-i="${i}">
-          <img class="cr__foto" src="${esc(s.foto)}" alt="${esc(s.alt)}"${i ? ' loading="lazy"' : ""}>
+          <img class="cr__foto" src="${esc(s.foto)}" alt="${esc(s.alt)}" decoding="async"${i === 0 ? ' fetchpriority="high"' : ""}>
           <div class="cr__texto">
             <div class="env">
               <h${i ? "2" : "1"} class="cr__titulo">${destaque(troca(s.titulo))}</h${i ? "2" : "1"}>
@@ -520,7 +520,7 @@ function montarEdificios(){
 
 function montarQuemSomos(){
   const A = TEXTOS.anos;
-  encher("anos-foto", `<img class="anos__foto" src="assets/img/predios/escritorio-marins.png" alt="Fachada do escritório da Marins Engenharia" loading="lazy">`);
+  encher("anos-foto", `<img class="anos__foto" src="assets/img/predios/escritorio-marins.jpg" alt="Fachada do escritório da Marins Engenharia" loading="lazy">`);
   encher("anos-paragrafos", A.paragrafos.map(p => `<p>${esc(p)}</p>`).join(""));
   encher("anos-destaques", A.destaques.map(d => `<li><b>${esc(d.titulo)}</b><span>${esc(d.texto)}</span></li>`).join(""));
   encher("principios", ["Missão", "Valores", "Visão"].map(titulo => TEXTOS.historia.principios.find(p => p.titulo === titulo)).map(p => `
