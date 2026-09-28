@@ -55,20 +55,6 @@ const NAV = [
    ------------------------------------------------------------ */
 const HERO = [
   {
-    foto: "assets/img/predios/turim.jpg",
-    alt: "Fachada do Edifício Turim vista de baixo, com céu azul",
-    titulo: "*25 anos* construindo em São Carlos.",
-    texto: "Incorporamos e construímos prédios residenciais de médio e alto padrão: do terreno à entrega das chaves.",
-    botao: "Ver edifícios", href: "edificios.html"
-  },
-  {
-    foto: "assets/img/predios/trivoli.jpg",
-    alt: "Fachada do Edifício Trivoli, na Rua São Joaquim",
-    titulo: "*100%* das obras entregues ANTES do prazo.",
-    texto: "Todas as nossas obras foram entregues antes do prazo contratado.",
-    botao: "Quem somos", href: "quem-somos.html"
-  },
-  {
     foto: "assets/img/predios/escritorio-marins.png",
     alt: "Fachada do escritório da Marins Engenharia",
     titulo: "*{edificios} edifícios* entregues na cidade.",
@@ -81,6 +67,20 @@ const HERO = [
     titulo: "Hospede-se em um apartamento *nosso*.",
     texto: "Conheça nossos apartamentos para hospedagem pelo AirBnB e aproveite sua estadia em São Carlos.",
     botao: "Ver unidades", href: "locacao.html"
+  },
+  {
+    foto: "assets/img/predios/trivoli.jpg",
+    alt: "Fachada do Edifício Trivoli, na Rua São Joaquim",
+    titulo: "*100%* das obras entregues ANTES do prazo.",
+    texto: "Todas as nossas obras foram entregues antes do prazo contratado.",
+    botao: "Quem somos", href: "quem-somos.html"
+  },
+  {
+    foto: "assets/img/predios/turim.jpg",
+    alt: "Fachada do Edifício Turim vista de baixo, com céu azul",
+    titulo: "*25 anos* construindo em São Carlos.",
+    texto: "Incorporamos e construímos prédios residenciais de médio e alto padrão: do terreno à entrega das chaves.",
+    botao: "Ver edifícios", href: "edificios.html"
   }
 ];
 
