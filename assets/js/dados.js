@@ -63,6 +63,8 @@ const HERO = [
   },
   {
     foto: "assets/img/predios/apartamento-vertical.jpg",
+    fotoDesktop: "assets/img/predios/ferretto-banner-desktop.png",
+    altDesktop: "Entrada do Edifício Ferretto, da Marins Engenharia",
     alt: "Suíte de um apartamento da Marins, com cama de casal e armário planejado",
     titulo: "Hospede-se em um apartamento *nosso*.",
     texto: "Conheça nossos apartamentos para hospedagem pelo AirBnB e aproveite sua estadia em São Carlos.",
@@ -70,6 +72,8 @@ const HERO = [
   },
   {
     foto: "assets/img/predios/trivoli-fachada.jpg",
+    fotoDesktop: "assets/img/predios/fachada-banner-desktop.png",
+    altDesktop: "Fachada de edifício da Marins Engenharia vista da rua",
     alt: "Fachada do Edifício Trivoli, na Rua São Joaquim",
     titulo: "*100%* das obras entregues ANTES do prazo.",
     texto: "Todas as nossas obras foram entregues antes do prazo contratado.",

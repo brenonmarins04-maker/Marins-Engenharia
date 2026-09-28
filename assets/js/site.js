@@ -185,12 +185,15 @@ function montarCarrossel(){
     <div class="cr__palco">
       ${HERO.map((s, i) => `
         <div class="cr__slide" data-i="${i}">
-          <img class="cr__foto" src="${esc(s.foto)}" alt="${esc(s.alt)}" decoding="async"${i === 0 ? ' fetchpriority="high"' : ""}>
+          <picture>
+            ${s.fotoDesktop ? `<source media="(min-width:961px)" srcset="${esc(s.fotoDesktop)}">` : ""}
+            <img class="cr__foto" src="${esc(s.foto)}" alt="${esc(s.alt)}" decoding="async"${i === 0 ? ' fetchpriority="high"' : ""}>
+          </picture>
           <div class="cr__texto">
             <div class="env">
               <h${i ? "2" : "1"} class="cr__titulo">${destaque(troca(s.titulo))}</h${i ? "2" : "1"}>
               <p class="cr__sub">${esc(troca(s.texto))}</p>
-              <a class="btn btn--amarelo" href="${esc(s.href)}">${esc(s.botao)}</a>
+              <a class="btn btn--azul" href="${esc(s.href)}">${esc(s.botao)}</a>
             </div>
           </div>
         </div>`).join("")}
@@ -201,6 +204,12 @@ function montarCarrossel(){
       ${HERO.map((s, i) => `<button class="cr__ponto" type="button" aria-label="${esc(C.irPara)} ${i + 1}" data-i="${i}"><span class="cr__ponto-carga"></span></button>`).join("")}
     </div>`;
 
+  const desktop = window.matchMedia("(min-width:961px)");
+  const atualizarDescricoes = () => raiz.querySelectorAll(".cr__foto").forEach((img, i) => {
+    img.alt = desktop.matches && HERO[i].altDesktop ? HERO[i].altDesktop : HERO[i].alt;
+  });
+  desktop.addEventListener("change", atualizarDescricoes);
+  atualizarDescricoes();
   const slides = [...raiz.querySelectorAll(".cr__slide")];
   const pontos = [...raiz.querySelectorAll(".cr__ponto")];
   const cargas = [...raiz.querySelectorAll(".cr__ponto-carga")];
@@ -228,13 +237,15 @@ function montarCarrossel(){
     if(animacaoCarga && animacaoCarga.playState === "paused") animacaoCarga.play();
   }
 
-  function mostrar(i){
+  function mostrar(i, direcao = i < atual ? -1 : 1){
     const proximo = (i + slides.length) % slides.length;
     if(animando || (iniciou && proximo === atual)) return;
     const anterior = atual;
     atual = proximo;
     if(iniciou && !reduz){
       animando = true;
+      raiz.style.setProperty("--cr-saida", direcao < 0 ? "100%" : "-100%");
+      raiz.style.setProperty("--cr-entrada", direcao < 0 ? "-100%" : "100%");
       slides[anterior].classList.add("cr__slide--saindo");
       slides[atual].classList.add("cr__slide--entrando");
       setTimeout(() => {
@@ -263,7 +274,7 @@ function montarCarrossel(){
     clearInterval(relogio);
     congelarCarga();
   }
-  const andar = n => { mostrar(atual + n); reiniciar(); };
+  const andar = n => { mostrar(atual + n, n); reiniciar(); };
 
   raiz.querySelector(".cr__seta--esq").addEventListener("click", () => andar(-1));
   raiz.querySelector(".cr__seta--dir").addEventListener("click", () => andar(1));
