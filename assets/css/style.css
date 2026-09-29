@@ -796,7 +796,12 @@ input,textarea,select{font-family:var(--fonte)}
 .apresentacao__texto .realce{color:var(--azul)}
 .apresentacao__texto p{margin:24px 0;color:var(--cinza);max-width:48ch}
 @media(max-width:700px){
- .home--trentino .destaque{height:480px;min-height:480px}
+ /* Abertura ocupa a tela inteira do celular, mantendo o predio a vista. */
+ .home--trentino .destaque{height:100vh;height:100svh;min-height:520px;max-height:none}
+ .home--trentino .destaque__foto{object-position:84% center}
+ .home--trentino .destaque__texto{right:16px;width:min(62vw,236px)}
+ .home--trentino .destaque__rotulo{margin-bottom:14px}
+ .home--trentino .destaque__descricao{margin:16px 0 24px;max-width:none}
  .apresentacao__item{grid-template-columns:1fr;gap:24px}
  .apresentacao__item:nth-child(even) .apresentacao__foto{order:0}
  .apresentacao__foto img{height:300px}

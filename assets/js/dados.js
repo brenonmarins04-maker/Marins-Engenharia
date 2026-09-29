@@ -66,8 +66,8 @@ const HERO = [
     fotoDesktop: "assets/img/predios/fachada-banner-desktop.png",
     altDesktop: "Fachada de edifício da Marins Engenharia vista da rua",
     alt: "Fachada do Edifício Trivoli, na Rua São Joaquim",
-    titulo: "*100%* das obras entregues ANTES do prazo.",
-    texto: "Todas as nossas obras foram entregues antes do prazo contratado.",
+    titulo: "Entregas com *até 4 meses* de antecedência.",
+    texto: "Nos comprometemos com o adiantamento do cronograma, da escolha dos materiais à entrega das chaves.",
     botao: "Quem somos", href: "quem-somos.html"
   },
   {
@@ -98,7 +98,7 @@ const TEXTOS = {
 
   numeros: [
     { valor: "25", rotulo: "anos em São Carlos" },
-    { valor: "100%", rotulo: "das obras entregues ANTES do prazo" }   // CONFIRMAR antes de publicar
+    { valor: "Até 4", rotulo: "meses de antecedência na entrega" }
   ],
 
   hero: {
@@ -108,7 +108,7 @@ const TEXTOS = {
     ctaVendas: "Falar com vendas",
     numeros: [
       { valor: "25", rotulo: "anos em São Carlos" },
-      { valor: "100%", rotulo: "das obras entregues ANTES do prazo" }   // CONFIRMAR antes de publicar
+      { valor: "Até 4", rotulo: "meses de antecedência na entrega" }
     ]
   },
 
@@ -118,7 +118,7 @@ const TEXTOS = {
     tituloHome: "Nossos Edifícios",
     verTodos: "Ver todos os edifícios",
     depoimento: "O que dizem de quem mora aqui",
-    texto: "Cada prédio tem uma página com plantas, localização, pontos de interesse ao redor e o andamento atualizado da obra.",
+    texto: "Cada prédio tem uma página com fotos, plantas, metragem e localização.",
     cta: "Ver disponibilidade",
     botaoCartao: "Falar sobre este prédio",
     zapCartao: "Falar no WhatsApp sobre o",
@@ -139,8 +139,8 @@ const TEXTOS = {
       "Trabalhamos alinhados à Indústria 4.0 da construção civil: processos digitais, decisões baseadas em dados e controle da qualidade da escolha do material até a mão de obra."
     ],
     destaques: [
-      { titulo: "100% dos edifícios entregues ANTES do prazo",
-        texto: "Todas as nossas obras foram entregues antes do prazo contratado." },
+      { titulo: "Edifícios entregues com até 4 meses de antecedência",
+        texto: "Nos comprometemos com a excelência do projeto, da escolha dos materiais ao adiantamento do cronograma de entrega." },
       { titulo: "Cultura e valores preservados há décadas",
         texto: "Pessoas, inovação, objetividade, resultados, ética, meio ambiente e qualidade. Não são um quadro na parede: orientam a decisão de cada obra." }
     ]
@@ -151,9 +151,8 @@ const TEXTOS = {
     titulo: "Hospede-se em um apartamento nosso",
     aviso: "Sinta-se em casa durante sua estadia em São Carlos. Conheça os apartamentos da Marins disponíveis para hospedagem pelo AirBnB.",
     selo: "Disponível",
-    botao: "Reservar pelo WhatsApp",
+    botao: "Ver no Airbnb",
     verUnidades: "Ver apartamentos no AirBnB",
-    anuncio: "Ver anúncio completo",
     fotoCartao: "Foto do apartamento"
   },
 
@@ -390,26 +389,26 @@ const EMPREENDIMENTOS = [
 const LOCACAO = [
   { id:"ferretto-41", nome:"Ferretto 41", apto:"41", predio:"Edifício Ferretto", endereco:"Rua Riachuelo, 907",
     hospedes:3, camas:"1 cama e sofá-cama", banheiros:1, metragem:"38,22 m²",
-    detalhes:"01 dormitório suíte, balcão americano, sala, cozinha e área de serviço. Apartamento inteiro.", linkExterno:"" },
+    detalhes:"01 dormitório suíte, balcão americano, sala, cozinha e área de serviço. Apartamento inteiro.", linkExterno:"https://www.airbnb.com.br/rooms/16601709" },
   { id:"ferretto-53", nome:"Ferretto 53", apto:"53", predio:"Edifício Ferretto", endereco:"Rua Riachuelo, 907",
     hospedes:3, camas:"2 camas e sofá-cama", banheiros:1, metragem:"",
-    detalhes:"01 dormitório suíte, balcão americano, sala, cozinha e área de serviço.", linkExterno:"" },
+    detalhes:"01 dormitório suíte, balcão americano, sala, cozinha e área de serviço.", linkExterno:"https://www.airbnb.com.br/rooms/17403633" },
   { id:"trieste-62", nome:"Trieste 62", apto:"62", predio:"Edifício Trieste", endereco:"Rua Padre Teixeira, 1465",
     hospedes:5, camas:"3 camas e sofá-cama", banheiros:2, metragem:"68,77 m²",
-    detalhes:"02 dormitórios (1 suíte), wc social, balcão americano, sala com dois ambientes, cozinha e área de serviço, sacada envidraçada.", linkExterno:"" },
+    detalhes:"02 dormitórios (1 suíte), wc social, balcão americano, sala com dois ambientes, cozinha e área de serviço, sacada envidraçada.", linkExterno:"https://www.airbnb.com.br/rooms/23818917" },
   { id:"trento-32", nome:"Trento 32", apto:"32", predio:"Edifício Trento", endereco:"Rua Padre Teixeira, 1680",
     hospedes:3, camas:"2 camas e sofá-cama", banheiros:1, metragem:"42,00 m²",
-    detalhes:"01 suíte, sala, cozinha e área de serviço, sacada envidraçada.", linkExterno:"" },
+    detalhes:"01 suíte, sala, cozinha e área de serviço, sacada envidraçada.", linkExterno:"https://www.airbnb.com.br/rooms/38354809" },
   { id:"trento-33", nome:"Trento 33", apto:"33", predio:"Edifício Trento", endereco:"Rua Padre Teixeira, 1680",
     hospedes:3, camas:"2 camas e sofá-cama", banheiros:1, metragem:"42,00 m²",
-    detalhes:"01 suíte, sala, cozinha e área de serviço, sacada envidraçada.", linkExterno:"" }
+    detalhes:"01 suíte, sala, cozinha e área de serviço, sacada envidraçada.", linkExterno:"https://www.airbnb.com.br/rooms/42666415" }
 ];
 
 
 /* ------------------------------------------------------------
    DEPOIMENTOS
-   Investidor e Morador são FICTÍCIOS (placeholder) — troque
-   pelos depoimentos reais. Locatário usa os textos reais.
+   Os três são avaliações reais de hóspedes, iguais às do site
+   antigo. Não invente depoimentos: acrescente somente os reais.
    ------------------------------------------------------------ */
 const DEPOIMENTOS = [
     { texto:"A Milena superou todas as expectativas na atenção, zelo e receptividade! Apartamento excelente, limpeza excelente! Tudo feito com muito carinho pra receber os hóspedes...",

@@ -416,15 +416,16 @@ function cartaoEmpreendimento(emp){
 /* ---------- cartões de locação ---------- */
 function cartaoLocacao(un){
   const L = TEXTOS.locacao;
-  const msg = MENSAGENS.edificio(`${un.predio} (apartamento ${un.apto})`);
-  const extra = un.linkExterno
-    ? `<a class="link-mapa" href="${esc(un.linkExterno)}" target="_blank" rel="noopener">${esc(L.anuncio)}</a>` : "";
+  // A foto e o botão levam direto ao anúncio: quem quer reservar resolve lá.
+  const ida = un.linkExterno
+    ? ` href="${esc(un.linkExterno)}" target="_blank" rel="noopener"` : "";
+  const abre = un.linkExterno ? "a" : "div";
   return `
   <article class="cartao">
-    <div class="cartao__foto">
+    <${abre} class="cartao__foto"${ida}>
       <span class="cartao__tag">${esc(L.selo)}</span>
       ${ph(L.fotoCartao + " — " + un.nome, "ph--esc")}
-    </div>
+    </${abre}>
     <div class="cartao__corpo">
       <p class="loc__predio">${esc(un.predio)}</p>
       <h3>${esc(un.nome)}</h3>
@@ -436,10 +437,9 @@ function cartaoLocacao(un){
       </ul>
       <p class="cartao__meta">${esc(un.detalhes)}</p>
       <a class="link-mapa" href="${maps(un.endereco)}" target="_blank" rel="noopener">${ICO.pin}${esc(un.endereco)}</a>
-      ${extra}
-      <div class="cartao__pe">
-        <a class="btn btn--zap btn--bloco" href="${zap(msg)}" target="_blank" rel="noopener">${ICO.zap} ${esc(L.botao)}</a>
-      </div>
+      ${un.linkExterno ? `<div class="cartao__pe">
+        <a class="btn btn--amarelo btn--bloco" href="${esc(un.linkExterno)}" target="_blank" rel="noopener">${esc(L.botao)} <span aria-hidden="true">↗</span></a>
+      </div>` : ""}
     </div>
   </article>`;
 }
@@ -596,8 +596,9 @@ function montarLocacao(){
     const emp = EMPREENDIMENTOS.find(e => e.id === id);
     const fotos = emp ? fotosEmpreendimento(emp) : (GALERIAS[id] || []);
     if(fotos.length){
-      card.querySelector(".cartao__foto .ph").outerHTML = miniaturaFoto(fotos[0], 0);
-      ligarLupa(card, fotos);
+      const f = fotos[0];
+      card.querySelector(".cartao__foto .ph").outerHTML =
+        `<img src="${f.mini}" alt="${TEXTOS.locacao.fotoCartao} — ${LOCACAO[i].nome}" loading="lazy">`;
     }
   });
 }
