@@ -333,394 +333,74 @@ const GALERIAS = {
   ],
   "trentino": [
     {
-      "src": "assets/img/galerias/trentino/001.webp",
-      "mini": "assets/img/galerias/trentino/001-mini.webp",
-      "legenda": "Trentino — Foto 1"
-    },
-    {
-      "src": "assets/img/galerias/trentino/002.webp",
-      "mini": "assets/img/galerias/trentino/002-mini.webp",
-      "legenda": "Trentino — Foto 2"
-    },
-    {
       "src": "assets/img/galerias/trentino/003.webp",
       "mini": "assets/img/galerias/trentino/003-mini.webp",
-      "legenda": "Trentino — Foto 3"
+      "legenda": "Trentino — Foto 1"
     },
     {
       "src": "assets/img/galerias/trentino/004.webp",
       "mini": "assets/img/galerias/trentino/004-mini.webp",
-      "legenda": "Trentino — Foto 4"
+      "legenda": "Trentino — Foto 2"
     },
     {
       "src": "assets/img/galerias/trentino/005.webp",
       "mini": "assets/img/galerias/trentino/005-mini.webp",
-      "legenda": "Trentino — Foto 5"
+      "legenda": "Trentino — Foto 3"
     },
     {
       "src": "assets/img/galerias/trentino/006.webp",
       "mini": "assets/img/galerias/trentino/006-mini.webp",
-      "legenda": "Trentino — Foto 6"
-    },
-    {
-      "src": "assets/img/galerias/trentino/007.webp",
-      "mini": "assets/img/galerias/trentino/007-mini.webp",
-      "legenda": "Trentino — Foto 7"
+      "legenda": "Trentino — Foto 4"
     },
     {
       "src": "assets/img/galerias/trentino/008.webp",
       "mini": "assets/img/galerias/trentino/008-mini.webp",
-      "legenda": "Trentino — Foto 8"
-    },
-    {
-      "src": "assets/img/galerias/trentino/009.webp",
-      "mini": "assets/img/galerias/trentino/009-mini.webp",
-      "legenda": "Trentino — Foto 9"
-    },
-    {
-      "src": "assets/img/galerias/trentino/010.webp",
-      "mini": "assets/img/galerias/trentino/010-mini.webp",
-      "legenda": "Trentino — Foto 10"
-    },
-    {
-      "src": "assets/img/galerias/trentino/011.webp",
-      "mini": "assets/img/galerias/trentino/011-mini.webp",
-      "legenda": "Trentino — Foto 11"
-    },
-    {
-      "src": "assets/img/galerias/trentino/012.webp",
-      "mini": "assets/img/galerias/trentino/012-mini.webp",
-      "legenda": "Trentino — Foto 12"
+      "legenda": "Trentino — Foto 5"
     },
     {
       "src": "assets/img/galerias/trentino/013.webp",
       "mini": "assets/img/galerias/trentino/013-mini.webp",
-      "legenda": "Trentino — Foto 13"
-    },
-    {
-      "src": "assets/img/galerias/trentino/014.webp",
-      "mini": "assets/img/galerias/trentino/014-mini.webp",
-      "legenda": "Trentino — Foto 14"
+      "legenda": "Trentino — Foto 6"
     },
     {
       "src": "assets/img/galerias/trentino/015.webp",
       "mini": "assets/img/galerias/trentino/015-mini.webp",
-      "legenda": "Trentino — Foto 15"
-    },
-    {
-      "src": "assets/img/galerias/trentino/016.webp",
-      "mini": "assets/img/galerias/trentino/016-mini.webp",
-      "legenda": "Trentino — Foto 16"
+      "legenda": "Trentino — Foto 7"
     },
     {
       "src": "assets/img/galerias/trentino/017.webp",
       "mini": "assets/img/galerias/trentino/017-mini.webp",
-      "legenda": "Trentino — Foto 17"
-    },
-    {
-      "src": "assets/img/galerias/trentino/018.webp",
-      "mini": "assets/img/galerias/trentino/018-mini.webp",
-      "legenda": "Trentino — Foto 18"
+      "legenda": "Trentino — Foto 8"
     },
     {
       "src": "assets/img/galerias/trentino/019.webp",
       "mini": "assets/img/galerias/trentino/019-mini.webp",
-      "legenda": "Trentino — Foto 19"
-    },
-    {
-      "src": "assets/img/galerias/trentino/020.webp",
-      "mini": "assets/img/galerias/trentino/020-mini.webp",
-      "legenda": "Trentino — Foto 20"
+      "legenda": "Trentino — Foto 9"
     },
     {
       "src": "assets/img/galerias/trentino/021.webp",
       "mini": "assets/img/galerias/trentino/021-mini.webp",
-      "legenda": "Trentino — Foto 21"
-    },
-    {
-      "src": "assets/img/galerias/trentino/022.webp",
-      "mini": "assets/img/galerias/trentino/022-mini.webp",
-      "legenda": "Trentino — Foto 22"
+      "legenda": "Trentino — Foto 10"
     },
     {
       "src": "assets/img/galerias/trentino/023.webp",
       "mini": "assets/img/galerias/trentino/023-mini.webp",
-      "legenda": "Trentino — Foto 23"
-    },
-    {
-      "src": "assets/img/galerias/trentino/024.webp",
-      "mini": "assets/img/galerias/trentino/024-mini.webp",
-      "legenda": "Trentino — Foto 24"
+      "legenda": "Trentino — Foto 11"
     },
     {
       "src": "assets/img/galerias/trentino/025.webp",
       "mini": "assets/img/galerias/trentino/025-mini.webp",
-      "legenda": "Trentino — Foto 25"
-    },
-    {
-      "src": "assets/img/galerias/trentino/026.webp",
-      "mini": "assets/img/galerias/trentino/026-mini.webp",
-      "legenda": "Trentino — Foto 26"
-    },
-    {
-      "src": "assets/img/galerias/trentino/027.webp",
-      "mini": "assets/img/galerias/trentino/027-mini.webp",
-      "legenda": "Trentino — Foto 27"
-    },
-    {
-      "src": "assets/img/galerias/trentino/028.webp",
-      "mini": "assets/img/galerias/trentino/028-mini.webp",
-      "legenda": "Trentino — Foto 28"
-    },
-    {
-      "src": "assets/img/galerias/trentino/029.webp",
-      "mini": "assets/img/galerias/trentino/029-mini.webp",
-      "legenda": "Trentino — Foto 29"
-    },
-    {
-      "src": "assets/img/galerias/trentino/030.webp",
-      "mini": "assets/img/galerias/trentino/030-mini.webp",
-      "legenda": "Trentino — Foto 30"
-    },
-    {
-      "src": "assets/img/galerias/trentino/031.webp",
-      "mini": "assets/img/galerias/trentino/031-mini.webp",
-      "legenda": "Trentino — Foto 31"
-    },
-    {
-      "src": "assets/img/galerias/trentino/032.webp",
-      "mini": "assets/img/galerias/trentino/032-mini.webp",
-      "legenda": "Trentino — Foto 32"
-    },
-    {
-      "src": "assets/img/galerias/trentino/033.webp",
-      "mini": "assets/img/galerias/trentino/033-mini.webp",
-      "legenda": "Trentino — Foto 33"
-    },
-    {
-      "src": "assets/img/galerias/trentino/034.webp",
-      "mini": "assets/img/galerias/trentino/034-mini.webp",
-      "legenda": "Trentino — Foto 34"
-    },
-    {
-      "src": "assets/img/galerias/trentino/035.webp",
-      "mini": "assets/img/galerias/trentino/035-mini.webp",
-      "legenda": "Trentino — Foto 35"
-    },
-    {
-      "src": "assets/img/galerias/trentino/036.webp",
-      "mini": "assets/img/galerias/trentino/036-mini.webp",
-      "legenda": "Trentino — Foto 36"
-    },
-    {
-      "src": "assets/img/galerias/trentino/037.webp",
-      "mini": "assets/img/galerias/trentino/037-mini.webp",
-      "legenda": "Trentino — Foto 37"
-    },
-    {
-      "src": "assets/img/galerias/trentino/038.webp",
-      "mini": "assets/img/galerias/trentino/038-mini.webp",
-      "legenda": "Trentino — Foto 38"
-    },
-    {
-      "src": "assets/img/galerias/trentino/039.webp",
-      "mini": "assets/img/galerias/trentino/039-mini.webp",
-      "legenda": "Trentino — Foto 39"
-    },
-    {
-      "src": "assets/img/galerias/trentino/040.webp",
-      "mini": "assets/img/galerias/trentino/040-mini.webp",
-      "legenda": "Trentino — Foto 40"
-    },
-    {
-      "src": "assets/img/galerias/trentino/041.webp",
-      "mini": "assets/img/galerias/trentino/041-mini.webp",
-      "legenda": "Trentino — Foto 41"
-    },
-    {
-      "src": "assets/img/galerias/trentino/042.webp",
-      "mini": "assets/img/galerias/trentino/042-mini.webp",
-      "legenda": "Trentino — Foto 42"
-    },
-    {
-      "src": "assets/img/galerias/trentino/043.webp",
-      "mini": "assets/img/galerias/trentino/043-mini.webp",
-      "legenda": "Trentino — Foto 43"
-    },
-    {
-      "src": "assets/img/galerias/trentino/044.webp",
-      "mini": "assets/img/galerias/trentino/044-mini.webp",
-      "legenda": "Trentino — Foto 44"
-    },
-    {
-      "src": "assets/img/galerias/trentino/045.webp",
-      "mini": "assets/img/galerias/trentino/045-mini.webp",
-      "legenda": "Trentino — Foto 45"
+      "legenda": "Trentino — Foto 12"
     },
     {
       "src": "assets/img/galerias/trentino/046.webp",
       "mini": "assets/img/galerias/trentino/046-mini.webp",
-      "legenda": "Trentino — Foto 46"
-    },
-    {
-      "src": "assets/img/galerias/trentino/047.webp",
-      "mini": "assets/img/galerias/trentino/047-mini.webp",
-      "legenda": "Trentino — Foto 47"
-    },
-    {
-      "src": "assets/img/galerias/trentino/048.webp",
-      "mini": "assets/img/galerias/trentino/048-mini.webp",
-      "legenda": "Trentino — Foto 48"
-    },
-    {
-      "src": "assets/img/galerias/trentino/049.webp",
-      "mini": "assets/img/galerias/trentino/049-mini.webp",
-      "legenda": "Trentino — Foto 49"
-    },
-    {
-      "src": "assets/img/galerias/trentino/050.webp",
-      "mini": "assets/img/galerias/trentino/050-mini.webp",
-      "legenda": "Trentino — Foto 50"
-    },
-    {
-      "src": "assets/img/galerias/trentino/051.webp",
-      "mini": "assets/img/galerias/trentino/051-mini.webp",
-      "legenda": "Trentino — Foto 51"
-    },
-    {
-      "src": "assets/img/galerias/trentino/052.webp",
-      "mini": "assets/img/galerias/trentino/052-mini.webp",
-      "legenda": "Trentino — Foto 52"
-    },
-    {
-      "src": "assets/img/galerias/trentino/053.webp",
-      "mini": "assets/img/galerias/trentino/053-mini.webp",
-      "legenda": "Trentino — Foto 53"
-    },
-    {
-      "src": "assets/img/galerias/trentino/054.webp",
-      "mini": "assets/img/galerias/trentino/054-mini.webp",
-      "legenda": "Trentino — Foto 54"
-    },
-    {
-      "src": "assets/img/galerias/trentino/055.webp",
-      "mini": "assets/img/galerias/trentino/055-mini.webp",
-      "legenda": "Trentino — Foto 55"
-    },
-    {
-      "src": "assets/img/galerias/trentino/056.webp",
-      "mini": "assets/img/galerias/trentino/056-mini.webp",
-      "legenda": "Trentino — Foto 56"
-    },
-    {
-      "src": "assets/img/galerias/trentino/057.webp",
-      "mini": "assets/img/galerias/trentino/057-mini.webp",
-      "legenda": "Trentino — Foto 57"
-    },
-    {
-      "src": "assets/img/galerias/trentino/058.webp",
-      "mini": "assets/img/galerias/trentino/058-mini.webp",
-      "legenda": "Trentino — Foto 58"
-    },
-    {
-      "src": "assets/img/galerias/trentino/059.webp",
-      "mini": "assets/img/galerias/trentino/059-mini.webp",
-      "legenda": "Trentino — Foto 59"
-    },
-    {
-      "src": "assets/img/galerias/trentino/060.webp",
-      "mini": "assets/img/galerias/trentino/060-mini.webp",
-      "legenda": "Trentino — Foto 60"
-    },
-    {
-      "src": "assets/img/galerias/trentino/061.webp",
-      "mini": "assets/img/galerias/trentino/061-mini.webp",
-      "legenda": "Trentino — Foto 61"
-    },
-    {
-      "src": "assets/img/galerias/trentino/062.webp",
-      "mini": "assets/img/galerias/trentino/062-mini.webp",
-      "legenda": "Trentino — Foto 62"
-    },
-    {
-      "src": "assets/img/galerias/trentino/063.webp",
-      "mini": "assets/img/galerias/trentino/063-mini.webp",
-      "legenda": "Trentino — Foto 63"
-    },
-    {
-      "src": "assets/img/galerias/trentino/064.webp",
-      "mini": "assets/img/galerias/trentino/064-mini.webp",
-      "legenda": "Trentino — Foto 64"
-    },
-    {
-      "src": "assets/img/galerias/trentino/065.webp",
-      "mini": "assets/img/galerias/trentino/065-mini.webp",
-      "legenda": "Trentino — Foto 65"
-    },
-    {
-      "src": "assets/img/galerias/trentino/066.webp",
-      "mini": "assets/img/galerias/trentino/066-mini.webp",
-      "legenda": "Trentino — Foto 66"
-    },
-    {
-      "src": "assets/img/galerias/trentino/067.webp",
-      "mini": "assets/img/galerias/trentino/067-mini.webp",
-      "legenda": "Trentino — Foto 67"
-    },
-    {
-      "src": "assets/img/galerias/trentino/068.webp",
-      "mini": "assets/img/galerias/trentino/068-mini.webp",
-      "legenda": "Trentino — Foto 68"
+      "legenda": "Trentino — Foto 13"
     },
     {
       "src": "assets/img/galerias/trentino/069.webp",
       "mini": "assets/img/galerias/trentino/069-mini.webp",
-      "legenda": "Trentino — Foto 69"
-    },
-    {
-      "src": "assets/img/galerias/trentino/070.webp",
-      "mini": "assets/img/galerias/trentino/070-mini.webp",
-      "legenda": "Trentino — Foto 70"
-    },
-    {
-      "src": "assets/img/galerias/trentino/071.webp",
-      "mini": "assets/img/galerias/trentino/071-mini.webp",
-      "legenda": "Trentino — Foto 71"
-    },
-    {
-      "src": "assets/img/galerias/trentino/072.webp",
-      "mini": "assets/img/galerias/trentino/072-mini.webp",
-      "legenda": "Trentino — Foto 72"
-    },
-    {
-      "src": "assets/img/galerias/trentino/073.webp",
-      "mini": "assets/img/galerias/trentino/073-mini.webp",
-      "legenda": "Trentino — Foto 73"
-    },
-    {
-      "src": "assets/img/galerias/trentino/074.webp",
-      "mini": "assets/img/galerias/trentino/074-mini.webp",
-      "legenda": "Trentino — Foto 74"
-    },
-    {
-      "src": "assets/img/galerias/trentino/075.webp",
-      "mini": "assets/img/galerias/trentino/075-mini.webp",
-      "legenda": "Trentino — Foto 75"
-    },
-    {
-      "src": "assets/img/galerias/trentino/076.webp",
-      "mini": "assets/img/galerias/trentino/076-mini.webp",
-      "legenda": "Trentino — Foto 76"
-    },
-    {
-      "src": "assets/img/galerias/trentino/077.webp",
-      "mini": "assets/img/galerias/trentino/077-mini.webp",
-      "legenda": "Trentino — Foto 77"
-    },
-    {
-      "src": "assets/img/galerias/trentino/078.webp",
-      "mini": "assets/img/galerias/trentino/078-mini.webp",
-      "legenda": "Trentino — Foto 78"
+      "legenda": "Trentino — Foto 14"
     }
   ],
   "trento": [

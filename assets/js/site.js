@@ -547,10 +547,10 @@ function montarApresentacao(){
     if(!reduz.matches){
       anterior.style.visibility="visible";
       const opcoes={duration:800,easing:"cubic-bezier(.22,.61,.36,1)"};
-      await Promise.all([
+      await comLimite(Promise.all([
         anterior.animate([{transform:"translateX(0)"},{transform:`translateX(${-direcao*100}%)`}],opcoes).finished,
         cards[atual].animate([{transform:`translateX(${direcao*100}%)`},{transform:"translateX(0)"}],opcoes).finished
-      ]);
+      ]), 800);
     }
     estado();animando=false;agendar();
   }
@@ -562,11 +562,103 @@ function montarApresentacao(){
   raiz.addEventListener("focusout",()=>setTimeout(agendar,0));
   document.addEventListener("visibilitychange",agendar);
   reduz.addEventListener("change",()=>{pausado=reduz.matches;estado();agendar();});
-  let inicio;
+  /* ---------- arraste que acompanha o dedo ----------
+     Antes o gesto so era lido no fim e o card saltava. Agora o card
+     atual e o vizinho andam junto com o dedo, e ao soltar deslizam
+     ate o mais proximo. Um gesto curto e rapido ja troca de card. */
   const janela=raiz.querySelector(".apresentacao__janela");
-  janela.addEventListener("touchstart",e=>{inicio=e.touches[0];parar();},{passive:true});
-  janela.addEventListener("touchend",e=>{if(!inicio)return;const dx=e.changedTouches[0].clientX-inicio.clientX,dy=e.changedTouches[0].clientY-inicio.clientY;if(Math.abs(dx)>50 && Math.abs(dx)>Math.abs(dy)){const d=dx<0?1:-1;mover(atual+d,d);}else agendar();inicio=null;},{passive:true});
-  janela.addEventListener("touchcancel",()=>{inicio=null;agendar();},{passive:true});
+  let arrastando=false, decidiu=false, x0=0, y0=0, desloc=0, vel=0, ultimoT=0, direcao=0, vizinho=null;
+
+  const largura = () => janela.getBoundingClientRect().width || 1;
+  const mostrar = el => { el.style.visibility="visible"; };
+  const limpar = el => { if(el){ el.style.transform=""; } };
+
+  /* Espera a animacao, mas nunca fica pendurada: se o navegador pausar
+     o relogio (aba em segundo plano, por exemplo), o limite solta o
+     fluxo e o carrossel volta a responder. */
+  const comLimite = (p, ms) => Promise.race([
+    Promise.resolve(p).catch(()=>{}),
+    new Promise(r => setTimeout(r, ms + 90))
+  ]);
+
+  function deslizar(el, de, para, ms){
+    const a = el.animate(
+      [{transform:`translateX(${de}px)`},{transform:`translateX(${para}px)`}],
+      {duration:ms, easing:"cubic-bezier(.22,.61,.36,1)", fill:"forwards"});
+    return comLimite(a.finished, ms).then(()=>{ try{ a.cancel(); }catch(e){} });
+  }
+
+  janela.addEventListener("touchstart",e=>{
+    if(animando || e.touches.length>1) return;
+    const t=e.touches[0];
+    x0=t.clientX; y0=t.clientY; desloc=0; vel=0; direcao=0; vizinho=null;
+    ultimoT=performance.now(); arrastando=true; decidiu=false;
+    parar();
+  },{passive:true});
+
+  janela.addEventListener("touchmove",e=>{
+    if(!arrastando) return;
+    const t=e.touches[0];
+    const ax=t.clientX-x0, ay=t.clientY-y0;
+
+    if(!decidiu){
+      if(Math.abs(ax)<6 && Math.abs(ay)<6) return;   // ainda nao da para saber a intencao
+      decidiu=true;
+      if(Math.abs(ay)>Math.abs(ax)){                 // e rolagem da pagina, nao carrossel
+        arrastando=false; agendar(); return;
+      }
+      janela.classList.add("apresentacao__janela--arrasto");
+    }
+
+    const agora=performance.now(), dt=agora-ultimoT;
+    if(dt>0){ const v=(ax-desloc)/dt; vel = vel ? vel*.7 + v*.3 : v; ultimoT=agora; }
+    desloc=ax;
+
+    const nova = desloc<0 ? 1 : -1;
+    if(nova!==direcao){                              // mudou de lado no meio do gesto
+      if(vizinho){ limpar(vizinho); vizinho.style.visibility="hidden"; }
+      direcao=nova;
+      vizinho=cards[(atual+direcao+cards.length)%cards.length];
+      mostrar(vizinho);
+    }
+
+    const L=largura();
+    cards[atual].style.transform=`translateX(${desloc}px)`;
+    if(vizinho) vizinho.style.transform=`translateX(${desloc + direcao*L}px)`;
+  },{passive:true});
+
+  async function soltar(){
+    if(!arrastando) return;
+    arrastando=false;
+    janela.classList.remove("apresentacao__janela--arrasto");
+    if(!decidiu || !vizinho){ agendar(); return; }
+
+    const L=largura(), saindo=cards[atual], entrando=vizinho;
+    // dedo parado no fim do gesto nao conta como impulso
+    const parado = performance.now()-ultimoT > 140;
+    const lancou = !parado && Math.abs(vel)>.5 && Math.abs(desloc)>30 &&
+                   Math.sign(vel)===Math.sign(desloc);
+    const troca = Math.abs(desloc) > L*.3 || lancou;
+
+    const alvoSai = troca ? -direcao*L : 0;
+    const alvoEntra = troca ? 0 : direcao*L;
+    const resta = Math.max(Math.abs(alvoSai-desloc), 1);
+    const ms = Math.round(Math.max(190, Math.min(430, resta/L*430)));
+
+    animando=true;
+    await Promise.all([
+      deslizar(saindo, desloc, alvoSai, ms),
+      deslizar(entrando, desloc + direcao*L, alvoEntra, ms)
+    ]);
+
+    if(troca) atual = cards.indexOf(entrando);
+    limpar(saindo); limpar(entrando);
+    vizinho=null; direcao=0; desloc=0;
+    estado(); animando=false; agendar();
+  }
+
+  janela.addEventListener("touchend", soltar, {passive:true});
+  janela.addEventListener("touchcancel", soltar, {passive:true});
   new IntersectionObserver(entries=>{visivel=entries[0].isIntersecting;agendar();},{threshold:.25}).observe(raiz);
   estado();
 }

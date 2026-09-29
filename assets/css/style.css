@@ -964,3 +964,7 @@ input,textarea,select{font-family:var(--fonte)}
 .rotulo--claro{color:var(--amarelo-esc)}
 /* Titulos que eram brancos porque o fundo era azul chapado. */
 .pg__titulo--claro,.loc :is(h1,h2,h3){color:var(--azul-esc)}
+
+/* Enquanto o dedo arrasta os cards, nada de transicao competindo com
+   o transform que o JS escreve a cada quadro. */
+.apresentacao__janela--arrasto .apresentacao__item{transition:none;will-change:transform}
