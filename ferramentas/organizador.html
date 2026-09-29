@@ -52,6 +52,10 @@
      caixa e os cartões da linha desalinhavam. */
   .foto__img{position:relative;aspect-ratio:4/3;flex:none;background:#E6EBF4;cursor:zoom-in}
   .foto__img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .sumiu{display:none;position:absolute;inset:0;place-content:center;text-align:center;
+    background:#FBEAE9;color:var(--vermelho);font-size:.8125rem;font-weight:600;padding:12px}
+  .foto__img--sumiu .sumiu{display:grid}
+  .foto__img--sumiu img{display:none}
   .foto__n{position:absolute;top:8px;left:8px;background:#fff;border:1px solid var(--linha);
     padding:2px 8px;font-size:.75rem;font-weight:700;color:var(--azul)}
   .pega{position:absolute;top:8px;right:8px;background:#fff;border:1px solid var(--linha);
@@ -93,6 +97,7 @@
     <select id="predio" aria-label="Edifício"></select>
     <div class="espaco">
       <span id="aviso" class="aviso"></span>
+      <button class="btn" id="recarregar" type="button" title="Relê os arquivos do disco">Recarregar</button>
       <button class="btn" id="renumerar" type="button">Renumerar legendas</button>
       <button class="btn" id="desfazer" type="button" disabled>Descartar mudanças</button>
       <button class="btn btn--forte" id="salvar" type="button" disabled>Salvar</button>
@@ -118,9 +123,16 @@
 
 <script>
 const $ = s => document.querySelector(s);
-let predios = [], atual = null, fotos = [], originais = "", enviando = 0;
+let predios = [], atual = null, fotos = [], enviando = 0;
+/* Mudanca nao salva fica guardada por edificio: trocar de predio nao
+   perde nada e nao precisa perguntar. */
+const rascunhos = {};
 
-const sujo = () => JSON.stringify(fotos) !== originais;
+const sujo = (id = atual && atual.id) => {
+  const p = predios.find(x => x.id === id);
+  const lista = id === (atual && atual.id) ? fotos : rascunhos[id];
+  return !!p && !!lista && JSON.stringify(lista) !== JSON.stringify(p.fotos);
+};
 
 function estado(){
   $("#salvar").disabled = !sujo() || enviando > 0;
@@ -129,6 +141,7 @@ function estado(){
   if (enviando > 0) msg(`preparando ${enviando} foto${enviando === 1 ? "" : "s"}...`);
   else if (sujo()) msg("mudanças não salvas");
   else msg("");
+  rotular();
 }
 
 function msg(texto, tipo){
@@ -147,7 +160,9 @@ function desenhar(){
   grade.innerHTML = fotos.map((f, i) => `
     <article class="foto" draggable="false" data-i="${i}">
       <div class="foto__img" data-ver="${i}">
-        <img src="/${f.mini}" alt="" loading="lazy">
+        <img src="/${f.mini}" alt="" loading="lazy"
+             onerror="this.closest('.foto__img').classList.add('foto__img--sumiu')">
+        <span class="sumiu">arquivo não encontrado<br><small>${f.src.split("/").pop()}</small></span>
         <span class="foto__n">${i + 1}</span>
         <span class="pega" draggable="true" title="Arraste para mudar a ordem">⠿ mover</span>
       </div>
@@ -165,20 +180,32 @@ function desenhar(){
 }
 
 /* ---------- carga ---------- */
-async function carregar(){
+async function carregar(manter){
   const r = await fetch("/api/dados").then(r => r.json());
   predios = r.predios;
   $("#predio").innerHTML = predios.map(p =>
     `<option value="${p.id}">${p.nome} (${p.fotos.length})</option>`).join("");
-  escolher(predios[0].id);
+  escolher(predios.some(p => p.id === manter) ? manter : predios[0].id);
 }
 
 function escolher(id){
+  if (atual){                                  // guarda o que estava mexendo
+    if (sujo(atual.id)) rascunhos[atual.id] = fotos;
+    else delete rascunhos[atual.id];
+  }
   atual = predios.find(p => p.id === id);
-  fotos = JSON.parse(JSON.stringify(atual.fotos));
-  originais = JSON.stringify(fotos);
+  fotos = JSON.parse(JSON.stringify(rascunhos[id] || atual.fotos));
   $("#predio").value = id;
+  rotular();
   desenhar();
+}
+
+/* Marca no seletor os edificios com mudanca por salvar. */
+function rotular(){
+  $("#predio").querySelectorAll("option").forEach(o => {
+    const p = predios.find(x => x.id === o.value);
+    o.textContent = `${sujo(p.id) ? "• " : ""}${p.nome} (${o.value === (atual && atual.id) ? fotos.length : (rascunhos[p.id] || p.fotos).length})`;
+  });
 }
 
 /* ---------- eventos da grade ---------- */
@@ -319,11 +346,16 @@ $("#escolher").addEventListener("click", () => $("#arquivos").click());
 $("#arquivos").addEventListener("change", e => { acrescentar(e.target.files); e.target.value = ""; });
 
 /* ---------- barra de cima ---------- */
-$("#predio").addEventListener("change", e => {
-  if (sujo() && !confirm("Há mudanças não salvas neste edifício. Trocar mesmo assim?")){
-    e.target.value = atual.id; return;
-  }
-  escolher(e.target.value);
+$("#predio").addEventListener("change", e => escolher(e.target.value));
+
+$("#recarregar").addEventListener("click", async () => {
+  const pendentes = Object.keys(rascunhos).filter(id => sujo(id));
+  if (pendentes.length && !confirm("Há mudanças não salvas. Recarregar descarta tudo. Continuar?")) return;
+  Object.keys(rascunhos).forEach(k => delete rascunhos[k]);
+  const id = atual && atual.id;
+  atual = null;
+  await carregar(id);
+  msg("recarregado do disco", "ok");
 });
 
 $("#renumerar").addEventListener("click", () => {
@@ -332,7 +364,10 @@ $("#renumerar").addEventListener("click", () => {
 });
 
 $("#desfazer").addEventListener("click", () => {
-  if (confirm("Descartar as mudanças deste edifício?")) escolher(atual.id);
+  if (!confirm("Descartar as mudanças deste edifício?")) return;
+  delete rascunhos[atual.id];
+  fotos = JSON.parse(JSON.stringify(atual.fotos));
+  desenhar();
 });
 
 $("#salvar").addEventListener("click", async () => {
@@ -344,8 +379,7 @@ $("#salvar").addEventListener("click", async () => {
     }).then(r => r.json());
     if (r.erro) throw new Error(r.erro);
     atual.fotos = JSON.parse(JSON.stringify(fotos));
-    originais = JSON.stringify(fotos);
-    $("#predio").querySelector(`option[value="${atual.id}"]`).textContent = `${atual.nome} (${fotos.length})`;
+    delete rascunhos[atual.id];
     const guardadas = r.guardados ? ` · ${r.guardados} arquivo(s) para a lixeira` : "";
     msg(`salvo: ${r.fotos} fotos${guardadas}` + (r.gerador === "ok" ? " · páginas geradas" : " · gerador " + r.gerador),
         r.gerador === "ok" ? "ok" : "erro");
