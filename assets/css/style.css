@@ -796,12 +796,19 @@ input,textarea,select{font-family:var(--fonte)}
 .apresentacao__texto .realce{color:var(--azul)}
 .apresentacao__texto p{margin:24px 0;color:var(--cinza);max-width:48ch}
 @media(max-width:700px){
- /* Abertura ocupa a tela inteira do celular, mantendo o predio a vista. */
- .home--trentino .destaque{height:100vh;height:100svh;min-height:520px;max-height:none}
- .home--trentino .destaque__foto{object-position:84% center}
- .home--trentino .destaque__texto{right:16px;width:min(62vw,236px)}
- .home--trentino .destaque__rotulo{margin-bottom:14px}
- .home--trentino .destaque__descricao{margin:16px 0 24px;max-width:none}
+ /* No celular a abertura vira duas faixas que juntas ocupam a tela:
+    a foto em cima, com o predio inteiro, e o texto embaixo no claro.
+    Recortar a foto na horizontal so mostrava metade do predio. */
+ .home--trentino .destaque{
+   height:100vh;height:100svh;min-height:560px;max-height:none;
+   display:grid;grid-template-rows:minmax(260px,42%) 1fr}
+ .home--trentino .destaque__foto{
+   position:static;grid-row:1;z-index:auto;width:100%;height:100%;object-position:14% center}
+ .home--trentino .destaque__texto{
+   position:static;grid-row:2;transform:none;left:auto;right:auto;top:auto;
+   width:auto;align-self:center;padding:0 24px}
+ .home--trentino .destaque__rotulo{margin-bottom:12px}
+ .home--trentino .destaque__descricao{margin:14px 0 26px;max-width:32ch}
  .apresentacao__item{grid-template-columns:1fr;gap:24px}
  .apresentacao__item:nth-child(even) .apresentacao__foto{order:0}
  .apresentacao__foto img{height:300px}
