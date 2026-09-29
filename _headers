@@ -1,3 +1,5 @@
-# Cache das imagens, CSS e JS (o ?v= no HTML força a atualização quando mudo algo)
-/assets/*
+/*
+  Cache-Control: public, max-age=0, must-revalidate
+
+/assets/img/*
   Cache-Control: public, max-age=604800, must-revalidate

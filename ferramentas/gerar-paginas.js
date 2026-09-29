@@ -41,6 +41,9 @@ const versao = () => {
 };
 const V = versao();
 
+// Novo endereço evita reutilizar a folha antiga armazenada no navegador.
+fs.copyFileSync(path.join(RAIZ, "assets/css/style.css"), path.join(RAIZ, "assets/css/marins-layout.css"));
+
 /* ---------- molde comum ---------- */
 function pagina({ titulo, descricao, canonical, imagem, jsonLd, corpo, id, scripts, rota }) {
   return `<!doctype html>
@@ -66,7 +69,7 @@ function pagina({ titulo, descricao, canonical, imagem, jsonLd, corpo, id, scrip
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="/assets/css/style.css?v=${V}">
+<link rel="stylesheet" href="/assets/css/marins-layout.css?v=${V}">
 <script type="application/ld+json">${JSON.stringify(jsonLd)}</script>
 </head>
 <body>
