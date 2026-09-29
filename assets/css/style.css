@@ -975,3 +975,18 @@ input,textarea,select{font-family:var(--fonte)}
 .home--trentino .loc{background:#DCE6EE;border-top-color:#D2DFE8}
 .home--trentino .depoimentos{background:#F5F7F9;border-block-color:#E0E7ED}
 .home--trentino .contato{background:#E8EFF4;border-top-color:#D9E3EC}
+
+/* Troca suave entre documentos, mantendo a navegação nativa do navegador. */
+@view-transition{navigation:auto}
+::view-transition-old(root){animation:pagina-sair 240ms ease-out both}
+::view-transition-new(root){animation:pagina-entrar 320ms ease-out both}
+@keyframes pagina-sair{from{opacity:1}to{opacity:0}}
+@keyframes pagina-entrar{from{opacity:0}to{opacity:1}}
+/* Entrada discreta em navegadores sem suporte às transições de documentos. */
+@supports not (view-transition-name:root){
+ main{animation:pagina-entrar 280ms ease-out both}
+}
+@media(prefers-reduced-motion:reduce){
+ @view-transition{navigation:none}
+ ::view-transition-old(root),::view-transition-new(root),main{animation:none}
+}
