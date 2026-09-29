@@ -21,7 +21,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="assets/css/marins-layout.css?v=20260929-7">
+<link rel="stylesheet" href="assets/css/marins-layout.css?v=20260929-8">
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "GeneralContractor", "name": "Marins Engenharia Ltda.", "url": "https://www.marinsengenharia.com.br", "logo": "https://www.marinsengenharia.com.br/assets/img/logo-marins.png", "telephone": "+551633073606", "email": "vendas@marinsengenharia.com.br", "areaServed": {"@type": "City", "name": "São Carlos"}, "address": {"@type": "PostalAddress", "streetAddress": "Rua 28 de Setembro, 2882", "addressLocality": "São Carlos", "addressRegion": "SP", "addressCountry": "BR"}}</script>
 </head>
 <body class="home home--trentino">
@@ -32,7 +32,10 @@
 <main id="conteudo">
 
   <section class="destaque" aria-labelledby="destaque-titulo">
-    <img class="destaque__foto" src="assets/img/predios/trentino-abertura.jpg" alt="Edifício Trentino visto de baixo, com o céu azul ao lado" fetchpriority="high" width="1600" height="900">
+    <picture>
+      <source media="(max-width: 700px)" srcset="assets/img/predios/trentino-abertura.jpg" width="1600" height="900">
+      <img class="destaque__foto" src="assets/img/predios/trentino-abertura-pc.jpg" alt="Fachada do Edifício Trentino sob o céu azul" fetchpriority="high" width="2000" height="1125">
+    </picture>
     <div class="destaque__texto">
       <p class="destaque__rotulo">Destaques</p>
       <h1 id="destaque-titulo">Trentino</h1>
@@ -139,8 +142,8 @@
   <span>WhatsApp</span>
 </a>
 
-<script src="assets/js/dados.js?v=20260929-7"></script>
-<script src="assets/js/galerias.js?v=20260929-7"></script>
-<script src="assets/js/site.js?v=20260929-7"></script>
+<script src="assets/js/dados.js?v=20260929-8"></script>
+<script src="assets/js/galerias.js?v=20260929-8"></script>
+<script src="assets/js/site.js?v=20260929-8"></script>
 </body>
 </html>
