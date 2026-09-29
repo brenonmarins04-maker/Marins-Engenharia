@@ -782,7 +782,7 @@ input,textarea,select{font-family:var(--fonte)}
 }
 
 /* Home: Trentino na abertura e quatro histórias com fotos ao lado. */
-.home--trentino .destaque{margin-top:72px;height:calc(100svh - 72px);min-height:480px;max-height:900px}
+.home--trentino .destaque{margin-top:0;height:100svh;min-height:480px;max-height:900px}
 .destaque__botao{animation:destaque-pulso 2.4s ease-in-out infinite}
 @keyframes destaque-pulso{0%,100%{transform:scale(1)}50%{transform:scale(1.045)}}
 .apresentacao{background:#fff}
@@ -803,3 +803,42 @@ input,textarea,select{font-family:var(--fonte)}
  .apresentacao__texto p{margin:18px 0}
 }
 @media(prefers-reduced-motion:reduce){.destaque__botao{animation:none}}
+
+/* Apresentação em uma única faixa, com foto e texto no mesmo cartão. */
+.home--trentino{background:#F5F7FA}
+.apresentacao{background:#EAF0F6}
+.apresentacao .env{display:block}
+.apresentacao__janela{display:grid;overflow:hidden;border:1px solid #DCE5EF;border-radius:12px;background:#fff;touch-action:pan-y}
+.apresentacao__item{grid-area:1 / 1;gap:0;background:#fff;visibility:hidden;min-width:0}
+.apresentacao__item:nth-child(even) .apresentacao__foto{order:0}
+.apresentacao__foto{height:100%}
+.apresentacao__foto img{height:100%;min-height:420px;max-height:520px}
+.apresentacao__texto{padding:clamp(28px,4vw,56px)}
+.apresentacao__texto h2{font-size:clamp(1.8rem,3vw,2.5rem)}
+.apresentacao__controles{display:flex;align-items:center;justify-content:center;gap:16px;margin-top:24px}
+.apresentacao__controles button{border:1px solid #CAD7E6;background:transparent;color:var(--azul);border-radius:50%;min-width:44px;height:44px;cursor:pointer}
+.apresentacao__controles button:hover{background:#fff}
+.apresentacao__pontos{display:flex;gap:4px}
+.apresentacao__pontos button{min-width:28px;width:28px;border:0;position:relative}
+.apresentacao__pontos button::after{content:"";position:absolute;left:6px;right:6px;height:3px;top:20px;background:#B5C6DA;border-radius:4px}
+.apresentacao__pontos button[aria-current="true"]::after{background:var(--azul)}
+.apresentacao__controles .apresentacao__pausa{border:0;border-radius:4px;font-size:.8rem;padding:0 8px}
+.home--trentino #edificios{background:#F8FAFC}
+.home--trentino .depoimentos{background:#EDF2F7}
+.home--trentino .contato{background:#fff}
+@media(max-width:700px){
+ .apresentacao{padding-block:40px}
+ .apresentacao__item{grid-template-columns:1fr;grid-template-rows:240px 1fr}
+ .apresentacao__foto img{height:240px;min-height:0}
+ .apresentacao__texto{padding:28px 24px 32px}
+ .apresentacao__texto h2{font-size:1.7rem}
+ .apresentacao__controles{gap:8px}
+}
+
+/* Contraste para o menu transparente sobre a foto de abertura. */
+.home--trentino .destaque::before{content:"";position:absolute;inset:0 0 auto;height:180px;background:linear-gradient(180deg,rgba(0,18,44,.68),rgba(0,18,44,.24) 55%,transparent);pointer-events:none}
+.home--trentino .destaque__texto{z-index:1}
+.home--trentino .topo:not(.topo--claro) .topo__pagina{border-bottom-color:#8AC4FF}
+@media(min-width:961px){
+ .home--trentino .topo:not(.topo--claro) .nav > a[aria-current="page"]{border-bottom-color:#8AC4FF}
+}

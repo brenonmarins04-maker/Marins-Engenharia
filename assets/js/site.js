@@ -89,7 +89,7 @@ function montarCabecalho(){
   ligarMenu();
   if(document.body.classList.contains("home")){
     const atualizar = () => {
-      const progresso = document.body.classList.contains("home--trentino") ? 1 : Math.min(window.scrollY / 180, 1);
+      const progresso = Math.min(window.scrollY / 180, 1);
       alvo.style.setProperty("--topo-opacidade", progresso);
       alvo.classList.toggle("topo--claro", progresso > .5);
     };
@@ -497,19 +497,80 @@ function ligarFormulario(){
 /* ---------- montagem de cada página ---------- */
 const encher = (id, html) => { const el = document.getElementById(id); if(el) el.innerHTML = html; };
 
-function montarHome(){
-  encher("apresentacao-marins", HERO.map((s, i) => `
-    <article class="apresentacao__item">
+function montarApresentacao(){
+  const raiz = document.getElementById("apresentacao-marins");
+  if(!raiz) return;
+  raiz.innerHTML = `<div class="apresentacao__janela" aria-roledescription="carrossel" aria-label="Sobre a Marins">
+    ${HERO.map((s, i) => `<article class="apresentacao__item" role="group" aria-roledescription="slide" aria-label="${i+1} de ${HERO.length}">
       <picture class="apresentacao__foto">
         ${s.fotoDesktop ? `<source media="(min-width:961px)" srcset="${esc(s.fotoDesktop)}">` : ""}
-        <img src="${esc(s.foto)}" alt="${esc(s.altDesktop || s.alt)}" loading="lazy" decoding="async">
+        <img src="${esc(s.foto)}" alt="${esc(s.alt)}" data-alt-desktop="${esc(s.altDesktop || s.alt)}" data-alt-mobile="${esc(s.alt)}" loading="lazy" decoding="async">
       </picture>
       <div class="apresentacao__texto">
         <h2>${destaque(troca(s.titulo))}</h2>
         <p>${esc(troca(s.texto))}</p>
         <a class="btn btn--linha" href="${esc(s.href)}">${esc(s.botao)} <span aria-hidden="true">↗</span></a>
       </div>
-    </article>`).join(""));
+    </article>`).join("")}</div>
+    <div class="apresentacao__controles">
+      <button type="button" data-passo="-1" aria-label="Informação anterior">←</button>
+      <div class="apresentacao__pontos">${HERO.map((_,i)=>`<button type="button" data-slide="${i}" aria-label="Ver informação ${i+1}"></button>`).join("")}</div>
+      <button type="button" data-passo="1" aria-label="Próxima informação">→</button>
+      <button type="button" class="apresentacao__pausa" aria-label="Pausar troca automática">Pausar</button>
+    </div>`;
+  const cards = [...raiz.querySelectorAll(".apresentacao__item")];
+  const pontos = [...raiz.querySelectorAll("[data-slide]")];
+  const reduz = window.matchMedia("(prefers-reduced-motion: reduce)");
+  const desktop = window.matchMedia("(min-width:961px)");
+  const descrever = () => raiz.querySelectorAll("img").forEach(img => img.alt = desktop.matches ? img.dataset.altDesktop : img.dataset.altMobile);
+  desktop.addEventListener("change", descrever); descrever();
+  let atual = 0, animando = false, pausado = reduz.matches, visivel = false, timer;
+  const pausa = raiz.querySelector(".apresentacao__pausa");
+  const parar = () => clearTimeout(timer);
+  const agendar = () => {
+    parar();
+    if(!pausado && visivel && !document.hidden && !raiz.matches(":hover") && !raiz.contains(document.activeElement)) timer = setTimeout(()=>mover(atual+1,1),6000);
+  };
+  function estado(){
+    cards.forEach((card,i)=>{card.style.visibility=i===atual?"visible":"hidden";card.inert=i!==atual;card.setAttribute("aria-hidden",String(i!==atual));});
+    pontos.forEach((p,i)=>p.setAttribute("aria-current",String(i===atual)));
+    pausa.textContent=pausado?"Reproduzir":"Pausar";
+    pausa.setAttribute("aria-label",pausado?"Retomar troca automática":"Pausar troca automática");
+  }
+  async function mover(destino,direcao){
+    const proximo=(destino+cards.length)%cards.length;
+    if(animando || proximo===atual) return;
+    parar(); animando=true;
+    const anterior=cards[atual]; atual=proximo; estado();
+    if(!reduz.matches){
+      anterior.style.visibility="visible";
+      const opcoes={duration:800,easing:"cubic-bezier(.22,.61,.36,1)"};
+      await Promise.all([
+        anterior.animate([{transform:"translateX(0)"},{transform:`translateX(${-direcao*100}%)`}],opcoes).finished,
+        cards[atual].animate([{transform:`translateX(${direcao*100}%)`},{transform:"translateX(0)"}],opcoes).finished
+      ]);
+    }
+    estado();animando=false;agendar();
+  }
+  raiz.querySelectorAll("[data-passo]").forEach(b=>b.onclick=()=>mover(atual+Number(b.dataset.passo),Number(b.dataset.passo)));
+  pontos.forEach((b,i)=>b.onclick=()=>mover(i,i<atual?-1:1));
+  pausa.onclick=()=>{pausado=!pausado;estado();agendar();};
+  raiz.addEventListener("keydown",e=>{if(e.key==="ArrowLeft"||e.key==="ArrowRight"){e.preventDefault();const d=e.key==="ArrowLeft"?-1:1;mover(atual+d,d);}});
+  raiz.addEventListener("mouseenter",parar);raiz.addEventListener("mouseleave",agendar);
+  raiz.addEventListener("focusin",parar);raiz.addEventListener("focusout",()=>setTimeout(agendar,0));
+  document.addEventListener("visibilitychange",agendar);
+  reduz.addEventListener("change",()=>{pausado=reduz.matches;estado();agendar();});
+  let inicio;
+  const janela=raiz.querySelector(".apresentacao__janela");
+  janela.addEventListener("touchstart",e=>{inicio=e.touches[0];parar();},{passive:true});
+  janela.addEventListener("touchend",e=>{if(!inicio)return;const dx=e.changedTouches[0].clientX-inicio.clientX,dy=e.changedTouches[0].clientY-inicio.clientY;if(Math.abs(dx)>50 && Math.abs(dx)>Math.abs(dy)){const d=dx<0?1:-1;mover(atual+d,d);}else agendar();inicio=null;},{passive:true});
+  janela.addEventListener("touchcancel",()=>{inicio=null;agendar();},{passive:true});
+  new IntersectionObserver(entries=>{visivel=entries[0].isIntersecting;agendar();},{threshold:.25}).observe(raiz);
+  estado();
+}
+
+function montarHome(){
+  montarApresentacao();
   encher("numeros", TEXTOS.numeros.map(n =>
     `<div class="dado"><b>${esc(troca(n.valor))}</b><span>${esc(n.rotulo)}</span></div>`).join(""));
   encher("trilho-vendas", EMPREENDIMENTOS.map(cartaoEmpreendimento).join(""));
