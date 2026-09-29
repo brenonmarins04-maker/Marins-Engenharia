@@ -351,6 +351,20 @@ const EMPREENDIMENTOS = [
     plantas: ["Apto 21 — 65 m²", "Sala", "Suíte", "Fachada"]
   },
   {
+    id: "ferretto",
+    nome: "Edifício Ferretto",
+    vendido: true,
+    foto: "assets/img/predios/ferretto-fachada.jpg",
+    status: "Vendido",
+    torres: "1 torre com 20 apartamentos",
+    unidades: 20,
+    metragem: "38,22 m²",
+    dorms: "1 suíte",
+    detalhes: "01 suíte (banheiro com box), balcão americano, sala, cozinha com cooktop elétrico Tramontina e área de serviço. 01 vaga de garagem.",
+    endereco: "Rua Riachuelo, 907",
+    plantas: ["Apto 41 — 38,22 m²", "Balcão americano", "Suíte", "Fachada"]
+  },
+  {
     id: "mario-verzola",
     nome: "Edifício Mario Verzola",
     vendido: true,

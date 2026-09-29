@@ -72,7 +72,7 @@
     },
     {
       "source": "/ferretto",
-      "destination": "/locacao",
+      "destination": "/edificios/ferretto",
       "statusCode": 301
     },
     {
