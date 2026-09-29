@@ -12,313 +12,103 @@ const GALERIAS = {
       "legenda": "Ana Terra — Foto 2"
     },
     {
-      "src": "assets/img/galerias/ana-terra/003.webp",
-      "mini": "assets/img/galerias/ana-terra/003-mini.webp",
-      "legenda": "Ana Terra — Foto 3"
-    },
-    {
       "src": "assets/img/galerias/ana-terra/004.webp",
       "mini": "assets/img/galerias/ana-terra/004-mini.webp",
-      "legenda": "Ana Terra — Foto 4"
-    },
-    {
-      "src": "assets/img/galerias/ana-terra/005.webp",
-      "mini": "assets/img/galerias/ana-terra/005-mini.webp",
-      "legenda": "Ana Terra — Foto 5"
-    },
-    {
-      "src": "assets/img/galerias/ana-terra/006.webp",
-      "mini": "assets/img/galerias/ana-terra/006-mini.webp",
-      "legenda": "Ana Terra — Foto 6"
+      "legenda": "Ana Terra — Foto 3"
     },
     {
       "src": "assets/img/galerias/ana-terra/007.webp",
       "mini": "assets/img/galerias/ana-terra/007-mini.webp",
-      "legenda": "Ana Terra — Foto 7"
+      "legenda": "Ana Terra — Foto 4"
     },
     {
       "src": "assets/img/galerias/ana-terra/008.webp",
       "mini": "assets/img/galerias/ana-terra/008-mini.webp",
-      "legenda": "Ana Terra — Foto 8"
-    },
-    {
-      "src": "assets/img/galerias/ana-terra/009.webp",
-      "mini": "assets/img/galerias/ana-terra/009-mini.webp",
-      "legenda": "Ana Terra — Foto 9"
+      "legenda": "Ana Terra — Foto 5"
     },
     {
       "src": "assets/img/galerias/ana-terra/010.webp",
       "mini": "assets/img/galerias/ana-terra/010-mini.webp",
-      "legenda": "Ana Terra — Foto 10"
-    },
-    {
-      "src": "assets/img/galerias/ana-terra/011.webp",
-      "mini": "assets/img/galerias/ana-terra/011-mini.webp",
-      "legenda": "Ana Terra — Foto 11"
-    },
-    {
-      "src": "assets/img/galerias/ana-terra/012.webp",
-      "mini": "assets/img/galerias/ana-terra/012-mini.webp",
-      "legenda": "Ana Terra — Foto 12"
-    },
-    {
-      "src": "assets/img/galerias/ana-terra/013.webp",
-      "mini": "assets/img/galerias/ana-terra/013-mini.webp",
-      "legenda": "Ana Terra — Foto 13"
-    },
-    {
-      "src": "assets/img/galerias/ana-terra/014.webp",
-      "mini": "assets/img/galerias/ana-terra/014-mini.webp",
-      "legenda": "Ana Terra — Foto 14"
-    },
-    {
-      "src": "assets/img/galerias/ana-terra/015.webp",
-      "mini": "assets/img/galerias/ana-terra/015-mini.webp",
-      "legenda": "Ana Terra — Foto 15"
-    },
-    {
-      "src": "assets/img/galerias/ana-terra/016.webp",
-      "mini": "assets/img/galerias/ana-terra/016-mini.webp",
-      "legenda": "Ana Terra — Foto 16"
-    },
-    {
-      "src": "assets/img/galerias/ana-terra/017.webp",
-      "mini": "assets/img/galerias/ana-terra/017-mini.webp",
-      "legenda": "Ana Terra — Foto 17"
-    },
-    {
-      "src": "assets/img/galerias/ana-terra/018.webp",
-      "mini": "assets/img/galerias/ana-terra/018-mini.webp",
-      "legenda": "Ana Terra — Foto 18"
-    },
-    {
-      "src": "assets/img/galerias/ana-terra/019.webp",
-      "mini": "assets/img/galerias/ana-terra/019-mini.webp",
-      "legenda": "Ana Terra — Foto 19"
+      "legenda": "Ana Terra — Foto 6"
     },
     {
       "src": "assets/img/galerias/ana-terra/020.webp",
       "mini": "assets/img/galerias/ana-terra/020-mini.webp",
-      "legenda": "Ana Terra — Foto 20"
-    },
-    {
-      "src": "assets/img/galerias/ana-terra/021.webp",
-      "mini": "assets/img/galerias/ana-terra/021-mini.webp",
-      "legenda": "Ana Terra — Foto 21"
-    },
-    {
-      "src": "assets/img/galerias/ana-terra/022.webp",
-      "mini": "assets/img/galerias/ana-terra/022-mini.webp",
-      "legenda": "Ana Terra — Foto 22"
-    },
-    {
-      "src": "assets/img/galerias/ana-terra/023.webp",
-      "mini": "assets/img/galerias/ana-terra/023-mini.webp",
-      "legenda": "Ana Terra — Foto 23"
-    },
-    {
-      "src": "assets/img/galerias/ana-terra/024.webp",
-      "mini": "assets/img/galerias/ana-terra/024-mini.webp",
-      "legenda": "Ana Terra — Foto 24"
+      "legenda": "Ana Terra — Foto 7"
     },
     {
       "src": "assets/img/galerias/ana-terra/025.webp",
       "mini": "assets/img/galerias/ana-terra/025-mini.webp",
-      "legenda": "Ana Terra — Foto 25"
+      "legenda": "Ana Terra — Foto 8"
     },
     {
       "src": "assets/img/galerias/ana-terra/026.webp",
       "mini": "assets/img/galerias/ana-terra/026-mini.webp",
-      "legenda": "Ana Terra — Foto 26"
+      "legenda": "Ana Terra — Foto 9"
     },
     {
       "src": "assets/img/galerias/ana-terra/027.webp",
       "mini": "assets/img/galerias/ana-terra/027-mini.webp",
-      "legenda": "Ana Terra — Foto 27"
-    },
-    {
-      "src": "assets/img/galerias/ana-terra/028.webp",
-      "mini": "assets/img/galerias/ana-terra/028-mini.webp",
-      "legenda": "Ana Terra — Foto 28"
-    },
-    {
-      "src": "assets/img/galerias/ana-terra/029.webp",
-      "mini": "assets/img/galerias/ana-terra/029-mini.webp",
-      "legenda": "Ana Terra — Foto 29"
-    },
-    {
-      "src": "assets/img/galerias/ana-terra/030.webp",
-      "mini": "assets/img/galerias/ana-terra/030-mini.webp",
-      "legenda": "Ana Terra — Foto 30"
-    },
-    {
-      "src": "assets/img/galerias/ana-terra/031.webp",
-      "mini": "assets/img/galerias/ana-terra/031-mini.webp",
-      "legenda": "Ana Terra — Foto 31"
-    },
-    {
-      "src": "assets/img/galerias/ana-terra/032.webp",
-      "mini": "assets/img/galerias/ana-terra/032-mini.webp",
-      "legenda": "Ana Terra — Foto 32"
-    },
-    {
-      "src": "assets/img/galerias/ana-terra/033.webp",
-      "mini": "assets/img/galerias/ana-terra/033-mini.webp",
-      "legenda": "Ana Terra — Foto 33"
-    },
-    {
-      "src": "assets/img/galerias/ana-terra/034.webp",
-      "mini": "assets/img/galerias/ana-terra/034-mini.webp",
-      "legenda": "Ana Terra — Foto 34"
-    },
-    {
-      "src": "assets/img/galerias/ana-terra/035.webp",
-      "mini": "assets/img/galerias/ana-terra/035-mini.webp",
-      "legenda": "Ana Terra — Foto 35"
-    },
-    {
-      "src": "assets/img/galerias/ana-terra/036.webp",
-      "mini": "assets/img/galerias/ana-terra/036-mini.webp",
-      "legenda": "Ana Terra — Foto 36"
-    },
-    {
-      "src": "assets/img/galerias/ana-terra/037.webp",
-      "mini": "assets/img/galerias/ana-terra/037-mini.webp",
-      "legenda": "Ana Terra — Foto 37"
+      "legenda": "Ana Terra — Foto 10"
     },
     {
       "src": "assets/img/galerias/ana-terra/038.webp",
       "mini": "assets/img/galerias/ana-terra/038-mini.webp",
-      "legenda": "Ana Terra — Foto 38"
-    },
-    {
-      "src": "assets/img/galerias/ana-terra/039.webp",
-      "mini": "assets/img/galerias/ana-terra/039-mini.webp",
-      "legenda": "Ana Terra — Foto 39"
-    },
-    {
-      "src": "assets/img/galerias/ana-terra/040.webp",
-      "mini": "assets/img/galerias/ana-terra/040-mini.webp",
-      "legenda": "Ana Terra — Foto 40"
+      "legenda": "Ana Terra — Foto 11"
     }
   ],
   "ferretto": [
     {
-      "src": "assets/img/galerias/ferretto/001.webp",
-      "mini": "assets/img/galerias/ferretto/001-mini.webp",
-      "legenda": "Ferretto — Foto 1"
-    },
-    {
-      "src": "assets/img/galerias/ferretto/002.webp",
-      "mini": "assets/img/galerias/ferretto/002-mini.webp",
-      "legenda": "Ferretto — Foto 2"
-    },
-    {
-      "src": "assets/img/galerias/ferretto/003.webp",
-      "mini": "assets/img/galerias/ferretto/003-mini.webp",
-      "legenda": "Ferretto — Foto 3"
-    },
-    {
-      "src": "assets/img/galerias/ferretto/004.webp",
-      "mini": "assets/img/galerias/ferretto/004-mini.webp",
-      "legenda": "Ferretto — Foto 4"
-    },
-    {
-      "src": "assets/img/galerias/ferretto/005.webp",
-      "mini": "assets/img/galerias/ferretto/005-mini.webp",
-      "legenda": "Ferretto — Foto 5"
-    },
-    {
       "src": "assets/img/galerias/ferretto/006.webp",
       "mini": "assets/img/galerias/ferretto/006-mini.webp",
-      "legenda": "Ferretto — Foto 6"
-    },
-    {
-      "src": "assets/img/galerias/ferretto/007.webp",
-      "mini": "assets/img/galerias/ferretto/007-mini.webp",
-      "legenda": "Ferretto — Foto 7"
+      "legenda": "Ferretto — Foto 1"
     },
     {
       "src": "assets/img/galerias/ferretto/008.webp",
       "mini": "assets/img/galerias/ferretto/008-mini.webp",
-      "legenda": "Ferretto — Foto 8"
-    },
-    {
-      "src": "assets/img/galerias/ferretto/009.webp",
-      "mini": "assets/img/galerias/ferretto/009-mini.webp",
-      "legenda": "Ferretto — Foto 9"
-    },
-    {
-      "src": "assets/img/galerias/ferretto/010.webp",
-      "mini": "assets/img/galerias/ferretto/010-mini.webp",
-      "legenda": "Ferretto — Foto 10"
+      "legenda": "Ferretto — Foto 2"
     },
     {
       "src": "assets/img/galerias/ferretto/011.webp",
       "mini": "assets/img/galerias/ferretto/011-mini.webp",
-      "legenda": "Ferretto — Foto 11"
-    },
-    {
-      "src": "assets/img/galerias/ferretto/012.webp",
-      "mini": "assets/img/galerias/ferretto/012-mini.webp",
-      "legenda": "Ferretto — Foto 12"
+      "legenda": "Ferretto — Foto 3"
     },
     {
       "src": "assets/img/galerias/ferretto/013.webp",
       "mini": "assets/img/galerias/ferretto/013-mini.webp",
-      "legenda": "Ferretto — Foto 13"
-    },
-    {
-      "src": "assets/img/galerias/ferretto/014.webp",
-      "mini": "assets/img/galerias/ferretto/014-mini.webp",
-      "legenda": "Ferretto — Foto 14"
+      "legenda": "Ferretto — Foto 4"
     },
     {
       "src": "assets/img/galerias/ferretto/015.webp",
       "mini": "assets/img/galerias/ferretto/015-mini.webp",
-      "legenda": "Ferretto — Foto 15"
+      "legenda": "Ferretto — Foto 5"
     },
     {
       "src": "assets/img/galerias/ferretto/016.webp",
       "mini": "assets/img/galerias/ferretto/016-mini.webp",
-      "legenda": "Ferretto — Foto 16"
+      "legenda": "Ferretto — Foto 6"
     },
     {
       "src": "assets/img/galerias/ferretto/017.webp",
       "mini": "assets/img/galerias/ferretto/017-mini.webp",
-      "legenda": "Ferretto — Foto 17"
+      "legenda": "Ferretto — Foto 7"
     },
     {
       "src": "assets/img/galerias/ferretto/018.webp",
       "mini": "assets/img/galerias/ferretto/018-mini.webp",
-      "legenda": "Ferretto — Foto 18"
-    },
-    {
-      "src": "assets/img/galerias/ferretto/019.webp",
-      "mini": "assets/img/galerias/ferretto/019-mini.webp",
-      "legenda": "Ferretto — Foto 19"
-    },
-    {
-      "src": "assets/img/galerias/ferretto/020.webp",
-      "mini": "assets/img/galerias/ferretto/020-mini.webp",
-      "legenda": "Ferretto — Foto 20"
+      "legenda": "Ferretto — Foto 8"
     }
   ],
   "mario-verzola": [
-    {
-      "src": "assets/img/galerias/mario-verzola/001.webp",
-      "mini": "assets/img/galerias/mario-verzola/001-mini.webp",
-      "legenda": "Mario Verzola — Foto 1"
-    },
     {
       "src": "assets/img/galerias/mario-verzola/002.webp",
       "mini": "assets/img/galerias/mario-verzola/002-mini.webp",
       "legenda": "Mario Verzola — Foto 2"
     },
     {
-      "src": "assets/img/galerias/mario-verzola/003.webp",
-      "mini": "assets/img/galerias/mario-verzola/003-mini.webp",
-      "legenda": "Mario Verzola — Foto 3"
+      "src": "assets/img/galerias/mario-verzola/001.webp",
+      "mini": "assets/img/galerias/mario-verzola/001-mini.webp",
+      "legenda": "Mario Verzola — Foto 1"
     },
     {
       "src": "assets/img/galerias/mario-verzola/004.webp",
@@ -335,361 +125,186 @@ const GALERIAS = {
     {
       "src": "assets/img/galerias/trentino/003.webp",
       "mini": "assets/img/galerias/trentino/003-mini.webp",
-      "legenda": "Trentino — Foto 1"
-    },
-    {
-      "src": "assets/img/galerias/trentino/004.webp",
-      "mini": "assets/img/galerias/trentino/004-mini.webp",
-      "legenda": "Trentino — Foto 2"
+      "legenda": "Trentino — Fachada"
     },
     {
       "src": "assets/img/galerias/trentino/005.webp",
       "mini": "assets/img/galerias/trentino/005-mini.webp",
-      "legenda": "Trentino — Foto 3"
+      "legenda": "Trentino — Corredor da entrada"
+    },
+    {
+      "src": "assets/img/galerias/trentino/004.webp",
+      "mini": "assets/img/galerias/trentino/004-mini.webp",
+      "legenda": "Trentino — Sala de Espera"
     },
     {
       "src": "assets/img/galerias/trentino/006.webp",
       "mini": "assets/img/galerias/trentino/006-mini.webp",
-      "legenda": "Trentino — Foto 4"
+      "legenda": "Trentino — Corredor para o elevador"
     },
     {
       "src": "assets/img/galerias/trentino/008.webp",
       "mini": "assets/img/galerias/trentino/008-mini.webp",
-      "legenda": "Trentino — Foto 5"
-    },
-    {
-      "src": "assets/img/galerias/trentino/013.webp",
-      "mini": "assets/img/galerias/trentino/013-mini.webp",
-      "legenda": "Trentino — Foto 6"
-    },
-    {
-      "src": "assets/img/galerias/trentino/015.webp",
-      "mini": "assets/img/galerias/trentino/015-mini.webp",
-      "legenda": "Trentino — Foto 7"
-    },
-    {
-      "src": "assets/img/galerias/trentino/017.webp",
-      "mini": "assets/img/galerias/trentino/017-mini.webp",
-      "legenda": "Trentino — Foto 8"
-    },
-    {
-      "src": "assets/img/galerias/trentino/019.webp",
-      "mini": "assets/img/galerias/trentino/019-mini.webp",
-      "legenda": "Trentino — Foto 9"
-    },
-    {
-      "src": "assets/img/galerias/trentino/021.webp",
-      "mini": "assets/img/galerias/trentino/021-mini.webp",
-      "legenda": "Trentino — Foto 10"
-    },
-    {
-      "src": "assets/img/galerias/trentino/023.webp",
-      "mini": "assets/img/galerias/trentino/023-mini.webp",
-      "legenda": "Trentino — Foto 11"
-    },
-    {
-      "src": "assets/img/galerias/trentino/025.webp",
-      "mini": "assets/img/galerias/trentino/025-mini.webp",
-      "legenda": "Trentino — Foto 12"
-    },
-    {
-      "src": "assets/img/galerias/trentino/046.webp",
-      "mini": "assets/img/galerias/trentino/046-mini.webp",
-      "legenda": "Trentino — Foto 13"
+      "legenda": "Trentino — Garagem"
     },
     {
       "src": "assets/img/galerias/trentino/069.webp",
       "mini": "assets/img/galerias/trentino/069-mini.webp",
-      "legenda": "Trentino — Foto 14"
+      "legenda": "Trentino — Garagem"
+    },
+    {
+      "src": "assets/img/galerias/trentino/013.webp",
+      "mini": "assets/img/galerias/trentino/013-mini.webp",
+      "legenda": "Trentino — Hall"
+    },
+    {
+      "src": "assets/img/galerias/trentino/046.webp",
+      "mini": "assets/img/galerias/trentino/046-mini.webp",
+      "legenda": "Trentino — Panorâmica"
+    },
+    {
+      "src": "assets/img/galerias/trentino/017.webp",
+      "mini": "assets/img/galerias/trentino/017-mini.webp",
+      "legenda": "Trentino — Sala"
+    },
+    {
+      "src": "assets/img/galerias/trentino/019.webp",
+      "mini": "assets/img/galerias/trentino/019-mini.webp",
+      "legenda": "Trentino — Cozinha equipada"
+    },
+    {
+      "src": "assets/img/galerias/trentino/021.webp",
+      "mini": "assets/img/galerias/trentino/021-mini.webp",
+      "legenda": "Trentino — Lavanderia"
+    },
+    {
+      "src": "assets/img/galerias/trentino/023.webp",
+      "mini": "assets/img/galerias/trentino/023-mini.webp",
+      "legenda": "Trentino — Suíte"
+    },
+    {
+      "src": "assets/img/galerias/trentino/025.webp",
+      "mini": "assets/img/galerias/trentino/025-mini.webp",
+      "legenda": "Trentino — Varanda gourmet"
+    },
+    {
+      "src": "assets/img/galerias/trentino/002.webp",
+      "mini": "assets/img/galerias/trentino/002-mini.webp",
+      "legenda": "Trentino — varanda gourmet"
+    },
+    {
+      "src": "assets/img/galerias/trentino/001.webp",
+      "mini": "assets/img/galerias/trentino/001-mini.webp",
+      "legenda": "Trentino — Quarto"
     }
   ],
   "trento": [
     {
-      "src": "assets/img/galerias/trento/001.webp",
-      "mini": "assets/img/galerias/trento/001-mini.webp",
-      "legenda": "Trento — Foto 1"
-    },
-    {
       "src": "assets/img/galerias/trento/002.webp",
       "mini": "assets/img/galerias/trento/002-mini.webp",
-      "legenda": "Trento — Foto 2"
+      "legenda": "Trento — Foto 1"
     },
     {
       "src": "assets/img/galerias/trento/003.webp",
       "mini": "assets/img/galerias/trento/003-mini.webp",
-      "legenda": "Trento — Foto 3"
-    },
-    {
-      "src": "assets/img/galerias/trento/004.webp",
-      "mini": "assets/img/galerias/trento/004-mini.webp",
-      "legenda": "Trento — Foto 4"
-    },
-    {
-      "src": "assets/img/galerias/trento/005.webp",
-      "mini": "assets/img/galerias/trento/005-mini.webp",
-      "legenda": "Trento — Foto 5"
+      "legenda": "Trento — Foto 2"
     },
     {
       "src": "assets/img/galerias/trento/006.webp",
       "mini": "assets/img/galerias/trento/006-mini.webp",
-      "legenda": "Trento — Foto 6"
+      "legenda": "Trento — Foto 3"
     },
     {
       "src": "assets/img/galerias/trento/007.webp",
       "mini": "assets/img/galerias/trento/007-mini.webp",
-      "legenda": "Trento — Foto 7"
-    },
-    {
-      "src": "assets/img/galerias/trento/008.webp",
-      "mini": "assets/img/galerias/trento/008-mini.webp",
-      "legenda": "Trento — Foto 8"
-    },
-    {
-      "src": "assets/img/galerias/trento/009.webp",
-      "mini": "assets/img/galerias/trento/009-mini.webp",
-      "legenda": "Trento — Foto 9"
+      "legenda": "Trento — Foto 4"
     },
     {
       "src": "assets/img/galerias/trento/010.webp",
       "mini": "assets/img/galerias/trento/010-mini.webp",
-      "legenda": "Trento — Foto 10"
+      "legenda": "Trento — Foto 5"
     },
     {
       "src": "assets/img/galerias/trento/011.webp",
       "mini": "assets/img/galerias/trento/011-mini.webp",
-      "legenda": "Trento — Foto 11"
+      "legenda": "Trento — Foto 6"
     },
     {
       "src": "assets/img/galerias/trento/012.webp",
       "mini": "assets/img/galerias/trento/012-mini.webp",
-      "legenda": "Trento — Foto 12"
+      "legenda": "Trento — Foto 7"
     },
     {
       "src": "assets/img/galerias/trento/013.webp",
       "mini": "assets/img/galerias/trento/013-mini.webp",
-      "legenda": "Trento — Foto 13"
+      "legenda": "Trento — Foto 8"
     },
     {
       "src": "assets/img/galerias/trento/014.webp",
       "mini": "assets/img/galerias/trento/014-mini.webp",
-      "legenda": "Trento — Foto 14"
-    },
-    {
-      "src": "assets/img/galerias/trento/015.webp",
-      "mini": "assets/img/galerias/trento/015-mini.webp",
-      "legenda": "Trento — Foto 15"
-    },
-    {
-      "src": "assets/img/galerias/trento/016.webp",
-      "mini": "assets/img/galerias/trento/016-mini.webp",
-      "legenda": "Trento — Foto 16"
-    },
-    {
-      "src": "assets/img/galerias/trento/017.webp",
-      "mini": "assets/img/galerias/trento/017-mini.webp",
-      "legenda": "Trento — Foto 17"
+      "legenda": "Trento — Foto 9"
     },
     {
       "src": "assets/img/galerias/trento/018.webp",
       "mini": "assets/img/galerias/trento/018-mini.webp",
-      "legenda": "Trento — Foto 18"
-    },
-    {
-      "src": "assets/img/galerias/trento/019.webp",
-      "mini": "assets/img/galerias/trento/019-mini.webp",
-      "legenda": "Trento — Foto 19"
+      "legenda": "Trento — Foto 10"
     },
     {
       "src": "assets/img/galerias/trento/020.webp",
       "mini": "assets/img/galerias/trento/020-mini.webp",
-      "legenda": "Trento — Foto 20"
-    },
-    {
-      "src": "assets/img/galerias/trento/021.webp",
-      "mini": "assets/img/galerias/trento/021-mini.webp",
-      "legenda": "Trento — Foto 21"
+      "legenda": "Trento — Foto 11"
     },
     {
       "src": "assets/img/galerias/trento/022.webp",
       "mini": "assets/img/galerias/trento/022-mini.webp",
-      "legenda": "Trento — Foto 22"
+      "legenda": "Trento — Foto 12"
     },
     {
       "src": "assets/img/galerias/trento/023.webp",
       "mini": "assets/img/galerias/trento/023-mini.webp",
-      "legenda": "Trento — Foto 23"
+      "legenda": "Trento — Foto 13"
     },
     {
       "src": "assets/img/galerias/trento/024.webp",
       "mini": "assets/img/galerias/trento/024-mini.webp",
-      "legenda": "Trento — Foto 24"
+      "legenda": "Trento — Foto 14"
     },
     {
       "src": "assets/img/galerias/trento/025.webp",
       "mini": "assets/img/galerias/trento/025-mini.webp",
-      "legenda": "Trento — Foto 25"
-    },
-    {
-      "src": "assets/img/galerias/trento/026.webp",
-      "mini": "assets/img/galerias/trento/026-mini.webp",
-      "legenda": "Trento — Foto 26"
+      "legenda": "Trento — Foto 15"
     },
     {
       "src": "assets/img/galerias/trento/027.webp",
       "mini": "assets/img/galerias/trento/027-mini.webp",
-      "legenda": "Trento — Foto 27"
-    },
-    {
-      "src": "assets/img/galerias/trento/028.webp",
-      "mini": "assets/img/galerias/trento/028-mini.webp",
-      "legenda": "Trento — Foto 28"
+      "legenda": "Trento — Foto 16"
     },
     {
       "src": "assets/img/galerias/trento/029.webp",
       "mini": "assets/img/galerias/trento/029-mini.webp",
-      "legenda": "Trento — Foto 29"
+      "legenda": "Trento — Foto 17"
     },
     {
       "src": "assets/img/galerias/trento/030.webp",
       "mini": "assets/img/galerias/trento/030-mini.webp",
-      "legenda": "Trento — Foto 30"
-    },
-    {
-      "src": "assets/img/galerias/trento/031.webp",
-      "mini": "assets/img/galerias/trento/031-mini.webp",
-      "legenda": "Trento — Foto 31"
-    },
-    {
-      "src": "assets/img/galerias/trento/032.webp",
-      "mini": "assets/img/galerias/trento/032-mini.webp",
-      "legenda": "Trento — Foto 32"
-    },
-    {
-      "src": "assets/img/galerias/trento/033.webp",
-      "mini": "assets/img/galerias/trento/033-mini.webp",
-      "legenda": "Trento — Foto 33"
-    },
-    {
-      "src": "assets/img/galerias/trento/034.webp",
-      "mini": "assets/img/galerias/trento/034-mini.webp",
-      "legenda": "Trento — Foto 34"
+      "legenda": "Trento — Foto 18"
     },
     {
       "src": "assets/img/galerias/trento/035.webp",
       "mini": "assets/img/galerias/trento/035-mini.webp",
-      "legenda": "Trento — Foto 35"
-    },
-    {
-      "src": "assets/img/galerias/trento/036.webp",
-      "mini": "assets/img/galerias/trento/036-mini.webp",
-      "legenda": "Trento — Foto 36"
+      "legenda": "Trento — Foto 19"
     },
     {
       "src": "assets/img/galerias/trento/037.webp",
       "mini": "assets/img/galerias/trento/037-mini.webp",
-      "legenda": "Trento — Foto 37"
-    },
-    {
-      "src": "assets/img/galerias/trento/038.webp",
-      "mini": "assets/img/galerias/trento/038-mini.webp",
-      "legenda": "Trento — Foto 38"
-    },
-    {
-      "src": "assets/img/galerias/trento/039.webp",
-      "mini": "assets/img/galerias/trento/039-mini.webp",
-      "legenda": "Trento — Foto 39"
-    },
-    {
-      "src": "assets/img/galerias/trento/040.webp",
-      "mini": "assets/img/galerias/trento/040-mini.webp",
-      "legenda": "Trento — Foto 40"
-    },
-    {
-      "src": "assets/img/galerias/trento/041.webp",
-      "mini": "assets/img/galerias/trento/041-mini.webp",
-      "legenda": "Trento — Foto 41"
-    },
-    {
-      "src": "assets/img/galerias/trento/042.webp",
-      "mini": "assets/img/galerias/trento/042-mini.webp",
-      "legenda": "Trento — Foto 42"
-    },
-    {
-      "src": "assets/img/galerias/trento/043.webp",
-      "mini": "assets/img/galerias/trento/043-mini.webp",
-      "legenda": "Trento — Foto 43"
-    },
-    {
-      "src": "assets/img/galerias/trento/044.webp",
-      "mini": "assets/img/galerias/trento/044-mini.webp",
-      "legenda": "Trento — Foto 44"
-    },
-    {
-      "src": "assets/img/galerias/trento/045.webp",
-      "mini": "assets/img/galerias/trento/045-mini.webp",
-      "legenda": "Trento — Foto 45"
-    },
-    {
-      "src": "assets/img/galerias/trento/046.webp",
-      "mini": "assets/img/galerias/trento/046-mini.webp",
-      "legenda": "Trento — Foto 46"
-    },
-    {
-      "src": "assets/img/galerias/trento/047.webp",
-      "mini": "assets/img/galerias/trento/047-mini.webp",
-      "legenda": "Trento — Foto 47"
-    },
-    {
-      "src": "assets/img/galerias/trento/048.webp",
-      "mini": "assets/img/galerias/trento/048-mini.webp",
-      "legenda": "Trento — Foto 48"
-    },
-    {
-      "src": "assets/img/galerias/trento/049.webp",
-      "mini": "assets/img/galerias/trento/049-mini.webp",
-      "legenda": "Trento — Foto 49"
-    },
-    {
-      "src": "assets/img/galerias/trento/050.webp",
-      "mini": "assets/img/galerias/trento/050-mini.webp",
-      "legenda": "Trento — Foto 50"
-    },
-    {
-      "src": "assets/img/galerias/trento/051.webp",
-      "mini": "assets/img/galerias/trento/051-mini.webp",
-      "legenda": "Trento — Foto 51"
-    },
-    {
-      "src": "assets/img/galerias/trento/052.webp",
-      "mini": "assets/img/galerias/trento/052-mini.webp",
-      "legenda": "Trento — Foto 52"
+      "legenda": "Trento — Foto 20"
     }
   ],
   "trieste": [
     {
-      "src": "assets/img/galerias/trieste/001.webp",
-      "mini": "assets/img/galerias/trieste/001-mini.webp",
-      "legenda": "Trieste — Foto 1"
-    },
-    {
-      "src": "assets/img/galerias/trieste/002.webp",
-      "mini": "assets/img/galerias/trieste/002-mini.webp",
-      "legenda": "Trieste — Foto 2"
-    },
-    {
       "src": "assets/img/galerias/trieste/003.webp",
       "mini": "assets/img/galerias/trieste/003-mini.webp",
       "legenda": "Trieste — Foto 3"
-    },
-    {
-      "src": "assets/img/galerias/trieste/004.webp",
-      "mini": "assets/img/galerias/trieste/004-mini.webp",
-      "legenda": "Trieste — Foto 4"
-    },
-    {
-      "src": "assets/img/galerias/trieste/005.webp",
-      "mini": "assets/img/galerias/trieste/005-mini.webp",
-      "legenda": "Trieste — Foto 5"
     },
     {
       "src": "assets/img/galerias/trieste/006.webp",

@@ -381,7 +381,8 @@ $("#salvar").addEventListener("click", async () => {
     atual.fotos = JSON.parse(JSON.stringify(fotos));
     delete rascunhos[atual.id];
     const guardadas = r.guardados ? ` · ${r.guardados} arquivo(s) para a lixeira` : "";
-    msg(`salvo: ${r.fotos} fotos${guardadas}` + (r.gerador === "ok" ? " · páginas geradas" : " · gerador " + r.gerador),
+    const versao = r.versao ? ` · versão ${r.versao}` : "";
+    msg(`salvo: ${r.fotos} fotos${guardadas}${versao}` + (r.gerador === "ok" ? " · páginas geradas" : " · gerador " + r.gerador),
         r.gerador === "ok" ? "ok" : "erro");
   } catch (e){
     msg("erro ao salvar: " + e.message, "erro");

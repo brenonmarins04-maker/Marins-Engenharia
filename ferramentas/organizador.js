@@ -122,11 +122,14 @@ async function api(req, res, url) {
     GALERIAS[predio] = limpas;
     gravarGalerias(GALERIAS);
 
+    // sem subir o ?v=, quem já visitou o site continua vendo a galeria antiga
+    const versao = require("./versao").subir();
+
     const gerador = await new Promise(ok =>
       execFile(process.execPath, [path.join(__dirname, "gerar-paginas.js")], { cwd: RAIZ },
         (e, saida, erro) => ok(e ? "falhou: " + (erro || e.message) : "ok")));
 
-    return json(res, { ok: true, fotos: limpas.length, guardados, gerador });
+    return json(res, { ok: true, fotos: limpas.length, guardados, gerador, versao: versao && versao.para });
   }
 
   if (url.pathname === "/api/enviar" && req.method === "POST") {

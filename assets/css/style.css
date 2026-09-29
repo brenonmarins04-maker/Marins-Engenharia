@@ -968,3 +968,10 @@ input,textarea,select{font-family:var(--fonte)}
 /* Enquanto o dedo arrasta os cards, nada de transicao competindo com
    o transform que o JS escreve a cada quadro. */
 .apresentacao__janela--arrasto .apresentacao__item{transition:none;will-change:transform}
+
+/* Prévia reversível: divisão suave das seções da home. */
+.home--trentino .apresentacao{background:#EAF0F5}
+.home--trentino #edificios{background:#FAFBFC}
+.home--trentino .loc{background:#DCE6EE;border-top-color:#D2DFE8}
+.home--trentino .depoimentos{background:#F5F7F9;border-block-color:#E0E7ED}
+.home--trentino .contato{background:#E8EFF4;border-top-color:#D9E3EC}
