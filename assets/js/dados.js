@@ -55,20 +55,11 @@ const NAV = [
    ------------------------------------------------------------ */
 const HERO = [
   {
-    foto: "assets/img/predios/escritorio-marins.jpg",
-    alt: "Fachada do escritório da Marins Engenharia",
-    titulo: "*{edificios} edifícios* entregues na cidade.",
-    texto: "São {apartamentos} apartamentos construídos nas melhores localizações de São Carlos.",
+    foto: "assets/img/predios/turim-fachada.jpg",
+    alt: "Fachada do Edifício Turim vista de baixo, com céu azul",
+    titulo: "*25 anos* construindo em São Carlos.",
+    texto: "Incorporamos e construímos prédios residenciais de médio e alto padrão: do terreno à entrega das chaves.",
     botao: "Ver edifícios", href: "edificios.html"
-  },
-  {
-    foto: "assets/img/predios/apartamento-vertical.jpg",
-    fotoDesktop: "assets/img/predios/ferretto-banner-desktop.png",
-    altDesktop: "Entrada do Edifício Ferretto, da Marins Engenharia",
-    alt: "Suíte de um apartamento da Marins, com cama de casal e armário planejado",
-    titulo: "Hospede-se em um apartamento *nosso*.",
-    texto: "Conheça nossos apartamentos para hospedagem pelo AirBnB e aproveite sua estadia em São Carlos.",
-    botao: "Ver unidades", href: "locacao.html"
   },
   {
     foto: "assets/img/predios/trivoli-fachada.jpg",
@@ -80,11 +71,18 @@ const HERO = [
     botao: "Quem somos", href: "quem-somos.html"
   },
   {
-    foto: "assets/img/predios/turim-fachada.jpg",
-    alt: "Fachada do Edifício Turim vista de baixo, com céu azul",
-    titulo: "*25 anos* construindo em São Carlos.",
-    texto: "Incorporamos e construímos prédios residenciais de médio e alto padrão: do terreno à entrega das chaves.",
+    foto: "assets/img/predios/escritorio-marins.jpg",
+    alt: "Fachada do escritório da Marins Engenharia",
+    titulo: "*{edificios} edifícios* entregues na cidade.",
+    texto: "São {apartamentos} apartamentos construídos nas melhores localizações de São Carlos.",
     botao: "Ver edifícios", href: "edificios.html"
+  },
+  {
+    foto: "assets/img/predios/hall-apartamentos.jpg",
+    alt: "Interior com painel de madeira, espelho e poltronas",
+    titulo: "Hospede-se em um apartamento *nosso*.",
+    texto: "Conheça nossos apartamentos para hospedagem pelo AirBnB e aproveite sua estadia em São Carlos.",
+    botao: "Ver unidades", href: "locacao.html"
   }
 ];
 

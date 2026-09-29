@@ -529,7 +529,7 @@ function montarApresentacao(){
   const parar = () => clearTimeout(timer);
   const agendar = () => {
     parar();
-    if(!pausado && visivel && !document.hidden && !raiz.matches(":hover") && !raiz.contains(document.activeElement)) timer = setTimeout(()=>mover(atual+1,1),6000);
+    if(!pausado && visivel && !document.hidden && !(raiz.contains(document.activeElement) && document.activeElement.matches(":focus-visible"))) timer = setTimeout(()=>mover(atual+1,1),7000);
   };
   function estado(){
     cards.forEach((card,i)=>{card.style.visibility=i===atual?"visible":"hidden";card.inert=i!==atual;card.setAttribute("aria-hidden",String(i!==atual));});
@@ -556,8 +556,8 @@ function montarApresentacao(){
   pontos.forEach((b,i)=>b.onclick=()=>mover(i,i<atual?-1:1));
   pausa.onclick=()=>{pausado=!pausado;estado();agendar();};
   raiz.addEventListener("keydown",e=>{if(e.key==="ArrowLeft"||e.key==="ArrowRight"){e.preventDefault();const d=e.key==="ArrowLeft"?-1:1;mover(atual+d,d);}});
-  raiz.addEventListener("mouseenter",parar);raiz.addEventListener("mouseleave",agendar);
-  raiz.addEventListener("focusin",parar);raiz.addEventListener("focusout",()=>setTimeout(agendar,0));
+  raiz.addEventListener("focusin",()=>{if(document.activeElement.matches(":focus-visible")) parar();});
+  raiz.addEventListener("focusout",()=>setTimeout(agendar,0));
   document.addEventListener("visibilitychange",agendar);
   reduz.addEventListener("change",()=>{pausado=reduz.matches;estado();agendar();});
   let inicio;

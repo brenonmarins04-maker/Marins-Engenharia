@@ -842,3 +842,12 @@ input,textarea,select{font-family:var(--fonte)}
 @media(min-width:961px){
  .home--trentino .topo:not(.topo--claro) .nav > a[aria-current="page"]{border-bottom-color:#8AC4FF}
 }
+
+/* Cartão azul para separar claramente a apresentação do fundo suave. */
+.apresentacao__janela{background:#12375C;border-color:#12375C;box-shadow:0 16px 36px rgba(18,55,92,.13)}
+.apresentacao__item{background:#12375C;color:#fff}
+.apresentacao__texto .realce{color:#9BD0FF}
+.apresentacao__texto p{color:#DFE8F2}
+.apresentacao__texto .btn--linha{color:#fff;border-color:#A5C6E5}
+.apresentacao__texto .btn--linha:hover{background:#24527D}
+.apresentacao__item:nth-child(2) img{object-position:center}
