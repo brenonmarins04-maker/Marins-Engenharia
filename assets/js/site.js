@@ -424,7 +424,9 @@ function cartaoLocacao(un){
   <article class="cartao">
     <${abre} class="cartao__foto"${ida}>
       <span class="cartao__tag">${esc(L.selo)}</span>
-      ${ph(L.fotoCartao + " — " + un.nome, "ph--esc")}
+      ${un.foto
+        ? `<img src="${esc(un.foto)}" alt="${esc(L.fotoCartao + " — " + un.nome)}" loading="lazy">`
+        : ph(L.fotoCartao + " — " + un.nome, "ph--esc")}
     </${abre}>
     <div class="cartao__corpo">
       <p class="loc__predio">${esc(un.predio)}</p>
@@ -595,9 +597,10 @@ function montarLocacao(){
     const id = LOCACAO[i].id.replace(/-\d+$/, "");
     const emp = EMPREENDIMENTOS.find(e => e.id === id);
     const fotos = emp ? fotosEmpreendimento(emp) : (GALERIAS[id] || []);
-    if(fotos.length){
+    const vazio = card.querySelector(".cartao__foto .ph");
+    if(vazio && fotos.length){
       const f = fotos[0];
-      card.querySelector(".cartao__foto .ph").outerHTML =
+      vazio.outerHTML =
         `<img src="${f.mini}" alt="${TEXTOS.locacao.fotoCartao} — ${LOCACAO[i].nome}" loading="lazy">`;
     }
   });

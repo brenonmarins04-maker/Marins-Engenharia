@@ -796,11 +796,22 @@ input,textarea,select{font-family:var(--fonte)}
 .apresentacao__texto .realce{color:var(--azul)}
 .apresentacao__texto p{margin:24px 0;color:var(--cinza);max-width:48ch}
 @media(max-width:700px){
+ /* No celular o menu e branco e ocupa o proprio espaco, em vez de
+    flutuar por cima da foto. Com isso o veu escuro no topo sai e a
+    foto comeca abaixo do menu. */
+ .home .topo{
+   position:sticky;background:rgba(255,255,255,.97);
+   border-bottom-color:var(--linha);backdrop-filter:saturate(160%) blur(10px)}
+ .home .topo:not(.topo--claro) .menu-btn{color:var(--tinta);border-color:var(--linha)}
+ .home .topo:not(.topo--claro) .topo__pagina{color:var(--azul)}
+ .home--trentino .destaque::before{display:none}
+
  /* No celular a abertura vira duas faixas que juntas ocupam a tela:
     a foto em cima, com o predio inteiro, e o texto embaixo no claro.
     Recortar a foto na horizontal so mostrava metade do predio. */
  .home--trentino .destaque{
-   height:100vh;height:100svh;min-height:560px;max-height:none;
+   height:calc(100vh - 73px);height:calc(100svh - 73px);
+   min-height:520px;max-height:none;
    display:grid;grid-template-rows:minmax(260px,42%) 1fr}
  .home--trentino .destaque__foto{
    position:static;grid-row:1;z-index:auto;width:100%;height:100%;object-position:14% center}

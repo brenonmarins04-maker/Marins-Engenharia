@@ -387,19 +387,19 @@ const EMPREENDIMENTOS = [
    linkExterno: cole aqui o link do Airbnb, se houver
    ------------------------------------------------------------ */
 const LOCACAO = [
-  { id:"ferretto-41", nome:"Ferretto 41", apto:"41", predio:"Edifício Ferretto", endereco:"Rua Riachuelo, 907",
+  { id:"ferretto-41", foto:"assets/img/locacao/ferretto-41.jpg", nome:"Ferretto 41", apto:"41", predio:"Edifício Ferretto", endereco:"Rua Riachuelo, 907",
     hospedes:3, camas:"1 cama e sofá-cama", banheiros:1, metragem:"38,22 m²",
     detalhes:"01 dormitório suíte, balcão americano, sala, cozinha e área de serviço. Apartamento inteiro.", linkExterno:"https://www.airbnb.com.br/rooms/16601709" },
-  { id:"ferretto-53", nome:"Ferretto 53", apto:"53", predio:"Edifício Ferretto", endereco:"Rua Riachuelo, 907",
+  { id:"ferretto-53", foto:"assets/img/locacao/ferretto-53.jpg", nome:"Ferretto 53", apto:"53", predio:"Edifício Ferretto", endereco:"Rua Riachuelo, 907",
     hospedes:3, camas:"2 camas e sofá-cama", banheiros:1, metragem:"",
     detalhes:"01 dormitório suíte, balcão americano, sala, cozinha e área de serviço.", linkExterno:"https://www.airbnb.com.br/rooms/17403633" },
-  { id:"trieste-62", nome:"Trieste 62", apto:"62", predio:"Edifício Trieste", endereco:"Rua Padre Teixeira, 1465",
+  { id:"trieste-62", foto:"assets/img/locacao/trieste-62.jpg", nome:"Trieste 62", apto:"62", predio:"Edifício Trieste", endereco:"Rua Padre Teixeira, 1465",
     hospedes:5, camas:"3 camas e sofá-cama", banheiros:2, metragem:"68,77 m²",
     detalhes:"02 dormitórios (1 suíte), wc social, balcão americano, sala com dois ambientes, cozinha e área de serviço, sacada envidraçada.", linkExterno:"https://www.airbnb.com.br/rooms/23818917" },
-  { id:"trento-32", nome:"Trento 32", apto:"32", predio:"Edifício Trento", endereco:"Rua Padre Teixeira, 1680",
+  { id:"trento-32", foto:"assets/img/locacao/trento-32.jpg", nome:"Trento 32", apto:"32", predio:"Edifício Trento", endereco:"Rua Padre Teixeira, 1680",
     hospedes:3, camas:"2 camas e sofá-cama", banheiros:1, metragem:"42,00 m²",
     detalhes:"01 suíte, sala, cozinha e área de serviço, sacada envidraçada.", linkExterno:"https://www.airbnb.com.br/rooms/38354809" },
-  { id:"trento-33", nome:"Trento 33", apto:"33", predio:"Edifício Trento", endereco:"Rua Padre Teixeira, 1680",
+  { id:"trento-33", foto:"assets/img/locacao/trento-33.jpg", nome:"Trento 33", apto:"33", predio:"Edifício Trento", endereco:"Rua Padre Teixeira, 1680",
     hospedes:3, camas:"2 camas e sofá-cama", banheiros:1, metragem:"42,00 m²",
     detalhes:"01 suíte, sala, cozinha e área de serviço, sacada envidraçada.", linkExterno:"https://www.airbnb.com.br/rooms/42666415" }
 ];
