@@ -89,7 +89,7 @@ function montarCabecalho(){
   ligarMenu();
   if(document.body.classList.contains("home")){
     const atualizar = () => {
-      const progresso = Math.min(window.scrollY / 180, 1);
+      const progresso = document.body.classList.contains("home--trentino") ? 1 : Math.min(window.scrollY / 180, 1);
       alvo.style.setProperty("--topo-opacidade", progresso);
       alvo.classList.toggle("topo--claro", progresso > .5);
     };
@@ -487,31 +487,10 @@ function ligarFormulario(){
       return avisar("erro", C.emailInvalido);
     }
 
-    // Sem webhook configurado: leva a conversa para o WhatsApp.
-    if(!EMPRESA.webhook){
-      const texto = `Olá! Meu nome é ${dados.nome}.\nE-mail: ${dados.email}\nTelefone: ${dados.telefone}` +
-        (dados.mensagem ? `\n\n${dados.mensagem}` : "");
-      window.open(zap(texto), "_blank", "noopener");
-      return avisar("ok", C.abriuZap);
-    }
-
-    const btn = form.querySelector('button[type="submit"]');
-    btn.disabled = true;
-    avisar("", C.enviando);
-    try{
-      const r = await fetch(EMPRESA.webhook, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(dados)
-      });
-      if(!r.ok) throw new Error(r.status);
-      form.reset();
-      avisar("ok", C.enviado);
-    }catch(err){
-      avisar("erro", C.falhou);
-    }finally{
-      btn.disabled = false;
-    }
+    const assunto = "Contato pelo site da Marins Engenharia";
+    const corpo = `Olá, equipe de vendas da Marins Engenharia!\r\n\r\nNome: ${dados.nome}\r\nE-mail: ${dados.email}\r\nTelefone: ${dados.telefone}\r\n\r\n${dados.mensagem}\r\n\r\nPágina de origem: ${dados.origem}`;
+    window.location.href = `mailto:${EMPRESA.email}?subject=${encodeURIComponent(assunto)}&body=${encodeURIComponent(corpo)}`;
+    avisar("ok", C.abriuEmail);
   });
 }
 
@@ -519,7 +498,18 @@ function ligarFormulario(){
 const encher = (id, html) => { const el = document.getElementById(id); if(el) el.innerHTML = html; };
 
 function montarHome(){
-  montarCarrossel();
+  encher("apresentacao-marins", HERO.map((s, i) => `
+    <article class="apresentacao__item">
+      <picture class="apresentacao__foto">
+        ${s.fotoDesktop ? `<source media="(min-width:961px)" srcset="${esc(s.fotoDesktop)}">` : ""}
+        <img src="${esc(s.foto)}" alt="${esc(s.altDesktop || s.alt)}" loading="lazy" decoding="async">
+      </picture>
+      <div class="apresentacao__texto">
+        <h2>${destaque(troca(s.titulo))}</h2>
+        <p>${esc(troca(s.texto))}</p>
+        <a class="btn btn--linha" href="${esc(s.href)}">${esc(s.botao)} <span aria-hidden="true">↗</span></a>
+      </div>
+    </article>`).join(""));
   encher("numeros", TEXTOS.numeros.map(n =>
     `<div class="dado"><b>${esc(troca(n.valor))}</b><span>${esc(n.rotulo)}</span></div>`).join(""));
   encher("trilho-vendas", EMPREENDIMENTOS.map(cartaoEmpreendimento).join(""));
