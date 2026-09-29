@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Organizador de fotos — Marins Engenharia</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --azul:#00378A; --azul-esc:#002255; --amarelo:#FFCC02; --amarelo-esc:#B88A00;
+    --tinta:#0C1626; --cinza:#5A6478; --linha:rgba(12,22,38,.13);
+    --neve:#F3F5FA; --vermelho:#B3261E;
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  body{margin:0;background:var(--neve);color:var(--tinta);
+    font-family:Raleway,system-ui,sans-serif;line-height:1.5}
+  header{position:sticky;top:0;z-index:20;background:rgba(255,255,255,.97);
+    border-bottom:1px solid var(--linha);backdrop-filter:blur(10px)}
+  .env{max-width:1240px;margin-inline:auto;padding:0 24px}
+  .topo{display:flex;align-items:center;gap:20px;flex-wrap:wrap;padding:16px 0}
+  h1{font-size:1.25rem;margin:0;font-weight:700;color:var(--azul-esc)}
+  .dica{color:var(--cinza);font-size:.8125rem;margin:0}
+
+  select,button,input{font:inherit}
+  select{padding:9px 12px;border:1px solid var(--linha);background:#fff;color:var(--tinta)}
+  .btn{border:1px solid var(--azul-esc);background:transparent;color:var(--azul-esc);
+    padding:9px 18px;font-weight:600;cursor:pointer}
+  .btn:hover{background:var(--azul-esc);color:#fff}
+  .btn--forte{background:var(--azul);border-color:var(--azul);color:#fff}
+  .btn--forte:hover{background:var(--azul-esc);border-color:var(--azul-esc)}
+  .btn:disabled{opacity:.45;cursor:default}
+  .btn:disabled:hover{background:transparent;color:var(--azul-esc)}
+  .btn--forte:disabled:hover{background:var(--azul);color:#fff}
+  .espaco{margin-left:auto;display:flex;gap:10px;align-items:center}
+  .aviso{font-size:.8125rem;font-weight:600;color:var(--amarelo-esc)}
+  .aviso--ok{color:#11843F}
+  .aviso--erro{color:var(--vermelho)}
+
+  main{padding:28px 0 120px}
+  .largar{border:2px dashed var(--linha);background:#fff;padding:22px;text-align:center;
+    color:var(--cinza);margin-bottom:24px;font-size:.9375rem}
+  .largar--ativo{border-color:var(--azul);background:#EEF3FB;color:var(--azul-esc)}
+  .largar b{color:var(--azul-esc)}
+
+  .grade{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:18px}
+  .foto{background:#fff;border:1px solid var(--linha);display:flex;flex-direction:column}
+  .foto--arrastando{opacity:.35}
+  .foto--alvo{outline:2px solid var(--azul);outline-offset:-2px}
+  /* A imagem sai do fluxo: se ficasse nele, uma foto em pé esticava a
+     caixa e os cartões da linha desalinhavam. */
+  .foto__img{position:relative;aspect-ratio:4/3;flex:none;background:#E6EBF4;cursor:zoom-in}
+  .foto__img img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block}
+  .foto__n{position:absolute;top:8px;left:8px;background:#fff;border:1px solid var(--linha);
+    padding:2px 8px;font-size:.75rem;font-weight:700;color:var(--azul)}
+  .pega{position:absolute;top:8px;right:8px;background:#fff;border:1px solid var(--linha);
+    padding:2px 8px;font-size:.75rem;color:var(--cinza);cursor:grab}
+  .pega:active{cursor:grabbing}
+  .foto__corpo{padding:12px;display:grid;gap:10px}
+  .foto__corpo input{width:100%;padding:8px 10px;border:1px solid var(--linha);color:var(--tinta)}
+  .foto__corpo input:focus{outline:none;border-color:var(--azul);box-shadow:0 0 0 3px rgba(0,55,138,.13)}
+  .acoes{display:flex;gap:6px}
+  .mini{border:1px solid var(--linha);background:#fff;color:var(--cinza);
+    padding:5px 9px;font-size:.8125rem;cursor:pointer;line-height:1}
+  .mini:hover{border-color:var(--azul);color:var(--azul)}
+  .mini--sair{margin-left:auto;color:var(--vermelho)}
+  .mini--sair:hover{border-color:var(--vermelho);color:#fff;background:var(--vermelho)}
+
+  .vazio{background:#fff;border:1px solid var(--linha);padding:40px;text-align:center;color:var(--cinza)}
+
+  .lupa{position:fixed;inset:0;background:rgba(6,14,28,.88);display:grid;place-items:center;
+    z-index:60;padding:28px}
+  .lupa img{max-width:100%;max-height:88vh;object-fit:contain}
+  .lupa p{color:#fff;text-align:center;margin:14px 0 0;font-size:.875rem}
+  .lupa button{position:absolute;top:20px;right:20px;background:#fff;border:0;
+    padding:9px 16px;font-weight:600;cursor:pointer;color:var(--azul-esc)}
+
+  .rodape{position:fixed;left:0;right:0;bottom:0;background:rgba(255,255,255,.97);
+    border-top:1px solid var(--linha);backdrop-filter:blur(10px);z-index:30}
+  .rodape .env{display:flex;align-items:center;gap:14px;padding:14px 24px;flex-wrap:wrap}
+  .contagem{font-size:.875rem;color:var(--cinza)}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="env topo">
+    <div>
+      <h1>Organizador de fotos</h1>
+      <p class="dica">Arraste pela alça para trocar a ordem · clique na foto para ver grande</p>
+    </div>
+    <select id="predio" aria-label="Edifício"></select>
+    <div class="espaco">
+      <span id="aviso" class="aviso"></span>
+      <button class="btn" id="renumerar" type="button">Renumerar legendas</button>
+      <button class="btn" id="desfazer" type="button" disabled>Descartar mudanças</button>
+      <button class="btn btn--forte" id="salvar" type="button" disabled>Salvar</button>
+    </div>
+  </div>
+</header>
+
+<main class="env">
+  <div class="largar" id="largar">
+    Arraste fotos novas do computador para cá — ou <b id="escolher" style="cursor:pointer;text-decoration:underline">escolha os arquivos</b>.
+    <input type="file" id="arquivos" accept="image/*" multiple hidden>
+  </div>
+  <div class="grade" id="grade"></div>
+</main>
+
+<div class="rodape">
+  <div class="env">
+    <span class="contagem" id="contagem"></span>
+    <span class="espaco"></span>
+    <span class="contagem">As fotos retiradas vão para <code>ferramentas/lixeira/</code> — nada é apagado de vez.</span>
+  </div>
+</div>
+
+<script>
+const $ = s => document.querySelector(s);
+let predios = [], atual = null, fotos = [], originais = "", enviando = 0;
+
+const sujo = () => JSON.stringify(fotos) !== originais;
+
+function estado(){
+  $("#salvar").disabled = !sujo() || enviando > 0;
+  $("#desfazer").disabled = !sujo();
+  $("#contagem").textContent = `${fotos.length} foto${fotos.length === 1 ? "" : "s"} em ${atual ? atual.nome : ""}`;
+  if (enviando > 0) msg(`preparando ${enviando} foto${enviando === 1 ? "" : "s"}...`);
+  else if (sujo()) msg("mudanças não salvas");
+  else msg("");
+}
+
+function msg(texto, tipo){
+  const el = $("#aviso");
+  el.textContent = texto;
+  el.className = "aviso" + (tipo ? " aviso--" + tipo : "");
+}
+
+/* ---------- desenho ---------- */
+function desenhar(){
+  const grade = $("#grade");
+  if (!fotos.length){
+    grade.innerHTML = `<div class="vazio">Nenhuma foto neste edifício. Arraste fotos para a área acima.</div>`;
+    return estado();
+  }
+  grade.innerHTML = fotos.map((f, i) => `
+    <article class="foto" draggable="false" data-i="${i}">
+      <div class="foto__img" data-ver="${i}">
+        <img src="/${f.mini}" alt="" loading="lazy">
+        <span class="foto__n">${i + 1}</span>
+        <span class="pega" draggable="true" title="Arraste para mudar a ordem">⠿ mover</span>
+      </div>
+      <div class="foto__corpo">
+        <input value="${String(f.legenda).replace(/"/g, "&quot;")}" data-legenda="${i}"
+               aria-label="Nome da foto ${i + 1}">
+        <div class="acoes">
+          <button class="mini" data-passo="-1" data-i="${i}" ${i === 0 ? "disabled" : ""} title="Mover para trás">←</button>
+          <button class="mini" data-passo="1" data-i="${i}" ${i === fotos.length - 1 ? "disabled" : ""} title="Mover para frente">→</button>
+          <button class="mini mini--sair" data-tirar="${i}">Tirar</button>
+        </div>
+      </div>
+    </article>`).join("");
+  estado();
+}
+
+/* ---------- carga ---------- */
+async function carregar(){
+  const r = await fetch("/api/dados").then(r => r.json());
+  predios = r.predios;
+  $("#predio").innerHTML = predios.map(p =>
+    `<option value="${p.id}">${p.nome} (${p.fotos.length})</option>`).join("");
+  escolher(predios[0].id);
+}
+
+function escolher(id){
+  atual = predios.find(p => p.id === id);
+  fotos = JSON.parse(JSON.stringify(atual.fotos));
+  originais = JSON.stringify(fotos);
+  $("#predio").value = id;
+  desenhar();
+}
+
+/* ---------- eventos da grade ---------- */
+$("#grade").addEventListener("click", e => {
+  const tirar = e.target.closest("[data-tirar]");
+  if (tirar){ fotos.splice(Number(tirar.dataset.tirar), 1); return desenhar(); }
+
+  const passo = e.target.closest("[data-passo]");
+  if (passo){
+    const i = Number(passo.dataset.i), j = i + Number(passo.dataset.passo);
+    if (j < 0 || j >= fotos.length) return;
+    [fotos[i], fotos[j]] = [fotos[j], fotos[i]];
+    return desenhar();
+  }
+
+  const ver = e.target.closest("[data-ver]");
+  if (ver && !e.target.closest(".pega")) lupa(Number(ver.dataset.ver));
+});
+
+$("#grade").addEventListener("input", e => {
+  const campo = e.target.closest("[data-legenda]");
+  if (!campo) return;
+  fotos[Number(campo.dataset.legenda)].legenda = campo.value;
+  estado();
+});
+
+/* ---------- arrastar para reordenar ---------- */
+let origem = null;
+$("#grade").addEventListener("dragstart", e => {
+  const pega = e.target.closest(".pega");
+  if (!pega) return e.preventDefault();
+  origem = Number(pega.closest(".foto").dataset.i);
+  pega.closest(".foto").classList.add("foto--arrastando");
+  e.dataTransfer.effectAllowed = "move";
+  e.dataTransfer.setData("text/plain", String(origem));
+});
+$("#grade").addEventListener("dragover", e => {
+  if (origem === null) return;
+  e.preventDefault();
+  const alvo = e.target.closest(".foto");
+  document.querySelectorAll(".foto--alvo").forEach(el => el.classList.remove("foto--alvo"));
+  if (alvo && Number(alvo.dataset.i) !== origem) alvo.classList.add("foto--alvo");
+});
+$("#grade").addEventListener("drop", e => {
+  if (origem === null) return;
+  e.preventDefault();
+  const alvo = e.target.closest(".foto");
+  if (alvo){
+    const destino = Number(alvo.dataset.i);
+    const [f] = fotos.splice(origem, 1);
+    fotos.splice(destino, 0, f);
+  }
+  origem = null;
+  desenhar();
+});
+$("#grade").addEventListener("dragend", () => {
+  origem = null;
+  document.querySelectorAll(".foto--arrastando,.foto--alvo")
+    .forEach(el => el.classList.remove("foto--arrastando", "foto--alvo"));
+  desenhar();
+});
+
+/* ---------- ver grande ---------- */
+function lupa(i){
+  const cx = document.createElement("div");
+  cx.className = "lupa";
+  cx.innerHTML = `<div><img src="/${fotos[i].src}" alt="">
+    <p>${i + 1} de ${fotos.length} — ${fotos[i].legenda}</p></div>
+    <button type="button">Fechar</button>`;
+  const fechar = () => { cx.remove(); document.removeEventListener("keydown", tecla); };
+  const tecla = ev => { if (ev.key === "Escape") fechar(); };
+  cx.addEventListener("click", ev => { if (ev.target === cx || ev.target.tagName === "BUTTON") fechar(); });
+  document.addEventListener("keydown", tecla);
+  document.body.appendChild(cx);
+}
+
+/* ---------- fotos novas: encolhe no navegador e manda pro disco ---------- */
+function encolher(arquivo, largura){
+  return new Promise((ok, erro) => {
+    const img = new Image();
+    img.onload = () => {
+      const escala = Math.min(1, largura / img.naturalWidth);
+      const c = document.createElement("canvas");
+      c.width = Math.round(img.naturalWidth * escala);
+      c.height = Math.round(img.naturalHeight * escala);
+      c.getContext("2d").drawImage(img, 0, 0, c.width, c.height);
+      c.toBlob(b => b ? ok(b) : erro(new Error("falha ao converter")), "image/webp", .82);
+      URL.revokeObjectURL(img.src);
+    };
+    img.onerror = () => erro(new Error("não deu para ler " + arquivo.name));
+    img.src = URL.createObjectURL(arquivo);
+  });
+}
+
+const paraBase64 = blob => new Promise(ok => {
+  const l = new FileReader();
+  l.onload = () => ok(l.result.split(",")[1]);
+  l.readAsDataURL(blob);
+});
+
+async function acrescentar(lista){
+  const imagens = [...lista].filter(f => f.type.startsWith("image/"));
+  if (!imagens.length) return;
+  enviando = imagens.length; estado();
+  try {
+    for (const arquivo of imagens){
+      const [cheia, mini] = await Promise.all([encolher(arquivo, 1600), encolher(arquivo, 480)]);
+      const r = await fetch("/api/enviar", {
+        method: "POST", headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          predio: atual.id, extensao: "webp",
+          cheia: await paraBase64(cheia), mini: await paraBase64(mini)
+        })
+      }).then(r => r.json());
+      if (r.erro) throw new Error(r.erro);
+      fotos.push({ src: r.src, mini: r.mini, legenda: `${nomeCurto()} — Foto ${fotos.length + 1}` });
+      enviando--; desenhar();
+    }
+    msg("fotos acrescentadas — falta salvar", "ok");
+  } catch (e){
+    msg("erro: " + e.message, "erro");
+  } finally {
+    enviando = 0; desenhar();
+  }
+}
+
+const nomeCurto = () => (atual.nome || "").replace(/^Edifício\s+/i, "");
+
+const caixa = $("#largar");
+["dragenter","dragover"].forEach(ev => caixa.addEventListener(ev, e => {
+  e.preventDefault(); caixa.classList.add("largar--ativo");
+}));
+["dragleave","drop"].forEach(ev => caixa.addEventListener(ev, e => {
+  e.preventDefault(); caixa.classList.remove("largar--ativo");
+}));
+caixa.addEventListener("drop", e => acrescentar(e.dataTransfer.files));
+$("#escolher").addEventListener("click", () => $("#arquivos").click());
+$("#arquivos").addEventListener("change", e => { acrescentar(e.target.files); e.target.value = ""; });
+
+/* ---------- barra de cima ---------- */
+$("#predio").addEventListener("change", e => {
+  if (sujo() && !confirm("Há mudanças não salvas neste edifício. Trocar mesmo assim?")){
+    e.target.value = atual.id; return;
+  }
+  escolher(e.target.value);
+});
+
+$("#renumerar").addEventListener("click", () => {
+  fotos.forEach((f, i) => f.legenda = `${nomeCurto()} — Foto ${i + 1}`);
+  desenhar();
+});
+
+$("#desfazer").addEventListener("click", () => {
+  if (confirm("Descartar as mudanças deste edifício?")) escolher(atual.id);
+});
+
+$("#salvar").addEventListener("click", async () => {
+  $("#salvar").disabled = true; msg("salvando...");
+  try {
+    const r = await fetch("/api/salvar", {
+      method: "POST", headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ predio: atual.id, fotos })
+    }).then(r => r.json());
+    if (r.erro) throw new Error(r.erro);
+    atual.fotos = JSON.parse(JSON.stringify(fotos));
+    originais = JSON.stringify(fotos);
+    $("#predio").querySelector(`option[value="${atual.id}"]`).textContent = `${atual.nome} (${fotos.length})`;
+    const guardadas = r.guardados ? ` · ${r.guardados} arquivo(s) para a lixeira` : "";
+    msg(`salvo: ${r.fotos} fotos${guardadas}` + (r.gerador === "ok" ? " · páginas geradas" : " · gerador " + r.gerador),
+        r.gerador === "ok" ? "ok" : "erro");
+  } catch (e){
+    msg("erro ao salvar: " + e.message, "erro");
+  }
+  estado();
+});
+
+addEventListener("beforeunload", e => { if (sujo()){ e.preventDefault(); e.returnValue = ""; } });
+
+carregar();
+</script>
+</body>
+</html>

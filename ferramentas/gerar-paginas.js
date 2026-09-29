@@ -263,6 +263,8 @@ ${enderecos.map(e => `  <url>
 escrever("robots.txt",
 `User-agent: *
 Allow: /
+# ferramentas de trabalho, não fazem parte do site
+Disallow: /ferramentas/
 
 Sitemap: ${SITE}/sitemap.xml
 `);
