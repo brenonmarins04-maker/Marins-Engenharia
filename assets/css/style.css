@@ -874,3 +874,93 @@ input,textarea,select{font-family:var(--fonte)}
 .apresentacao__texto .btn--linha{color:#fff;border-color:#A5C6E5}
 .apresentacao__texto .btn--linha:hover{background:#24527D}
 .apresentacao__item:nth-child(2) img{object-position:center}
+
+/* ============================================================
+   PADRONIZAÇÃO CLEAN
+   A abertura do Trentino virou o padrão do site: fundo claro,
+   texto em azul escuro, traço fino de 1px, canto reto e muito
+   espaço em branco. Este bloco tira os blocos chapados de azul
+   e amarelo que competiam com ela. O amarelo continua marcando
+   a locação, mas como detalhe (rótulo e filete), não como fundo.
+   ============================================================ */
+
+/* --- seções: tudo no claro, separadas por um filete --- */
+.loc{background:#fff;color:var(--tinta);border-top:1px solid var(--linha)}
+.loc h2,.loc .cab p{color:var(--azul-esc)}
+.loc .cab p,.loc .cartao__meta,.loc .prog__data,.loc .grade-cartoes .cartao__meta{color:var(--cinza)}
+.loc .aviso,.aviso{
+  border-left:2px solid var(--amarelo);color:var(--cinza);
+  padding:2px 0 2px 18px;margin:20px 0 34px;font-size:1.0625rem;
+}
+.loc .cartao{background:#fff;border-color:var(--linha);color:var(--tinta)}
+.loc .cartao:hover{border-color:var(--azul)}
+.loc .cartao__tag{background:#fff;color:var(--amarelo-esc);box-shadow:inset 0 0 0 1px var(--amarelo)}
+.loc .link-mapa{color:var(--cinza);border-bottom-color:var(--linha)}
+.loc .link-mapa svg{color:var(--amarelo-esc)}
+.loc__predio{color:var(--amarelo-esc)}
+.ficha{color:var(--cinza)}
+.loc .trilho::-webkit-scrollbar-thumb{background:var(--neve-2)}
+
+.home--trentino .depoimentos,.home--trentino #edificios,.home--trentino .contato,
+.apresentacao,.anos{background:#fff}
+.home--trentino{background:#fff}
+
+/* --- cartões e caixas: sem sombra, só o filete --- */
+.cartao,.post,.depo,.caixa,.form,.mapa,.post__figura,.apresentacao__janela{
+  border-color:var(--linha);box-shadow:none;
+}
+.cartao:hover,.post:hover{border-color:var(--azul);box-shadow:none}
+.depo,.depo--interno{border-top-width:1px;border-top-color:var(--linha)}
+.depo{border:1px solid var(--linha)}
+.depo--interno{border:0;border-top:1px solid var(--linha)}
+.destaques li{border-left-width:2px}
+
+/* --- selos: contorno fino no lugar do fundo chapado --- */
+.cartao__tag,.entrega,.selos-empreendimento .entrega{
+  background:#fff;color:var(--azul);box-shadow:inset 0 0 0 1px currentColor;font-weight:600;
+}
+.entrega--lancamento,.entrega--novidades,.selos-empreendimento .entrega--disponivel,
+.selos-empreendimento .entrega--novidades{background:#fff;color:var(--amarelo-esc)}
+.entrega--obras,.cartao__tag--obras{background:#fff;color:var(--azul)}
+
+/* --- botões: o contorno fino da abertura vira o padrão --- */
+.btn--amarelo{background:#fff;color:var(--azul-esc);border:1px solid var(--azul-esc)}
+.btn--amarelo:hover{background:var(--azul-esc);color:#fff}
+.btn--azul{background:var(--azul);color:#fff;border:1px solid var(--azul)}
+.btn--azul:hover{background:var(--azul-esc);border-color:var(--azul-esc)}
+.aba[aria-selected="true"][data-loc]{background:var(--azul-esc);border-color:var(--azul-esc);color:#fff}
+
+/* --- apresentação: painel claro em vez de azul chapado --- */
+.apresentacao{background:var(--neve)}
+.apresentacao__item,.apresentacao__texto{background:#fff;color:var(--tinta)}
+.apresentacao__texto h2{color:var(--azul-esc)}
+.apresentacao__texto .realce{color:var(--azul)}
+.apresentacao__texto p{color:var(--cinza)}
+.apresentacao__texto .btn{border-color:var(--azul-esc);color:var(--azul-esc);background:transparent}
+.apresentacao__texto .btn:hover{background:var(--azul-esc);color:#fff}
+
+/* --- blog: tabela e CTA no claro (a capa tem foto com veu escuro, fica) --- */
+.post__tabela thead th{background:var(--neve);color:var(--azul-esc);border-bottom:1px solid var(--linha)}
+.post__tabela-destaque,.post__tabela tbody tr.post__tabela-destaque:nth-child(odd){box-shadow:inset 0 0 0 1px var(--amarelo)}
+.post__cta{background:var(--neve);border:1px solid var(--linha);color:var(--tinta)}
+.post__cta h2,.post__cta h3{color:var(--azul-esc)}
+.post__cta p{color:var(--cinza)}
+.post__cta-contato{color:var(--azul)}
+.post__cta .btn{background:var(--azul);color:#fff;border-color:var(--azul)}
+.post__fontes{border-top-width:1px;border-top-color:var(--linha)}
+.callout,.callout--destaque{border-left-width:2px}
+.post__meta{border-top-width:1px;border-top-color:var(--linha)}
+
+/* --- rodapé claro, fechando o site no mesmo tom --- */
+.rodape{background:#fff;color:var(--cinza);border-top:1px solid var(--linha)}
+.rodape__tit{color:var(--azul-esc)}
+.rodape a{color:var(--cinza)}
+.rodape a:hover{color:var(--azul)}
+.rodape .marca img{background:transparent;padding:0}
+.rodape__texto{color:var(--cinza)}
+.rodape__fim{border-top-color:var(--linha);color:var(--cinza)}
+/* O amarelo vivo so passa em contraste sobre o azul; no claro usa-se
+   a versao escurecida (igual a do menu AirBnB). */
+.rotulo--claro{color:var(--amarelo-esc)}
+/* Titulos que eram brancos porque o fundo era azul chapado. */
+.pg__titulo--claro,.loc :is(h1,h2,h3){color:var(--azul-esc)}
