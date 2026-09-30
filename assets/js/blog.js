@@ -7,6 +7,109 @@
    ============================================================ */
 const BLOG = [
   {
+    id: "documentos-comprar-apartamento-sao-carlos",
+    data: "Setembro / 2026",
+    foto: "assets/img/blog/documentos-compra-apartamento.webp",
+    fotoMini: "assets/img/blog/documentos-compra-apartamento-mini.webp",
+    alt: "Fachada do Edifício Ferretto, da Marins Engenharia, na Rua Riachuelo, com céu azul",
+    titulo: "Documentos para comprar apartamento em São Carlos",
+    resumo: "Quais documentos o comprador e o vendedor precisam apresentar, o que conferir na matrícula e como organizar a papelada antes de assinar.",
+    seo: {
+      kw: "documentos para comprar apartamento em São Carlos",
+      meta: "Documentos para comprar apartamento em São Carlos: o que o comprador e o vendedor apresentam, o que conferir na matrícula e certidões do imóvel.",
+      categoria: "Compra de imóvel",
+      leitura: "4 min de leitura",
+      atualizado: "Atualizado em Setembro de 2026"
+    },
+    resumoRapido: "Para comprar apartamento em São Carlos, o comprador reúne documentos pessoais e comprovantes de renda, e o vendedor entrega os documentos do imóvel: matrícula atualizada, certidões e declaração de condomínio. O ponto central é a matrícula, que mostra quem é o dono e se há dívida ou restrição sobre a unidade. Confira tudo antes de pagar qualquer sinal.",
+    intro: "Comprar apartamento envolve mais papel do que parece. Parte dele é do comprador, parte é do vendedor, e parte é emitida em cartório ou na prefeitura. Este guia organiza cada grupo de documentos e explica para que serve cada um, sem entrar em valores, que mudam de caso a caso.",
+    secoes: [
+      {
+        titulo: "Documentos do comprador",
+        paragrafos: [
+          "O comprador prova quem é e, quando há financiamento, prova que consegue pagar. Cada instituição financeira tem a própria lista, por isso peça a relação atualizada ao banco antes de começar a reunir os papéis."
+        ],
+        bullets: [
+          "Documento de identidade e CPF.",
+          "Certidão de estado civil: nascimento, casamento ou outra, conforme o caso.",
+          "Comprovante de residência recente.",
+          "Comprovantes de renda, como holerites, extratos ou declaração de imposto de renda.",
+          "Documentos do cônjuge ou companheiro, quando a compra envolve o casal."
+        ],
+        callout: null
+      },
+      {
+        titulo: "Documentos do vendedor",
+        paragrafos: [
+          "O vendedor também precisa provar quem é e que pode vender. Se o vendedor for pessoa jurídica, como uma construtora ou incorporadora, os documentos da empresa entram no lugar dos pessoais.",
+          "Peça cópia de tudo e guarde os originais para o dia da escritura. Documento vencido ou ilegível costuma atrasar o processo mais do que qualquer outro problema."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Documentos do imóvel: a matrícula vem primeiro",
+        paragrafos: [
+          "A matrícula é o registro do apartamento no Cartório de Registro de Imóveis. Ela mostra o proprietário atual, a descrição da unidade e os ônus que existirem, como hipoteca, penhora ou alienação fiduciária. Peça uma certidão atualizada, emitida há pouco tempo, e não uma cópia antiga.",
+          "Além da matrícula, o vendedor costuma apresentar a certidão de quitação de tributos do imóvel e a declaração do condomínio informando que não há taxas em atraso. Dívida de condomínio acompanha a unidade, por isso essa declaração protege o comprador."
+        ],
+        bullets: [],
+        callout: { tipo: "alerta", texto: "Se o nome na matrícula não é o de quem está vendendo, ou se a matrícula mostra restrição que ninguém explicou, pare a negociação até esclarecer por escrito." }
+      },
+      {
+        titulo: "Certidões sobre as pessoas envolvidas",
+        paragrafos: [
+          "Além dos documentos do imóvel, é prática comum pedir certidões sobre o vendedor, para saber se existem ações judiciais ou dívidas que possam alcançar o bem vendido. Um profissional de confiança, como um advogado ou o próprio cartório, indica quais certidões fazem sentido em cada caso.",
+          "Esse cuidado vale para compra entre particulares. Em compra direto com a construtora, a documentação do empreendimento já costuma estar organizada, e o comprador pode pedi-la por escrito."
+        ],
+        bullets: [],
+        callout: { tipo: "info", texto: "Compra na planta tem uma lista própria de documentos, como o memorial de incorporação e o memorial descritivo. Ela está no texto sobre apartamento na planta em São Carlos." }
+      },
+      {
+        titulo: "Da papelada à escritura e ao registro",
+        paragrafos: [
+          "Com os documentos conferidos, a compra segue para a escritura, feita em tabelionato de notas, ou para o contrato com o banco, quando há financiamento. Depois, o comprador leva o título ao Cartório de Registro de Imóveis. Só com o registro na matrícula o apartamento passa a ser oficialmente seu.",
+          "Pergunte ao tabelionato e ao cartório quais custos e prazos se aplicam ao seu caso. Eles variam e devem ser confirmados no momento da compra."
+        ],
+        bullets: [],
+        callout: null
+      }
+    ],
+    tabela: {
+      titulo: "Resumo dos documentos e para que servem",
+      colunas: ["Documento", "Quem apresenta", "Para que serve"],
+      linhas: [
+        ["Identidade, CPF e estado civil", "Comprador e vendedor", "Identificar as partes e definir quem precisa assinar"],
+        ["Comprovantes de renda", "Comprador", "Análise de crédito quando há financiamento"],
+        ["Certidão de matrícula atualizada", "Vendedor", "Confirmar o proprietário e conferir ônus sobre o imóvel"],
+        ["Quitação de tributos do imóvel", "Vendedor", "Mostrar que não há tributo do imóvel em aberto"],
+        ["Declaração de condomínio", "Vendedor", "Confirmar que não há taxa em atraso"],
+        ["Escritura e registro", "Tabelionato e Cartório de Registro de Imóveis", "Formalizar a compra e transferir a propriedade"]
+      ],
+      destaque: null
+    },
+    faq: [
+      { p: "Qual é o documento mais importante na compra de um apartamento?",
+        r: "A certidão de matrícula atualizada. Ela mostra o proprietário e os ônus sobre a unidade, e por isso deve ser conferida antes de qualquer pagamento." },
+      { p: "Preciso de advogado para comprar apartamento?",
+        r: "A lei não exige em todos os casos, mas ter um profissional para revisar documentos e contrato reduz o risco, principalmente em compra entre particulares." },
+      { p: "O que acontece se o vendedor tem dívida de condomínio?",
+        r: "A dívida de condomínio está ligada à unidade. Por isso, peça a declaração do condomínio antes de fechar e combine por escrito quem paga o que estiver em aberto." },
+      { p: "Quando o apartamento passa a ser meu?",
+        r: "Quando a escritura ou o contrato é registrado na matrícula, no Cartório de Registro de Imóveis. A assinatura sozinha não transfere a propriedade." },
+      { p: "Posso tirar dúvidas sobre a documentação de um empreendimento da Marins?",
+        r: "Sim. O time de vendas da Marins Engenharia, em São Carlos, responde pelo WhatsApp (16) 99766-7976 ou pelo e-mail vendas@marinsengenharia.com.br." }
+    ],
+    cta: {
+      titulo: "Tire dúvidas sobre a documentação",
+      texto: "Fale com o time de vendas da Marins Engenharia para saber como organizar os documentos da compra."
+    },
+    fontes: [
+      "Base de dados interna da Marins Engenharia"
+    ]
+  },
+
+  {
     id: "investir-imoveis-sao-carlos",
     data: "Outubro / 2026",
     foto: "assets/img/blog/investidor-capa.jpg",
