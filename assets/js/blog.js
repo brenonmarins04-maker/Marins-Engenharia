@@ -8,7 +8,7 @@
 const BLOG = [
   {
     id: "documentos-comprar-apartamento-sao-carlos",
-    data: "Setembro / 2026",
+    data: "30 de setembro de 2026",
     foto: "assets/img/blog/documentos-compra-apartamento.webp",
     fotoMini: "assets/img/blog/documentos-compra-apartamento-mini.webp",
     alt: "Fachada do Edifício Ferretto, da Marins Engenharia, na Rua Riachuelo, com céu azul",
@@ -19,7 +19,7 @@ const BLOG = [
       meta: "Documentos para comprar apartamento em São Carlos: o que o comprador e o vendedor apresentam, o que conferir na matrícula e certidões do imóvel.",
       categoria: "Compra de imóvel",
       leitura: "4 min de leitura",
-      atualizado: "Atualizado em Setembro de 2026"
+      atualizado: "Atualizado em 30 de setembro de 2026"
     },
     resumoRapido: "Para comprar apartamento em São Carlos, o comprador reúne documentos pessoais e comprovantes de renda, e o vendedor entrega os documentos do imóvel: matrícula atualizada, certidões e declaração de condomínio. O ponto central é a matrícula, que mostra quem é o dono e se há dívida ou restrição sobre a unidade. Confira tudo antes de pagar qualquer sinal.",
     intro: "Comprar apartamento envolve mais papel do que parece. Parte dele é do comprador, parte é do vendedor, e parte é emitida em cartório ou na prefeitura. Este guia organiza cada grupo de documentos e explica para que serve cada um, sem entrar em valores, que mudam de caso a caso.",
@@ -111,7 +111,7 @@ const BLOG = [
 
   {
     id: "investir-imoveis-sao-carlos",
-    data: "Outubro / 2026",
+    data: "30 de setembro de 2026",
     foto: "assets/img/blog/investidor-capa.jpg",
     fotoMini: "assets/img/blog/investidor-capa-mini.jpg",
     alt: "Vista aérea do Edifício Trentino e do entorno, no centro de São Carlos",
@@ -122,7 +122,7 @@ const BLOG = [
       meta: "Investir em imóveis em São Carlos: como calcular rentabilidade líquida, custos que entram na conta, perfis de inquilino e liquidez na revenda.",
       categoria: "Investimento",
       leitura: "5 min de leitura",
-      atualizado: "Atualizado em Outubro de 2026"
+      atualizado: "Atualizado em 30 de setembro de 2026"
     },
     resumoRapido: "Investir em imóveis em São Carlos costuma render por dois caminhos: aluguel mensal e valorização na revenda. O que define o resultado é a conta líquida, feita depois de ITBI, registro, condomínio nos meses vagos, manutenção, administração, imposto de renda e vacância. Apartamentos de dois dormitórios em região central atendem o público mais amplo, que é o que reduz vacância. O Edifício Trentino, da Marins Engenharia, tem unidades de 64,52 m² com dois dormitórios, sendo uma suíte, na Rua Padre Teixeira, 1456, no Centro.",
     intro: "A parte fácil de investir em imóvel é a compra. A difícil é manter a unidade alugada, com inquilino bom, sem surpresa de custo. Este texto organiza a conta que o investidor precisa fazer antes de assinar, os três formatos de investimento que existem na cidade e o tipo de apartamento que sustenta cada um deles.",
@@ -249,7 +249,7 @@ const BLOG = [
 
   {
     id: "melhores-bairros-sao-carlos",
-    data: "Outubro / 2026",
+    data: "30 de setembro de 2026",
     foto: "assets/img/blog/bairros-capa.jpg",
     fotoMini: "assets/img/blog/bairros-capa-mini.jpg",
     alt: "Vista do centro de São Carlos a partir do Edifício Trentino, com prédios e casas ao redor",
@@ -260,7 +260,7 @@ const BLOG = [
       meta: "Melhores bairros de São Carlos para morar: ranking por deslocamento, serviços e liquidez, com o Centro em primeiro lugar e o caso do Trentino.",
       categoria: "Guia da cidade",
       leitura: "5 min de leitura",
-      atualizado: "Atualizado em Outubro de 2026"
+      atualizado: "Atualizado em 30 de setembro de 2026"
     },
     resumoRapido: "Entre os melhores bairros de São Carlos para morar, o Centro fica em primeiro lugar por um motivo objetivo: é a região que concentra comércio, bancos, serviços de saúde, escolas e linhas de ônibus em raio de caminhada, o que reduz deslocamento diário e mantém a liquidez do imóvel na revenda e na locação. O Edifício Trentino, da Marins Engenharia, fica na Rua Padre Teixeira, 1456, no Centro, com apartamentos de 64,52 m², dois dormitórios sendo uma suíte e varanda gourmet.",
     intro: "Lista de melhores bairros costuma ser questão de gosto. Esta não é. A ordem abaixo segue quatro critérios verificáveis: tempo de deslocamento, serviços que cabem em uma caminhada, oferta de transporte público e liquidez do imóvel quando chega a hora de vender ou alugar. Por esses critérios, o Centro de São Carlos fica em primeiro lugar, e o texto explica por quê.",
@@ -383,7 +383,7 @@ const BLOG = [
 
   {
     id: "localizacao-centro-sao-carlos",
-    data: "Outubro / 2026",
+    data: "30 de setembro de 2026",
     foto: "assets/img/blog/trentino-fachada.jpg",
     fotoMini: "assets/img/blog/trentino-fachada-mini.jpg",
     alt: "Entrada do Edifício Trentino, na Rua Padre Teixeira, 1456, no centro de São Carlos",
@@ -394,7 +394,7 @@ const BLOG = [
       meta: "Por que a localização decide a compra de um apartamento no centro de São Carlos: rotina, custo mensal, revenda e o caso do Edifício Trentino.",
       categoria: "Guia da cidade",
       leitura: "4 min de leitura",
-      atualizado: "Atualizado em Outubro de 2026"
+      atualizado: "Atualizado em 30 de setembro de 2026"
     },
     resumoRapido: "Localização é o único item de um apartamento que não pode ser reformado. Planta, acabamento e até a fachada mudam com obra; o endereço permanece o mesmo e define o tempo gasto no trajeto, o custo mensal com transporte e a facilidade de revender ou alugar. O Edifício Trentino, da Marins Engenharia, fica na Rua Padre Teixeira, 1456, no centro de São Carlos, com apartamentos de 64,52 m², dois dormitórios sendo uma suíte e varanda gourmet.",
     intro: "Duas plantas idênticas, com o mesmo acabamento e o mesmo preço, valem coisas diferentes se estiverem em ruas diferentes. Essa é a parte da compra que nenhuma reforma corrige depois. Este texto reúne o que a localização decide na prática e mostra como esses critérios se aplicam a um endereço concreto no centro de São Carlos.",
@@ -499,7 +499,7 @@ const BLOG = [
 
   {
     id: "construtora-sao-carlos",
-    data: "Setembro / 2026",
+    data: "30 de setembro de 2026",
     foto: "assets/img/blog/entrada-sao-carlos.jpg",
     fotoMini: "assets/img/blog/entrada-sao-carlos-mini.jpg",
     alt: "Entrada de São Carlos pela rodovia, com o nome da cidade escrito no barranco",
@@ -510,7 +510,7 @@ const BLOG = [
       meta: "Como escolher uma construtora em São Carlos: documentos para exigir, prazo de obra, garantias após a entrega e sinais de alerta no contrato.",
       categoria: "Compra de imóvel",
       leitura: "4 min de leitura",
-      atualizado: "Atualizado em Setembro de 2026"
+      atualizado: "Atualizado em 30 de setembro de 2026"
     },
     resumoRapido: "Escolher uma construtora em São Carlos é, na prática, conferir quatro coisas: memorial de incorporação registrado em cartório, responsável técnico com ART no CREA-SP, prazo de entrega escrito em contrato com multa por atraso e assistência técnica depois da chave. A Marins Engenharia incorpora e constrói em São Carlos há 25 anos, com oito edifícios entregues e 172 apartamentos construídos, e responde pelo empreendimento do terreno à entrega.",
     intro: "Quem compra apartamento em São Carlos costuma comparar planta, metragem e preço. O que decide a qualidade da compra, porém, aparece antes disso: quem constrói, o que está registrado em cartório e o que o contrato garante se a obra atrasar. Este guia reúne o que dá para verificar sozinho, sem depender da palavra do vendedor.",
@@ -605,7 +605,7 @@ const BLOG = [
 
   {
     id: "apartamento-na-planta-sao-carlos",
-    data: "Agosto / 2026",
+    data: "30 de setembro de 2026",
     foto: "assets/img/blog/verticalizacao.jpg",
     fotoMini: "assets/img/blog/verticalizacao-mini.jpg",
     alt: "Vista aérea de avenida com prédios residenciais e comerciais",
@@ -616,7 +616,7 @@ const BLOG = [
       meta: "Comprar apartamento na planta em São Carlos: memorial descritivo, etapas da obra, prazos, documentos e riscos que dá para reduzir antes de assinar.",
       categoria: "Compra de imóvel",
       leitura: "4 min de leitura",
-      atualizado: "Atualizado em Agosto de 2026"
+      atualizado: "Atualizado em 30 de setembro de 2026"
     },
     resumoRapido: "Comprar apartamento na planta em São Carlos significa pagar durante a obra e receber a chave no fim dela. O que protege o comprador é o memorial de incorporação registrado, o memorial descritivo detalhando acabamentos, o cronograma com data de entrega e o acompanhamento do andamento da obra. Peça à construtora o cronograma da obra por escrito e o manual do proprietário na entrega das chaves.",
     intro: "Na planta, o comprador escolhe um apartamento que ainda não existe. O preço costuma ser menor que o do pronto e o pagamento se distribui ao longo da obra, mas a decisão depende de documentos, não de perspectiva artística. Abaixo estão as etapas, os papéis envolvidos e o que reduz risco em cada fase.",
@@ -702,7 +702,7 @@ const BLOG = [
 
   {
     id: "onde-morar-sao-carlos",
-    data: "Julho / 2026",
+    data: "30 de setembro de 2026",
     foto: "assets/img/blog/crescimento-urbano.jpg",
     fotoMini: "assets/img/blog/crescimento-urbano-mini.jpg",
     alt: "Vista aérea de São Carlos com rodovia, bairros residenciais e área verde",
@@ -713,7 +713,7 @@ const BLOG = [
       meta: "Onde morar em São Carlos: como pesar proximidade das universidades, deslocamento, entorno e qualidade do prédio antes de comprar o apartamento.",
       categoria: "Guia da cidade",
       leitura: "4 min de leitura",
-      atualizado: "Atualizado em Julho de 2026"
+      atualizado: "Atualizado em 30 de setembro de 2026"
     },
     resumoRapido: "A escolha de onde morar em São Carlos costuma se resolver em três perguntas: quanto tempo por dia você quer gastar no deslocamento, se a rotina gira em torno das universidades ou do centro, e se o prédio segue a norma de desempenho da ABNT. Os edifícios da Marins Engenharia ficam nas regiões da Vila Prado, do centro e do entorno da USP São Carlos, em ruas com comércio de bairro e linhas de ônibus.",
     intro: "Em uma cidade de porte médio, a distância entre dois extremos raramente passa de meia hora de carro. Isso faz a escolha do bairro parecer pouco importante, até a rotina começar. Trajeto diário, silêncio à noite e comércio na quadra pesam mais na convivência do que a metragem do apartamento.",

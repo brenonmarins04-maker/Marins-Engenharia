@@ -304,242 +304,242 @@ const GALERIAS = {
     {
       "src": "assets/img/galerias/trieste/003.webp",
       "mini": "assets/img/galerias/trieste/003-mini.webp",
-      "legenda": "Trieste — Foto 3"
+      "legenda": "Trieste — Foto 1"
     },
     {
       "src": "assets/img/galerias/trieste/006.webp",
       "mini": "assets/img/galerias/trieste/006-mini.webp",
-      "legenda": "Trieste — Foto 6"
+      "legenda": "Trieste — Foto 2"
     },
     {
       "src": "assets/img/galerias/trieste/007.webp",
       "mini": "assets/img/galerias/trieste/007-mini.webp",
-      "legenda": "Trieste — Foto 7"
+      "legenda": "Trieste — Foto 3"
     },
     {
       "src": "assets/img/galerias/trieste/008.webp",
       "mini": "assets/img/galerias/trieste/008-mini.webp",
-      "legenda": "Trieste — Foto 8"
+      "legenda": "Trieste — Foto 4"
     },
     {
       "src": "assets/img/galerias/trieste/009.webp",
       "mini": "assets/img/galerias/trieste/009-mini.webp",
-      "legenda": "Trieste — Foto 9"
+      "legenda": "Trieste — Foto 5"
     },
     {
       "src": "assets/img/galerias/trieste/010.webp",
       "mini": "assets/img/galerias/trieste/010-mini.webp",
-      "legenda": "Trieste — Foto 10"
+      "legenda": "Trieste — Foto 6"
     },
     {
       "src": "assets/img/galerias/trieste/011.webp",
       "mini": "assets/img/galerias/trieste/011-mini.webp",
-      "legenda": "Trieste — Foto 11"
+      "legenda": "Trieste — Foto 7"
     },
     {
       "src": "assets/img/galerias/trieste/012.webp",
       "mini": "assets/img/galerias/trieste/012-mini.webp",
-      "legenda": "Trieste — Foto 12"
+      "legenda": "Trieste — Foto 8"
     },
     {
       "src": "assets/img/galerias/trieste/013.webp",
       "mini": "assets/img/galerias/trieste/013-mini.webp",
-      "legenda": "Trieste — Foto 13"
+      "legenda": "Trieste — Foto 9"
     },
     {
       "src": "assets/img/galerias/trieste/014.webp",
       "mini": "assets/img/galerias/trieste/014-mini.webp",
-      "legenda": "Trieste — Foto 14"
+      "legenda": "Trieste — Foto 10"
     },
     {
       "src": "assets/img/galerias/trieste/015.webp",
       "mini": "assets/img/galerias/trieste/015-mini.webp",
-      "legenda": "Trieste — Foto 15"
+      "legenda": "Trieste — Foto 11"
     },
     {
       "src": "assets/img/galerias/trieste/016.webp",
       "mini": "assets/img/galerias/trieste/016-mini.webp",
-      "legenda": "Trieste — Foto 16"
+      "legenda": "Trieste — Foto 12"
     },
     {
       "src": "assets/img/galerias/trieste/017.webp",
       "mini": "assets/img/galerias/trieste/017-mini.webp",
-      "legenda": "Trieste — Foto 17"
+      "legenda": "Trieste — Foto 13"
     },
     {
       "src": "assets/img/galerias/trieste/018.webp",
       "mini": "assets/img/galerias/trieste/018-mini.webp",
-      "legenda": "Trieste — Foto 18"
+      "legenda": "Trieste — Foto 14"
     },
     {
       "src": "assets/img/galerias/trieste/019.webp",
       "mini": "assets/img/galerias/trieste/019-mini.webp",
-      "legenda": "Trieste — Foto 19"
+      "legenda": "Trieste — Foto 15"
     },
     {
       "src": "assets/img/galerias/trieste/020.webp",
       "mini": "assets/img/galerias/trieste/020-mini.webp",
-      "legenda": "Trieste — Foto 20"
+      "legenda": "Trieste — Foto 16"
     },
     {
       "src": "assets/img/galerias/trieste/021.webp",
       "mini": "assets/img/galerias/trieste/021-mini.webp",
-      "legenda": "Trieste — Foto 21"
+      "legenda": "Trieste — Foto 17"
     },
     {
       "src": "assets/img/galerias/trieste/022.webp",
       "mini": "assets/img/galerias/trieste/022-mini.webp",
-      "legenda": "Trieste — Foto 22"
+      "legenda": "Trieste — Foto 18"
     },
     {
       "src": "assets/img/galerias/trieste/023.webp",
       "mini": "assets/img/galerias/trieste/023-mini.webp",
-      "legenda": "Trieste — Foto 23"
+      "legenda": "Trieste — Foto 19"
     },
     {
       "src": "assets/img/galerias/trieste/024.webp",
       "mini": "assets/img/galerias/trieste/024-mini.webp",
-      "legenda": "Trieste — Foto 24"
+      "legenda": "Trieste — Foto 20"
     },
     {
       "src": "assets/img/galerias/trieste/025.webp",
       "mini": "assets/img/galerias/trieste/025-mini.webp",
-      "legenda": "Trieste — Foto 25"
+      "legenda": "Trieste — Foto 21"
     },
     {
       "src": "assets/img/galerias/trieste/026.webp",
       "mini": "assets/img/galerias/trieste/026-mini.webp",
-      "legenda": "Trieste — Foto 26"
+      "legenda": "Trieste — Foto 22"
     },
     {
       "src": "assets/img/galerias/trieste/027.webp",
       "mini": "assets/img/galerias/trieste/027-mini.webp",
-      "legenda": "Trieste — Foto 27"
+      "legenda": "Trieste — Foto 23"
     },
     {
       "src": "assets/img/galerias/trieste/028.webp",
       "mini": "assets/img/galerias/trieste/028-mini.webp",
-      "legenda": "Trieste — Foto 28"
+      "legenda": "Trieste — Foto 24"
     },
     {
       "src": "assets/img/galerias/trieste/029.webp",
       "mini": "assets/img/galerias/trieste/029-mini.webp",
-      "legenda": "Trieste — Foto 29"
+      "legenda": "Trieste — Foto 25"
     },
     {
       "src": "assets/img/galerias/trieste/030.webp",
       "mini": "assets/img/galerias/trieste/030-mini.webp",
-      "legenda": "Trieste — Foto 30"
+      "legenda": "Trieste — Foto 26"
     },
     {
       "src": "assets/img/galerias/trieste/031.webp",
       "mini": "assets/img/galerias/trieste/031-mini.webp",
-      "legenda": "Trieste — Foto 31"
+      "legenda": "Trieste — Foto 27"
     },
     {
       "src": "assets/img/galerias/trieste/032.webp",
       "mini": "assets/img/galerias/trieste/032-mini.webp",
-      "legenda": "Trieste — Foto 32"
+      "legenda": "Trieste — Foto 28"
     },
     {
       "src": "assets/img/galerias/trieste/033.webp",
       "mini": "assets/img/galerias/trieste/033-mini.webp",
-      "legenda": "Trieste — Foto 33"
+      "legenda": "Trieste — Foto 29"
     },
     {
       "src": "assets/img/galerias/trieste/034.webp",
       "mini": "assets/img/galerias/trieste/034-mini.webp",
-      "legenda": "Trieste — Foto 34"
+      "legenda": "Trieste — Foto 30"
     },
     {
       "src": "assets/img/galerias/trieste/035.webp",
       "mini": "assets/img/galerias/trieste/035-mini.webp",
-      "legenda": "Trieste — Foto 35"
+      "legenda": "Trieste — Foto 31"
     },
     {
       "src": "assets/img/galerias/trieste/036.webp",
       "mini": "assets/img/galerias/trieste/036-mini.webp",
-      "legenda": "Trieste — Foto 36"
+      "legenda": "Trieste — Foto 32"
     },
     {
       "src": "assets/img/galerias/trieste/037.webp",
       "mini": "assets/img/galerias/trieste/037-mini.webp",
-      "legenda": "Trieste — Foto 37"
+      "legenda": "Trieste — Foto 33"
     },
     {
       "src": "assets/img/galerias/trieste/038.webp",
       "mini": "assets/img/galerias/trieste/038-mini.webp",
-      "legenda": "Trieste — Foto 38"
+      "legenda": "Trieste — Foto 34"
     },
     {
       "src": "assets/img/galerias/trieste/039.webp",
       "mini": "assets/img/galerias/trieste/039-mini.webp",
-      "legenda": "Trieste — Foto 39"
+      "legenda": "Trieste — Foto 35"
     },
     {
       "src": "assets/img/galerias/trieste/040.webp",
       "mini": "assets/img/galerias/trieste/040-mini.webp",
-      "legenda": "Trieste — Foto 40"
+      "legenda": "Trieste — Foto 36"
     },
     {
       "src": "assets/img/galerias/trieste/041.webp",
       "mini": "assets/img/galerias/trieste/041-mini.webp",
-      "legenda": "Trieste — Foto 41"
+      "legenda": "Trieste — Foto 37"
     },
     {
       "src": "assets/img/galerias/trieste/042.webp",
       "mini": "assets/img/galerias/trieste/042-mini.webp",
-      "legenda": "Trieste — Foto 42"
+      "legenda": "Trieste — Foto 38"
     },
     {
       "src": "assets/img/galerias/trieste/043.webp",
       "mini": "assets/img/galerias/trieste/043-mini.webp",
-      "legenda": "Trieste — Foto 43"
+      "legenda": "Trieste — Foto 39"
     },
     {
       "src": "assets/img/galerias/trieste/044.webp",
       "mini": "assets/img/galerias/trieste/044-mini.webp",
-      "legenda": "Trieste — Foto 44"
+      "legenda": "Trieste — Foto 40"
     },
     {
       "src": "assets/img/galerias/trieste/045.webp",
       "mini": "assets/img/galerias/trieste/045-mini.webp",
-      "legenda": "Trieste — Foto 45"
+      "legenda": "Trieste — Foto 41"
     },
     {
       "src": "assets/img/galerias/trieste/046.webp",
       "mini": "assets/img/galerias/trieste/046-mini.webp",
-      "legenda": "Trieste — Foto 46"
+      "legenda": "Trieste — Foto 42"
     },
     {
       "src": "assets/img/galerias/trieste/047.webp",
       "mini": "assets/img/galerias/trieste/047-mini.webp",
-      "legenda": "Trieste — Foto 47"
+      "legenda": "Trieste — Foto 43"
     },
     {
       "src": "assets/img/galerias/trieste/048.webp",
       "mini": "assets/img/galerias/trieste/048-mini.webp",
-      "legenda": "Trieste — Foto 48"
+      "legenda": "Trieste — Foto 44"
     },
     {
       "src": "assets/img/galerias/trieste/049.webp",
       "mini": "assets/img/galerias/trieste/049-mini.webp",
-      "legenda": "Trieste — Foto 49"
+      "legenda": "Trieste — Foto 45"
     },
     {
       "src": "assets/img/galerias/trieste/050.webp",
       "mini": "assets/img/galerias/trieste/050-mini.webp",
-      "legenda": "Trieste — Foto 50"
+      "legenda": "Trieste — Foto 46"
     },
     {
       "src": "assets/img/galerias/trieste/051.webp",
       "mini": "assets/img/galerias/trieste/051-mini.webp",
-      "legenda": "Trieste — Foto 51"
+      "legenda": "Trieste — Foto 47"
     },
     {
       "src": "assets/img/galerias/trieste/052.webp",
       "mini": "assets/img/galerias/trieste/052-mini.webp",
-      "legenda": "Trieste — Foto 52"
+      "legenda": "Trieste — Foto 48"
     }
   ],
   "trivoli": [
