@@ -7,6 +7,109 @@
    ============================================================ */
 const BLOG = [
   {
+    id: "avaliacao-imovel-financiamento-sao-carlos",
+    data: "1 de outubro de 2026",
+    foto: "assets/img/blog/avaliacao-imovel-financiamento.webp",
+    fotoMini: "assets/img/blog/avaliacao-imovel-financiamento-mini.webp",
+    alt: "Fachada do Edifício Ferretto, da Marins Engenharia, vista da esquina com céu azul",
+    titulo: "Avaliação do imóvel no financiamento em São Carlos",
+    resumo: "O que o banco avalia antes de liberar o crédito, quem faz a vistoria, como o laudo se relaciona com o preço e o que fazer se o valor sair menor.",
+    seo: {
+      kw: "avaliação do imóvel no financiamento em São Carlos",
+      meta: "Avaliação do imóvel no financiamento em São Carlos: o que o banco confere, quem faz a vistoria e o que fazer se o laudo vier abaixo do preço.",
+      categoria: "Financiamento",
+      leitura: "4 min de leitura",
+      atualizado: "Atualizado em 1 de outubro de 2026"
+    },
+    resumoRapido: "Quando você financia um apartamento, o banco manda um profissional avaliar o imóvel antes de liberar o crédito. A avaliação confere a documentação, o estado do prédio e o valor de mercado. O valor do laudo, e não o preço combinado na venda, costuma ser a base para calcular quanto o banco financia. Por isso vale entender o processo antes de fechar negócio.",
+    intro: "Muita gente descobre a avaliação do imóvel só no meio do financiamento, quando o banco devolve um valor diferente do esperado. Este guia explica, sem entrar em números que mudam de banco para banco, o que é essa etapa, o que é conferido e como se preparar.",
+    secoes: [
+      {
+        titulo: "Para que o banco avalia o imóvel",
+        paragrafos: [
+          "No financiamento imobiliário, o próprio imóvel fica como garantia da dívida. Por isso o banco precisa saber quanto ele vale e se está em condições regulares. A avaliação protege o banco, mas também ajuda o comprador a não pagar mais do que o imóvel vale.",
+          "A avaliação é uma etapa à parte da análise de crédito. A análise de crédito olha para a sua renda e o seu histórico. A avaliação olha para o apartamento."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "O que é conferido na vistoria",
+        paragrafos: [
+          "Em geral, um engenheiro ou arquiteto indicado pela instituição financeira visita o imóvel, compara com a documentação e emite um laudo. Cada banco tem o seu procedimento e a sua lista, por isso peça a relação atualizada ao seu gerente."
+        ],
+        bullets: [
+          "Se a metragem e a descrição do apartamento batem com a matrícula.",
+          "O estado de conservação da unidade e das áreas comuns do prédio.",
+          "A localização e o padrão da região.",
+          "A existência de reformas ou alterações que não constem nos documentos.",
+          "Comparação com valores de imóveis semelhantes na vizinhança."
+        ],
+        callout: null
+      },
+      {
+        titulo: "Valor de venda e valor de avaliação não são a mesma coisa",
+        paragrafos: [
+          "O preço de venda é o que comprador e vendedor combinam. O valor de avaliação é a opinião técnica do avaliador sobre o imóvel naquele momento. Os dois podem coincidir ou não.",
+          "O banco calcula o financiamento a partir do menor entre os dois valores, conforme a regra de cada instituição. Se a avaliação sair abaixo do preço, a diferença precisa vir do comprador, com recursos próprios. Pergunte ao banco, antes de assinar o compromisso de compra, como ele faz esse cálculo."
+        ],
+        bullets: [],
+        callout: { tipo: "alerta", texto: "Não pague sinal alto antes de saber o resultado da avaliação. Se o laudo vier abaixo do preço, o valor que falta sai do seu bolso." }
+      },
+      {
+        titulo: "Como se preparar para a avaliação",
+        paragrafos: [
+          "Um imóvel com documentos em ordem costuma passar pela avaliação com menos atrito. Se você é o comprador, confira a matrícula atualizada e a regularidade da unidade antes de pedir o financiamento. Se você é o vendedor, deixe o apartamento acessível para a visita e tenha à mão a documentação.",
+          "No caso de imóvel na planta, a avaliação segue a lógica do projeto e da obra, e o banco acompanha o andamento. As regras variam, então peça as condições por escrito."
+        ],
+        bullets: [],
+        callout: { tipo: "info", texto: "A lista de documentos da compra está no texto sobre documentos para comprar apartamento em São Carlos." }
+      },
+      {
+        titulo: "Se o valor da avaliação vier menor",
+        paragrafos: [
+          "Isso acontece e não significa que o negócio acabou. Você tem algumas saídas, e a melhor depende do caso."
+        ],
+        bullets: [
+          "Cobrir a diferença com recursos próprios.",
+          "Renegociar o preço com o vendedor com base no laudo.",
+          "Pedir ao banco a explicação do cálculo e, se for possível, a revisão.",
+          "Desistir do negócio, se o contrato previu essa condição."
+        ],
+        callout: null
+      }
+    ],
+    tabela: {
+      titulo: "Avaliação do imóvel em resumo",
+      colunas: ["Etapa", "Quem faz", "O que resulta"],
+      linhas: [
+        ["Análise de crédito", "Banco", "Aprovação do comprador e limite de crédito"],
+        ["Avaliação e vistoria", "Profissional indicado pelo banco", "Laudo com o valor do imóvel"],
+        ["Conferência da documentação", "Banco e cartório", "Confirmação de que o imóvel está regular"],
+        ["Definição do valor financiado", "Banco", "Quanto será financiado e quanto o comprador paga de entrada"]
+      ],
+      destaque: null
+    },
+    faq: [
+      { p: "Quem paga a avaliação do imóvel?",
+        r: "Em geral o custo é repassado ao comprador, mas depende do banco. Pergunte o valor e a forma de cobrança antes de iniciar o processo." },
+      { p: "A avaliação garante que o imóvel é um bom negócio?",
+        r: "Não. Ela serve ao banco para conceder o crédito. O comprador deve fazer a própria pesquisa de preço, de documentação e de localização." },
+      { p: "Posso escolher o avaliador?",
+        r: "Na maioria dos casos o banco indica o profissional ou a empresa que faz o laudo. Confirme com a sua instituição." },
+      { p: "A avaliação vale para outro banco?",
+        r: "Normalmente não. Cada instituição faz a sua avaliação conforme os critérios próprios." },
+      { p: "Posso tirar dúvidas sobre financiamento com a Marins?",
+        r: "O time de vendas da Marins Engenharia, em São Carlos, responde pelo WhatsApp (16) 99766-7976 ou pelo e-mail vendas@marinsengenharia.com.br." }
+    ],
+    cta: {
+      titulo: "Converse antes de financiar",
+      texto: "Fale com o time de vendas da Marins Engenharia para tirar dúvidas sobre a compra de um apartamento em São Carlos."
+    },
+    fontes: []
+  },
+
+  {
     id: "documentos-comprar-apartamento-sao-carlos",
     data: "30 de setembro de 2026",
     foto: "assets/img/blog/documentos-compra-apartamento.webp",
