@@ -7,6 +7,123 @@
    ============================================================ */
 const BLOG = [
   {
+    id: "valor-do-condominio-sao-carlos",
+    data: "3 de outubro de 2026",
+    foto: "assets/img/blog/valor-condominio.webp",
+    fotoMini: "assets/img/blog/valor-condominio-mini.webp",
+    alt: "Garagem coberta do Edifício Trentino, da Marins Engenharia, com pilares sinalizados e piso intertravado",
+    titulo: "O que compõe o valor do condomínio em São Carlos",
+    resumo: "As despesas que entram no rateio mensal, a diferença entre taxa ordinária e extraordinária, para que serve o fundo de reserva e o que pedir antes de comprar.",
+    seo: {
+      kw: "valor do condomínio em São Carlos",
+      meta: "O que compõe o valor do condomínio em São Carlos: as despesas que entram no rateio, a diferença entre taxa ordinária e extraordinária e o que conferir.",
+      categoria: "Custos de morar",
+      leitura: "4 min de leitura",
+      atualizado: "Atualizado em 3 de outubro de 2026"
+    },
+    resumoRapido: "A taxa de condomínio não é um preço cobrado por alguém: é a divisão, entre os moradores, do custo de manter as áreas que pertencem a todos. Entram nessa conta pessoal, água e energia das áreas comuns, manutenção dos equipamentos, conservação, seguro da edificação e a administração. Entender a composição ajuda a comparar prédios antes de comprar e a participar das decisões depois.",
+    intro: "Na hora de comparar apartamentos, o valor do condomínio costuma aparecer como um número solto, sem explicação. Ele não é arbitrário: sai de um orçamento aprovado em assembleia e dividido entre as unidades. Este texto mostra o que entra nessa conta, o que muda de um prédio para outro e quais documentos pedir antes de assinar.",
+    secoes: [
+      {
+        titulo: "O condomínio não é uma tarifa, é um rateio",
+        paragrafos: [
+          "Quem mora em apartamento é dono da sua unidade e, junto com os vizinhos, das áreas comuns: hall, escada, garagem, elevador, telhado, fachada, instalações. Manter tudo isso custa dinheiro, e esse custo é dividido entre os moradores conforme a regra da convenção do condomínio.",
+          "Por isso o valor não é definido por uma empresa, e sim por um orçamento discutido e aprovado pelos próprios condôminos em assembleia. A administradora executa esse orçamento e presta contas, mas não decide sozinha quanto será cobrado."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "As despesas que entram na conta todo mês",
+        paragrafos: [
+          "A composição muda de prédio para prédio, conforme o que existe para manter. Em linhas gerais, estes são os grupos de despesa que costumam aparecer no balancete."
+        ],
+        bullets: [
+          "Pessoal: salários e encargos de porteiro, zelador e equipe de limpeza, quando o prédio tem funcionários próprios.",
+          "Consumo das áreas comuns: energia da iluminação, dos elevadores e das bombas, além da água, quando não há medição individual.",
+          "Manutenção de equipamentos: elevador, portão, bombas, interfone, sistema de incêndio e, onde houver, câmeras.",
+          "Conservação: limpeza, jardinagem, pequenos reparos e material de uso comum.",
+          "Seguro da edificação, obrigatório por lei para o condomínio.",
+          "Administração: a taxa da empresa que cuida da contabilidade, da folha e da prestação de contas."
+        ],
+        callout: null
+      },
+      {
+        titulo: "Ordinária e extraordinária: quem paga o quê",
+        paragrafos: [
+          "A despesa ordinária é a do dia a dia, aquela que se repete todo mês: pessoal, consumo, manutenção de rotina, limpeza. A extraordinária é a que não faz parte da rotina, como a troca de um elevador, a pintura da fachada ou uma obra de reforço na estrutura.",
+          "A distinção importa quando o apartamento está alugado. Pela legislação de locação, a despesa ordinária cabe ao inquilino e a extraordinária ao proprietário. Antes de assinar um contrato de aluguel, confira como essa divisão está escrita nele."
+        ],
+        bullets: [],
+        callout: { tipo: "alerta", texto: "Rateio de obra grande não entra na conta mensal e costuma vir em cobrança separada. Pergunte se há algum rateio em andamento antes de fechar a compra." }
+      },
+      {
+        titulo: "Para que serve o fundo de reserva",
+        paragrafos: [
+          "Boa parte dos condomínios recolhe, junto com a taxa mensal, um percentual destinado ao fundo de reserva. É uma poupança do prédio, criada para cobrir imprevistos e despesas que não cabem no orçamento do mês.",
+          "Um fundo bem formado reduz a chance de os moradores serem surpreendidos por uma cobrança extra quando algo quebra. A convenção do condomínio define o percentual e as regras de uso."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Por que o tamanho do prédio muda a conta",
+        paragrafos: [
+          "Boa parte das despesas é fixa: o elevador custa o mesmo para manter, tenha o prédio dezesseis ou cem apartamentos. Quando há menos unidades, cada uma arca com uma fatia maior desse custo fixo. Quando há mais, o mesmo custo se dilui.",
+          "A área comum pesa na mesma direção. Prédio com muita estrutura de lazer tem mais o que limpar, iluminar e consertar, e isso aparece na taxa todo mês. Os edifícios da Marins Engenharia em São Carlos têm entre dezesseis e trinta e dois apartamentos, com áreas comuns enxutas: hall, garagem coberta e circulação."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "O que pedir antes de comprar",
+        paragrafos: [
+          "O valor atual da taxa diz pouco sozinho. O que explica esse valor, e indica se ele tende a subir, está nos documentos do condomínio. Peça-os ao vendedor ou à administradora."
+        ],
+        bullets: [
+          "A convenção do condomínio e o regimento interno.",
+          "Os últimos balancetes, para ver em que o dinheiro está sendo gasto.",
+          "A previsão orçamentária do ano em curso.",
+          "As atas das últimas assembleias, onde aparecem obras aprovadas e discussões em aberto.",
+          "A declaração de que a unidade não tem taxas em atraso."
+        ],
+        callout: { tipo: "info", texto: "Débito de condomínio acompanha o imóvel, não o antigo dono. Confirme a quitação antes de assinar." }
+      }
+    ],
+    tabela: {
+      titulo: "Para onde vai o valor do condomínio",
+      colunas: ["Grupo de despesa", "O que cobre", "Tipo"],
+      linhas: [
+        ["Pessoal", "Portaria, zeladoria e limpeza, com encargos", "Ordinária"],
+        ["Consumo das áreas comuns", "Energia, água e gás das partes de uso coletivo", "Ordinária"],
+        ["Manutenção de equipamentos", "Elevador, bombas, portão, interfone, incêndio", "Ordinária"],
+        ["Seguro da edificação", "Cobertura obrigatória do prédio", "Ordinária"],
+        ["Administração", "Contabilidade, folha e prestação de contas", "Ordinária"],
+        ["Fundo de reserva", "Poupança do prédio para imprevistos", "Conforme a convenção"],
+        ["Obras e reformas de vulto", "Pintura de fachada, troca de elevador, reforço estrutural", "Extraordinária"]
+      ],
+      destaque: null
+    },
+    faq: [
+      { p: "Quem define o valor do condomínio?",
+        r: "Os próprios moradores, em assembleia, ao aprovar a previsão orçamentária. A administradora executa e presta contas, mas não decide o valor sozinha." },
+      { p: "O valor é igual para todos os apartamentos?",
+        r: "Depende da convenção do condomínio. Em muitos prédios o rateio segue a fração ideal de cada unidade, e não uma divisão em partes iguais. Confira na convenção." },
+      { p: "Condomínio mais barato é sempre melhor?",
+        r: "Não necessariamente. Taxa muito baixa pode significar manutenção adiada, que volta depois como rateio extra. Vale olhar os balancetes junto com o valor." },
+      { p: "Quem paga o condomínio no apartamento alugado?",
+        r: "Pela legislação de locação, as despesas ordinárias cabem ao inquilino e as extraordinárias ao proprietário. Confirme como isso está escrito no contrato." },
+      { p: "Posso tirar dúvidas sobre um edifício da Marins?",
+        r: "O time de vendas da Marins Engenharia, em São Carlos, responde pelo WhatsApp (16) 99766-7976 ou pelo e-mail vendas@marinsengenharia.com.br." }
+    ],
+    cta: {
+      titulo: "Conheça os edifícios da Marins",
+      texto: "Fale com o time de vendas da Marins Engenharia para conhecer os apartamentos disponíveis em São Carlos."
+    },
+    fontes: []
+  },
+
+  {
     id: "avaliacao-imovel-financiamento-sao-carlos",
     data: "1 de outubro de 2026",
     foto: "assets/img/blog/avaliacao-imovel-financiamento.webp",
