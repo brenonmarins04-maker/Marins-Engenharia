@@ -7,6 +7,105 @@
    ============================================================ */
 const BLOG = [
   {
+    id: "itbi-sao-carlos",
+    data: "5 de outubro de 2026",
+    foto: "assets/img/blog/itbi-imposto-compra.webp",
+    fotoMini: "assets/img/blog/itbi-imposto-compra-mini.webp",
+    alt: "Entrada e garagem do Edifício Ferretto, da Marins Engenharia, na Rua Riachuelo, vistas da esquina",
+    titulo: "ITBI em São Carlos: o que é e quando se paga",
+    resumo: "O que é o ITBI, quem paga, em que momento da compra ele é cobrado e por que sem ele o registro do apartamento não sai.",
+    seo: {
+      kw: "ITBI em São Carlos",
+      meta: "ITBI em São Carlos: o que é o imposto, quem paga, em que etapa da compra ele é cobrado e como se relaciona com a escritura e o registro.",
+      categoria: "Compra de imóvel",
+      leitura: "4 min de leitura",
+      atualizado: "Atualizado em 5 de outubro de 2026"
+    },
+    resumoRapido: "O ITBI é o imposto municipal cobrado quando a propriedade de um imóvel é transferida em uma compra e venda. Quem paga, em regra, é o comprador. Ele é recolhido antes da escritura e do registro, e o comprovante de pagamento é exigido pelo cartório. Por isso, entra no planejamento da compra junto com as demais despesas de documentação.",
+    intro: "Quem compra um apartamento paga o preço combinado com o vendedor e mais um conjunto de despesas que ficam de fora da negociação. O ITBI é uma delas. Este texto explica o que é o imposto, em que momento ele aparece e como se preparar, sem citar alíquotas ou valores, que são definidos pelo município e podem mudar.",
+    secoes: [
+      {
+        titulo: "O que é o ITBI",
+        paragrafos: [
+          "ITBI é a sigla de Imposto sobre a Transmissão de Bens Imóveis. É um tributo do município: quem cobra é a prefeitura da cidade onde o imóvel está. Em um apartamento em São Carlos, portanto, o imposto é recolhido à prefeitura de São Carlos.",
+          "O fato que gera o imposto é a transferência da propriedade entre pessoas vivas, por compra e venda, por exemplo. Ele não é um custo do banco nem do cartório, embora o cartório exija a prova de que foi pago."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Quem paga e quando",
+        paragrafos: [
+          "Em regra, o ITBI é pago pelo comprador. Isso pode ser combinado de outra forma entre as partes, mas o costume é esse, e vale deixar escrito no contrato quem arca com cada despesa.",
+          "O pagamento acontece antes da escritura e do registro. Com o imposto quitado, o comprador apresenta o comprovante ao tabelionato e, depois, ao Cartório de Registro de Imóveis. Sem ele, o registro na matrícula não é feito, e a propriedade não é transferida."
+        ],
+        bullets: [],
+        callout: { tipo: "alerta", texto: "Pague o ITBI apenas com a guia emitida pela prefeitura ou por canal oficial indicado por ela. Desconfie de boleto recebido por mensagem de terceiros." }
+      },
+      {
+        titulo: "Em que ordem as despesas aparecem",
+        paragrafos: [
+          "Na compra de um apartamento, o ITBI faz parte de uma sequência. Conhecer a ordem evita surpresa no caixa."
+        ],
+        bullets: [
+          "Documentos do comprador, do vendedor e do imóvel são conferidos.",
+          "A prefeitura emite a guia do ITBI e o comprador paga.",
+          "A escritura é lavrada no tabelionato, ou o contrato é assinado com o banco, quando há financiamento.",
+          "O título é levado ao Cartório de Registro de Imóveis e registrado na matrícula."
+        ],
+        callout: null
+      },
+      {
+        titulo: "ITBI e financiamento",
+        paragrafos: [
+          "Quem financia o imóvel costuma precisar do dinheiro do imposto e das despesas de cartório em recursos próprios, separados do valor financiado. Pergunte ao banco, antes de fechar, quais despesas ele não cobre.",
+          "Se o banco tiver regras próprias para o momento do pagamento do imposto, elas constam na lista de documentos que a instituição entrega ao comprador."
+        ],
+        bullets: [],
+        callout: { tipo: "info", texto: "Documentos e etapas da compra estão no texto sobre documentos para comprar apartamento em São Carlos." }
+      },
+      {
+        titulo: "Como se preparar",
+        paragrafos: [
+          "Antes de assinar, pergunte à prefeitura ou ao tabelionato como o imposto é calculado e emitido no caso do seu imóvel. A forma de apurar a base de cálculo é definida pelo município e pode mudar com o tempo, por isso a informação deve ser confirmada na hora da compra.",
+          "Reserve esse valor no orçamento junto com escritura, registro e eventual mudança. Quem só descobre o custo no dia da escritura costuma atrasar a transferência."
+        ],
+        bullets: [],
+        callout: null
+      }
+    ],
+    tabela: {
+      titulo: "ITBI em resumo",
+      colunas: ["Ponto", "Como funciona em geral"],
+      linhas: [
+        ["Quem cobra", "A prefeitura do município onde o imóvel está"],
+        ["Quem paga", "Em regra, o comprador, salvo combinação diferente por escrito"],
+        ["Quando é pago", "Antes da escritura e do registro"],
+        ["Para que serve o comprovante", "O cartório o exige para registrar a transferência"],
+        ["Valor e forma de cálculo", "Definidos pelo município; confirme na prefeitura ou no tabelionato"]
+      ],
+      destaque: null
+    },
+    faq: [
+      { p: "O ITBI é a mesma coisa que o IPTU?",
+        r: "Não. O ITBI é cobrado uma vez, na transferência do imóvel. O IPTU é o imposto sobre a propriedade, cobrado todos os anos do dono." },
+      { p: "Posso registrar o apartamento sem pagar o ITBI?",
+        r: "Não. O Cartório de Registro de Imóveis exige o comprovante do imposto para registrar a transferência na matrícula." },
+      { p: "Quem paga o ITBI em um financiamento?",
+        r: "Em regra, o comprador, e geralmente com recursos próprios, fora do valor financiado. Confirme com o banco o que a instituição cobre." },
+      { p: "O ITBI tem o mesmo valor em todas as cidades?",
+        r: "Não. Ele é um imposto municipal, e cada município define suas regras. Por isso a consulta deve ser feita na prefeitura da cidade do imóvel." },
+      { p: "Posso tirar dúvidas sobre a compra de um apartamento da Marins?",
+        r: "Sim. O time de vendas da Marins Engenharia, em São Carlos, responde pelo WhatsApp (16) 99766-7976 ou pelo e-mail vendas@marinsengenharia.com.br." }
+    ],
+    cta: {
+      titulo: "Planeje a compra com antecedência",
+      texto: "Fale com o time de vendas da Marins Engenharia para entender as etapas da compra de um apartamento em São Carlos."
+    },
+    fontes: []
+  },
+
+  {
     id: "valor-do-condominio-sao-carlos",
     data: "3 de outubro de 2026",
     foto: "assets/img/blog/valor-condominio.webp",
