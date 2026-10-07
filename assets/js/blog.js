@@ -7,6 +7,107 @@
    ============================================================ */
 const BLOG = [
   {
+    id: "vistoria-entrega-chaves-sao-carlos",
+    data: "7 de outubro de 2026",
+    foto: "assets/img/blog/vistoria-entrega-chaves.webp",
+    fotoMini: "assets/img/blog/vistoria-entrega-chaves-mini.webp",
+    alt: "Fachada do Edifício Trivoli, da Marins Engenharia, na Rua São Joaquim, com janelas e portão de garagem",
+    titulo: "Vistoria na entrega das chaves em São Carlos: roteiro",
+    resumo: "Como fazer a vistoria do apartamento novo antes de assinar o termo de recebimento, o que conferir e como registrar o que estiver fora do combinado.",
+    seo: {
+      kw: "vistoria na entrega das chaves em São Carlos",
+      meta: "Vistoria na entrega das chaves em São Carlos: o que conferir no apartamento novo, como registrar problemas e por que revisar antes do termo de recebimento.",
+      categoria: "Compra de imóvel",
+      leitura: "4 min de leitura",
+      atualizado: "Atualizado em 7 de outubro de 2026"
+    },
+    resumoRapido: "A vistoria é a conferência do apartamento pronto contra o que foi contratado, feita antes de assinar o termo de recebimento. Leve o contrato e o memorial descritivo, teste cada item, anote tudo por escrito e peça que os problemas constem no documento. Pressa na assinatura é o erro mais comum.",
+    intro: "Receber a chave é o fim da espera, mas também o último momento para conferir o apartamento com calma. Depois da assinatura do termo de recebimento, fica mais difícil provar o que já estava fora do combinado. Este roteiro mostra como se organizar para a visita e o que olhar em cada ambiente.",
+    secoes: [
+      {
+        titulo: "O que é a vistoria e quando ela acontece",
+        paragrafos: [
+          "A vistoria é a visita em que o comprador confere o apartamento pronto e compara o que vê com o contrato e com o memorial descritivo. Ela acontece perto da entrega, em data combinada com a construtora.",
+          "O termo de recebimento é o documento que registra que o comprador recebeu a unidade. Por isso, a vistoria vem antes dele. Se algo estiver errado, o ideal é que o problema esteja descrito no termo, e não apenas dito de boca."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "O que levar para a visita",
+        paragrafos: [
+          "Uma boa vistoria depende mais de preparo do que de conhecimento técnico. Separe poucos itens e leve todos."
+        ],
+        bullets: [
+          "Contrato de compra e venda e memorial descritivo, para comparar item a item.",
+          "Planta da unidade, com as medidas dos ambientes.",
+          "Lanterna, trena e um carregador de celular com adaptador para testar tomadas.",
+          "Celular para fotografar e filmar cada problema.",
+          "Uma pessoa de confiança, ou um profissional de engenharia, se você preferir uma segunda opinião."
+        ],
+        callout: null
+      },
+      {
+        titulo: "O que conferir em cada ambiente",
+        paragrafos: [
+          "Vá cômodo por cômodo, sempre na mesma ordem. Abra e feche portas e janelas, ligue e desligue luzes, abra torneiras e dê descarga. Olhe também para o teto e para os cantos, onde aparecem manchas e fissuras.",
+          "A tabela abaixo reúne os pontos principais. Ela não substitui o memorial descritivo, que é a referência para o que foi prometido."
+        ],
+        bullets: [],
+        callout: { tipo: "info", texto: "Teste a pressão e o escoamento da água em todos os pontos, inclusive no ralo do box e na área de serviço. Problemas hidráulicos são mais fáceis de resolver antes da mudança." }
+      },
+      {
+        titulo: "Como registrar o que estiver fora do combinado",
+        paragrafos: [
+          "Anote cada problema com o ambiente, a descrição e uma foto. Entregue a lista por escrito e peça que ela seja anexada ao termo de recebimento, com data e assinatura das duas partes.",
+          "Peça também um prazo para o reparo. Sem prazo escrito, a correção fica sem data para acontecer."
+        ],
+        bullets: [],
+        callout: { tipo: "alerta", texto: "Evite assinar o termo de recebimento sem a lista de pendências anexada. Se faltar tempo para olhar tudo, peça outra data de vistoria." }
+      },
+      {
+        titulo: "Depois da vistoria: chaves, manual e garantias",
+        paragrafos: [
+          "Com o termo assinado, peça o manual do proprietário. Ele explica o uso e a manutenção de cada sistema do apartamento e do prédio, e indica a quem recorrer se algo apresentar defeito.",
+          "Guarde o termo, a lista de pendências, as fotos e o manual juntos. Esses documentos valem em qualquer conversa futura sobre assistência."
+        ],
+        bullets: [],
+        callout: null
+      }
+    ],
+    tabela: {
+      titulo: "O que conferir na vistoria",
+      colunas: ["Item", "Como testar", "O que anotar"],
+      linhas: [
+        ["Paredes e teto", "Olhar com lanterna, de perto e de lado", "Manchas, fissuras, falhas de pintura"],
+        ["Pisos e revestimentos", "Passar a mão e observar o alinhamento", "Peças soltas, trincadas ou manchadas"],
+        ["Portas e janelas", "Abrir, fechar e trancar cada uma", "Folgas, atrito, vidros riscados"],
+        ["Tomadas e interruptores", "Testar com carregador e ligar cada luz", "Pontos sem energia ou fora do lugar"],
+        ["Torneiras, ralos e descargas", "Abrir, dar descarga e observar o escoamento", "Vazamento, entupimento, pressão baixa"],
+        ["Medidas dos ambientes", "Conferir com a trena e a planta", "Diferenças em relação à planta"]
+      ],
+      destaque: null
+    },
+    faq: [
+      { p: "Posso levar alguém para a vistoria?",
+        r: "Sim. Levar uma pessoa de confiança ou um profissional de engenharia ajuda a enxergar problemas que passam despercebidos na empolgação da entrega." },
+      { p: "Quanto tempo deve durar a vistoria?",
+        r: "O tempo necessário para conferir todos os ambientes sem pressa. Se a visita não for suficiente, peça uma segunda data." },
+      { p: "O que fazer se encontrar defeitos?",
+        r: "Registre cada um por escrito, com fotos, e peça que a lista seja anexada ao termo de recebimento, junto com um prazo para o reparo." },
+      { p: "Quando devo assinar o termo de recebimento?",
+        r: "Depois de conferir o apartamento e de ter as pendências registradas por escrito. Assinar sem a lista pode dificultar a cobrança dos reparos." },
+      { p: "Posso tirar dúvidas sobre a entrega de um apartamento da Marins?",
+        r: "Sim. O time de vendas da Marins Engenharia, em São Carlos, responde pelo WhatsApp (16) 99766-7976 ou pelo e-mail vendas@marinsengenharia.com.br." }
+    ],
+    cta: {
+      titulo: "Tire dúvidas sobre a entrega",
+      texto: "Fale com o time de vendas da Marins Engenharia para entender as etapas da compra e da entrega de um apartamento em São Carlos."
+    },
+    fontes: []
+  },
+
+  {
     id: "itbi-sao-carlos",
     data: "5 de outubro de 2026",
     foto: "assets/img/blog/itbi-imposto-compra.webp",
