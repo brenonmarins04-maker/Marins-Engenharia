@@ -7,6 +7,105 @@
    ============================================================ */
 const BLOG = [
   {
+    id: "escritura-registro-cartorio-sao-carlos",
+    data: "9 de outubro de 2026",
+    foto: "assets/img/blog/escritura-registro-cartorio.webp",
+    fotoMini: "assets/img/blog/escritura-registro-cartorio-mini.webp",
+    alt: "Entrada do Edifício Ferretto, da Marins Engenharia, com letreiro na fachada, jardineira e caixas de correio",
+    titulo: "Escritura e registro em cartório em São Carlos: o passo a passo",
+    resumo: "Qual é a diferença entre escritura e registro, o que cada cartório faz e por que o apartamento só passa a ser seu depois do registro na matrícula.",
+    seo: {
+      kw: "escritura e registro de imóvel em São Carlos",
+      meta: "Escritura e registro de imóvel em São Carlos: a diferença entre as duas etapas, o que cada cartório faz e por que o registro transfere a propriedade.",
+      categoria: "Compra de imóvel",
+      leitura: "4 min de leitura",
+      atualizado: "Atualizado em 9 de outubro de 2026"
+    },
+    resumoRapido: "Escritura e registro são etapas diferentes. A escritura é o documento da compra, lavrado em tabelionato de notas. O registro é feito no Cartório de Registro de Imóveis e é ele que transfere a propriedade, ao ser anotado na matrícula. Sem o registro, o apartamento ainda não é oficialmente do comprador.",
+    intro: "Muita gente acredita que, ao assinar a escritura, o apartamento já é seu. Não é bem assim. A compra passa por dois cartórios, cada um com uma função, e só o segundo conclui a transferência. Este texto explica a ordem das etapas e o que conferir em cada uma, sem entrar em valores, que variam conforme o caso.",
+    secoes: [
+      {
+        titulo: "Escritura e registro: duas etapas diferentes",
+        paragrafos: [
+          "A escritura é o documento em que comprador e vendedor formalizam o negócio. Ela é lavrada por um tabelião, em um tabelionato de notas, que confere os documentos das partes e do imóvel e registra o que foi combinado.",
+          "O registro vem depois. O título, que pode ser a escritura ou o contrato de financiamento, é levado ao Cartório de Registro de Imóveis, onde a compra é anotada na matrícula do apartamento. Em regra, é essa anotação que faz o comprador virar o proprietário perante todos."
+        ],
+        bullets: [],
+        callout: { tipo: "alerta", texto: "Assinar a escritura não transfere a propriedade por si só. Enquanto o registro não for feito na matrícula, o nome do vendedor continua constando como dono." }
+      },
+      {
+        titulo: "O caminho até a escritura",
+        paragrafos: [
+          "Antes de ir ao tabelionato, reúna e confira a documentação. A matrícula atualizada, as certidões do vendedor e a declaração do condomínio estão no texto sobre documentos para comprar apartamento em São Carlos.",
+          "O tabelionato informa quais documentos pede em cada caso e quais impostos e taxas devem ser pagos antes da assinatura. Um deles é o ITBI, explicado em outro texto deste blog. Pergunte os valores e prazos diretamente ao cartório, porque eles mudam de caso a caso."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Quando há financiamento",
+        paragrafos: [
+          "Em compra financiada, o caminho costuma ser diferente. O contrato assinado com o banco cumpre o papel de título para o registro, e o banco orienta o comprador sobre os documentos e as etapas. A avaliação do imóvel pelo banco é uma das fases desse processo.",
+          "Mesmo assim, o contrato precisa ser registrado na matrícula. Pergunte ao banco quem cuida do registro e como acompanhar o andamento."
+        ],
+        bullets: [],
+        callout: { tipo: "info", texto: "No financiamento, é comum o imóvel ficar em garantia do banco até o contrato ser quitado. Isso aparece na matrícula e deve constar no contrato que você assina." }
+      },
+      {
+        titulo: "O que conferir antes de assinar",
+        paragrafos: [
+          "Leia a escritura ou o contrato inteiro antes de assinar. Os pontos abaixo ajudam a não deixar passar nada importante."
+        ],
+        bullets: [
+          "Nome, estado civil e CPF das partes, conforme os documentos originais.",
+          "Descrição do apartamento, da vaga de garagem e demais unidades incluídas, igual à da matrícula.",
+          "Valor e forma de pagamento descritos como foram combinados.",
+          "Informações sobre dívidas e ônus do imóvel, quando houver.",
+          "Quem paga cada custo do processo, combinado por escrito."
+        ],
+        callout: null
+      },
+      {
+        titulo: "Depois do registro",
+        paragrafos: [
+          "Concluído o registro, peça uma certidão atualizada da matrícula. Nela deve constar o seu nome como proprietário. Guarde essa certidão junto com a escritura ou o contrato, o termo de recebimento e o manual do proprietário.",
+          "Esses papéis serão necessários em uma futura venda, em uma reforma que exija comprovação de propriedade ou em qualquer discussão sobre o imóvel."
+        ],
+        bullets: [],
+        callout: null
+      }
+    ],
+    tabela: {
+      titulo: "Escritura e registro lado a lado",
+      colunas: ["Etapa", "Onde acontece", "O que faz"],
+      linhas: [
+        ["Escritura", "Tabelionato de notas", "Formaliza a compra entre comprador e vendedor"],
+        ["Contrato com o banco", "Instituição financeira", "Formaliza a compra financiada e serve de título para o registro"],
+        ["Registro", "Cartório de Registro de Imóveis", "Anota a compra na matrícula e transfere a propriedade"],
+        ["Certidão atualizada da matrícula", "Cartório de Registro de Imóveis", "Comprova que o comprador consta como proprietário"]
+      ],
+      destaque: null
+    },
+    faq: [
+      { p: "Qual é a diferença entre escritura e registro?",
+        r: "A escritura formaliza a compra no tabelionato de notas. O registro é feito no Cartório de Registro de Imóveis e transfere a propriedade ao ser anotado na matrícula." },
+      { p: "Depois de assinar a escritura o apartamento já é meu?",
+        r: "Ainda não. A propriedade passa ao comprador com o registro na matrícula do imóvel." },
+      { p: "Quando compro com financiamento, preciso de escritura?",
+        r: "Em geral, o contrato com o banco serve de título para o registro. Confirme com a instituição financeira como o processo funciona no seu caso." },
+      { p: "Quanto custa a escritura e o registro?",
+        r: "Os custos variam conforme o caso. Consulte o tabelionato e o Cartório de Registro de Imóveis antes de fechar a compra." },
+      { p: "Posso tirar dúvidas sobre a documentação de um apartamento da Marins?",
+        r: "Sim. O time de vendas da Marins Engenharia, em São Carlos, responde pelo WhatsApp (16) 99766-7976 ou pelo e-mail vendas@marinsengenharia.com.br." }
+    ],
+    cta: {
+      titulo: "Tire dúvidas sobre a compra",
+      texto: "Fale com o time de vendas da Marins Engenharia para entender as etapas da compra de um apartamento em São Carlos."
+    },
+    fontes: []
+  },
+
+  {
     id: "vistoria-entrega-chaves-sao-carlos",
     data: "7 de outubro de 2026",
     foto: "assets/img/blog/vistoria-entrega-chaves.webp",
