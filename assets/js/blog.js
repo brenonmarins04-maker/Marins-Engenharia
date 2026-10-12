@@ -7,6 +7,96 @@
    ============================================================ */
 const BLOG = [
   {
+    id: "como-ler-planta-area-util-area-total-sao-carlos",
+    data: "12 de outubro de 2026",
+    foto: "assets/img/blog/planta-area-util-area-total.webp",
+    fotoMini: "assets/img/blog/planta-area-util-area-total-mini.webp",
+    alt: "Fachada do Edifício Ferretto, da Marins Engenharia, em São Carlos, com céu azul ao fundo",
+    titulo: "Como ler a planta: área útil e área total em São Carlos",
+    resumo: "O que significam área útil, área privativa e área total na planta, e como conferir a metragem do apartamento antes de comprar.",
+    seo: {
+      kw: "área útil e área total do apartamento em São Carlos",
+      meta: "Área útil e área total do apartamento em São Carlos: o que cada medida inclui, como ler a planta e o que conferir antes de fechar a compra.",
+      categoria: "Compra de imóvel",
+      leitura: "4 min de leitura",
+      atualizado: "Atualizado em 12 de outubro de 2026"
+    },
+    resumoRapido: "A área útil é a que você ocupa dentro do apartamento, medida pelo interior das paredes. A área privativa inclui também as paredes. A área total soma a privativa com a parte proporcional das áreas comuns. Ao comparar apartamentos, compare sempre a mesma medida e peça a planta ao vendedor.",
+    intro: "Dois apartamentos com a mesma metragem anunciada podem ter espaços internos bem diferentes. A diferença costuma estar em qual medida foi usada no anúncio. Este texto explica o que cada termo da planta significa e como comparar com segurança.",
+    secoes: [
+      {
+        titulo: "As três medidas que aparecem na planta",
+        paragrafos: [
+          "A área útil é o espaço livre dentro do apartamento, medido de parede a parede pelo lado de dentro. É a que mais se aproxima do que você vai mobiliar.",
+          "A área privativa leva em conta as paredes do próprio apartamento, inclusive as que dividem com os vizinhos. Por isso é maior que a útil.",
+          "A área total acrescenta a fração das áreas de uso comum, como hall, escadas e garagem. Ela serve para efeitos de documentação e não indica o espaço interno disponível."
+        ],
+        bullets: [],
+        callout: { tipo: "alerta", texto: "Compare sempre a mesma medida entre apartamentos. Comparar a área total de um com a útil de outro leva a conclusões erradas." }
+      },
+      {
+        titulo: "Como ler a planta cômodo por cômodo",
+        paragrafos: [
+          "A planta mostra a posição das paredes, portas, janelas e, em geral, a medida de cada ambiente. Antes de olhar a metragem, observe como o espaço é distribuído."
+        ],
+        bullets: [
+          "Posição das portas e janelas e o espaço livre para circulação.",
+          "Paredes onde cabem os móveis principais, como cama, sofá e armários.",
+          "Largura da cozinha, da área de serviço e da sacada, quando houver.",
+          "Localização dos pontos de água e do banheiro em relação aos quartos.",
+          "Escala do desenho, para medir com régua se houver dúvida."
+        ],
+        callout: null
+      },
+      {
+        titulo: "Onde conferir a metragem oficial",
+        paragrafos: [
+          "A metragem oficial consta na matrícula do imóvel e no projeto aprovado. O texto sobre documentos para comprar apartamento em São Carlos explica como pedir a matrícula atualizada.",
+          "Se o número do anúncio for diferente do da matrícula, pergunte qual medida foi usada em cada um. Pedir isso por escrito evita mal-entendidos mais tarde."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Uma comparação com dois edifícios da Marins",
+        paragrafos: [
+          "Nos dados da Marins Engenharia, o Edifício Ferretto, na Rua Riachuelo, 907, tem apartamento de 38,22 m², com uma suíte, sala, cozinha com balcão americano e área de serviço. O Edifício Turim, na Rua São Joaquim, 1885, tem apartamento de 57,27 m², com dois dormitórios.",
+          "A metragem sozinha não diz tudo. O que muda a experiência é como o espaço é dividido, e é isso que a planta mostra."
+        ],
+        bullets: [],
+        callout: { tipo: "info", texto: "Os dois edifícios acima já foram vendidos. Servem aqui como exemplo de como a divisão dos ambientes pesa tanto quanto o número de metros quadrados." }
+      }
+    ],
+    tabela: {
+      titulo: "Medidas da planta em resumo",
+      colunas: ["Medida", "O que inclui", "Para que serve"],
+      linhas: [
+        ["Área útil", "Espaço interno, medido de parede a parede", "Avaliar o espaço para mobiliar"],
+        ["Área privativa", "Área útil mais as paredes do apartamento", "Documentação do imóvel"],
+        ["Área total", "Área privativa mais a fração das áreas comuns", "Documentação e rateio"]
+      ],
+      destaque: null
+    },
+    faq: [
+      { p: "Qual é a diferença entre área útil e área total?",
+        r: "A útil é o espaço interno do apartamento. A total soma a área privativa com a parte proporcional das áreas comuns do prédio." },
+      { p: "Qual metragem devo usar para comparar apartamentos?",
+        r: "Use sempre a mesma medida nos dois. Para saber quanto espaço terá dentro de casa, a área útil é a mais indicada." },
+      { p: "Onde encontro a metragem oficial do apartamento?",
+        r: "Na matrícula do imóvel e no projeto aprovado. Peça uma matrícula atualizada ao vendedor ou ao Cartório de Registro de Imóveis." },
+      { p: "A planta do anúncio e a do apartamento sempre são iguais?",
+        r: "Nem sempre. Confira a planta com a do projeto aprovado e visite o imóvel para ver os ambientes como realmente são." },
+      { p: "Posso pedir a planta de um apartamento da Marins?",
+        r: "Sim. O time de vendas da Marins Engenharia, em São Carlos, responde pelo WhatsApp (16) 99766-7976 ou pelo e-mail vendas@marinsengenharia.com.br." }
+    ],
+    cta: {
+      titulo: "Tire dúvidas sobre a planta",
+      texto: "Fale com o time de vendas da Marins Engenharia para entender as medidas e a divisão dos apartamentos em São Carlos."
+    },
+    fontes: []
+  },
+
+  {
     id: "escritura-registro-cartorio-sao-carlos",
     data: "9 de outubro de 2026",
     foto: "assets/img/blog/escritura-registro-cartorio.webp",
