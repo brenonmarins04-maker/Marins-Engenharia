@@ -7,6 +7,103 @@
    ============================================================ */
 const BLOG = [
   {
+    id: "suite-ou-dormitorio-simples-revenda-sao-carlos",
+    data: "14 de outubro de 2026",
+    foto: "assets/img/blog/suite-ou-dormitorio-revenda.webp",
+    fotoMini: "assets/img/blog/suite-ou-dormitorio-revenda-mini.webp",
+    alt: "Suíte do Edifício Trentino, da Marins Engenharia, com piso claro, janela e acesso ao banheiro",
+    titulo: "Suíte ou dormitório simples: o que pesa na revenda",
+    resumo: "Como comparar apartamentos com suíte e com dormitórios simples em São Carlos, pensando no uso de hoje e na hora de vender.",
+    seo: {
+      kw: "apartamento com suíte em São Carlos",
+      meta: "Apartamento com suíte em São Carlos: quando a suíte compensa, quando o dormitório simples basta e o que avaliar pensando na revenda.",
+      categoria: "Compra de imóvel",
+      leitura: "4 min de leitura",
+      atualizado: "Atualizado em 14 de outubro de 2026"
+    },
+    resumoRapido: "A suíte dá privacidade e conforto, mas ocupa área que poderia ir para outros ambientes. O dormitório simples libera espaço, porém depende de um banheiro social bem posicionado. Na hora de revender, o que pesa é o perfil de quem procura o apartamento. Nenhuma das duas escolhas garante venda rápida ou valorização.",
+    intro: "Ao comparar plantas, muita gente se pergunta se vale pagar por uma suíte ou se dormitórios simples resolvem. A resposta depende de quem vai morar e de quem poderá comprar o apartamento depois. Este texto organiza os pontos para decidir com calma.",
+    secoes: [
+      {
+        titulo: "O que muda entre uma suíte e um dormitório simples",
+        paragrafos: [
+          "A suíte é o dormitório com banheiro próprio, acessado de dentro do quarto. O dormitório simples depende de um banheiro social, usado por todos os moradores e pelas visitas.",
+          "Em apartamentos compactos, o banheiro da suíte consome parte da área total. Por isso, o espaço de sala, cozinha ou do próprio quarto pode ficar menor do que seria sem ele."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Quando a suíte faz diferença no dia a dia",
+        paragrafos: [
+          "A suíte costuma agradar a quem mora sozinho ou em casal, porque o banheiro é de uso exclusivo. Também ajuda quando há hóspedes frequentes, já que o quarto de visita ganha privacidade."
+        ],
+        bullets: [
+          "Rotinas diferentes entre moradores, como horários de trabalho e de descanso.",
+          "Quem recebe familiares ou amigos e quer separar o espaço de quem visita.",
+          "Quem prefere menos movimento no banheiro social."
+        ],
+        callout: null
+      },
+      {
+        titulo: "Quando o dormitório simples basta",
+        paragrafos: [
+          "Em famílias com crianças, dois ou mais dormitórios podem ser mais úteis do que uma suíte única. Um banheiro social bem dimensionado atende bem, e a área poupada pode melhorar o conforto da sala e da cozinha.",
+          "Vale olhar a posição do banheiro social na planta. Se a porta abre direto para a sala, o incômodo no dia a dia é maior."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "O que pensar sobre a revenda",
+        paragrafos: [
+          "Quem compra um apartamento daqui a alguns anos tem um perfil próprio: pode ser um morador sozinho, um casal, uma família ou alguém que quer alugar. Cada perfil valoriza uma configuração diferente.",
+          "Por isso, não existe resposta única. Apartamentos com suíte e apartamentos com dormitórios simples atendem públicos distintos, e nenhum deles garante prazo de venda ou valorização. Escolher a planta que funciona bem para quem vai morar já ajuda, porque um apartamento bem resolvido tende a ser mais fácil de explicar ao próximo comprador."
+        ],
+        bullets: [],
+        callout: { tipo: "alerta", texto: "Evite decidir só pela ideia de que uma configuração vende mais. O que conta é a planta ser coerente com o tamanho do apartamento." }
+      },
+      {
+        titulo: "Exemplos nos edifícios da Marins",
+        paragrafos: [
+          "Segundo os dados da Marins Engenharia, o Edifício Trentino, na Rua Padre Teixeira, 1456, tem apartamentos de 64,52 m² com dois dormitórios, sendo uma suíte, e banheiros com box. Os edifícios Ferretto, Trivoli e Trento têm apartamentos de uma suíte, e o Ana Terra tem apartamentos de um dormitório com banheiro com box.",
+          "Esses exemplos mostram que a mesma construtora trabalha plantas diferentes, cada uma pensada para um tipo de morador."
+        ],
+        bullets: [],
+        callout: { tipo: "info", texto: "Entre os edifícios citados, apenas o Trentino ainda tem apartamentos à venda. Os demais já foram vendidos." }
+      }
+    ],
+    tabela: {
+      titulo: "Suíte e dormitório simples lado a lado",
+      colunas: ["Ponto", "Suíte", "Dormitório simples"],
+      linhas: [
+        ["Banheiro", "Próprio, dentro do quarto", "Social, compartilhado"],
+        ["Privacidade", "Maior para quem usa a suíte", "Depende da posição do banheiro social"],
+        ["Espaço da planta", "Parte da área vai para o banheiro da suíte", "Área liberada para outros ambientes"],
+        ["Perfil que costuma procurar", "Quem mora sozinho, casal, quem recebe visitas", "Famílias e quem precisa de mais quartos"]
+      ],
+      destaque: null
+    },
+    faq: [
+      { p: "Apartamento com suíte vende mais rápido?",
+        r: "Não há garantia. O prazo de venda depende de preço, localização, conservação e do perfil de quem procura. A suíte atrai alguns compradores e não faz diferença para outros." },
+      { p: "Vale abrir mão da suíte para ter um quarto a mais?",
+        r: "Depende de quem vai morar. Para uma família, mais dormitórios podem ser mais úteis. Para quem mora sozinho ou em casal, a suíte costuma ser mais valorizada no dia a dia." },
+      { p: "A suíte aumenta o custo do condomínio?",
+        r: "Não diretamente. O condomínio é rateado entre as unidades e não varia com a quantidade de banheiros do apartamento." },
+      { p: "Como saber se a planta é bem resolvida?",
+        r: "Observe onde ficam as portas, o espaço para cama e armário e a posição do banheiro. Visitar o apartamento ou a unidade decorada ajuda a perceber o que a planta não mostra." },
+      { p: "Posso conhecer os apartamentos do Trentino?",
+        r: "Sim. O time de vendas da Marins Engenharia, em São Carlos, responde pelo WhatsApp (16) 99766-7976 ou pelo e-mail vendas@marinsengenharia.com.br." }
+    ],
+    cta: {
+      titulo: "Conheça as plantas do Trentino",
+      texto: "Fale com o time de vendas da Marins Engenharia para ver a suíte e os dormitórios dos apartamentos disponíveis em São Carlos."
+    },
+    fontes: []
+  },
+
+  {
     id: "como-ler-planta-area-util-area-total-sao-carlos",
     data: "12 de outubro de 2026",
     foto: "assets/img/blog/planta-area-util-area-total.webp",
