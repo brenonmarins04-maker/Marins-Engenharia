@@ -7,6 +7,108 @@
    ============================================================ */
 const BLOG = [
   {
+    id: "varanda-gourmet-sao-carlos",
+    data: "16 de outubro de 2026",
+    foto: "assets/img/blog/varanda-gourmet-uso-diario.webp",
+    fotoMini: "assets/img/blog/varanda-gourmet-uso-diario-mini.webp",
+    alt: "Varanda gourmet do Edifício Trentino, com bancada escura, pia com torneira, armários e fechamento em vidro com vista para a cidade",
+    titulo: "Varanda gourmet em São Carlos: como ela funciona no dia a dia",
+    resumo: "O que é uma varanda gourmet, como ela é usada na rotina e o que observar na planta antes de comprar um apartamento em São Carlos.",
+    seo: {
+      kw: "varanda gourmet em São Carlos",
+      meta: "Varanda gourmet em São Carlos: o que é, como usar no dia a dia e o que conferir na planta e na visita antes de comprar um apartamento.",
+      categoria: "Compra de imóvel",
+      leitura: "4 min de leitura",
+      atualizado: "Atualizado em 16 de outubro de 2026"
+    },
+    resumoRapido: "A varanda gourmet é uma varanda com bancada, pia e espaço para preparar e servir refeições. Ela amplia a área de convivência, mas só funciona bem se tiver largura suficiente, boa ventilação e ponto de água e energia. Vale conferir esses itens na planta e na visita.",
+    intro: "A varanda gourmet aparece cada vez mais em anúncios de apartamento. Mas o que a diferencia de uma varanda comum, e ela serve mesmo no uso diário? Este texto explica o conceito e lista o que verificar antes de decidir.",
+    secoes: [
+      {
+        titulo: "O que é uma varanda gourmet",
+        paragrafos: [
+          "É uma varanda preparada para receber e preparar refeições. Em geral, tem bancada, pia e armários, além de pontos de energia para eletrodomésticos.",
+          "Ela costuma ficar ligada à sala ou à cozinha, o que facilita circular entre os ambientes quando há visitas."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Como ela entra na rotina",
+        paragrafos: [
+          "No dia a dia, a varanda gourmet pode servir de extensão da sala. Muita gente a usa para o café da manhã, para almoços de fim de semana ou para receber amigos."
+        ],
+        bullets: [
+          "Refeições rápidas, longe da mesa principal.",
+          "Encontros com amigos e familiares, com a cozinha por perto.",
+          "Um canto para trabalhar ou ler com luz natural."
+        ],
+        callout: null
+      },
+      {
+        titulo: "O que conferir na planta e na visita",
+        paragrafos: [
+          "Nem toda varanda com bancada é confortável. Algumas medidas e detalhes fazem diferença no uso."
+        ],
+        bullets: [
+          "Largura: dá para circular e ainda sentar à mesa ou à bancada?",
+          "Fechamento: a varanda é aberta, com vidro ou com esquadria? Isso muda o conforto com chuva e vento.",
+          "Pontos de água, esgoto e energia: onde ficam e quantos são.",
+          "Ventilação: para onde sai o ar de uma churrasqueira ou de um cooktop, se houver.",
+          "Insolação: em que horário o sol bate e como a varanda fica à tarde."
+        ],
+        callout: { tipo: "alerta", texto: "Antes de instalar churrasqueira ou aparelho a gás, consulte a convenção e o regimento do condomínio e a construtora. Nem todo prédio permite." }
+      },
+      {
+        titulo: "Manutenção e regras do condomínio",
+        paragrafos: [
+          "A varanda é parte da fachada. Por isso, mudanças como fechar com vidro, trocar o piso ou instalar toldos costumam seguir as regras do condomínio.",
+          "A bancada e a pia pedem a limpeza de qualquer cozinha. Vale ver o material usado e se a esquadria é fácil de limpar."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "O exemplo do Edifício Trentino",
+        paragrafos: [
+          "Segundo os dados da Marins Engenharia, os apartamentos do Edifício Trentino, na Rua Padre Teixeira, 1456, têm 64,52 m², dois dormitórios, sendo uma suíte, sala de dois ambientes, cozinha, área de serviço e varanda gourmet.",
+          "A foto que abre este texto mostra a varanda gourmet do Trentino, com bancada, pia, armários e fechamento em vidro. Para ver o espaço de perto e tirar as dúvidas sobre o uso, o caminho é a visita ao prédio."
+        ],
+        bullets: [],
+        callout: { tipo: "info", texto: "Entre os edifícios da Marins, o Trentino é o que tem apartamentos à venda atualmente." }
+      }
+    ],
+    tabela: {
+      titulo: "Varanda gourmet e varanda comum",
+      colunas: ["Ponto", "Varanda gourmet", "Varanda comum"],
+      linhas: [
+        ["Estrutura", "Bancada, pia e armários", "Espaço livre, sem bancada"],
+        ["Uso", "Preparar e servir refeições, receber visitas", "Descanso, vista e área de respiro"],
+        ["Instalações", "Pontos de água e energia", "Normalmente só energia para iluminação"],
+        ["Limpeza", "Exige a rotina de uma cozinha", "Limpeza mais simples"]
+      ],
+      destaque: null
+    },
+    faq: [
+      { p: "Varanda gourmet substitui a cozinha?",
+        r: "Não. Ela complementa a cozinha e a sala, servindo de apoio para refeições e encontros." },
+      { p: "Posso instalar churrasqueira na varanda?",
+        r: "Depende da planta, da ventilação e das regras do condomínio. Consulte a convenção e a construtora antes de qualquer instalação." },
+      { p: "A varanda gourmet aumenta o condomínio?",
+        r: "Não diretamente. O condomínio é rateado entre as unidades e depende das despesas do prédio." },
+      { p: "Varanda fechada com vidro ainda é varanda?",
+        r: "Sim. O fechamento em vidro protege de chuva e vento, e a esquadria deve ser feita conforme as regras do prédio." },
+      { p: "Posso conhecer a varanda gourmet do Trentino?",
+        r: "Sim. O time de vendas da Marins Engenharia, em São Carlos, responde pelo WhatsApp (16) 99766-7976 ou pelo e-mail vendas@marinsengenharia.com.br." }
+    ],
+    cta: {
+      titulo: "Conheça a varanda gourmet do Trentino",
+      texto: "Fale com o time de vendas da Marins Engenharia para agendar uma visita aos apartamentos disponíveis em São Carlos."
+    },
+    fontes: []
+  },
+
+  {
     id: "suite-ou-dormitorio-simples-revenda-sao-carlos",
     data: "14 de outubro de 2026",
     foto: "assets/img/blog/suite-ou-dormitorio-revenda.webp",
