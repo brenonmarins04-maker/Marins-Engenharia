@@ -7,6 +7,108 @@
    ============================================================ */
 const BLOG = [
   {
+    id: "vaga-garagem-coberta-descoberta-sao-carlos",
+    data: "19 de outubro de 2026",
+    foto: "assets/img/blog/vaga-garagem-coberta-descoberta.webp",
+    fotoMini: "assets/img/blog/vaga-garagem-coberta-descoberta-mini.webp",
+    alt: "Garagem do Edifício Trentino, com piso de bloco intertravado, pilares com faixas amarelas e pretas e vagas demarcadas sob o prédio",
+    titulo: "Vaga de garagem coberta ou descoberta em São Carlos",
+    resumo: "Diferenças entre vaga coberta e descoberta, o que conferir na matrícula e na visita e como a escolha pesa no dia a dia em São Carlos.",
+    seo: {
+      kw: "vaga de garagem coberta ou descoberta em São Carlos",
+      meta: "Vaga de garagem coberta ou descoberta em São Carlos: diferenças, o que conferir na matrícula e na visita antes de comprar um apartamento.",
+      categoria: "Compra de imóvel",
+      leitura: "4 min de leitura",
+      atualizado: "Atualizado em 19 de outubro de 2026"
+    },
+    resumoRapido: "A vaga coberta protege o carro de sol e chuva. A descoberta costuma ser mais simples e fica ao ar livre. Além da cobertura, vale conferir se a vaga é fixa ou sorteada, se é individual ou presa a outra, as medidas e a manobra de entrada e saída.",
+    intro: "Na hora de comprar um apartamento, a vaga de garagem entra na conta quase sem ser notada. Mas coberta ou descoberta, fixa ou sorteada, a diferença aparece todos os dias. Este texto explica cada caso e lista o que verificar.",
+    secoes: [
+      {
+        titulo: "O que muda entre vaga coberta e descoberta",
+        paragrafos: [
+          "A vaga coberta fica sob uma laje, um telhado ou o próprio corpo do prédio. A descoberta fica ao ar livre, exposta a sol, chuva e queda de folhas.",
+          "A cobertura protege a pintura e os bancos do carro e facilita carregar compras em dia de chuva. Em compensação, a descoberta pode ser mais ventilada e mais clara."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Vaga fixa, sorteada ou presa",
+        paragrafos: [
+          "Cobertura não é o único ponto. O modo como a vaga é atribuída ao apartamento também pesa."
+        ],
+        bullets: [
+          "Vaga fixa: está ligada ao apartamento e sempre é a mesma.",
+          "Vaga sorteada: muda conforme o sorteio definido pelo condomínio.",
+          "Vaga presa ou dupla: uma vaga fica atrás da outra, e quem está à frente precisa sair para liberar a de trás."
+        ],
+        callout: { tipo: "info", texto: "Confira na matrícula do imóvel e na convenção do condomínio como a vaga é descrita e se ela faz parte da unidade." }
+      },
+      {
+        titulo: "O que conferir na visita",
+        paragrafos: [
+          "Vá até a garagem e observe, de preferência com o seu carro ou com as medidas dele em mãos."
+        ],
+        bullets: [
+          "Largura e comprimento da vaga e se há folga para abrir as portas.",
+          "Espaço de manobra no corredor e na rampa de acesso.",
+          "Pilares próximos da vaga e a sinalização.",
+          "Iluminação e câmeras.",
+          "Piso e escoamento da água de chuva.",
+          "Distância até o elevador ou a escada."
+        ],
+        callout: null
+      },
+      {
+        titulo: "Como a escolha pesa no dia a dia",
+        paragrafos: [
+          "Quem sai e volta muitas vezes por dia tende a valorizar uma vaga de acesso fácil, mesmo que descoberta. Quem deixa o carro parado por longos períodos costuma dar mais peso à cobertura.",
+          "Quem tem mais de um carro deve conferir se o apartamento tem direito a mais de uma vaga. Nem todo apartamento tem."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Exemplos nos edifícios da Marins",
+        paragrafos: [
+          "Segundo os dados da Marins Engenharia, o apartamento do Edifício Ferretto, na Rua Riachuelo, 907, tem 01 vaga de garagem.",
+          "A foto que abre este texto mostra a garagem do Edifício Trentino, na Rua Padre Teixeira, 1456, com piso de bloco intertravado e vagas demarcadas sob o prédio. Para saber como as vagas são distribuídas em cada edifício, o caminho é falar com o time de vendas."
+        ],
+        bullets: [],
+        callout: { tipo: "info", texto: "Entre os edifícios da Marins, o Trentino é o que tem apartamentos à venda atualmente." }
+      }
+    ],
+    tabela: {
+      titulo: "Vaga coberta e vaga descoberta",
+      colunas: ["Ponto", "Coberta", "Descoberta"],
+      linhas: [
+        ["Proteção", "Contra sol e chuva", "Exposta ao tempo"],
+        ["Ventilação e luz", "Depende do projeto", "Em geral boas"],
+        ["Limpeza do carro", "Menos poeira e folhas", "Mais exposição"],
+        ["O que conferir", "Altura livre e iluminação", "Piso, drenagem e sombra"]
+      ],
+      destaque: null
+    },
+    faq: [
+      { p: "Vaga coberta é sempre melhor?",
+        r: "Depende do uso. A cobertura protege o carro, mas o acesso, a medida e a manobra também contam." },
+      { p: "Como saber se a vaga é minha?",
+        r: "Confira a descrição da vaga na matrícula do imóvel e na convenção do condomínio." },
+      { p: "Posso alugar ou vender a vaga separada?",
+        r: "Depende da matrícula e das regras do condomínio. Consulte a convenção antes de qualquer negociação." },
+      { p: "Vaga de garagem muda o valor do condomínio?",
+        r: "O condomínio é rateado conforme as regras da convenção. Para saber como ele é calculado, consulte a convenção do prédio." },
+      { p: "Como saber quantas vagas tem o apartamento do Trentino?",
+        r: "O time de vendas da Marins Engenharia, em São Carlos, responde pelo WhatsApp (16) 99766-7976 ou pelo e-mail vendas@marinsengenharia.com.br." }
+    ],
+    cta: {
+      titulo: "Conheça a garagem do Trentino",
+      texto: "Fale com o time de vendas da Marins Engenharia para agendar uma visita aos apartamentos disponíveis em São Carlos."
+    },
+    fontes: []
+  },
+  {
     id: "varanda-gourmet-sao-carlos",
     data: "16 de outubro de 2026",
     foto: "assets/img/blog/varanda-gourmet-uso-diario.webp",
