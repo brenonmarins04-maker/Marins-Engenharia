@@ -7,6 +7,105 @@
    ============================================================ */
 const BLOG = [
   {
+    id: "apartamento-estudante-usp-ufscar-sao-carlos",
+    data: "21 de outubro de 2026",
+    foto: "assets/img/blog/apartamento-estudante-sao-carlos.webp",
+    fotoMini: "assets/img/blog/apartamento-estudante-sao-carlos-mini.webp",
+    alt: "Entrada do Edifício Ferretto, na Rua Riachuelo, com muro cinza, portão de garagem, portão de pedestres e canteiro com plantas",
+    titulo: "Apartamento para estudante da USP e da UFSCar em São Carlos",
+    resumo: "O que avaliar ao escolher um apartamento para estudar em São Carlos: tamanho, rotina, custos e o que conferir antes de comprar ou alugar.",
+    seo: {
+      kw: "apartamento para estudante em São Carlos",
+      meta: "Apartamento para estudante em São Carlos: o que avaliar em tamanho, rotina e custos antes de comprar ou alugar perto da USP e da UFSCar.",
+      categoria: "Compra de imóvel",
+      leitura: "4 min de leitura",
+      atualizado: "Atualizado em 21 de outubro de 2026"
+    },
+    resumoRapido: "Para quem estuda na USP ou na UFSCar, o melhor apartamento costuma ser o que cabe na rotina: trajeto simples até a aula, um cômodo para dormir e estudar, cozinha funcional e custo mensal previsível. Metragem grande importa menos do que planta bem aproveitada e condomínio que a família consegue sustentar.",
+    intro: "São Carlos recebe estudantes de vários lugares, e muitas famílias pensam em comprar um apartamento para o filho ou a filha em vez de pagar aluguel por anos. Este texto lista o que avaliar nesse caso, sem prometer retorno e sem atalhos.",
+    secoes: [
+      {
+        titulo: "Comece pela rotina, não pela metragem",
+        paragrafos: [
+          "Um estudante passa boa parte do dia fora de casa. O apartamento serve para dormir, comer, estudar e descansar. Isso reduz a necessidade de espaço e aumenta o peso de outros fatores.",
+          "Antes de olhar planta, defina como será o dia: se o trajeto até a aula será feito a pé, de ônibus, de bicicleta ou de carro, e se haverá visitas ou colegas dividindo o espaço."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "O que um apartamento compacto precisa ter",
+        paragrafos: [
+          "Em plantas menores, o aproveitamento conta mais que o tamanho. Alguns itens fazem diferença para quem mora e estuda no mesmo lugar."
+        ],
+        bullets: [
+          "Um canto com luz natural e tomada para a mesa de estudo.",
+          "Cozinha que permita cozinhar de verdade, mesmo que integrada à sala.",
+          "Área de serviço ou espaço para lavar e secar roupa.",
+          "Armários ou parede livre para guardar roupas e livros.",
+          "Ventilação e janelas que permitam ficar em casa sem calor excessivo."
+        ],
+        callout: null
+      },
+      {
+        titulo: "A conta mensal além do preço do imóvel",
+        paragrafos: [
+          "Quem compra para o filho estudar precisa somar as despesas fixas: condomínio, IPTU, energia, água, internet e manutenção. O condomínio é rateado entre as unidades e varia conforme o prédio, por isso vale pedir a previsão de despesas antes de decidir.",
+          "Se a ideia é alugar o apartamento quando o estudo terminar, ou dividir com colegas, converse antes com a administração do prédio sobre as regras de uso e de locação."
+        ],
+        bullets: [],
+        callout: { tipo: "alerta", texto: "Antes de comprar pensando em renda de aluguel, consulte a convenção do condomínio. Ela define o que é permitido." }
+      },
+      {
+        titulo: "Comprar ou alugar durante a graduação",
+        paragrafos: [
+          "O aluguel dá flexibilidade, principalmente se o curso for curto ou se houver chance de mudar de cidade. A compra faz sentido quando a família já planeja manter o imóvel por mais tempo e consegue arcar com as despesas.",
+          "Nenhuma das duas opções garante retorno financeiro. A decisão deve caber no orçamento da família e no tempo que ela pretende ficar com o apartamento."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Exemplos de plantas compactas da Marins",
+        paragrafos: [
+          "Segundo os dados da Marins Engenharia, o Edifício Ferretto, na Rua Riachuelo, 907, tem apartamentos de 38,22 m² com uma suíte, balcão americano, sala, cozinha com cooktop elétrico, área de serviço e uma vaga de garagem. O Edifício Trento, na Rua Padre Teixeira, 1680, tem apartamentos de 42,00 m² com uma suíte, e o Edifício Trivoli, na Rua São Joaquim, 2225, de 42,49 m².",
+          "A foto que abre este texto mostra a entrada do Ferretto. Os três edifícios estão vendidos. Entre os edifícios da Marins, o Trentino, na Rua Padre Teixeira, 1456, é o que tem apartamentos à venda atualmente, com 64,52 m² e dois dormitórios, sendo uma suíte."
+        ],
+        bullets: [],
+        callout: { tipo: "info", texto: "Quem quiser conhecer uma planta com dois dormitórios, que permite dividir o apartamento, pode falar com o time de vendas sobre o Trentino." }
+      }
+    ],
+    tabela: {
+      titulo: "O que pesa na escolha para estudante",
+      colunas: ["Ponto", "O que avaliar", "Por quê"],
+      linhas: [
+        ["Planta", "Aproveitamento do espaço e canto de estudo", "A casa é também lugar de estudar"],
+        ["Rotina", "Trajeto até a aula e serviços por perto", "Define o tempo gasto no dia a dia"],
+        ["Custos", "Condomínio, IPTU, energia, água e internet", "A conta mensal vai além do preço do imóvel"],
+        ["Regras", "Convenção sobre locação e uso", "Importa se o imóvel for alugado depois"]
+      ],
+      destaque: null
+    },
+    faq: [
+      { p: "Um apartamento de um dormitório basta para estudante?",
+        r: "Para uma pessoa só, em geral sim. Se a ideia é dividir com colegas, uma planta com dois dormitórios costuma ser mais prática." },
+      { p: "Vale comprar um apartamento para o filho estudar?",
+        r: "Depende do orçamento e do tempo que a família pretende manter o imóvel. Compare com o custo do aluguel no mesmo período, sem contar com retorno garantido." },
+      { p: "Preciso de vaga de garagem?",
+        r: "Depende do meio de transporte. Se o estudante não vai ter carro, a vaga pode ser dispensável, mas pode fazer falta numa futura revenda." },
+      { p: "Posso alugar o apartamento depois da formatura?",
+        r: "Em geral sim, mas confira a convenção do condomínio, que pode ter regras sobre locação." },
+      { p: "Como falar com a Marins sobre os apartamentos disponíveis?",
+        r: "O time de vendas da Marins Engenharia, em São Carlos, responde pelo WhatsApp (16) 99766-7976 ou pelo e-mail vendas@marinsengenharia.com.br." }
+    ],
+    cta: {
+      titulo: "Conheça o Edifício Trentino",
+      texto: "Fale com o time de vendas da Marins Engenharia para saber quais apartamentos estão disponíveis em São Carlos."
+    },
+    fontes: []
+  },
+
+  {
     id: "vaga-garagem-coberta-descoberta-sao-carlos",
     data: "19 de outubro de 2026",
     foto: "assets/img/blog/vaga-garagem-coberta-descoberta.webp",
