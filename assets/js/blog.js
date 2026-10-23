@@ -7,6 +7,105 @@
    ============================================================ */
 const BLOG = [
   {
+    id: "morar-perto-do-trabalho-sao-carlos",
+    data: "23 de outubro de 2026",
+    foto: "assets/img/blog/morar-perto-do-trabalho.webp",
+    fotoMini: "assets/img/blog/morar-perto-do-trabalho-mini.webp",
+    alt: "Vista de cima de telhados e edifícios residenciais de São Carlos sob céu azul, em foto da galeria do Edifício Ana Terra",
+    titulo: "Morar perto do trabalho em São Carlos: a conta de tempo e custo",
+    resumo: "Como comparar o apartamento perto do trabalho com um mais distante: tempo no trajeto, gasto com transporte e o que muda na rotina.",
+    seo: {
+      kw: "morar perto do trabalho em São Carlos",
+      meta: "Morar perto do trabalho em São Carlos: como somar tempo de trajeto, custo com transporte e rotina antes de escolher o apartamento.",
+      categoria: "Compra de imóvel",
+      leitura: "4 min de leitura",
+      atualizado: "Atualizado em 23 de outubro de 2026"
+    },
+    resumoRapido: "Morar perto do trabalho reduz o tempo de trajeto e pode reduzir o gasto com transporte. Para comparar com um imóvel mais distante, some o tempo diário de ida e volta, o custo mensal do deslocamento e o que o bairro oferece no dia a dia. A conta é pessoal e muda conforme a rotina de cada família.",
+    intro: "Na hora de escolher um apartamento, o endereço costuma pesar tanto quanto a planta. Para quem trabalha na cidade, a distância até o trabalho entra na rotina todos os dias. Este texto mostra como fazer essa conta com os seus próprios números, sem promessa de economia.",
+    secoes: [
+      {
+        titulo: "O tempo que o trajeto toma",
+        paragrafos: [
+          "Comece medindo o trajeto real, no horário em que você costuma sair e voltar. Teste em um dia de semana comum, e não num domingo, porque o trânsito muda ao longo do dia.",
+          "Multiplique o tempo de ida e volta pelos dias de trabalho no mês. O resultado mostra quantas horas por mês vão para o deslocamento. Essas horas podem ser trocadas por descanso, estudo ou tempo com a família."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "O custo do deslocamento",
+        paragrafos: [
+          "Quem vai de carro gasta com combustível, estacionamento e manutenção. Quem vai de ônibus gasta com a passagem. Quem vai a pé ou de bicicleta gasta pouco, mas depende do clima e da segurança do caminho.",
+          "Some esses valores num mês e compare entre os imóveis que você está avaliando. Use os preços que você paga hoje, sem estimativas de terceiros."
+        ],
+        bullets: [
+          "Combustível e estacionamento, se o trajeto for de carro.",
+          "Passagem, se for de ônibus.",
+          "Desgaste do veículo e manutenção.",
+          "Possibilidade de dispensar um segundo carro."
+        ],
+        callout: null
+      },
+      {
+        titulo: "O que mais muda quando se mora perto",
+        paragrafos: [
+          "A proximidade também afeta a rotina fora do horário de trabalho. Morar perto pode facilitar voltar para almoçar em casa, resolver uma tarefa no meio do dia ou sair mais tarde de manhã.",
+          "Por outro lado, quem mora perto do centro ou de uma avenida movimentada pode conviver com mais barulho. Vale visitar o imóvel em horários diferentes, inclusive à noite."
+        ],
+        bullets: [],
+        callout: { tipo: "info", texto: "Visite o apartamento no horário em que você estaria em casa. Assim você percebe o barulho, a iluminação da rua e o movimento da vizinhança." }
+      },
+      {
+        titulo: "Quando morar mais longe faz sentido",
+        paragrafos: [
+          "Nem sempre o imóvel mais próximo do trabalho é o melhor. Um apartamento mais distante pode oferecer planta maior, rua mais tranquila ou preço mais adequado ao orçamento.",
+          "Se a família tem duas pessoas trabalhando em lugares diferentes, o ideal é calcular o trajeto das duas e procurar o ponto que equilibra os dois."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Um exemplo de localização da Marins",
+        paragrafos: [
+          "Segundo os dados da Marins Engenharia, o Edifício Ferretto fica na Rua Riachuelo, 907, e tem apartamentos de 38,22 m² com uma suíte e uma vaga de garagem. O Ferretto está vendido.",
+          "A Marins tem edifícios em endereços diferentes de São Carlos, como a Rua Padre Teixeira, a Rua São Joaquim e a Rua José Bonifácio. Para saber como cada endereço se encaixa no seu trajeto, o melhor caminho é fazer o percurso até o trabalho a partir dele. O Edifício Trentino, na Rua Padre Teixeira, 1456, é o que tem apartamentos à venda atualmente."
+        ],
+        bullets: [],
+        callout: null
+      }
+    ],
+    tabela: {
+      titulo: "A conta de morar perto do trabalho",
+      colunas: ["Ponto", "Como medir", "Por quê"],
+      linhas: [
+        ["Tempo", "Ida e volta no horário real, vezes os dias de trabalho", "Mostra as horas do mês gastas no trajeto"],
+        ["Custo", "Combustível, estacionamento ou passagem do mês", "Permite comparar imóveis com números seus"],
+        ["Rotina", "Almoço em casa, serviços e comércio por perto", "Afeta o dia a dia além do trajeto"],
+        ["Ambiente", "Visita em horários diferentes", "Revela barulho e movimento da região"]
+      ],
+      destaque: null
+    },
+    faq: [
+      { p: "Morar perto do trabalho compensa?",
+        r: "Depende da sua rotina. Some o tempo e o custo do trajeto e compare com o que o outro imóvel oferece em planta, preço e tranquilidade." },
+      { p: "Como medir o tempo de trajeto antes de comprar?",
+        r: "Faça o percurso real no horário em que você sai e volta do trabalho, em dias de semana comuns." },
+      { p: "Morar perto do trabalho dispensa o carro?",
+        r: "Em alguns casos sim, se o trajeto puder ser feito a pé, de bicicleta ou de ônibus. Avalie também as outras atividades da família." },
+      { p: "Morar perto do centro tem desvantagens?",
+        r: "Pode haver mais barulho e movimento. Visite o imóvel em horários diferentes para avaliar." },
+      { p: "Como falar com a Marins sobre os apartamentos disponíveis?",
+        r: "O time de vendas da Marins Engenharia, em São Carlos, responde pelo WhatsApp (16) 99766-7976 ou pelo e-mail vendas@marinsengenharia.com.br." }
+    ],
+    cta: {
+      titulo: "Conheça o Edifício Trentino",
+      texto: "Fale com o time de vendas da Marins Engenharia para saber quais apartamentos estão disponíveis em São Carlos."
+    },
+    fontes: []
+  },
+
+  {
     id: "apartamento-estudante-usp-ufscar-sao-carlos",
     data: "21 de outubro de 2026",
     foto: "assets/img/blog/apartamento-estudante-sao-carlos.webp",
