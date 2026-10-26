@@ -7,6 +7,110 @@
    ============================================================ */
 const BLOG = [
   {
+    id: "apartamento-compacto-sao-carlos",
+    data: "26 de outubro de 2026",
+    foto: "assets/img/blog/apartamento-compacto-sacada.webp",
+    fotoMini: "assets/img/blog/apartamento-compacto-sacada-mini.webp",
+    alt: "Sacada envidraçada de apartamento do Edifício Trento, com mesa redonda de vidro, duas banquetas e painel de folhagens na parede",
+    titulo: "Apartamento compacto em São Carlos: para quem funciona",
+    resumo: "Para quem o apartamento compacto funciona bem, o que conferir na planta e quando vale escolher uma metragem maior.",
+    seo: {
+      kw: "apartamento compacto em São Carlos",
+      meta: "Apartamento compacto em São Carlos: para quem funciona, o que conferir na planta e quando é melhor escolher uma metragem maior.",
+      categoria: "Compra de imóvel",
+      leitura: "4 min de leitura",
+      atualizado: "Atualizado em 26 de outubro de 2026"
+    },
+    resumoRapido: "O apartamento compacto funciona bem para quem passa pouco tempo em casa, mora sozinho ou em casal e prefere um custo mensal menor. Ele serve menos para quem trabalha em casa, recebe visitas com frequência ou espera aumentar a família. Mais importante que a metragem é o aproveitamento da planta.",
+    intro: "Apartamentos de 38 a 45 m² são comuns em prédios novos e atraem quem quer morar bem sem pagar por espaço que não usa. Mas compacto não serve para todo mundo. Este texto ajuda a decidir se esse formato combina com a sua rotina.",
+    secoes: [
+      {
+        titulo: "Para quem o formato funciona",
+        paragrafos: [
+          "O apartamento compacto costuma funcionar para quem mora sozinho ou em casal, passa boa parte do dia fora e usa a casa principalmente para dormir, comer e descansar.",
+          "Também atende quem quer um imóvel de custo mensal menor, já que condomínio, energia e limpeza tendem a acompanhar o tamanho da unidade."
+        ],
+        bullets: [
+          "Quem mora sozinho ou em casal.",
+          "Quem passa a maior parte do dia fora de casa.",
+          "Quem prefere gastar menos com manutenção e limpeza.",
+          "Quem busca um primeiro imóvel com orçamento mais enxuto."
+        ],
+        callout: null
+      },
+      {
+        titulo: "Quando ele pode não funcionar",
+        paragrafos: [
+          "Quem trabalha em casa todos os dias precisa de um canto fixo para a mesa de trabalho, e em plantas menores esse espaço disputa lugar com a sala.",
+          "Se a família pretende crescer em poucos anos, ou se há visitas frequentes para dormir, uma planta com dois dormitórios tende a ser mais prática."
+        ],
+        bullets: [],
+        callout: { tipo: "alerta", texto: "Pense no que a casa vai ser daqui a alguns anos, e não só hoje. Trocar de imóvel tem custos de venda, documentação e mudança." }
+      },
+      {
+        titulo: "O que conferir na planta",
+        paragrafos: [
+          "Em planta pequena, a distribuição pesa mais que o número de metros. Confira como os ambientes se conectam e se há onde guardar as coisas."
+        ],
+        bullets: [
+          "Circulação livre entre cozinha, sala e quarto, sem corredores que desperdiçam área.",
+          "Parede livre para encostar sofá, estante e armários.",
+          "Janelas que garantam luz e ventilação à sala e ao quarto.",
+          "Área de serviço onde caiba a máquina de lavar.",
+          "Sacada ou varanda que amplie a sala no uso diário."
+        ],
+        callout: null
+      },
+      {
+        titulo: "Como aproveitar bem o espaço",
+        paragrafos: [
+          "Móveis planejados e peças que fazem dupla função ajudam muito. Uma bancada ou balcão americano separa a cozinha da sala sem fechar o ambiente.",
+          "Uma sacada envidraçada, como a da foto deste texto, pode virar um canto de refeição ou de leitura, sem ocupar a sala."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Exemplos de plantas compactas da Marins",
+        paragrafos: [
+          "Segundo os dados da Marins Engenharia, o Edifício Ferretto, na Rua Riachuelo, 907, tem apartamentos de 38,22 m² com uma suíte, balcão americano, sala, cozinha com cooktop elétrico, área de serviço e uma vaga de garagem. O Edifício Trento, na Rua Padre Teixeira, 1680, tem apartamentos de 42,00 m² com uma suíte e sacada com vidro na fachada, e o Edifício Trivoli, na Rua São Joaquim, 2225, de 42,49 m².",
+          "Os três estão vendidos. Entre os edifícios da Marins, o Trentino, na Rua Padre Teixeira, 1456, é o que tem apartamentos à venda atualmente, com 64,52 m², dois dormitórios, sendo uma suíte, e varanda gourmet."
+        ],
+        bullets: [],
+        callout: null
+      }
+    ],
+    tabela: {
+      titulo: "Apartamento compacto: quando funciona e quando não",
+      colunas: ["Perfil", "Funciona bem quando", "Pede atenção quando"],
+      linhas: [
+        ["Mora sozinho ou em casal", "A rotina é quase toda fora de casa", "Há visitas frequentes para dormir"],
+        ["Trabalho", "O trabalho é presencial", "Trabalha em casa e precisa de canto fixo"],
+        ["Orçamento", "Quer custo mensal menor", "Precisa de muito espaço para guardar"],
+        ["Futuro", "Pretende ficar poucos anos ou manter o imóvel", "Pretende aumentar a família em breve"]
+      ],
+      destaque: null
+    },
+    faq: [
+      { p: "Quantos metros tem um apartamento compacto?",
+        r: "Não há uma regra única. Neste texto, tratamos como compactos os apartamentos de cerca de 38 a 45 m², com um dormitório." },
+      { p: "Apartamento compacto é bom para morar sozinho?",
+        r: "Em geral sim, se a planta for bem aproveitada e a rotina não exigir muito espaço dentro de casa." },
+      { p: "Dá para trabalhar em casa em um apartamento compacto?",
+        r: "Dá, desde que haja um canto para mesa e cadeira com luz natural. Confira isso na planta antes de decidir." },
+      { p: "A planta compacta dificulta a revenda?",
+        r: "Depende do perfil de quem procura o imóvel. Localização, planta e estado de conservação pesam na decisão, e não há garantia de prazo ou de valorização." },
+      { p: "Como falar com a Marins sobre os apartamentos disponíveis?",
+        r: "O time de vendas da Marins Engenharia, em São Carlos, responde pelo WhatsApp (16) 99766-7976 ou pelo e-mail vendas@marinsengenharia.com.br." }
+    ],
+    cta: {
+      titulo: "Conheça o Edifício Trentino",
+      texto: "Fale com o time de vendas da Marins Engenharia para saber quais apartamentos estão disponíveis em São Carlos."
+    },
+    fontes: []
+  },
+
+  {
     id: "morar-perto-do-trabalho-sao-carlos",
     data: "23 de outubro de 2026",
     foto: "assets/img/blog/morar-perto-do-trabalho.webp",
