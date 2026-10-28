@@ -7,6 +7,112 @@
    ============================================================ */
 const BLOG = [
   {
+    id: "reforma-em-apartamento-condominio-sao-carlos",
+    data: "28 de outubro de 2026",
+    foto: "assets/img/blog/reforma-no-condominio-regras.webp",
+    fotoMini: "assets/img/blog/reforma-no-condominio-regras-mini.webp",
+    alt: "Hall do Edifício Turim, da Marins Engenharia, com parede de tijolinho, caixas de correio, quadro e mesa de apoio com plantas",
+    titulo: "Reforma em apartamento: o que o condomínio permite",
+    resumo: "O que costuma exigir autorização do condomínio antes de uma reforma, quais documentos pedir e como evitar problemas com vizinhos e com a estrutura do prédio.",
+    seo: {
+      kw: "reforma em apartamento no condomínio em São Carlos",
+      meta: "Reforma em apartamento no condomínio em São Carlos: o que a convenção costuma limitar, o que exige autorização e como se organizar antes da obra.",
+      categoria: "Morar em condomínio",
+      leitura: "4 min de leitura",
+      atualizado: "Atualizado em 28 de outubro de 2026"
+    },
+    resumoRapido: "Quem reforma um apartamento precisa seguir a convenção e o regimento interno do condomínio. Paredes estruturais, fachada e áreas comuns não podem ser alteradas por conta própria. Antes da obra, leia as regras, avise a administração, combine horários de trabalho e guarde os documentos do projeto.",
+    intro: "Apartamento é propriedade sua, mas o prédio é de todos. Por isso, uma reforma que parece simples dentro de casa pode mexer em estrutura, fachada, barulho e segurança dos vizinhos. Este texto explica, de forma geral, o que costuma ser permitido, o que costuma exigir autorização e como se organizar antes de chamar a primeira equipe de obra.",
+    secoes: [
+      {
+        titulo: "Onde estão as regras",
+        paragrafos: [
+          "As regras de cada prédio ficam na convenção do condomínio e no regimento interno. A convenção define direitos e deveres dos moradores. O regimento detalha o dia a dia, como horários de obra e uso do elevador.",
+          "Peça uma cópia dos dois documentos à administração antes de contratar qualquer serviço. Cada condomínio tem regras próprias, e o que vale em um prédio pode não valer em outro."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "O que costuma exigir autorização",
+        paragrafos: [
+          "Em geral, mudanças que afetam a estrutura, a fachada ou as instalações comuns precisam de aprovação. Mudanças apenas internas e de acabamento costumam ser mais simples, mas ainda pedem aviso."
+        ],
+        bullets: [
+          "Retirada ou abertura de paredes, que pode atingir a estrutura do prédio.",
+          "Alteração de janelas, sacadas e esquadrias visíveis na fachada.",
+          "Mudança em tubulações, prumadas de água, esgoto e gás que atendem mais de uma unidade.",
+          "Instalação de equipamentos externos, como aparelhos de ar-condicionado, em locais não previstos.",
+          "Troca de piso, que pode exigir manta acústica conforme o regimento."
+        ],
+        callout: { tipo: "alerta", texto: "Antes de mexer em qualquer parede, peça a um engenheiro ou arquiteto que confirme se ela é estrutural. Essa análise deve constar em documento assinado." }
+      },
+      {
+        titulo: "O que conferir antes de começar",
+        paragrafos: [
+          "Com as regras em mãos, avise a administração por escrito. Informe o tipo de obra, as datas previstas e a empresa ou o profissional que vai executar o serviço.",
+          "Muitos condomínios pedem o registro de responsabilidade técnica do profissional. Pergunte se o seu pede e guarde o documento com o projeto."
+        ],
+        bullets: [
+          "Cópia da convenção e do regimento interno.",
+          "Comunicação por escrito à administração, com o protocolo de recebimento.",
+          "Projeto ou descrição da obra e dados do responsável técnico.",
+          "Horários permitidos para barulho e para entrada de material e entulho.",
+          "Regras de uso do elevador e da área de descarga."
+        ],
+        callout: null
+      },
+      {
+        titulo: "Convivência com os vizinhos",
+        paragrafos: [
+          "Obra gera barulho, poeira e movimento de pessoas. Avisar os vizinhos mais próximos com antecedência evita reclamações e mostra respeito pelo prédio.",
+          "Combine com a equipe a limpeza diária das áreas comuns e a proteção do elevador e do hall. Danos às áreas comuns costumam ser de responsabilidade de quem faz a obra."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Reforma e revenda",
+        paragrafos: [
+          "Quem vende um apartamento reformado pode ser questionado sobre as alterações feitas. Guardar a autorização do condomínio, o projeto e o documento do profissional ajuda a mostrar que a obra foi feita com regularidade.",
+          "Em um apartamento novo, o memorial descritivo da construtora é a referência do que foi entregue. Compare o que pretende alterar com ele e com a planta, para saber o que está mudando em relação ao original."
+        ],
+        bullets: [],
+        callout: { tipo: "info", texto: "Reformas que alteram a estrutura ou a fachada, sem autorização, podem gerar notificação do condomínio e a obrigação de desfazer a obra." }
+      }
+    ],
+    tabela: {
+      titulo: "Tipos de reforma e o cuidado que pedem",
+      colunas: ["Tipo de obra", "Costuma exigir", "Cuidado principal"],
+      linhas: [
+        ["Pintura e acabamentos internos", "Aviso à administração", "Respeitar horários de obra"],
+        ["Troca de piso", "Aviso e, às vezes, isolamento acústico", "Confirmar a regra do regimento sobre ruído"],
+        ["Mudança de parede", "Análise técnica e autorização", "Confirmar que a parede não é estrutural"],
+        ["Alteração de janela ou sacada", "Autorização do condomínio", "Manter o padrão da fachada"],
+        ["Mudança em tubulações comuns", "Autorização e responsável técnico", "Não afetar os vizinhos"]
+      ],
+      destaque: null
+    },
+    faq: [
+      { p: "Preciso avisar o condomínio para pintar o apartamento?",
+        r: "Em geral basta avisar a administração e respeitar os horários de obra. Confirme no regimento interno do seu prédio." },
+      { p: "Posso derrubar uma parede da sala?",
+        r: "Só depois de confirmar com um profissional habilitado que a parede não é estrutural e de obter a autorização do condomínio, quando exigida." },
+      { p: "Quem responde por danos causados na obra?",
+        r: "Em geral, quem faz a reforma responde pelos danos às áreas comuns e a outros apartamentos. Guarde a documentação e combine isso com a equipe contratada." },
+      { p: "Existe horário permitido para reformas?",
+        r: "O regimento interno costuma definir dias e horários de barulho. Peça o documento à administração antes de marcar a obra." },
+      { p: "Posso falar com a Marins sobre um apartamento novo?",
+        r: "Sim. O time de vendas da Marins Engenharia, em São Carlos, responde pelo WhatsApp (16) 99766-7976 ou pelo e-mail vendas@marinsengenharia.com.br." }
+    ],
+    cta: {
+      titulo: "Tire dúvidas sobre o apartamento",
+      texto: "Fale com o time de vendas da Marins Engenharia para conhecer os apartamentos e as plantas disponíveis em São Carlos."
+    },
+    fontes: []
+  },
+
+  {
     id: "apartamento-compacto-sao-carlos",
     data: "26 de outubro de 2026",
     foto: "assets/img/blog/apartamento-compacto-sacada.webp",
