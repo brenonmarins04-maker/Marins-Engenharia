@@ -7,6 +7,112 @@
    ============================================================ */
 const BLOG = [
   {
+    id: "seguranca-predial-portaria-remota-sao-carlos",
+    data: "30 de outubro de 2026",
+    foto: "assets/img/blog/seguranca-predial-portaria.webp",
+    fotoMini: "assets/img/blog/seguranca-predial-portaria-mini.webp",
+    alt: "Corredor de entrada do Edifício Trentino, da Marins Engenharia, com quadros na parede, iluminação linear no teto e parede de vidro ao lado",
+    titulo: "Segurança predial: portaria remota e câmeras",
+    resumo: "Como funcionam a portaria presencial e a portaria remota, o que as câmeras fazem e o que perguntar sobre segurança antes de comprar um apartamento.",
+    seo: {
+      kw: "segurança predial e portaria remota em São Carlos",
+      meta: "Segurança predial em São Carlos: como funcionam portaria remota e câmeras, o que cada uma resolve e o que perguntar antes de comprar um apartamento.",
+      categoria: "Morar em condomínio",
+      leitura: "4 min de leitura",
+      atualizado: "Atualizado em 30 de outubro de 2026"
+    },
+    resumoRapido: "Portaria presencial tem uma pessoa no local. Portaria remota usa câmeras, interfones e uma central que atende à distância. Nenhum modelo é melhor em qualquer prédio: depende do tamanho, do custo e das regras de uso. Antes de comprar, pergunte como a entrada é controlada, quem tem acesso às imagens e como é a manutenção dos equipamentos.",
+    intro: "Segurança é um dos primeiros assuntos de quem escolhe onde morar. Em prédio residencial, ela depende de três coisas: como a entrada é controlada, quais equipamentos existem e como os moradores usam tudo isso no dia a dia. Este texto explica, de forma geral, como funcionam a portaria presencial, a portaria remota e as câmeras, e o que vale perguntar durante a visita.",
+    secoes: [
+      {
+        titulo: "Portaria presencial e portaria remota",
+        paragrafos: [
+          "Na portaria presencial, um funcionário fica no prédio, recebe visitantes e entregas e libera a entrada. Na portaria remota, essa função é feita por uma central à distância, com câmeras, interfone e controle de acesso por tecnologia.",
+          "Os dois modelos podem funcionar bem. A diferença está no que muda para o morador: presença física de alguém no hall de um lado, e custo e procedimentos de acesso do outro."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "O que a portaria remota costuma envolver",
+        paragrafos: [
+          "Cada condomínio contrata o serviço de um jeito. Em geral, o sistema reúne alguns itens, e vale confirmar quais deles existem no prédio que você está visitando."
+        ],
+        bullets: [
+          "Câmeras na entrada, na garagem e nas áreas comuns, com imagens monitoradas pela central.",
+          "Interfone ligado à central ou ao aplicativo do morador.",
+          "Controle de acesso de moradores, por chave, cartão, controle remoto ou biometria.",
+          "Regras para entregas, visitantes e prestadores de serviço.",
+          "Atendimento da central em caso de alarme ou ocorrência."
+        ],
+        callout: { tipo: "info", texto: "Pergunte também o que acontece quando falta energia ou a internet cai. O sistema precisa ter uma alternativa de funcionamento nesses casos." }
+      },
+      {
+        titulo: "O que as câmeras fazem e o que não fazem",
+        paragrafos: [
+          "Câmeras ajudam a registrar quem entra e sai e a esclarecer ocorrências depois que elas acontecem. Elas também têm efeito dissuasório, porque quem circula sabe que está sendo filmado.",
+          "Câmera sozinha não impede uma entrada indevida. Ela funciona junto com o controle de acesso e com bons hábitos dos moradores, como não segurar o portão para desconhecidos."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Privacidade e uso das imagens",
+        paragrafos: [
+          "As imagens mostram a rotina dos moradores, então o condomínio precisa definir quem pode vê-las e por quanto tempo elas ficam guardadas. Essas regras costumam constar no regimento interno ou em decisão de assembleia.",
+          "Pergunte à administração quem tem acesso às gravações e como um morador pode pedir uma imagem em caso de ocorrência."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "O que perguntar antes de comprar",
+        paragrafos: [
+          "Na visita, observe a entrada, a garagem e o hall. Veja se há portão de pedestres e de veículos, como é a iluminação e onde ficam as câmeras e o interfone.",
+          "Converse com a administração ou com moradores sobre o funcionamento real do sistema. Também confirme quanto a segurança pesa na taxa mensal, porque um serviço mais completo costuma custar mais."
+        ],
+        bullets: [
+          "Como é controlada a entrada de pessoas e de veículos.",
+          "Se existe funcionário no local ou central à distância.",
+          "Onde ficam as câmeras e quem acessa as imagens.",
+          "Como funcionam entregas e visitas, inclusive à noite.",
+          "Quem faz a manutenção dos equipamentos e com que frequência."
+        ],
+        callout: null
+      }
+    ],
+    tabela: {
+      titulo: "Portaria presencial e portaria remota lado a lado",
+      colunas: ["Ponto", "Portaria presencial", "Portaria remota"],
+      linhas: [
+        ["Quem atende", "Funcionário no prédio", "Central à distância"],
+        ["Recebimento de entregas", "Feito no local pelo funcionário", "Depende da regra do condomínio"],
+        ["Controle de acesso", "Funcionário e equipamentos", "Equipamentos e central"],
+        ["Custo no condomínio", "Inclui a equipe no prédio", "Costuma envolver contrato e equipamentos"],
+        ["Ponto de atenção", "Cobertura em trocas de turno", "Energia e internet funcionando"]
+      ],
+      destaque: null
+    },
+    faq: [
+      { p: "Portaria remota é mais segura que portaria presencial?",
+        r: "Depende do prédio. A segurança vem do conjunto: controle de acesso, equipamentos, manutenção e comportamento dos moradores." },
+      { p: "As câmeras do condomínio podem gravar as áreas comuns?",
+        r: "Em geral sim, desde que o condomínio defina as regras de uso das imagens. Confirme no regimento interno ou com a administração." },
+      { p: "Quem paga a portaria remota?",
+        r: "O custo entra na taxa de condomínio, rateado entre as unidades, assim como a portaria presencial." },
+      { p: "O que fazer quando o sistema de acesso falha?",
+        r: "Avise a administração e pergunte qual é o procedimento previsto. Um bom condomínio mantém uma alternativa para esses casos." },
+      { p: "Posso falar com a Marins sobre um apartamento?",
+        r: "Sim. O time de vendas da Marins Engenharia, em São Carlos, responde pelo WhatsApp (16) 99766-7976 ou pelo e-mail vendas@marinsengenharia.com.br." }
+    ],
+    cta: {
+      titulo: "Tire dúvidas sobre o apartamento",
+      texto: "Fale com o time de vendas da Marins Engenharia para conhecer os apartamentos e as plantas disponíveis em São Carlos."
+    },
+    fontes: []
+  },
+
+  {
     id: "reforma-em-apartamento-condominio-sao-carlos",
     data: "28 de outubro de 2026",
     foto: "assets/img/blog/reforma-no-condominio-regras.webp",
