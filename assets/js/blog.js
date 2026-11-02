@@ -7,6 +7,112 @@
    ============================================================ */
 const BLOG = [
   {
+    id: "comparar-acabamento-construtoras-sao-carlos",
+    data: "2 de novembro de 2026",
+    foto: "assets/img/blog/comparar-acabamento-construtoras.webp",
+    fotoMini: "assets/img/blog/comparar-acabamento-construtoras-mini.webp",
+    alt: "Porta do elevador em aço escovado cercada por revestimento de placas de pedra marrom na garagem do Edifício Turim, da Marins Engenharia",
+    titulo: "Como comparar acabamento entre construtoras em São Carlos",
+    resumo: "Um roteiro para comparar o acabamento de apartamentos de construtoras diferentes: memorial descritivo, materiais, visita e perguntas que tiram a dúvida.",
+    seo: {
+      kw: "comparar acabamento entre construtoras em São Carlos",
+      meta: "Comparar acabamento entre construtoras em São Carlos: como usar o memorial descritivo, o que olhar na visita e que perguntas fazer antes de decidir.",
+      categoria: "Comprar com segurança",
+      leitura: "4 min de leitura",
+      atualizado: "Atualizado em 2 de novembro de 2026"
+    },
+    resumoRapido: "Folhetos e fotos de decoração não servem de base para comparar acabamento. O que vale é o memorial descritivo, que lista material, marca e especificação de cada item. Coloque os memoriais lado a lado, compare item por item e confirme na visita o que está escrito no papel. Quando o texto for vago, peça por escrito.",
+    intro: "Duas construtoras podem anunciar apartamentos parecidos, com o mesmo número de quartos e a mesma metragem, e entregar acabamentos bem diferentes. Como o acabamento aparece no dia a dia e pesa na manutenção e na revenda, vale comparar com método. Este texto explica, de forma geral, o que olhar e o que perguntar.",
+    secoes: [
+      {
+        titulo: "Comece pelo memorial descritivo",
+        paragrafos: [
+          "O memorial descritivo é o documento que lista os materiais e as especificações do apartamento e das áreas comuns. É nele que está escrito qual piso vai em cada cômodo, como são as esquadrias, o tipo de bancada e o que vem instalado na cozinha e nos banheiros.",
+          "Peça o memorial de cada construtora que você estiver comparando e leia os dois com calma. Imagens de divulgação mostram a ideia do projeto, mas só o memorial descreve o que será entregue."
+        ],
+        bullets: [],
+        callout: { tipo: "info", texto: "Se o memorial disser apenas 'revestimento cerâmico' ou 'piso de primeira linha', pergunte qual é o material e a especificação. Descrição vaga dificulta qualquer comparação." }
+      },
+      {
+        titulo: "Os itens que mais mudam de um prédio para outro",
+        paragrafos: [
+          "Monte uma lista com os mesmos itens para todos os prédios. Assim a comparação deixa de ser uma impressão geral e vira uma tabela."
+        ],
+        bullets: [
+          "Pisos e revestimentos de sala, quartos, cozinha e banheiros.",
+          "Esquadrias: material, tipo de vidro e como abrem.",
+          "Bancadas, pias e louças dos banheiros.",
+          "Instalações previstas: pontos de ar-condicionado, gás encanado, tomadas e iluminação.",
+          "Sacada com ou sem vidro e tipo de guarda-corpo.",
+          "Áreas comuns: hall, elevador, piso da garagem e fachada."
+        ],
+        callout: null
+      },
+      {
+        titulo: "Olhe também o que o memorial não mostra",
+        paragrafos: [
+          "Bom acabamento depende de execução, não só de material. Na visita, observe o alinhamento do revestimento, o rejunte, o encontro da parede com o teto, o funcionamento das janelas e o acabamento das áreas comuns.",
+          "Se existir um apartamento decorado, lembre que ele mostra o conceito do projeto e pode incluir itens de decoração que não vêm no contrato. Se existir um prédio já entregue da mesma construtora, visitá-lo mostra como o acabamento se comporta com o tempo."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Acabamento tem custo de uso e de manutenção",
+        paragrafos: [
+          "Um material mais sofisticado nem sempre é a melhor escolha para quem vai morar ou alugar. Considere a limpeza, a durabilidade e a facilidade de reposição. Pergunte se as peças do acabamento continuam disponíveis no mercado, para o caso de precisar trocar uma delas depois.",
+          "Pense também na revenda. Um acabamento coerente com o padrão do prédio e da região costuma ser mais fácil de explicar a outro comprador do que uma mistura de padrões."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Perguntas para levar na conversa",
+        paragrafos: [
+          "Leve a lista abaixo para cada construtora. As respostas, de preferência por escrito, fecham a comparação."
+        ],
+        bullets: [
+          "O memorial descritivo completo está disponível? Posso levar para analisar?",
+          "Quais itens podem ser trocados pelo comprador e até quando?",
+          "Existe algum prédio entregue que eu possa visitar?",
+          "O que o contrato diz sobre material equivalente, caso um item saia de linha?",
+          "Como funciona a garantia dos acabamentos depois da entrega?"
+        ],
+        callout: null
+      }
+    ],
+    tabela: {
+      titulo: "Como comparar dois apartamentos item por item",
+      colunas: ["Item", "O que anotar", "Onde confirmar"],
+      linhas: [
+        ["Pisos e revestimentos", "Material e especificação por cômodo", "Memorial descritivo e visita"],
+        ["Esquadrias", "Material, tipo de vidro e abertura", "Memorial descritivo e visita"],
+        ["Cozinha e banheiros", "Bancadas, louças e metais incluídos", "Memorial descritivo"],
+        ["Instalações", "Pontos de gás, ar-condicionado e tomadas", "Planta e memorial"],
+        ["Áreas comuns", "Hall, elevador, garagem e fachada", "Visita ao prédio"]
+      ],
+      destaque: null
+    },
+    faq: [
+      { p: "Onde encontro a lista de materiais do apartamento?",
+        r: "No memorial descritivo, que a construtora deve fornecer. Peça uma cópia e confira se ela cita material e especificação de cada item." },
+      { p: "Posso confiar nas fotos do apartamento decorado?",
+        r: "Elas mostram o conceito do projeto. Para saber o que será entregue, compare o decorado com o memorial descritivo e pergunte o que é decoração." },
+      { p: "Vale a pena comparar o acabamento de prédios já entregues?",
+        r: "Sim. Visitar um prédio pronto da construtora mostra a execução e o desgaste real dos materiais com o uso." },
+      { p: "O comprador pode trocar itens do acabamento?",
+        r: "Depende da construtora e da fase da obra. Pergunte antes de assinar quais itens podem ser alterados e até quando." },
+      { p: "Posso falar com a Marins sobre um apartamento?",
+        r: "Sim. O time de vendas da Marins Engenharia, em São Carlos, responde pelo WhatsApp (16) 99766-7976 ou pelo e-mail vendas@marinsengenharia.com.br." }
+    ],
+    cta: {
+      titulo: "Tire dúvidas sobre o apartamento",
+      texto: "Fale com o time de vendas da Marins Engenharia para conhecer os apartamentos e as plantas disponíveis em São Carlos."
+    },
+    fontes: []
+  },
+
+  {
     id: "seguranca-predial-portaria-remota-sao-carlos",
     data: "30 de outubro de 2026",
     foto: "assets/img/blog/seguranca-predial-portaria.webp",
