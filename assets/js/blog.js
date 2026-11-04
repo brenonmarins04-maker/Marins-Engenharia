@@ -7,6 +7,124 @@
    ============================================================ */
 const BLOG = [
   {
+    id: "fases-da-obra-predio-sao-carlos",
+    data: "4 de novembro de 2026",
+    foto: "assets/img/blog/fases-da-obra-predio.jpg",
+    fotoMini: "assets/img/blog/fases-da-obra-predio.jpg",
+    alt: "Fachada do Edifício Turim, da Marins Engenharia, na Rua São Joaquim, vista da esquina, com revestimento cinza e céu azul",
+    titulo: "Fases da obra de um prédio em São Carlos: do terreno às chaves",
+    resumo: "As etapas de uma obra de prédio residencial, da fundação ao habite-se, e como acompanhar o cronograma de um apartamento comprado na planta.",
+    seo: {
+      kw: "fases da obra de um prédio em São Carlos",
+      meta: "Fases da obra de um prédio em São Carlos: da fundação ao habite-se, o que acontece em cada etapa e como acompanhar o cronograma do seu apartamento.",
+      categoria: "Comprar com segurança",
+      leitura: "4 min de leitura",
+      atualizado: "Atualizado em 4 de novembro de 2026"
+    },
+    resumoRapido: "Uma obra de prédio segue uma sequência: projetos e aprovações, fundação, estrutura, vedação das paredes, instalações, revestimentos e acabamento, áreas comuns, vistorias e habite-se. As etapas se sobrepõem e o tempo de cada uma varia de obra para obra. Para acompanhar, peça o cronograma à construtora e visite o canteiro quando for permitido.",
+    intro: "Quem compra um apartamento na planta costuma ouvir que a obra está na fundação, na estrutura ou no acabamento, sem saber o que cada fase significa. Entender a sequência ajuda a ler o cronograma, a perceber o que já avançou e a fazer perguntas melhores. Este texto descreve, de forma geral, como uma obra de prédio residencial costuma andar.",
+    secoes: [
+      {
+        titulo: "Antes da obra: projetos e aprovações",
+        paragrafos: [
+          "A obra começa no papel. Há o projeto de arquitetura, o estrutural, o das instalações elétricas e hidráulicas e a aprovação nos órgãos competentes. Também entram a análise do terreno e a preparação do canteiro.",
+          "Essa fase não aparece na rua, mas define o ritmo do resto. Projeto bem resolvido reduz mudanças durante a execução."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Fundação e estrutura",
+        paragrafos: [
+          "A fundação é a base que sustenta o prédio e depende do terreno e do projeto estrutural. Sobre ela sobe a estrutura, formada por pilares, vigas e lajes, que define a forma do edifício pavimento a pavimento.",
+          "É a fase em que o prédio mais cresce à vista de quem passa. Também é a que mais depende de planejamento de materiais e de condições do tempo."
+        ],
+        bullets: [],
+        callout: { tipo: "info", texto: "Ver a estrutura subir não significa que a obra está perto do fim. Boa parte do trabalho, como instalações e acabamento, ainda vem depois." }
+      },
+      {
+        titulo: "Vedação e instalações",
+        paragrafos: [
+          "Com a estrutura pronta, as paredes são levantadas. Em paralelo, passam as tubulações de água, esgoto, gás e os eletrodutos da parte elétrica, que ficam dentro das paredes e dos pisos.",
+          "É a fase de maior sobreposição entre equipes. Por isso a coordenação entre os projetos pesa tanto: um ponto de tomada ou de gás fora do lugar é caro de corrigir depois do revestimento."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Revestimentos, esquadrias e acabamento",
+        paragrafos: [
+          "Depois vêm o reboco, os pisos, as paredes dos banheiros e da cozinha, as janelas, as portas, as bancadas, a pintura e a instalação de louças, metais e luminárias.",
+          "É nessa fase que o memorial descritivo vira realidade, e por isso ela merece atenção. Se você tem o memorial em mãos, compare o que está sendo instalado com o que foi descrito."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Áreas comuns, vistorias e habite-se",
+        paragrafos: [
+          "Perto do fim, a obra se concentra nas áreas comuns, como hall, garagem, elevador e fachada, e na limpeza geral. Ocorrem as vistorias técnicas internas, os testes das instalações e a regularização final junto à prefeitura, que resulta no habite-se.",
+          "Só depois dessa regularização o prédio pode ser ocupado. A entrega das chaves e a vistoria do comprador vêm a seguir."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Como acompanhar o cronograma",
+        paragrafos: [
+          "As fases se sobrepõem e o tempo de cada uma muda de obra para obra, por isso desconfie de qualquer regra fixa. O caminho mais seguro é perguntar diretamente à construtora."
+        ],
+        bullets: [
+          "Peça o cronograma da obra e pergunte como ele é atualizado.",
+          "Pergunte em que fase o prédio está e o que vem a seguir.",
+          "Verifique se a construtora envia fotos ou relatórios periódicos.",
+          "Combine uma visita ao canteiro, se for permitido, respeitando as regras de segurança.",
+          "Confirme no contrato o que acontece em caso de atraso ou de antecipação da entrega."
+        ],
+        callout: null
+      },
+      {
+        titulo: "O que a Marins informa sobre cronograma",
+        paragrafos: [
+          "A Marins Engenharia atua em São Carlos há 25 anos e informa em seu site o compromisso com o adiantamento do cronograma, com edifícios entregues com até 4 meses de antecedência. Um exemplo de prédio da empresa é o Edifício Turim, na Rua São Joaquim, 1885, com 1 torre e 20 apartamentos de 57,27 m².",
+          "Para saber o prazo e a fase de um empreendimento específico, fale com o time de vendas."
+        ],
+        bullets: [],
+        callout: null
+      }
+    ],
+    tabela: {
+      titulo: "Fases da obra de um prédio em resumo",
+      colunas: ["Fase", "O que acontece", "O que perguntar"],
+      linhas: [
+        ["Projetos e aprovações", "Projetos, análise do terreno e aprovações", "Quais aprovações já saíram?"],
+        ["Fundação e estrutura", "Base, pilares, vigas e lajes", "Qual pavimento está em execução?"],
+        ["Vedação e instalações", "Paredes e tubulações de água, gás e energia", "Como as instalações foram coordenadas?"],
+        ["Revestimentos e acabamento", "Pisos, janelas, bancadas, pintura e louças", "Isso confere com o memorial descritivo?"],
+        ["Áreas comuns e habite-se", "Hall, garagem, fachada, vistorias e regularização", "Quando a entrega das chaves será agendada?"]
+      ],
+      destaque: null
+    },
+    faq: [
+      { p: "Quais são as fases de uma obra de prédio?",
+        r: "Em geral: projetos e aprovações, fundação, estrutura, vedação das paredes, instalações, revestimentos e acabamento, áreas comuns, vistorias e habite-se. As etapas se sobrepõem." },
+      { p: "Quanto tempo dura cada fase?",
+        r: "Depende do projeto, do terreno e do ritmo da obra. Pergunte à construtora o cronograma específico do empreendimento." },
+      { p: "O que é o habite-se?",
+        r: "É o documento da prefeitura que atesta que a obra foi concluída conforme o projeto aprovado e pode ser ocupada." },
+      { p: "Posso visitar a obra antes da entrega?",
+        r: "Depende da política da construtora e de questões de segurança. Pergunte se há visitas acompanhadas ou relatórios com fotos." },
+      { p: "Posso falar com a Marins sobre um apartamento?",
+        r: "Sim. O time de vendas da Marins Engenharia, em São Carlos, responde pelo WhatsApp (16) 99766-7976 ou pelo e-mail vendas@marinsengenharia.com.br." }
+    ],
+    cta: {
+      titulo: "Tire dúvidas sobre o apartamento",
+      texto: "Fale com o time de vendas da Marins Engenharia para conhecer os apartamentos e as plantas disponíveis em São Carlos."
+    },
+    fontes: []
+  },
+
+  {
     id: "comparar-acabamento-construtoras-sao-carlos",
     data: "2 de novembro de 2026",
     foto: "assets/img/blog/comparar-acabamento-construtoras.webp",
