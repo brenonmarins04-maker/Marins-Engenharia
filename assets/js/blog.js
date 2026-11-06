@@ -7,6 +7,111 @@
    ============================================================ */
 const BLOG = [
   {
+    id: "habite-se-sao-carlos",
+    data: "6 de novembro de 2026",
+    foto: "assets/img/blog/habite-se-fachada-edificio.jpg",
+    fotoMini: "assets/img/blog/habite-se-fachada-edificio.jpg",
+    alt: "Fachada do Edifício Treviso, da Marins Engenharia, na Rua José Bonifácio, vista da rua, com céu azul",
+    titulo: "O que é o habite-se em São Carlos e por que ele importa na compra",
+    resumo: "O que é o habite-se, quem o emite, quando ele sai e por que o comprador deve pedir esse documento antes de receber as chaves de um apartamento.",
+    seo: {
+      kw: "habite-se em São Carlos",
+      meta: "Habite-se em São Carlos: o que é o documento, para que serve, quando sai e o que o comprador deve conferir antes de receber as chaves do apartamento.",
+      categoria: "Comprar com segurança",
+      leitura: "4 min de leitura",
+      atualizado: "Atualizado em 6 de novembro de 2026"
+    },
+    resumoRapido: "O habite-se é o documento da prefeitura que atesta que a obra foi concluída de acordo com o projeto aprovado e pode ser ocupada. Ele é pedido pela construtora no fim da obra. Para o comprador, é um dos documentos que mostram que o prédio está regular. Vale perguntar se ele já saiu antes da entrega das chaves.",
+    intro: "Perto do fim da obra, uma palavra aparece em quase toda conversa: habite-se. Muita gente sabe que é importante, mas não sabe exatamente o que ele comprova nem em que momento ele entra na compra. Este texto explica o documento em termos gerais, sem citar leis ou prazos, que dependem do município e do caso.",
+    secoes: [
+      {
+        titulo: "O que é o habite-se",
+        paragrafos: [
+          "O habite-se é um documento emitido pela prefeitura. Ele atesta que a construção foi concluída conforme o projeto que havia sido aprovado e que o prédio está em condições de ser ocupado. Em outras palavras, é a autorização para que as pessoas passem a morar no edifício.",
+          "Cada município tem seu nome e seu procedimento para esse documento. Em alguns lugares ele aparece com outra denominação. Em São Carlos, o caminho certo é perguntar à construtora e à prefeitura como o processo funciona."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Quem pede e quando",
+        paragrafos: [
+          "Quem solicita o habite-se é a construtora ou a incorporadora responsável pela obra. O pedido é feito quando a obra está concluída. A prefeitura então confere se o que foi construído corresponde ao projeto aprovado.",
+          "Por isso o habite-se só pode ser pedido no final. Antes disso, a obra ainda está em andamento e não há o que atestar. O tempo de análise depende da prefeitura e do projeto, e a construtora é quem pode informar em que fase o pedido está."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Por que ele importa para quem compra",
+        paragrafos: [
+          "O comprador não emite o habite-se, mas depende dele. Um prédio sem o documento pode ter dificuldade para seguir etapas que vêm depois, como a averbação da construção na matrícula, que é feita no Cartório de Registro de Imóveis.",
+          "Em compras com financiamento, o banco costuma pedir documentos que comprovem a regularidade da obra, e o habite-se costuma estar entre eles. Confirme com a instituição a lista exata, porque ela varia de banco para banco."
+        ],
+        bullets: [
+          "Mostra que a obra foi concluída conforme o projeto aprovado.",
+          "Ajuda a comprovar que o prédio pode ser ocupado.",
+          "Costuma ser exigido em etapas de documentação e financiamento.",
+          "Pode ser consultado antes da assinatura ou da entrega das chaves."
+        ],
+        callout: { tipo: "info", texto: "Habite-se não é o mesmo que a vistoria do apartamento. O habite-se atesta o prédio como um todo; a vistoria confere a sua unidade, item por item." }
+      },
+      {
+        titulo: "O que perguntar à construtora",
+        paragrafos: [
+          "Antes de receber as chaves, faça perguntas objetivas e peça as respostas por escrito quando possível."
+        ],
+        bullets: [
+          "O habite-se do prédio já foi emitido?",
+          "Posso receber uma cópia do documento?",
+          "Se ainda não saiu, em que fase está o pedido?",
+          "A construção será averbada na matrícula, e quando?",
+          "Quais documentos o banco vai exigir no meu caso?"
+        ],
+        callout: null
+      },
+      {
+        titulo: "Depois do habite-se",
+        paragrafos: [
+          "Com o habite-se em mãos, as etapas seguintes podem andar: a averbação da construção, a individualização das matrículas dos apartamentos, quando for o caso, e a entrega das chaves. A ordem e o tempo de cada uma dependem do empreendimento e dos cartórios.",
+          "Mesmo depois da entrega, guarde uma cópia do habite-se junto com a escritura e os demais documentos do imóvel. Ele pode ser pedido no futuro, em uma revenda ou em um financiamento."
+        ],
+        bullets: [],
+        callout: null
+      }
+    ],
+    tabela: {
+      titulo: "Habite-se em resumo",
+      colunas: ["Ponto", "Como funciona em geral"],
+      linhas: [
+        ["Quem emite", "A prefeitura do município onde o prédio está"],
+        ["Quem pede", "A construtora ou a incorporadora, ao fim da obra"],
+        ["O que atesta", "Que a obra foi concluída conforme o projeto aprovado e pode ser ocupada"],
+        ["Para que o comprador usa", "Conferir a regularidade do prédio e apoiar a documentação e o financiamento"],
+        ["Prazo e custo", "Dependem do município e do caso; confirme com a prefeitura e a construtora"]
+      ],
+      destaque: null
+    },
+    faq: [
+      { p: "O que é o habite-se?",
+        r: "É o documento da prefeitura que atesta que a obra foi concluída conforme o projeto aprovado e pode ser ocupada." },
+      { p: "Quem pede o habite-se?",
+        r: "A construtora ou a incorporadora responsável pela obra, quando ela é concluída. O comprador não precisa solicitá-lo." },
+      { p: "Posso pedir uma cópia do habite-se antes de receber as chaves?",
+        r: "Pode e vale a pena. Pergunte à construtora se o documento já foi emitido e peça uma cópia para guardar com os papéis do imóvel." },
+      { p: "Habite-se e vistoria são a mesma coisa?",
+        r: "Não. O habite-se atesta o prédio como um todo e é emitido pela prefeitura. A vistoria é a conferência que o comprador faz no próprio apartamento." },
+      { p: "Posso tirar dúvidas sobre a compra de um apartamento da Marins?",
+        r: "Sim. O time de vendas da Marins Engenharia, em São Carlos, responde pelo WhatsApp (16) 99766-7976 ou pelo e-mail vendas@marinsengenharia.com.br." }
+    ],
+    cta: {
+      titulo: "Tire dúvidas sobre a compra",
+      texto: "Fale com o time de vendas da Marins Engenharia para entender as etapas da compra de um apartamento em São Carlos."
+    },
+    fontes: []
+  },
+
+  {
     id: "fases-da-obra-predio-sao-carlos",
     data: "4 de novembro de 2026",
     foto: "assets/img/blog/fases-da-obra-predio.jpg",
