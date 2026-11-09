@@ -7,6 +7,112 @@
    ============================================================ */
 const BLOG = [
   {
+    id: "garantia-construtora-apos-entrega-sao-carlos",
+    data: "9 de novembro de 2026",
+    foto: "assets/img/blog/garantia-construtora-pos-entrega.webp",
+    fotoMini: "assets/img/blog/garantia-construtora-pos-entrega-mini.webp",
+    alt: "Detalhe da fachada do Edifício Ana Terra, da Marins Engenharia, na Rua Dona Maria Jacinta, com sacadas, janelas venezianas e céu azul",
+    titulo: "Garantia da construtora após a entrega em São Carlos",
+    resumo: "Como funciona a garantia depois que o apartamento é entregue: o que a construtora responde, o que é manutenção do morador e como pedir assistência.",
+    seo: {
+      kw: "garantia da construtora após a entrega em São Carlos",
+      meta: "Garantia da construtora após a entrega em São Carlos: o que cobre, o que é manutenção do morador, o papel do manual do proprietário e como pedir reparo.",
+      categoria: "Compra de imóvel",
+      leitura: "4 min de leitura",
+      atualizado: "Atualizado em 9 de novembro de 2026"
+    },
+    resumoRapido: "A garantia pós-entrega cobre defeitos de construção, e não o desgaste normal do uso. Os prazos variam conforme o sistema do prédio e devem estar no manual do proprietário. Para manter o direito, o morador precisa fazer a manutenção indicada, guardar os documentos e registrar cada problema por escrito.",
+    intro: "Receber as chaves não encerra a relação com a construtora. Se algo apresentar defeito depois da mudança, o comprador tem direito a assistência dentro de certas condições. Este texto explica, em linhas gerais, como funciona a garantia, o que costuma ficar de fora e como se organizar para pedir um reparo.",
+    secoes: [
+      {
+        titulo: "O que a garantia cobre",
+        paragrafos: [
+          "A garantia trata de defeitos de construção: falhas de projeto, de material ou de execução que aparecem depois da entrega. Um vazamento por instalação mal feita ou uma infiltração por falha de impermeabilização são exemplos.",
+          "Cada sistema do prédio tem um prazo próprio. Estrutura, instalações, esquadrias e acabamentos não seguem o mesmo calendário. Por isso, o prazo de cada item deve estar escrito, e não apenas combinado de palavra."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "O que fica de fora",
+        paragrafos: [
+          "Desgaste natural, mau uso e falta de manutenção não entram na garantia. Uma pintura que escurece com o tempo ou um rejunte que se solta por limpeza inadequada são casos comuns.",
+          "Alterações feitas pelo morador também podem comprometer a garantia do sistema afetado. Antes de mexer em paredes, instalações ou esquadrias, confira o manual e as regras do condomínio."
+        ],
+        bullets: [],
+        callout: { tipo: "alerta", texto: "Reformas que alteram instalações ou paredes podem afetar a garantia do sistema envolvido. Consulte o manual do proprietário antes de começar." }
+      },
+      {
+        titulo: "O manual do proprietário é o ponto de partida",
+        paragrafos: [
+          "O manual reúne as orientações de uso e de manutenção do apartamento e das áreas comuns. Ele indica quais itens exigem cuidado periódico e a quem recorrer em caso de defeito.",
+          "Peça o manual na entrega, junto com o termo de recebimento. Se ele não vier, solicite por escrito."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Como pedir assistência",
+        paragrafos: [
+          "Quando notar um problema, registre-o assim que possível. Quanto mais claro o registro, mais simples é a análise."
+        ],
+        bullets: [
+          "Descreva o problema com data, local e, se possível, fotos ou vídeo.",
+          "Envie o pedido por um canal que deixe registro, como e-mail ou protocolo.",
+          "Guarde o número do protocolo e as respostas recebidas.",
+          "Combine por escrito a data da visita técnica e do reparo.",
+          "Não faça o conserto por conta própria antes da análise, para não perder o direito."
+        ],
+        callout: null
+      },
+      {
+        titulo: "Documentos que valem guardar",
+        paragrafos: [
+          "Mantenha em uma pasta o contrato, o memorial descritivo, o termo de recebimento, a lista de pendências da vistoria, o manual do proprietário e os registros de manutenção. Esses papéis mostram o que foi entregue, o que foi combinado e como o apartamento foi cuidado."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Áreas comuns e o papel do condomínio",
+        paragrafos: [
+          "Nas áreas comuns, quem pede a assistência costuma ser o condomínio, por meio do síndico. Defeitos em fachada, garagem ou elevador devem ser levados a ele, para que o pedido seja feito de forma conjunta e documentada."
+        ],
+        bullets: [],
+        callout: null
+      }
+    ],
+    tabela: {
+      titulo: "Garantia e manutenção: quem responde",
+      colunas: ["Situação", "Em geral", "O que fazer"],
+      linhas: [
+        ["Defeito de construção", "Construtora, dentro do prazo do sistema", "Registrar por escrito e pedir a visita técnica"],
+        ["Desgaste natural pelo uso", "Morador", "Seguir a manutenção indicada no manual"],
+        ["Dano por mau uso ou reforma", "Morador", "Consultar o manual antes de alterar"],
+        ["Defeito em área comum", "Condomínio pede a assistência", "Levar o caso ao síndico"],
+        ["Pendência da vistoria de entrega", "Construtora, conforme o termo", "Cobrar o reparo no prazo combinado"]
+      ],
+      destaque: null
+    },
+    faq: [
+      { p: "A garantia vale para qualquer problema no apartamento?",
+        r: "Não. Ela cobre defeitos de construção. Desgaste normal, mau uso e falta de manutenção ficam por conta do morador." },
+      { p: "Onde encontro os prazos de cada item?",
+        r: "No manual do proprietário e no contrato de compra e venda. Se algum prazo não estiver claro, peça o esclarecimento por escrito." },
+      { p: "Posso consertar por conta própria e cobrar depois?",
+        r: "O mais seguro é acionar a construtora antes e aguardar a análise. Reparo feito antes disso pode dificultar a comprovação do defeito." },
+      { p: "Revender o apartamento muda a garantia?",
+        r: "Os termos dependem do contrato e da legislação. Ao vender ou comprar um imóvel usado, vale pedir o manual e os documentos de manutenção." },
+      { p: "Posso tirar dúvidas sobre um apartamento da Marins?",
+        r: "Sim. O time de vendas da Marins Engenharia, em São Carlos, responde pelo WhatsApp (16) 99766-7976 ou pelo e-mail vendas@marinsengenharia.com.br." }
+    ],
+    cta: {
+      titulo: "Tire dúvidas sobre o apartamento",
+      texto: "Fale com o time de vendas da Marins Engenharia para entender as etapas da compra e da entrega de um apartamento em São Carlos."
+    },
+    fontes: []
+  },
+  {
     id: "habite-se-sao-carlos",
     data: "6 de novembro de 2026",
     foto: "assets/img/blog/habite-se-fachada-edificio.jpg",
