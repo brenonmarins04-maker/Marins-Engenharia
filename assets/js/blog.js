@@ -7,6 +7,119 @@
    ============================================================ */
 const BLOG = [
   {
+    id: "locacao-temporada-aluguel-tradicional-sao-carlos",
+    data: "11 de novembro de 2026",
+    foto: "assets/img/blog/locacao-temporada-aluguel-tradicional.webp",
+    fotoMini: "assets/img/blog/locacao-temporada-aluguel-tradicional-mini.webp",
+    alt: "Vista de telhados e prédios de São Carlos, em foto da galeria do Edifício Trento, da Marins Engenharia",
+    titulo: "Aluguel por temporada ou tradicional em São Carlos",
+    resumo: "As diferenças entre alugar por temporada e por contrato tradicional: rotina de trabalho, custos, vacância e o perfil de imóvel que combina com cada modelo.",
+    seo: {
+      kw: "locação por temporada e aluguel tradicional em São Carlos",
+      meta: "Locação por temporada e aluguel tradicional em São Carlos: como cada modelo funciona e o que muda em custos, rotina e vacância para o dono do imóvel.",
+      categoria: "Investimento",
+      leitura: "4 min de leitura",
+      atualizado: "Atualizado em 11 de novembro de 2026"
+    },
+    resumoRapido: "No aluguel tradicional, o contrato é longo e a rotina do proprietário é leve. Na locação por temporada, as estadias são curtas e exigem anúncio, limpeza, enxoval e atendimento constantes. Nenhum modelo é melhor em si: a escolha depende do tempo que o dono tem, do imóvel e da procura da região. Vale comparar custos e esforço, e não apenas a diária ou o valor mensal.",
+    intro: "Quem tem um apartamento para alugar em São Carlos costuma chegar à mesma dúvida: contrato de longa duração ou hospedagem por temporada. Os dois modelos funcionam, mas pedem rotinas e custos diferentes. Este texto explica as diferenças em linhas gerais, sem prometer retorno, para ajudar na comparação.",
+    secoes: [
+      {
+        titulo: "Como cada modelo funciona",
+        paragrafos: [
+          "No aluguel tradicional, o proprietário e o inquilino assinam um contrato de duração mais longa. O inquilino mora no imóvel, paga um valor mensal e cuida do uso do dia a dia. O dono recebe, acompanha o contrato e responde pelas questões estruturais do apartamento.",
+          "Na locação por temporada, o imóvel recebe hóspedes por períodos curtos, de poucos dias ou semanas, geralmente por meio de plataformas de reserva. Cada estadia tem entrada, saída, limpeza e troca de enxoval."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "O que muda na rotina de quem aluga",
+        paragrafos: [
+          "O aluguel tradicional pede pouco da rotina depois que o inquilino se instala. Os contatos se concentram no início do contrato, na vistoria de entrada e saída e nos reparos eventuais.",
+          "A temporada exige presença quase diária. Alguém precisa responder aos interessados, receber os hóspedes, cuidar da limpeza entre uma estadia e outra e resolver imprevistos. Muitos donos contratam uma pessoa ou uma empresa para isso, o que entra na conta."
+        ],
+        bullets: [
+          "Tradicional: poucos contatos, contrato longo, rotina previsível.",
+          "Temporada: contato frequente, estadias curtas, rotina de operação.",
+          "Nos dois casos, o apartamento precisa estar em bom estado de conservação."
+        ],
+        callout: null
+      },
+      {
+        titulo: "Os custos que entram na conta",
+        paragrafos: [
+          "A diária costuma ser mais alta do que o valor mensal proporcional de um contrato longo, mas isso não quer dizer lucro maior. Na temporada, entram custos que o aluguel tradicional quase não tem.",
+          "No modelo tradicional, os gastos principais são condomínio e impostos do imóvel, em geral conforme o contrato, além de reparos e eventual taxa de administradora. Quem calcula só a receita bruta tende a se enganar nos dois casos."
+        ],
+        bullets: [
+          "Enxoval, utensílios e reposição de itens da casa.",
+          "Limpeza a cada saída de hóspede.",
+          "Taxa das plataformas de reserva e eventual gestão do anúncio.",
+          "Contas de água, luz e internet, que na temporada ficam com o dono.",
+          "Períodos sem hóspedes, chamados de vacância."
+        ],
+        callout: { tipo: "alerta", texto: "Compare os dois modelos pelo resultado líquido do ano e pelo esforço que cada um exige, e não pelo valor da diária ou do mensal isolado." }
+      },
+      {
+        titulo: "Vacância e regularidade da renda",
+        paragrafos: [
+          "O aluguel tradicional dá renda mais regular enquanto o contrato dura, mas há o risco de ficar sem inquilino entre um contrato e outro, e de inadimplência. A temporada oscila mais ao longo do ano e depende de eventos, calendário universitário e da avaliação do anúncio.",
+          "Em uma cidade com universidades e polo de tecnologia, como São Carlos, a procura por moradia e por hospedagem tem motivos diferentes. Vale observar a demanda real da região do imóvel antes de escolher o modelo."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "O condomínio e as regras do prédio",
+        paragrafos: [
+          "Antes de optar pela temporada, confira o que a convenção e o regimento interno do condomínio dizem sobre hospedagem de curta duração. Alguns prédios têm regras específicas, como cadastro de hóspedes, horários e limite de pessoas.",
+          "No aluguel tradicional, o inquilino também deve seguir o regimento, e o proprietário continua responsável perante o condomínio. Por isso, o contrato deve deixar claro quem paga cada despesa."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Um exemplo no portfólio da Marins",
+        paragrafos: [
+          "O site da Marins Engenharia tem uma página de apartamentos para hospedagem pelo AirBnB, em unidades dos edifícios Ferretto, Trieste e Trento. São apartamentos de um e de dois dormitórios, com sacada envidraçada em parte deles, que mostram como o formato de temporada aparece na prática.",
+          "Isso não significa que esse seja o melhor modelo para outro imóvel. O formato compacto, com suíte, atende ao hóspede em estadia curta, mas o mesmo apartamento pode ser alugado com contrato tradicional."
+        ],
+        bullets: [],
+        callout: null
+      }
+    ],
+    tabela: {
+      titulo: "Aluguel tradicional e locação por temporada lado a lado",
+      colunas: ["Aspecto", "Aluguel tradicional", "Locação por temporada"],
+      linhas: [
+        ["Duração", "Contrato de longo prazo", "Estadias curtas, por diária ou semana"],
+        ["Rotina do proprietário", "Leve, com contatos pontuais", "Frequente, com limpeza e atendimento"],
+        ["Custos adicionais", "Condomínio, reparos e administradora, conforme o contrato", "Enxoval, limpeza, taxas de plataforma e contas da casa"],
+        ["Regularidade da renda", "Mais previsível enquanto o contrato durar", "Oscila conforme a procura e o calendário"],
+        ["Regras do condomínio", "Regimento interno e contrato", "Convenção e regras sobre hospedagem de curta duração"]
+      ],
+      destaque: null
+    },
+    faq: [
+      { p: "Qual modelo rende mais, temporada ou aluguel tradicional?",
+        r: "Depende do imóvel, da localização e da gestão. A diária costuma ser maior, mas os custos e a vacância também. Compare o resultado líquido de um ano, e não apenas o valor bruto." },
+      { p: "Posso alugar por temporada em qualquer condomínio?",
+        r: "Não necessariamente. Confira a convenção e o regimento interno do prédio, que podem restringir ou regular a hospedagem de curta duração." },
+      { p: "Preciso de alguém para cuidar do imóvel na temporada?",
+        r: "Na prática, sim. Limpeza, troca de enxoval e atendimento acontecem a cada estadia. O dono pode fazer sozinho ou contratar uma pessoa ou empresa." },
+      { p: "O mesmo apartamento pode mudar de modelo depois?",
+        r: "Pode, desde que o contrato em vigor e as regras do condomínio permitam. Planeje os prazos para não deixar o imóvel parado entre um modelo e outro." },
+      { p: "Posso tirar dúvidas sobre um apartamento da Marins?",
+        r: "Sim. O time de vendas da Marins Engenharia, em São Carlos, responde pelo WhatsApp (16) 99766-7976 ou pelo e-mail vendas@marinsengenharia.com.br." }
+    ],
+    cta: {
+      titulo: "Conheça os apartamentos para hospedagem",
+      texto: "Veja no site os apartamentos da Marins Engenharia disponíveis para hospedagem em São Carlos ou fale com o time de vendas."
+    },
+    fontes: []
+  },
+  {
     id: "garantia-construtora-apos-entrega-sao-carlos",
     data: "9 de novembro de 2026",
     foto: "assets/img/blog/garantia-construtora-pos-entrega.webp",
