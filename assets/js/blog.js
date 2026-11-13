@@ -7,6 +7,120 @@
    ============================================================ */
 const BLOG = [
   {
+    id: "hospedagem-aplicativo-condominio-sao-carlos",
+    data: "13 de novembro de 2026",
+    foto: "assets/img/blog/hospedagem-aplicativo-condominio.jpg",
+    fotoMini: "assets/img/blog/hospedagem-aplicativo-condominio.jpg",
+    alt: "Entrada do Edifício Turim, da Marins Engenharia, com letreiro, caixas de correio e leitor de acesso ao lado da porta",
+    titulo: "Hospedagem por aplicativo em condomínio: as regras",
+    resumo: "O que conferir na convenção e no regimento interno antes de hospedar por aplicativo em um apartamento, e como evitar conflito com o condomínio e os vizinhos.",
+    seo: {
+      kw: "hospedagem por aplicativo em condomínio em São Carlos",
+      meta: "Hospedagem por aplicativo em condomínio em São Carlos: o que a convenção e o regimento podem dizer, o que conferir antes e como lidar com os vizinhos.",
+      categoria: "Investimento",
+      leitura: "4 min de leitura",
+      atualizado: "Atualizado em 13 de novembro de 2026"
+    },
+    resumoRapido: "Quem quer hospedar por aplicativo em um apartamento deve ler antes a convenção e o regimento interno do condomínio. São esses documentos, e as decisões de assembleia, que dizem se a hospedagem de curta duração é permitida, com quais condições e quais multas. O ideal é confirmar por escrito com a administração, antes de anunciar, e combinar com o hóspede as regras de uso das áreas comuns.",
+    intro: "Anunciar um apartamento por aplicativo parece simples: fotos, preço e calendário. Mas o imóvel fica dentro de um condomínio, com moradores e regras próprias. Este texto explica, em linhas gerais, onde estão essas regras e o que vale conferir antes de receber o primeiro hóspede em São Carlos.",
+    secoes: [
+      {
+        titulo: "Onde estão as regras do condomínio",
+        paragrafos: [
+          "A convenção do condomínio é o documento principal. Ela define a finalidade das unidades, os direitos e os deveres dos condôminos e como as decisões são tomadas. O regimento interno detalha o dia a dia: horários, uso das áreas comuns, mudanças e entrada de visitantes.",
+          "Além desses dois documentos, vale ler as atas das últimas assembleias. Uma regra sobre hospedagem pode ter sido aprovada depois da convenção original e estar registrada só na ata."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "O que esses documentos podem dizer sobre hospedagem",
+        paragrafos: [
+          "Cada condomínio decide à sua maneira. Alguns permitem a hospedagem de curta duração sem restrições além das regras comuns. Outros exigem cadastro dos hóspedes, limitam o número de pessoas por unidade ou proíbem o formato. Por isso, não existe resposta única que valha para todos os prédios.",
+          "Quando o texto é omisso ou ambíguo, a dúvida costuma ser resolvida em assembleia ou, em último caso, na Justiça. Quem investe na compra de um apartamento pensando em hospedagem deve resolver essa dúvida antes de comprar, e não depois."
+        ],
+        bullets: [
+          "Hospedagem de curta duração permitida, proibida ou condicionada.",
+          "Exigência de cadastro e de identificação dos hóspedes na portaria.",
+          "Limite de pessoas por apartamento.",
+          "Regras para uso de piscina, salão e outras áreas comuns, quando houver.",
+          "Penalidades previstas para infrações."
+        ],
+        callout: { tipo: "alerta", texto: "Peça à administração a resposta por escrito e guarde uma cópia da convenção, do regimento e da última ata. Isso evita desencontro de informação depois." }
+      },
+      {
+        titulo: "Cadastro, portaria e controle de acesso",
+        paragrafos: [
+          "Quem recebe hóspedes precisa avisar a portaria sobre quem entra, quando e por quanto tempo. Em prédios com portaria remota ou sem porteiro, o controle costuma ser feito por senha, cadastro de visitantes ou aplicativo do condomínio. Entender como funciona o acesso no seu prédio evita que o hóspede chegue e não consiga entrar.",
+          "Defina com antecedência como o hóspede recebe a chave ou a senha e quem atende se houver problema fora do horário comercial."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Convivência com os vizinhos",
+        paragrafos: [
+          "A maior parte dos conflitos nasce do barulho, da circulação de pessoas desconhecidas e do uso inadequado das áreas comuns. São problemas de convivência, e uma boa orientação ao hóspede resolve boa parte deles.",
+          "Envie as regras principais antes da chegada: horário de silêncio, destino do lixo, uso do elevador e das vagas. Se algum vizinho reclamar, responda rápido e procure resolver direto, antes que a queixa chegue à assembleia."
+        ],
+        bullets: [
+          "Informe o horário de silêncio do prédio ao hóspede.",
+          "Explique onde estacionar e onde descartar o lixo.",
+          "Deixe um contato para o síndico ou a administração falarem com você.",
+          "Responda às reclamações com rapidez."
+        ],
+        callout: null
+      },
+      {
+        titulo: "Responsabilidade do proprietário",
+        paragrafos: [
+          "Perante o condomínio, quem responde por multas e danos é o proprietário da unidade, mesmo que o problema tenha sido causado por um hóspede. Por isso, combine com quem hospeda como serão tratados danos e quebras, e mantenha o registro dos hóspedes de cada estadia.",
+          "Se o imóvel estiver alugado por contrato tradicional, o contrato deve dizer se o inquilino pode ou não hospedar por aplicativo. Sem essa previsão, o risco de desentendimento é maior."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Quando a hospedagem é parte do projeto",
+        paragrafos: [
+          "O site da Marins Engenharia mantém uma página de apartamentos para hospedagem pelo AirBnB, em unidades dos edifícios Ferretto, Trieste e Trento, em São Carlos. Cada prédio tem suas próprias regras de condomínio, e quem pensa em comprar um apartamento para esse fim deve consultar a convenção e o regimento do edifício específico.",
+          "Esse é o ponto central do texto: o que vale em um prédio pode não valer em outro. A leitura dos documentos do condomínio vem antes de qualquer plano de hospedagem."
+        ],
+        bullets: [],
+        callout: null
+      }
+    ],
+    tabela: {
+      titulo: "O que conferir antes de hospedar por aplicativo",
+      colunas: ["Item", "Onde verificar", "Por que importa"],
+      linhas: [
+        ["Hospedagem de curta duração", "Convenção e atas de assembleia", "Define se o formato é permitido, proibido ou condicionado"],
+        ["Cadastro de hóspedes", "Regimento interno e portaria", "Evita problemas de acesso e de segurança"],
+        ["Uso das áreas comuns", "Regimento interno", "Orienta o hóspede e reduz reclamações"],
+        ["Multas e penalidades", "Convenção e regimento", "Mostra o risco de infração para o proprietário"],
+        ["Aluguel com inquilino", "Contrato de locação", "Deixa claro se o inquilino pode hospedar"]
+      ],
+      destaque: null
+    },
+    faq: [
+      { p: "Posso hospedar por aplicativo em qualquer condomínio?",
+        r: "Não necessariamente. A permissão depende da convenção, do regimento interno e das decisões de assembleia de cada prédio. Confira esses documentos antes de anunciar." },
+      { p: "Quem responde se o hóspede causar um problema?",
+        r: "Perante o condomínio, em geral o proprietário da unidade. Por isso vale combinar com o hóspede as regras de uso e manter o registro de cada estadia." },
+      { p: "O condomínio pode proibir a hospedagem depois de eu comprar?",
+        r: "Os condomínios podem mudar regras por decisão de assembleia, conforme o quórum que a convenção e a legislação exigirem. Por isso, acompanhe as atas e consulte a administração." },
+      { p: "Como comunico a portaria sobre os hóspedes?",
+        r: "Pergunte à administração qual o procedimento do prédio. Pode ser lista de visitantes, senha, cadastro prévio ou aplicativo do condomínio." },
+      { p: "Posso tirar dúvidas sobre um apartamento da Marins?",
+        r: "Sim. O time de vendas da Marins Engenharia, em São Carlos, responde pelo WhatsApp (16) 99766-7976 ou pelo e-mail vendas@marinsengenharia.com.br." }
+    ],
+    cta: {
+      titulo: "Conheça os apartamentos para hospedagem",
+      texto: "Veja no site os apartamentos da Marins Engenharia disponíveis para hospedagem em São Carlos ou fale com o time de vendas."
+    },
+    fontes: []
+  },
+  {
     id: "locacao-temporada-aluguel-tradicional-sao-carlos",
     data: "11 de novembro de 2026",
     foto: "assets/img/blog/locacao-temporada-aluguel-tradicional.webp",
