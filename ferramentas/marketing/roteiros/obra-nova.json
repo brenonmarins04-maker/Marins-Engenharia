@@ -1,6 +1,6 @@
 {
   "nome": "trezzano",
-  "observacao": "Segundo post do perfil. Numeros do projeto arquitetonico. O render abre o carrossel e vai marcado como projeto sujeito a alteracoes. Nada sobre prazo de entrega: segue sem confirmacao.",
+  "observacao": "Segundo post do perfil. Numeros e tipologias lidos do projeto arquitetonico. Mapa desenhado a partir da malha real de ruas, sem captura do Google. Carta 3 ainda precisa das fotos reais da demolicao, da cortina e da terraplenagem. Nada sobre prazo de entrega.",
   "cartas": [
     {
       "tipo": "capa",
@@ -9,9 +9,23 @@
       "nota": "Imagem do projeto · sujeita a alterações"
     },
     {
-      "tipo": "foto",
-      "foto": "ferramentas/marketing/fotos-obra/obra-2026-11-15-1.jpg",
-      "texto": "Na esquina da Rua Riachuelo com a Marechal Deodoro. Hoje o terreno está assim, com as primeiras formas de fundação montadas."
+      "tipo": "mapa",
+      "titulo": "Onde fica",
+      "verticais": [
+        { "nome": "Visc. de Inhaúma", "em": 0.1 },
+        { "nome": "Riachuelo", "em": 0.5 },
+        { "nome": "Aquidabã", "em": 0.9 }
+      ],
+      "horizontais": [
+        { "nome": "R. Padre Teixeira", "em": 0.12 },
+        { "nome": "R. Mal. Deodoro", "em": 0.62 }
+      ],
+      "marcos": [
+        { "nome": "Trezzano", "x": 0.5, "y": 0.62, "destaque": true },
+        { "nome": "Ferretto", "x": 0.5, "y": 0.34 },
+        { "nome": "Trentino · Trieste · Trento", "x": 0.5, "y": 0.12 }
+      ],
+      "rodape": "No Centro, na esquina da Riachuelo com a Marechal Deodoro. Será o quinto prédio da Marins em duas quadras."
     },
     {
       "tipo": "lista",
@@ -28,21 +42,30 @@
       "texto": "A cortina de contenção impede que o solo e as construções vizinhas cedam durante a escavação. A terraplenagem deixa o terreno nivelado e compactado, para a fundação assentar sobre solo uniforme. Errar aqui não aparece em foto nenhuma. Aparece no prédio, anos depois."
     },
     {
-      "tipo": "lista",
-      "titulo": "O Trezzano em números",
-      "itens": [
-        "24 apartamentos",
-        "24 vagas de garagem",
-        "6 unidades de 64 m²",
-        "18 unidades de 45 m²",
-        "Terreno de 632 m²",
-        "Elevador e vaga acessível"
+      "tipo": "opcoes",
+      "titulo": "Duas plantas",
+      "opcoes": [
+        {
+          "area": "64 m²",
+          "quantas": "6 unidades",
+          "itens": ["2 dormitórios", "2 banheiros", "Sala e jantar", "Cozinha com serviço", "Varanda"]
+        },
+        {
+          "area": "45 m²",
+          "quantas": "18 unidades",
+          "itens": ["1 dormitório", "1 banheiro", "Sala e jantar", "Cozinha", "Área de serviço", "Varanda"]
+        }
+      ],
+      "resumo": [
+        "24 apartamentos e 24 vagas",
+        "Elevador e vaga acessível",
+        "Terreno de 632 m²"
       ]
     },
     {
       "tipo": "fecho",
       "foto": "ferramentas/marketing/fotos-obra/obra-2026-11-15-2.jpg",
-      "titulo": "De terreno a prédio.",
+      "titulo": "Estamos apenas começando.",
       "cta": "Siga para acompanhar"
     }
   ]

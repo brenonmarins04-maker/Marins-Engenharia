@@ -132,11 +132,13 @@ def carta_foto(c):
     img = fundo_azul()
     d = ImageDraw.Draw(img)
     chapeu(d)
-    y = 120
-    alt_foto = 680
-    cartao = cartao_foto(caminho(c["foto"]), UTIL, alt_foto, raio=20, borda=4)
-    img.paste(cartao, (MARGEM - 4, y - 4), cartao)
-    y += alt_foto + 52
+    # foto de ponta a ponta: no feed do celular a carta é pequena e o
+    # filete branco comia largura útil sem acrescentar nada
+    y = 108
+    alt_foto = 760
+    cartao = cartao_foto(caminho(c["foto"]), L, alt_foto, raio=0)
+    img.paste(cartao, (0, y), cartao)
+    y += alt_foto + 48
     f, linhas = ajusta(d, c["texto"], UTIL, 42, 28, "Regular", 5)
     for ln in linhas:
         d.text((MARGEM, y), ln, font=f, fill=(228, 234, 244))
@@ -231,8 +233,152 @@ def carta_fecho(c):
     return img
 
 
+def carta_mapa(c):
+    """Mapa desenhado do quarteirão: ruas reais, sem captura do Google."""
+    img = fundo_azul()
+    d = ImageDraw.Draw(img)
+    chapeu(d)
+
+    y = 130
+    f, linhas = ajusta(d, c["titulo"], UTIL, 72, 46, "Bold", 2)
+    for ln in linhas:
+        d.text((MARGEM, y), ln, font=f, fill=BRANCO)
+        y += round(f.size * 1.16)
+    d.rounded_rectangle([MARGEM, y + 14, MARGEM + 110, y + 20], 3, fill=AMARELO)
+
+    # malha de ruas: verticais e horizontais em frações da área do mapa
+    topo, base = y + 86, A - 250
+    esq, dir_ = MARGEM, L - MARGEM
+    verticais = c.get("verticais", [])
+    horizontais = c.get("horizontais", [])
+    via = (255, 255, 255, 46)
+    f_rua = fonte(21, "SemiBold")
+
+    for v in verticais:
+        x = esq + (dir_ - esq) * v["em"]
+        d.line([(x, topo), (x, base)], fill=via, width=16)
+    for h in horizontais:
+        yy = topo + (base - topo) * h["em"]
+        d.line([(esq, yy), (dir_, yy)], fill=via, width=16)
+
+    def rotulo(texto, cx, cy, f, cor, centrado=True):
+        """Texto sobre uma tarja escura: sem ela o nome some na via branca."""
+        larg = d.textlength(texto, font=f)
+        x0 = cx - larg / 2 if centrado else cx
+        x0 = min(max(esq - 6, x0), dir_ - larg + 6)
+        pad_x, pad_y = 10, 6
+        d.rounded_rectangle(
+            [x0 - pad_x, cy - pad_y, x0 + larg + pad_x, cy + f.size + pad_y],
+            8, fill=AZUL_ESC + (225,))
+        d.text((x0, cy), texto, font=f, fill=cor)
+
+    for v in verticais:
+        x = esq + (dir_ - esq) * v["em"]
+        rotulo(v["nome"], x, topo - 40, f_rua, (198, 210, 230))
+    for h in horizontais:
+        yy = topo + (base - topo) * h["em"]
+        rotulo(h["nome"], esq + 14, yy - 44, f_rua, (198, 210, 230), centrado=False)
+
+    # marcos: o destaque em amarelo, os demais em branco
+    f_m = fonte(25, "Bold")
+    for m in c.get("marcos", []):
+        x = esq + (dir_ - esq) * m["x"]
+        yy = topo + (base - topo) * m["y"]
+        destaque = m.get("destaque")
+        r = 17 if destaque else 11
+        cor = AMARELO if destaque else (255, 255, 255, 235)
+        d.ellipse([x - r, yy - r, x + r, yy + r], fill=cor)
+        if destaque:
+            d.ellipse([x - r - 9, yy - r - 9, x + r + 9, yy + r + 9],
+                      outline=AMARELO + (120,), width=4)
+        f_r = f_m if destaque else fonte(22, "SemiBold")
+        rotulo(m["nome"], x, yy + r + 14, f_r,
+               AMARELO if destaque else (226, 233, 245))
+
+    if c.get("rodape"):
+        f_p = fonte(29, "SemiBold")
+        lp = quebra(d, c["rodape"], f_p, UTIL)
+        yy = A - 210
+        for ln in lp:
+            d.text((MARGEM, yy), ln, font=f_p, fill=(214, 223, 238))
+            yy += round(f_p.size * 1.38)
+
+    marca(img, d)
+    return img
+
+
+def painel(img, caixa, raio=14, cor=(255, 255, 255, 20)):
+    """Retângulo translúcido.
+
+    O ImageDraw ignora o alfa quando desenha direto numa imagem RGB: o
+    painel saía branco sólido e engolia o texto por cima. Por isso vai
+    numa camada RGBA e depois é composta.
+    """
+    camada = Image.new("RGBA", img.size, (0, 0, 0, 0))
+    ImageDraw.Draw(camada).rounded_rectangle(caixa, raio, fill=cor)
+    return Image.alpha_composite(img.convert("RGBA"), camada).convert("RGB")
+
+
+def carta_opcoes(c):
+    """Duas tipologias lado a lado, cada uma com o que tem dentro."""
+    img = fundo_azul()
+    d = ImageDraw.Draw(img)
+    chapeu(d)
+
+    y = 130
+    f, linhas = ajusta(d, c["titulo"], UTIL, 72, 44, "Bold", 2)
+    for ln in linhas:
+        d.text((MARGEM, y), ln, font=f, fill=BRANCO)
+        y += round(f.size * 1.16)
+    d.rounded_rectangle([MARGEM, y + 14, MARGEM + 110, y + 20], 3, fill=AMARELO)
+    y += 74
+
+    ops = c["opcoes"]
+    alt = 470
+    larg = (UTIL - 28) // 2
+    f_area = fonte(62, "Bold")
+    f_qtd = fonte(24, "SemiBold")
+    f_it = fonte(26, "Regular")
+
+    for i, op in enumerate(ops[:2]):
+        x = MARGEM + i * (larg + 28)
+        img = painel(img, [x, y, x + larg, y + alt])
+    d = ImageDraw.Draw(img)
+
+    for i, op in enumerate(ops[:2]):
+        x = MARGEM + i * (larg + 28)
+        d.rounded_rectangle([x, y, x + larg, y + 7], 4, fill=AMARELO)
+
+        yy = y + 40
+        d.text((x + 26, yy), op["area"], font=f_area, fill=AMARELO)
+        yy += 76
+        d.text((x + 26, yy), op["quantas"], font=f_qtd, fill=(198, 211, 232))
+        yy += 48
+        for it in op["itens"]:
+            d.ellipse([x + 28, yy + 11, x + 36, yy + 19], fill=(255, 255, 255, 170))
+            d.text((x + 50, yy), it, font=f_it, fill=BRANCO)
+            yy += 42
+
+    y += alt + 44
+    if c.get("resumo"):
+        f_r = fonte(27, "SemiBold")
+        passo = 46
+        img = painel(img, [MARGEM, y, L - MARGEM, y + 24 + passo * len(c["resumo"])],
+                     cor=(255, 255, 255, 15))
+        d = ImageDraw.Draw(img)
+        yy = y + 18
+        for it in c["resumo"]:
+            d.rounded_rectangle([MARGEM + 26, yy + 13, MARGEM + 40, yy + 21], 4, fill=AMARELO)
+            d.text((MARGEM + 56, yy), it, font=f_r, fill=(228, 234, 246))
+            yy += passo
+
+    marca(img, d)
+    return img
+
+
 TIPOS = {"capa": carta_capa, "foto": carta_foto, "lista": carta_lista,
-         "destaque": carta_destaque, "fecho": carta_fecho}
+         "destaque": carta_destaque, "fecho": carta_fecho,
+         "mapa": carta_mapa, "opcoes": carta_opcoes}
 
 
 def caminho(p):

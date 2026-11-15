@@ -111,7 +111,7 @@ def fundo():
     return img
 
 
-def cartao_foto(caminho, caixa_l, caixa_a, raio=24, borda=4):
+def cartao_foto(caminho, caixa_l, caixa_a, raio=24, borda=0):
     """Foto cortada para preencher a caixa, canto arredondado e filete branco."""
     im = Image.open(caminho).convert("RGB")
     escala = max(caixa_l / im.width, caixa_a / im.height)
@@ -121,9 +121,20 @@ def cartao_foto(caminho, caixa_l, caixa_a, raio=24, borda=4):
     topo = (im.height - caixa_a) // 2
     im = im.crop((esq, topo, esq + caixa_l, topo + caixa_a))
 
+    # Sem filete a foto rende mais na tela do celular, que é onde isso é
+    # visto. O fundo branco só existe para desenhar o filete: com borda 0
+    # ele apareceria nos cantos arredondados.
+    if not borda:
+        if not raio:
+            return im.convert("RGBA")
+        mascara = Image.new("L", (caixa_l, caixa_a), 0)
+        ImageDraw.Draw(mascara).rounded_rectangle([0, 0, caixa_l - 1, caixa_a - 1], raio, fill=255)
+        cartao = Image.new("RGBA", (caixa_l, caixa_a), (0, 0, 0, 0))
+        cartao.paste(im, (0, 0), mascara)
+        return cartao
+
     mascara = Image.new("L", (caixa_l, caixa_a), 0)
     ImageDraw.Draw(mascara).rounded_rectangle([0, 0, caixa_l - 1, caixa_a - 1], raio, fill=255)
-
     cartao = Image.new("RGBA", (caixa_l + borda * 2, caixa_a + borda * 2), (0, 0, 0, 0))
     ImageDraw.Draw(cartao).rounded_rectangle(
         [0, 0, cartao.width - 1, cartao.height - 1], raio + borda, fill=BRANCO + (255,))
@@ -209,11 +220,12 @@ def monta(modelo, foto, titulo, texto, extra):
     f_ex = fonte(28, "SemiBold")
     alt_extra = (f_ex.size + 34 if modelo == "obra" else f_ex.size + 56) if extra else 0
 
-    alt_foto = max(420, min(900, BASE_SEGURA - y - alt_txt - alt_extra - 30))
+    alt_foto = max(420, min(1020, BASE_SEGURA - y - alt_txt - alt_extra - 30))
 
     if foto and os.path.exists(foto):
-        cartao = cartao_foto(foto, util, alt_foto)
-        img.paste(cartao, (margem - 4, y - 4), cartao)
+        # a foto sangra de ponta a ponta: no celular cada pixel conta
+        cartao = cartao_foto(foto, L, alt_foto, raio=0)
+        img.paste(cartao, (0, y), cartao)
         y += alt_foto + 38
     else:
         print("   aviso: foto nao encontrada, story sai sem imagem")
