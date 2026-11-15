@@ -113,11 +113,17 @@ def carta_capa(c):
     chapeu(d)
     f, linhas = ajusta(d, c["titulo"], UTIL, 96, 56, "Bold", 4)
     alt = len(linhas) * round(f.size * 1.14)
-    y = A - 190 - alt
+    # `nota` avisa quando a imagem é um render, e não o que já existe
+    f_n = fonte(23, "SemiBold") if c.get("nota") else None
+    alt_nota = (f_n.size + 20) if f_n else 0
+
+    y = A - 190 - alt - alt_nota
     d.rounded_rectangle([MARGEM, y - 44, MARGEM + 110, y - 38], 3, fill=AMARELO)
     for ln in linhas:
         d.text((MARGEM, y), ln, font=f, fill=BRANCO)
         y += round(f.size * 1.14)
+    if f_n:
+        d.text((MARGEM, y + 14), c["nota"], font=f_n, fill=(196, 208, 228))
     marca(img, d)
     return img
 
@@ -157,8 +163,10 @@ def carta_lista(c):
     f_n = fonte(30, "Bold")
     f_i = fonte(38, "SemiBold")
     disponivel = (A - 170) - y
-    passo = max(76, min(132, round(disponivel / max(1, len(itens)))))
-    y += max(0, round((disponivel - passo * len(itens)) / 2))
+    passo = max(76, min(150, round(disponivel / max(1, len(itens)))))
+    # com poucos itens a sobra é grande; centralizar tudo afastava demais
+    # a lista do título, então o deslocamento tem teto
+    y += max(0, min(90, round((disponivel - passo * len(itens)) / 2)))
 
     for i, item in enumerate(itens, 1):
         d.rounded_rectangle([MARGEM, y, MARGEM + 54, y + 54], 10, fill=AMARELO)

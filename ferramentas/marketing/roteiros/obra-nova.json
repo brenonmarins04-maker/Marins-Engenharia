@@ -1,16 +1,31 @@
 {
   "nome": "trezzano",
-  "observacao": "Segundo post do perfil. Todos os números saíram do projeto arquitetônico do Trezzano. A carta 6 usa o render do arquiteto e é identificada como projeto, não como obra pronta. Nada sobre prazo de entrega: não está confirmado.",
+  "observacao": "Segundo post do perfil. Numeros do projeto arquitetonico. O render abre o carrossel e vai marcado como projeto sujeito a alteracoes. Nada sobre prazo de entrega: segue sem confirmacao.",
   "cartas": [
     {
       "tipo": "capa",
-      "foto": "ferramentas/marketing/fotos-obra/obra-2026-11-15-2.jpg",
-      "titulo": "Esse terreno vazio vai virar um prédio"
+      "foto": "ferramentas/marketing/fotos-obra/trezzano-render.jpg",
+      "titulo": "Começou o Edifício Trezzano",
+      "nota": "Imagem do projeto · sujeita a alterações"
     },
     {
       "tipo": "foto",
       "foto": "ferramentas/marketing/fotos-obra/obra-2026-11-15-1.jpg",
-      "texto": "Começou o Edifício Trezzano, na esquina da Rua Riachuelo com a Marechal Deodoro. Hoje é isso: terreno nivelado e as primeiras formas de fundação."
+      "texto": "Na esquina da Rua Riachuelo com a Marechal Deodoro. Hoje o terreno está assim, com as primeiras formas de fundação montadas."
+    },
+    {
+      "tipo": "lista",
+      "titulo": "O que já foi feito",
+      "itens": [
+        "Demolição do que havia no terreno",
+        "Cortina de contenção",
+        "Terraplenagem"
+      ]
+    },
+    {
+      "tipo": "destaque",
+      "titulo": "Demolir, conter e nivelar segura todo o resto",
+      "texto": "A cortina de contenção impede que o solo e as construções vizinhas cedam durante a escavação. A terraplenagem deixa o terreno nivelado e compactado, para a fundação assentar sobre solo uniforme. Errar aqui não aparece em foto nenhuma. Aparece no prédio, anos depois."
     },
     {
       "tipo": "lista",
@@ -25,16 +40,10 @@
       ]
     },
     {
-      "tipo": "destaque",
-      "titulo": "A parte que ninguém vê é a que mais demora",
-      "texto": "Fundação e estrutura levam boa parte do cronograma. Depois que o contrapiso cobre, ninguém mais olha para elas. Mas é ali que se decide se o prédio vai ser bom."
-    },
-    {
       "tipo": "fecho",
-      "foto": "ferramentas/marketing/fotos-obra/trezzano-render.jpg",
-      "titulo": "Edifício Trezzano",
-      "cta": "Siga para acompanhar",
-      "nota": "Imagem do projeto"
+      "foto": "ferramentas/marketing/fotos-obra/obra-2026-11-15-2.jpg",
+      "titulo": "De terreno a prédio.",
+      "cta": "Siga para acompanhar"
     }
   ]
 }
