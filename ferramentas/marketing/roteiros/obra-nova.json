@@ -1,0 +1,40 @@
+{
+  "nome": "trezzano",
+  "observacao": "Segundo post do perfil. Todos os números saíram do projeto arquitetônico do Trezzano. A carta 6 usa o render do arquiteto e é identificada como projeto, não como obra pronta. Nada sobre prazo de entrega: não está confirmado.",
+  "cartas": [
+    {
+      "tipo": "capa",
+      "foto": "ferramentas/marketing/fotos-obra/obra-2026-11-15-2.jpg",
+      "titulo": "Esse terreno vazio vai virar um prédio"
+    },
+    {
+      "tipo": "foto",
+      "foto": "ferramentas/marketing/fotos-obra/obra-2026-11-15-1.jpg",
+      "texto": "Começou o Edifício Trezzano, na esquina da Rua Riachuelo com a Marechal Deodoro. Hoje é isso: terreno nivelado e as primeiras formas de fundação."
+    },
+    {
+      "tipo": "lista",
+      "titulo": "O Trezzano em números",
+      "itens": [
+        "24 apartamentos",
+        "24 vagas de garagem",
+        "6 unidades de 64 m²",
+        "18 unidades de 45 m²",
+        "Terreno de 632 m²",
+        "Elevador e vaga acessível"
+      ]
+    },
+    {
+      "tipo": "destaque",
+      "titulo": "A parte que ninguém vê é a que mais demora",
+      "texto": "Fundação e estrutura levam boa parte do cronograma. Depois que o contrapiso cobre, ninguém mais olha para elas. Mas é ali que se decide se o prédio vai ser bom."
+    },
+    {
+      "tipo": "fecho",
+      "foto": "ferramentas/marketing/fotos-obra/trezzano-render.jpg",
+      "titulo": "Edifício Trezzano",
+      "cta": "Siga para acompanhar",
+      "nota": "Imagem do projeto"
+    }
+  ]
+}
