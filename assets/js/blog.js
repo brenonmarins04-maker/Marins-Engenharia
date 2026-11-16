@@ -7,6 +7,116 @@
    ============================================================ */
 const BLOG = [
   {
+    id: "mobiliar-apartamento-locacao-sao-carlos",
+    data: "16 de novembro de 2026",
+    foto: "assets/img/blog/mobiliar-apartamento-locacao.webp",
+    fotoMini: "assets/img/blog/mobiliar-apartamento-locacao-mini.webp",
+    alt: "Bancada de cozinha equipada, com purificador de água, utensílios pendurados, escorredor de pratos e cooktop elétrico, em foto da galeria do Edifício Trento, da Marins Engenharia",
+    titulo: "Mobiliar um apartamento para locação em São Carlos",
+    resumo: "O que mobiliar primeiro, o que deixar de fora e como pensar a escolha de móveis conforme o apartamento seja para aluguel por temporada ou por contrato tradicional.",
+    seo: {
+      kw: "mobiliar apartamento para locação em São Carlos",
+      meta: "Mobiliar apartamento para locação em São Carlos: o que priorizar, o que evitar e como a escolha muda entre aluguel por temporada e contrato tradicional.",
+      categoria: "Investimento",
+      leitura: "4 min de leitura",
+      atualizado: "Atualizado em 16 de novembro de 2026"
+    },
+    resumoRapido: "Mobiliar um apartamento para locação começa por uma pergunta: quem vai morar nele. Na hospedagem por temporada, o hóspede espera chegar e usar, então cama, cozinha equipada e enxoval fazem parte do pacote. No aluguel tradicional, o inquilino costuma levar os próprios móveis, e o apartamento vazio ou com poucos itens fixos tende a bastar. Em ambos os casos, vale escolher peças simples, resistentes e fáceis de limpar, e conferir antes o que a convenção e o contrato permitem.",
+    intro: "Quem compra um apartamento para alugar logo se pergunta se deve entregá-lo mobiliado. A resposta depende do tipo de locação e do perfil de quem vai morar. Este texto explica, em linhas gerais, como pensar essa escolha em São Carlos, sem prometer retorno nem fixar valores.",
+    secoes: [
+      {
+        titulo: "Comece pelo tipo de locação",
+        paragrafos: [
+          "Na locação por temporada, o hóspede fica poucos dias e viaja com pouca bagagem. Ele precisa encontrar o apartamento pronto: cama, roupa de cama e banho, utensílios de cozinha e o básico para trabalhar ou descansar.",
+          "No aluguel tradicional, o inquilino costuma ficar meses ou anos e prefere montar o espaço do seu jeito. Nesse caso, entregar o imóvel sem móveis, ou apenas com os itens fixos, como armários de cozinha, é o caminho mais comum."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "O que priorizar quando o apartamento é mobiliado",
+        paragrafos: [
+          "Em um apartamento compacto, cada peça precisa ter função clara. Comece pelo que o morador usa todos os dias e deixe a decoração para o fim.",
+          "A cozinha pesa muito na percepção de quem se hospeda. Bancada livre, panelas, pratos, talheres e um bom conjunto de utensílios mostram cuidado e evitam que o hóspede precise comprar o básico."
+        ],
+        bullets: [
+          "Cama confortável, com colchão de boa qualidade e roupa de cama de reposição.",
+          "Cozinha com utensílios completos para o número de hóspedes que o imóvel comporta.",
+          "Mesa ou bancada que sirva para refeição e para trabalhar.",
+          "Sofá ou sofá-cama, quando a sala permitir.",
+          "Cortinas ou persianas que escureçam o quarto.",
+          "Armário ou espaço para guardar a bagagem."
+        ],
+        callout: null
+      },
+      {
+        titulo: "Peças simples, resistentes e fáceis de limpar",
+        paragrafos: [
+          "Quem aluga paga o desgaste. Móveis com tecido claro, laca delicada ou acabamento difícil de limpar envelhecem rápido quando passam por muitas mãos. Prefira superfícies laváveis, estofados resistentes e peças fáceis de repor.",
+          "Evite itens raros ou de difícil reposição. Se um copo ou uma cadeira quebrar, o ideal é conseguir comprar outro igual sem esforço."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "O que o espaço e a planta pedem",
+        paragrafos: [
+          "A metragem define o que cabe. Em um apartamento de um dormitório, uma cama grande, um sofá e uma mesa já ocupam boa parte da área. Meça os cômodos antes de comprar e confirme que as portas, o elevador e a escada comportam as peças.",
+          "Leia a planta com atenção aos pontos de tomada, à posição das janelas e à circulação. Um móvel que bloqueia a abertura de uma porta ou de uma janela atrapalha o uso e pode virar motivo de reclamação."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Contrato, inventário e condomínio",
+        paragrafos: [
+          "Quando o apartamento é alugado mobiliado, vale fazer uma lista com os itens e o estado de cada um, de preferência com fotos, e anexá-la ao contrato. Assim, na devolução, não há dúvida sobre o que foi entregue.",
+          "Confira também a convenção e o regimento interno do condomínio. Eles podem tratar de horário de mudança, uso do elevador de serviço e entrada de móveis, e alguns prédios têm regras específicas para hospedagem de curta duração."
+        ],
+        bullets: [],
+        callout: { tipo: "alerta", texto: "Guarde as notas dos móveis e eletrodomésticos e o inventário assinado. Os dois documentos ajudam em qualquer discussão sobre danos ou reposição." }
+      },
+      {
+        titulo: "O que a Marins informa sobre hospedagem",
+        paragrafos: [
+          "O site da Marins Engenharia mantém uma página de apartamentos para hospedagem pelo AirBnB, em unidades dos edifícios Ferretto, Trieste e Trento, em São Carlos. Cada anúncio mostra o número de hóspedes, as camas e a descrição da unidade.",
+          "Quem pensa em mobiliar um imóvel para esse fim pode consultar essa página e ver como as unidades são apresentadas. Para a compra de um apartamento, o time de vendas esclarece as dúvidas sobre cada prédio."
+        ],
+        bullets: [],
+        callout: null
+      }
+    ],
+    tabela: {
+      titulo: "Mobiliado ou vazio: o que muda em cada modelo",
+      colunas: ["Item", "Locação por temporada", "Aluguel tradicional"],
+      linhas: [
+        ["Móveis", "Cama, sofá, mesa e armário já no imóvel", "Em geral o inquilino leva os próprios"],
+        ["Cozinha", "Utensílios e eletrodomésticos básicos incluídos", "Armários e, às vezes, cooktop ou fogão"],
+        ["Enxoval", "Roupa de cama e banho fornecida", "Responsabilidade do inquilino"],
+        ["Reposição", "Frequente, por causa do uso intenso", "Menor, concentrada nos itens fixos"],
+        ["Inventário", "Útil para controlar o estado das peças", "Necessário se houver móveis incluídos"]
+      ],
+      destaque: null
+    },
+    faq: [
+      { p: "Preciso mobiliar para alugar?",
+        r: "Depende do modelo. Na locação por temporada, o imóvel mobiliado é a regra. No aluguel tradicional, muitos inquilinos preferem levar os próprios móveis." },
+      { p: "Vale a pena comprar tudo de uma vez?",
+        r: "Muitos proprietários começam pelo essencial e completam depois, conforme as avaliações e as necessidades que aparecem. Priorize cama, cozinha e o que o hóspede usa todo dia." },
+      { p: "Quem paga se um móvel estragar?",
+        r: "O contrato deve dizer. Por isso, vale anexar um inventário com o estado dos itens e deixar claro quem responde por danos além do desgaste normal." },
+      { p: "O condomínio pode limitar a entrada de móveis?",
+        r: "Pode haver regras de horário e de uso do elevador. Consulte a convenção e o regimento interno do prédio antes de combinar a entrega." },
+      { p: "Posso tirar dúvidas sobre um apartamento da Marins?",
+        r: "Sim. O time de vendas da Marins Engenharia, em São Carlos, responde pelo WhatsApp (16) 99766-7976 ou pelo e-mail vendas@marinsengenharia.com.br." }
+    ],
+    cta: {
+      titulo: "Conheça os apartamentos para hospedagem",
+      texto: "Veja no site os apartamentos da Marins Engenharia disponíveis para hospedagem em São Carlos ou fale com o time de vendas."
+    },
+    fontes: []
+  },
+  {
     id: "hospedagem-aplicativo-condominio-sao-carlos",
     data: "13 de novembro de 2026",
     foto: "assets/img/blog/hospedagem-aplicativo-condominio.jpg",
