@@ -7,6 +7,119 @@
    ============================================================ */
 const BLOG = [
   {
+    id: "energia-solar-predio-residencial-sao-carlos",
+    data: "18 de novembro de 2026",
+    foto: "assets/img/blog/energia-solar-predio-residencial.webp",
+    fotoMini: "assets/img/blog/energia-solar-predio-residencial-mini.webp",
+    alt: "Fachada do Edifício Ana Terra, da Marins Engenharia, vista da rua em um dia de céu azul, com varandas e paredes claras",
+    titulo: "Energia solar em prédio residencial: como funciona",
+    resumo: "Como a energia solar pode servir um prédio de apartamentos, o que muda para o condomínio e para o morador, e o que perguntar antes de comprar.",
+    seo: {
+      kw: "energia solar em prédio residencial em São Carlos",
+      meta: "Energia solar em prédio residencial em São Carlos: como o sistema funciona no condomínio, quem decide e paga, e o que perguntar antes de comprar.",
+      categoria: "Morar em condomínio",
+      leitura: "4 min de leitura",
+      atualizado: "Atualizado em 18 de novembro de 2026"
+    },
+    resumoRapido: "Em prédio, a energia solar costuma ser instalada no telhado ou na cobertura e atender as áreas comuns do condomínio. Atender também os apartamentos depende de arranjo específico com a distribuidora e de decisão dos moradores. Antes de comprar, pergunte se o prédio tem sistema, o que ele alimenta e quem cuida da manutenção.",
+    intro: "A energia solar aparece cada vez mais nas conversas sobre custo de morar. Em casa, o raciocínio é simples: o telhado é seu. Em prédio, o telhado é de todos, e a decisão passa pelo condomínio. Este texto explica, de forma geral, como a energia solar funciona em um edifício residencial e o que vale conferir na hora de escolher um apartamento.",
+    secoes: [
+      {
+        titulo: "Como o sistema funciona",
+        paragrafos: [
+          "Um sistema solar é formado por placas, que captam a luz do sol, e por um inversor, que transforma essa energia na forma usada pelas instalações do prédio. Em geral, o sistema fica ligado à rede da distribuidora de energia.",
+          "Quando as placas produzem mais do que o prédio consome naquele momento, o excedente pode ser injetado na rede e virar crédito para uso posterior. As condições desse crédito são definidas pela regulação e pela distribuidora, e podem mudar com o tempo."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Onde as placas ficam em um prédio",
+        paragrafos: [
+          "O lugar mais comum é a cobertura ou o telhado sobre a caixa de escada e o reservatório. Esse espaço é área comum, então a instalação precisa de aprovação do condomínio.",
+          "Também é preciso verificar se a laje e a estrutura comportam o peso, se há sombra de construções vizinhas e como será o acesso para limpeza e manutenção."
+        ],
+        bullets: [],
+        callout: { tipo: "info", texto: "A análise técnica do telhado e da estrutura deve ser feita por profissional habilitado, antes da contratação." }
+      },
+      {
+        titulo: "O que a energia solar costuma atender",
+        paragrafos: [
+          "Quando o sistema é do condomínio, o caso mais comum é abater o consumo das áreas comuns. Isso reduz uma das despesas que entram na taxa mensal."
+        ],
+        bullets: [
+          "Iluminação do hall, da escada e da garagem.",
+          "Elevador e portão automático.",
+          "Bombas de água e equipamentos de segurança.",
+          "Áreas de lazer, quando existem."
+        ],
+        callout: null
+      },
+      {
+        titulo: "E a conta de luz de cada apartamento?",
+        paragrafos: [
+          "Cada apartamento tem o seu medidor e a sua conta. Levar a geração solar para essas contas exige um arranjo próprio, com regras definidas pela distribuidora e acordo entre os interessados.",
+          "Por isso, não presuma que o prédio com placas reduz a conta individual. Pergunte, de forma específica, o que o sistema alimenta."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Quem decide, quem paga e quem cuida",
+        paragrafos: [
+          "A instalação em área comum costuma ser levada à assembleia, e o investimento pode sair do fundo de reserva, de rateio extra ou de contrato com empresa especializada. Cada forma tem implicações diferentes para o morador.",
+          "Depois da instalação, o sistema pede limpeza periódica e acompanhamento da produção. Confirme quem faz isso e como o custo aparece na prestação de contas."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "O que perguntar antes de comprar",
+        paragrafos: [
+          "Se o prédio já tem placas, peça os documentos do sistema e a ata que aprovou a instalação. Se não tem, pergunte se o assunto já foi discutido em assembleia."
+        ],
+        bullets: [
+          "O prédio tem sistema solar instalado ou previsto?",
+          "O que ele alimenta: só áreas comuns ou também unidades?",
+          "Quem é o responsável pela manutenção e qual é o custo?",
+          "O telhado tem espaço livre e estrutura para novas placas?",
+          "Como o ganho aparece na prestação de contas do condomínio?"
+        ],
+        callout: null
+      }
+    ],
+    tabela: {
+      titulo: "Energia solar no prédio: o que decidir",
+      colunas: ["Ponto", "O que conferir", "Quem costuma decidir"],
+      linhas: [
+        ["Local das placas", "Espaço, sombra e resistência da laje", "Condomínio, com apoio técnico"],
+        ["O que o sistema atende", "Áreas comuns ou também unidades", "Assembleia e distribuidora"],
+        ["Investimento", "Fundo de reserva, rateio ou contrato", "Assembleia"],
+        ["Manutenção", "Limpeza e acompanhamento da produção", "Síndico e administração"],
+        ["Crédito de energia", "Regras vigentes da distribuidora", "Regulação e distribuidora"]
+      ],
+      destaque: null
+    },
+    faq: [
+      { p: "Todo prédio pode ter energia solar?",
+        r: "Depende do espaço no telhado, da estrutura, da incidência de sol e da aprovação do condomínio. A avaliação deve ser feita por profissional habilitado." },
+      { p: "A energia solar reduz a taxa de condomínio?",
+        r: "Pode reduzir a despesa com energia das áreas comuns. O efeito depende do tamanho do sistema, do consumo do prédio e do custo de instalação e manutenção." },
+      { p: "O morador pode instalar placas por conta própria?",
+        r: "Em geral, as placas ficam em área comum, então é preciso autorização do condomínio. Consulte a convenção e o regimento interno." },
+      { p: "As regras de crédito de energia mudam?",
+        r: "Podem mudar. Confirme as condições vigentes com a distribuidora de energia antes de decidir." },
+      { p: "Posso falar com a Marins sobre um apartamento?",
+        r: "Sim. O time de vendas da Marins Engenharia, em São Carlos, responde pelo WhatsApp (16) 99766-7976 ou pelo e-mail vendas@marinsengenharia.com.br." }
+    ],
+    cta: {
+      titulo: "Tire dúvidas sobre o apartamento",
+      texto: "Fale com o time de vendas da Marins Engenharia para conhecer os apartamentos e as plantas disponíveis em São Carlos."
+    },
+    fontes: []
+  },
+
+  {
     id: "mobiliar-apartamento-locacao-sao-carlos",
     data: "16 de novembro de 2026",
     foto: "assets/img/blog/mobiliar-apartamento-locacao.webp",
