@@ -7,6 +7,119 @@
    ============================================================ */
 const BLOG = [
   {
+    id: "gas-encanado-botijao-sao-carlos",
+    data: "20 de novembro de 2026",
+    foto: "assets/img/blog/gas-encanado-botijao-cozinha.webp",
+    fotoMini: "assets/img/blog/gas-encanado-botijao-cozinha-mini.webp",
+    alt: "Cozinha de apartamento do Edifício Turim, da Marins Engenharia, com bancada de granito, pia, fogão e janela ao fundo",
+    titulo: "Gás encanado ou botijão em apartamento em São Carlos",
+    resumo: "Como funcionam o gás encanado e o botijão em um prédio, o que muda na rotina e no custo, e o que conferir antes de comprar um apartamento.",
+    seo: {
+      kw: "gás encanado ou botijão em apartamento em São Carlos",
+      meta: "Gás encanado ou botijão em apartamento em São Carlos: como cada sistema funciona, o que muda no dia a dia e o que conferir antes de comprar.",
+      categoria: "Morar em condomínio",
+      leitura: "4 min de leitura",
+      atualizado: "Atualizado em 20 de novembro de 2026"
+    },
+    resumoRapido: "No gás encanado, o gás chega à cozinha por tubulação do prédio e é medido por consumo. No botijão, o morador compra, troca e armazena o recipiente. A escolha também depende do fogão ou cooktop que a cozinha usa. Antes de comprar, confira como a cozinha foi projetada, o que o prédio permite e como o gás é cobrado.",
+    intro: "A cozinha de um apartamento é projetada para um tipo de equipamento, e o gás faz parte dessa decisão. Há prédios com gás encanado, prédios que usam botijão e cozinhas pensadas para cooktop elétrico. Este texto explica, de forma geral, como cada opção funciona e o que vale conferir na hora de escolher um apartamento.",
+    secoes: [
+      {
+        titulo: "Como funciona o gás encanado",
+        paragrafos: [
+          "No gás encanado, uma tubulação leva o gás até a cozinha de cada apartamento. Não há recipiente para trocar: o gás está sempre disponível quando o registro está aberto.",
+          "O consumo costuma ser medido por apartamento, e a cobrança segue o que o contrato com a fornecedora e as regras do condomínio definem. Pergunte como a leitura é feita e como o valor chega ao morador."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Como funciona o botijão",
+        paragrafos: [
+          "No botijão, o morador compra o recipiente, pede a troca quando acaba e escolhe onde e como guardá-lo, respeitando as regras do prédio.",
+          "A vantagem é a independência: o gás é do apartamento, sem relação com o restante do prédio. O ponto de atenção é a rotina de reposição e o espaço que o recipiente ocupa."
+        ],
+        bullets: [],
+        callout: { tipo: "info", texto: "Instalação, manutenção e troca de mangueiras e reguladores devem ser feitas por profissional habilitado." }
+      },
+      {
+        titulo: "O que muda na rotina",
+        paragrafos: [
+          "A diferença aparece em pequenas tarefas do dia a dia. Veja o que costuma pesar em cada caso."
+        ],
+        bullets: [
+          "Gás encanado: não há troca nem risco de o gás acabar no meio do preparo.",
+          "Botijão: é preciso acompanhar o nível e pedir a reposição com antecedência.",
+          "Gás encanado: a cobrança acompanha o consumo medido.",
+          "Botijão: o custo vem de cada compra, no momento da troca."
+        ],
+        callout: null
+      },
+      {
+        titulo: "E o cooktop elétrico?",
+        paragrafos: [
+          "Há cozinhas que dispensam o gás. Nesse caso, o equipamento funciona com energia elétrica e o custo aparece na conta de luz, sem tubulação nem botijão.",
+          "Se a cozinha foi projetada para cooktop elétrico, trocar por fogão a gás pode exigir adaptações e a autorização do condomínio. Confirme antes de planejar a mudança."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "O que conferir antes de comprar",
+        paragrafos: [
+          "Peça à construtora ou à administração informações claras sobre o gás do prédio e leve a pergunta para a visita."
+        ],
+        bullets: [
+          "O prédio tem gás encanado, usa botijão ou prevê cooktop elétrico?",
+          "Onde ficam os pontos de gás ou de tomada de alta potência na cozinha?",
+          "Se houver tubulação, como o consumo é medido e cobrado?",
+          "Se for botijão, onde ele pode ser guardado segundo o regimento?",
+          "Quem faz a manutenção da parte comum da instalação?"
+        ],
+        callout: null
+      },
+      {
+        titulo: "O que os prédios da Marins informam",
+        paragrafos: [
+          "Nos dados da Marins Engenharia, a cozinha do Edifício Turim, na Rua São Joaquim, 1885, é descrita com gás encanado.",
+          "Os edifícios Trivoli, Trento e Ferretto são descritos com cozinha com cooktop elétrico. A Marins não informa aqui as regras de cobrança de cada prédio. Para esse detalhe, consulte o time de vendas ou o condomínio."
+        ],
+        bullets: [],
+        callout: null
+      }
+    ],
+    tabela: {
+      titulo: "Gás encanado, botijão e cooktop elétrico lado a lado",
+      colunas: ["Ponto", "Gás encanado", "Botijão", "Cooktop elétrico"],
+      linhas: [
+        ["Origem da energia", "Tubulação do prédio", "Recipiente comprado pelo morador", "Rede elétrica"],
+        ["Reposição", "Não há", "Troca periódica", "Não há"],
+        ["Como o custo aparece", "Consumo medido e cobrado", "Compra a cada troca", "Conta de luz"],
+        ["Espaço necessário", "Apenas o ponto na cozinha", "Local para guardar o recipiente", "Apenas o ponto elétrico"],
+        ["O que confirmar", "Regras de medição e cobrança", "Regras do regimento sobre armazenamento", "Capacidade da instalação elétrica"]
+      ],
+      destaque: null
+    },
+    faq: [
+      { p: "Gás encanado é melhor que botijão?",
+        r: "Depende do prédio e da rotina. O gás encanado dispensa a troca, e o botijão dá independência ao apartamento. Compare a praticidade e a forma de cobrança." },
+      { p: "Posso trocar o cooktop elétrico por um fogão a gás?",
+        r: "Pode exigir adaptações na instalação e autorização do condomínio. Consulte a convenção, o regimento interno e um profissional habilitado." },
+      { p: "Quem cuida da tubulação de gás do prédio?",
+        r: "A parte comum costuma ser responsabilidade do condomínio, e a parte interna do apartamento, do morador. Confirme essa divisão no regimento." },
+      { p: "Como saber qual sistema o apartamento usa?",
+        r: "Pergunte à construtora ou à administração e observe os pontos de gás ou de tomada na cozinha durante a visita." },
+      { p: "Posso falar com a Marins sobre um apartamento?",
+        r: "Sim. O time de vendas da Marins Engenharia, em São Carlos, responde pelo WhatsApp (16) 99766-7976 ou pelo e-mail vendas@marinsengenharia.com.br." }
+    ],
+    cta: {
+      titulo: "Tire dúvidas sobre o apartamento",
+      texto: "Fale com o time de vendas da Marins Engenharia para conhecer os apartamentos e as plantas disponíveis em São Carlos."
+    },
+    fontes: []
+  },
+
+  {
     id: "energia-solar-predio-residencial-sao-carlos",
     data: "18 de novembro de 2026",
     foto: "assets/img/blog/energia-solar-predio-residencial.webp",
