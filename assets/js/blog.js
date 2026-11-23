@@ -7,6 +7,122 @@
    ============================================================ */
 const BLOG = [
   {
+    id: "manutencao-custo-elevador-sao-carlos",
+    data: "23 de novembro de 2026",
+    foto: "assets/img/blog/manutencao-elevador-predio-residencial.webp",
+    fotoMini: "assets/img/blog/manutencao-elevador-predio-residencial-mini.webp",
+    alt: "Hall de entrada do Edifício Trentino, da Marins Engenharia, com painel de madeira ripada, espelho, mesa lateral, duas poltronas e parede de vidro",
+    titulo: "Manutenção e custo do elevador em prédio em São Carlos",
+    resumo: "Como funciona a manutenção do elevador em prédio residencial, como o custo entra no condomínio e o que perguntar antes de comprar um apartamento.",
+    seo: {
+      kw: "manutenção e custo de elevador em São Carlos",
+      meta: "Manutenção e custo de elevador em prédio residencial em São Carlos: como o contrato funciona, o que pesa no condomínio e o que perguntar antes de comprar.",
+      categoria: "Morar em condomínio",
+      leitura: "4 min de leitura",
+      atualizado: "Atualizado em 23 de novembro de 2026"
+    },
+    resumoRapido: "O elevador é um equipamento que exige manutenção regular, feita por empresa contratada pelo condomínio. O custo entra na taxa mensal e é dividido entre os moradores. O que pesa é o tipo de contrato, a frequência das visitas e a reserva para trocas de peças maiores. Antes de comprar, pergunte quem faz a manutenção, como são tratados os chamados e se há reserva para reparos.",
+    intro: "Em prédio com mais de alguns andares, o elevador é parte do dia a dia: carregar compras, subir com mala, chegar em casa com criança no colo. Por isso, o custo e o cuidado com esse equipamento merecem atenção de quem está comprando. Este texto explica, de forma geral, como a manutenção funciona, como o custo chega ao condomínio e o que vale perguntar durante a visita.",
+    secoes: [
+      {
+        titulo: "Por que o elevador precisa de manutenção regular",
+        paragrafos: [
+          "Elevador tem partes mecânicas, elétricas e eletrônicas que se desgastam com o uso. Portas, cabos, freios, painel de comando e sensores precisam ser verificados e ajustados de tempos em tempos.",
+          "A manutenção preventiva existe para reduzir paradas inesperadas e manter o equipamento seguro. Esperar o problema aparecer costuma sair mais caro e deixa os moradores sem o elevador por mais tempo."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Quem faz e como o serviço é contratado",
+        paragrafos: [
+          "Quem cuida do elevador é uma empresa especializada, contratada pelo condomínio. A escolha costuma passar pelo síndico e, conforme as regras do prédio, pode ser levada à assembleia.",
+          "Os contratos variam. Em geral, vale entender quais serviços estão incluídos e quais são cobrados à parte."
+        ],
+        bullets: [
+          "Visitas periódicas de verificação e ajuste.",
+          "Atendimento de chamados quando o elevador para ou apresenta defeito.",
+          "Lubrificação, limpeza técnica e regulagens de rotina.",
+          "Troca de peças: se está no valor mensal ou é cobrada separadamente.",
+          "Prazo de resposta da empresa para chamados urgentes."
+        ],
+        callout: { tipo: "info", texto: "Peça para ver o contrato de manutenção. Dois contratos com valores parecidos podem cobrir coisas bem diferentes." }
+      },
+      {
+        titulo: "Como o custo chega à taxa de condomínio",
+        paragrafos: [
+          "O valor do contrato de manutenção entra nas despesas do condomínio e é rateado entre as unidades, junto com os demais gastos do prédio. Cada morador paga a sua parte na taxa mensal.",
+          "O custo total depende de fatores como o número de elevadores, a idade do equipamento, o tipo de contrato e o uso. Não existe um valor único para todos os prédios, e por isso o número real deve ser confirmado com a administração."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Reserva para reparos maiores",
+        paragrafos: [
+          "Além da manutenção de rotina, equipamentos mais antigos podem precisar de trocas maiores, como modernização de painel ou substituição de componentes. Esses gastos não aparecem todo mês e, sem planejamento, podem virar uma cobrança extra.",
+          "Um condomínio organizado costuma manter um fundo de reserva e discutir esses custos em assembleia. Pergunte se existe reserva e como ela é usada."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Uso e convivência",
+        paragrafos: [
+          "O desgaste do elevador também depende do uso. Mudanças e obras são situações em que o equipamento é muito exigido, e muitos condomínios definem horários, reservas e cuidados para esses casos.",
+          "Essas regras costumam estar no regimento interno. Vale ler antes de comprar, principalmente se você pretende reformar ou se mudar com muitos móveis."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "O que perguntar antes de comprar",
+        paragrafos: [
+          "Na visita, observe o estado do elevador: se as portas fecham bem, se a parada nos andares é nivelada e se há informações de manutenção à vista. Depois, converse com a administração ou com moradores."
+        ],
+        bullets: [
+          "Qual empresa faz a manutenção e com que frequência.",
+          "Se o contrato inclui a troca de peças ou só as visitas.",
+          "Quanto tempo a empresa leva para atender um chamado.",
+          "Se existe fundo de reserva para reparos maiores.",
+          "Se houve paradas longas do elevador no último ano.",
+          "Quais regras valem para mudanças e entrega de materiais."
+        ],
+        callout: null
+      }
+    ],
+    tabela: {
+      titulo: "Manutenção preventiva e manutenção só quando quebra",
+      colunas: ["Ponto", "Preventiva", "Só quando quebra"],
+      linhas: [
+        ["Paradas inesperadas", "Tendem a ser menos frequentes", "Mais frequentes"],
+        ["Custo ao longo do tempo", "Mais previsível", "Varia conforme os defeitos"],
+        ["Segurança", "Verificações programadas", "Depende do defeito aparecer"],
+        ["Planejamento no condomínio", "Entra no orçamento mensal", "Pode gerar cobrança extra"],
+        ["Ponto de atenção", "Conferir o que o contrato inclui", "Tempo parado até o reparo"]
+      ],
+      destaque: null
+    },
+    faq: [
+      { p: "Quem paga a manutenção do elevador?",
+        r: "O condomínio, com o valor dividido entre as unidades e cobrado na taxa mensal." },
+      { p: "Quem mora no térreo também paga?",
+        r: "Isso depende da convenção do condomínio. Em geral, o rateio segue o que está definido nela, então vale conferir o documento." },
+      { p: "O contrato de manutenção cobre a troca de peças?",
+        r: "Depende do contrato. Alguns incluem peças, outros cobram à parte. Leia o contrato ou peça à administração que explique." },
+      { p: "O que fazer quando o elevador para?",
+        r: "Avise a portaria ou a administração para que a empresa de manutenção seja acionada. Se houver pessoas presas, siga o procedimento do prédio e não tente abrir a porta por conta própria." },
+      { p: "Posso falar com a Marins sobre um apartamento?",
+        r: "Sim. O time de vendas da Marins Engenharia, em São Carlos, responde pelo WhatsApp (16) 99766-7976 ou pelo e-mail vendas@marinsengenharia.com.br." }
+    ],
+    cta: {
+      titulo: "Tire dúvidas sobre o apartamento",
+      texto: "Fale com o time de vendas da Marins Engenharia para conhecer os apartamentos e as plantas disponíveis em São Carlos."
+    },
+    fontes: []
+  },
+
+  {
     id: "gas-encanado-botijao-sao-carlos",
     data: "20 de novembro de 2026",
     foto: "assets/img/blog/gas-encanado-botijao-cozinha.webp",
