@@ -7,6 +7,130 @@
    ============================================================ */
 const BLOG = [
   {
+    id: "area-de-lazer-custo-condominio-sao-carlos",
+    data: "25 de novembro de 2026",
+    foto: "assets/img/blog/area-lazer-custo-condominio.webp",
+    fotoMini: "assets/img/blog/area-lazer-custo-condominio-mini.webp",
+    alt: "Hall de um andar do Edifício Trentino, da Marins Engenharia, com porta do elevador, duas portas de apartamento e porta corta-fogo ao fundo",
+    titulo: "Área de lazer vale o custo do condomínio em São Carlos?",
+    resumo: "Como pensar na área de lazer de um prédio: o que ela custa para manter, quem usa de verdade e o que perguntar antes de comprar um apartamento.",
+    seo: {
+      kw: "área de lazer e custo de condomínio em São Carlos",
+      meta: "Área de lazer e custo de condomínio em São Carlos: como a manutenção entra na taxa, quem usa de fato e o que perguntar antes de comprar um apartamento.",
+      categoria: "Morar em condomínio",
+      leitura: "4 min de leitura",
+      atualizado: "Atualizado em 25 de novembro de 2026"
+    },
+    resumoRapido: "Toda área comum tem custo de manutenção, limpeza e consumo, e esse custo é dividido entre os moradores na taxa de condomínio. Uma área de lazer vale a pena quando será usada com frequência pelas pessoas que vão morar no apartamento. Se ela fica parada, o morador paga por algo que não usa. Antes de comprar, compare o uso que você pretende fazer com o que a taxa embute.",
+    intro: "Piscina, salão de festas, churrasqueira e academia aparecem com destaque nos anúncios de apartamento. Mas cada espaço desses precisa de limpeza, reparo e, às vezes, de funcionário. Este texto explica, de forma geral, como a área de lazer chega à taxa de condomínio e como avaliar se ela faz sentido para o seu dia a dia.",
+    secoes: [
+      {
+        titulo: "O que é área de lazer em um condomínio",
+        paragrafos: [
+          "Área de lazer é qualquer espaço comum pensado para descanso, convivência ou atividade física. Os mais comuns são salão de festas, churrasqueira, espaço gourmet, playground, quadra, academia e piscina.",
+          "Cada prédio tem a sua combinação. Nem todo edifício residencial oferece esses espaços, e a presença deles muda bastante o perfil do condomínio."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Como ela entra no custo mensal",
+        paragrafos: [
+          "As despesas das áreas comuns são rateadas entre as unidades e cobradas na taxa mensal. O morador que não usa o espaço também contribui, porque o rateio costuma seguir o que está definido na convenção do condomínio.",
+          "Quanto mais espaços e equipamentos, em geral maior a lista de gastos a cobrir. O valor exato depende de cada prédio e deve ser confirmado com a administração."
+        ],
+        bullets: [
+          "Limpeza e conservação do espaço.",
+          "Manutenção de equipamentos, mobiliário e instalações.",
+          "Consumo de água e energia.",
+          "Pessoal, quando o espaço exige funcionário.",
+          "Seguro e reparos de maior porte, pagos com a reserva do condomínio."
+        ],
+        callout: { tipo: "info", texto: "Peça a previsão orçamentária do condomínio. Ela mostra quanto da taxa vai para cada tipo de despesa." }
+      },
+      {
+        titulo: "Quando a área de lazer compensa",
+        paragrafos: [
+          "Ela compensa quando a rotina de quem vai morar combina com o espaço. Uma família que recebe parentes aos fins de semana pode usar o salão de festas com frequência. Quem treina todos os dias pode economizar com uma academia no prédio.",
+          "Também conta a praticidade. Ter o espaço no mesmo prédio evita deslocamento e custo de aluguel de espaço externo, o que pesa para algumas pessoas e não pesa para outras."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Quando ela pesa sem ser usada",
+        paragrafos: [
+          "Para quem passa o dia fora, viaja com frequência ou prefere sair para lazer, um espaço comum pode ficar sem uso. Mesmo assim, ele continua gerando despesa.",
+          "Outro ponto é o uso real dos vizinhos. Se poucos moradores frequentam o espaço, o custo por pessoa que usa é maior do que parece."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Regras de uso e convivência",
+        paragrafos: [
+          "Áreas de lazer costumam ter regimento próprio: horários, reserva, limite de convidados e responsabilidade por danos. Algumas têm taxa de uso à parte, cobrada de quem reserva.",
+          "Leia o regimento interno antes de comprar. Ele mostra se o espaço atende ao uso que você imagina e como os moradores dividem a agenda."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "O que perguntar antes de comprar",
+        paragrafos: [
+          "Na visita, peça para ver os espaços comuns, o estado de conservação e os documentos do condomínio. Depois, converse com a administração ou com moradores."
+        ],
+        bullets: [
+          "Quais espaços de lazer existem e quais estão em funcionamento.",
+          "Quanto da taxa mensal cobre a manutenção desses espaços.",
+          "Se há reserva para reparos e como ela é usada.",
+          "Como funciona a reserva e se existe cobrança por uso.",
+          "Quais são os horários e as regras de convivência.",
+          "Se o espaço costuma ser usado ou fica parado na maior parte do tempo."
+        ],
+        callout: null
+      },
+      {
+        titulo: "O que a Marins informa",
+        paragrafos: [
+          "Cada edifício da Marins Engenharia tem uma página com fotos, plantas, metragem e localização. Para saber quais áreas comuns um prédio específico oferece e como elas funcionam, o caminho é falar com o time de vendas."
+        ],
+        bullets: [],
+        callout: null
+      }
+    ],
+    tabela: {
+      titulo: "Prédio com área de lazer e prédio sem área de lazer",
+      colunas: ["Ponto", "Com área de lazer", "Sem área de lazer"],
+      linhas: [
+        ["Taxa de condomínio", "Tende a ter mais despesas a ratear", "Tende a ter menos despesas a ratear"],
+        ["Espaço para receber pessoas", "Disponível no prédio, conforme as regras", "Depende de espaço externo"],
+        ["Manutenção", "Mais itens para conservar", "Menos itens para conservar"],
+        ["Convivência", "Exige regras de reserva e horário", "Menos pontos de atrito"],
+        ["Ponto de atenção", "Conferir se o espaço será usado", "Conferir se a falta pesa na sua rotina"]
+      ],
+      destaque: null
+    },
+    faq: [
+      { p: "Quem não usa a área de lazer paga por ela?",
+        r: "Em geral, sim. As despesas das áreas comuns são rateadas conforme a convenção do condomínio. Confira o documento para saber como o rateio é feito." },
+      { p: "Dá para saber quanto a área de lazer custa na taxa?",
+        r: "A administração pode mostrar a previsão orçamentária e a prestação de contas, que detalham as despesas do condomínio." },
+      { p: "Prédio sem área de lazer é pior?",
+        r: "Não necessariamente. Depende da rotina de quem vai morar. Para quem usa pouco esses espaços, uma taxa com menos despesas pode fazer mais sentido." },
+      { p: "O uso do salão de festas tem custo à parte?",
+        r: "Isso depende do regimento de cada condomínio. Alguns cobram uma taxa de reserva e outros não. Vale conferir antes de comprar." },
+      { p: "Posso falar com a Marins sobre um apartamento?",
+        r: "Sim. O time de vendas da Marins Engenharia, em São Carlos, responde pelo WhatsApp (16) 99766-7976 ou pelo e-mail vendas@marinsengenharia.com.br." }
+    ],
+    cta: {
+      titulo: "Tire dúvidas sobre o apartamento",
+      texto: "Fale com o time de vendas da Marins Engenharia para conhecer os apartamentos e as plantas disponíveis em São Carlos."
+    },
+    fontes: []
+  },
+
+  {
     id: "manutencao-custo-elevador-sao-carlos",
     data: "23 de novembro de 2026",
     foto: "assets/img/blog/manutencao-elevador-predio-residencial.webp",
