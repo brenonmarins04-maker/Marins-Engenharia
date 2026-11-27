@@ -7,6 +7,130 @@
    ============================================================ */
 const BLOG = [
   {
+    id: "sacada-envidracada-sao-carlos",
+    data: "27 de novembro de 2026",
+    foto: "assets/img/blog/sacada-envidracada-fachada-edificio.jpg",
+    fotoMini: "assets/img/blog/sacada-envidracada-fachada-edificio.jpg",
+    alt: "Fachada do Edifício Trieste, da Marins Engenharia, na Rua Padre Teixeira, com sacadas envidraçadas empilhadas sob céu azul",
+    titulo: "Sacada envidraçada em apartamento em São Carlos",
+    resumo: "O que muda no uso do apartamento com a sacada envidraçada: conforto, limpeza, regras do condomínio e o que conferir antes de comprar.",
+    seo: {
+      kw: "sacada envidraçada em apartamento em São Carlos",
+      meta: "Sacada envidraçada em apartamento em São Carlos: o que muda no uso, na limpeza e nas regras do condomínio, e o que conferir antes de comprar o imóvel.",
+      categoria: "Plantas e acabamento",
+      leitura: "4 min de leitura",
+      atualizado: "Atualizado em 27 de novembro de 2026"
+    },
+    resumoRapido: "A sacada envidraçada protege o espaço de vento e chuva e permite usá-lo em mais dias do ano. Em troca, exige limpeza do vidro e atenção às regras do condomínio, que costumam definir o padrão da fachada. Antes de comprar, confira se o vidro já vem instalado, o que a convenção diz sobre alterações e como a sacada se encaixa no uso que você imagina.",
+    intro: "Quem olha a fachada de um prédio em São Carlos vê, em muitos deles, sacadas fechadas com vidro. A escolha muda o uso do espaço e a rotina de manutenção. Este texto explica, de forma geral, o que a sacada envidraçada oferece, o que ela pede de quem mora e o que conferir antes de comprar.",
+    secoes: [
+      {
+        titulo: "O que é a sacada envidraçada",
+        paragrafos: [
+          "É a sacada fechada com painéis de vidro, em vez de aberta apenas com guarda-corpo. O vidro cobre o vão e forma um espaço protegido, ligado à sala ou ao dormitório.",
+          "Há sistemas diferentes de envidraçamento. Alguns recolhem os painéis para abrir a sacada por completo e outros têm folhas fixas e folhas móveis. O desenho muda a ventilação e a limpeza."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "O que muda no uso do dia a dia",
+        paragrafos: [
+          "Com o vidro fechado, o morador ocupa a sacada mesmo com vento ou chuva fina. Ela pode servir como canto de leitura, de refeição ou de descanso, sem depender do tempo.",
+          "O vidro também ajuda a reduzir poeira e parte do ruído da rua. O efeito depende do tipo de vidro, da vedação e da posição do prédio, por isso vale testar no local."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "Sol, calor e ventilação",
+        paragrafos: [
+          "Uma sacada fechada pode esquentar quando recebe sol forte. Se o sistema permite abrir os painéis, a ventilação melhora e o calor sai mais rápido.",
+          "Na visita, observe a face do apartamento e o horário. Uma sacada voltada ao sol da tarde se comporta de outro jeito que uma voltada ao sol da manhã."
+        ],
+        bullets: [],
+        callout: { tipo: "info", texto: "Visite o apartamento em mais de um horário, quando possível, para ver como o sol entra na sacada." }
+      },
+      {
+        titulo: "Limpeza e manutenção",
+        paragrafos: [
+          "O vidro precisa de limpeza regular, por dentro e por fora. A parte externa nem sempre é fácil de alcançar, e isso varia conforme o sistema instalado.",
+          "As borrachas e os trilhos também pedem cuidado, porque acumulam poeira. Pergunte quem faz a manutenção desse conjunto e como ela é combinada."
+        ],
+        bullets: [
+          "Limpeza interna e externa do vidro.",
+          "Conservação de trilhos, roldanas e borrachas de vedação.",
+          "Verificação de folgas e travas.",
+          "Cuidado com objetos pesados apoiados nos painéis."
+        ],
+        callout: null
+      },
+      {
+        titulo: "Regras do condomínio",
+        paragrafos: [
+          "A sacada é visível da rua, por isso muitos condomínios definem o padrão do fechamento: cor da esquadria, tipo de vidro e modelo. A convenção e o regimento interno dizem o que é permitido.",
+          "Se a sacada ainda não tem vidro, consulte essas regras antes de contratar qualquer serviço. Mudar a fachada sem autorização pode gerar problema com o condomínio."
+        ],
+        bullets: [],
+        callout: null
+      },
+      {
+        titulo: "O que conferir antes de comprar",
+        paragrafos: [
+          "Na visita, olhe a sacada com atenção e leve as perguntas abaixo para a conversa com a construtora ou a administração."
+        ],
+        bullets: [
+          "Se o vidro já vem instalado ou se ficará por conta do morador.",
+          "Qual é o padrão de fechamento definido para o prédio.",
+          "Como o sistema abre e como se limpa o lado de fora.",
+          "O que a convenção diz sobre alterações na fachada.",
+          "Se a sacada se liga à sala ou ao dormitório e como isso afeta a planta.",
+          "Se há espaço para móveis, sem prejudicar a passagem."
+        ],
+        callout: null
+      },
+      {
+        titulo: "O que a Marins informa",
+        paragrafos: [
+          "Nas descrições dos edifícios Turim, Trieste, Trivoli e Trento, a Marins Engenharia informa sacada com vidro na fachada. A foto deste texto mostra o Edifício Trieste, na Rua Padre Teixeira.",
+          "Cada edifício tem uma página com fotos, plantas, metragem e localização. Para detalhes de um apartamento específico, o caminho é falar com o time de vendas."
+        ],
+        bullets: [],
+        callout: null
+      }
+    ],
+    tabela: {
+      titulo: "Sacada envidraçada e sacada aberta lado a lado",
+      colunas: ["Ponto", "Sacada envidraçada", "Sacada aberta"],
+      linhas: [
+        ["Uso com chuva e vento", "Em geral, o espaço continua utilizável", "Fica exposta ao tempo"],
+        ["Limpeza", "Inclui vidro, trilhos e borrachas", "Inclui piso e guarda-corpo"],
+        ["Ventilação", "Depende de o sistema abrir", "Total, sem barreira"],
+        ["Fachada", "Segue o padrão definido pelo condomínio", "Segue o padrão original do prédio"],
+        ["Ponto de atenção", "Calor com sol forte e manutenção do conjunto", "Poeira e exposição de móveis"]
+      ],
+      destaque: null
+    },
+    faq: [
+      { p: "Posso envidraçar a sacada por conta própria?",
+        r: "Depende das regras do condomínio. A convenção e o regimento interno costumam definir o padrão do fechamento. Consulte esses documentos e a administração antes de contratar o serviço." },
+      { p: "A sacada envidraçada deixa o apartamento mais quente?",
+        r: "Pode deixar, quando recebe sol forte e o sistema não abre bem. A face do apartamento e o tipo de vidro fazem diferença. Vale visitar em horários diferentes." },
+      { p: "Quem limpa o vidro por fora?",
+        r: "Isso varia conforme o sistema instalado e o que o condomínio permite. Pergunte à administração como a limpeza externa costuma ser feita no prédio." },
+      { p: "A sacada envidraçada conta na metragem do apartamento?",
+        r: "A forma de medir a sacada consta na planta e no memorial do imóvel. Peça à construtora que explique, e veja também o texto sobre área útil e área total." },
+      { p: "Posso falar com a Marins sobre um apartamento?",
+        r: "Sim. O time de vendas da Marins Engenharia, em São Carlos, responde pelo WhatsApp (16) 99766-7976 ou pelo e-mail vendas@marinsengenharia.com.br." }
+    ],
+    cta: {
+      titulo: "Tire dúvidas sobre o apartamento",
+      texto: "Fale com o time de vendas da Marins Engenharia para conhecer os apartamentos e as plantas disponíveis em São Carlos."
+    },
+    fontes: []
+  },
+
+  {
     id: "area-de-lazer-custo-condominio-sao-carlos",
     data: "25 de novembro de 2026",
     foto: "assets/img/blog/area-lazer-custo-condominio.webp",
